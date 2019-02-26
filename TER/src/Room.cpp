@@ -1,21 +1,25 @@
 #include "Room.h"
 
-Room::Room()
+int Room::nbRoom = 0;
+
+Room::Room() : type(0), capacity(0), location(0)
 {
-    this->type = 0;
-    this->id = 0;
-    this->capacity = 0;
-    this->location = 0;
+    nbRoom += 1;
+    id = nbRoom;
 }
 
-Room::~Room()
-{
-    //dtor
+Room::Room(int p_type, int p_capacity) : type(p_type), capacity(p_capacity), location(0){ //without location
+    nbRoom += 1;
+    id = nbRoom;
+}
+Room::Room(int p_type, int p_capacity, int p_location) : type(p_type), capacity(p_capacity), location(p_location){ //with location
+    nbRoom += 1;
+    id = nbRoom;
 }
 
-Room::Room(const Room& other)
-{
-    //copy ctor
+Room::Room(const Room& other) : type(other.type), capacity(other.capacity), location(other.location){
+    nbRoom += 1;
+    id = nbRoom;
 }
 
 //GETTER
@@ -48,7 +52,9 @@ void Room::set_location(int p_location){
 bool Room::test_capacity(int nb_etudiants){//test si la capacité est dépassée
     return true;
 }
-bool Room::test_id(Room p_room){//verifie que 2 id de salle soit differents
+bool Room::test_id(const Room& p_room){//verifie que 2 id de salle soit differents
+    if(p_room.id == this->id)
+        return false;
     return true;
 }
 void Room::descritpion(){
