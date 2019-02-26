@@ -17,11 +17,6 @@ Room::Room(int p_type, int p_capacity, int p_location) : type(p_type), capacity(
     id = nbRoom;
 }
 
-Room::Room(const Room& other) : type(other.type), capacity(other.capacity), location(other.location){
-    nbRoom += 1;
-    id = nbRoom;
-}
-
 //GETTER
 int Room::get_type(){
     return this->type;
@@ -50,14 +45,17 @@ void Room::set_location(int p_location){
 }
 //TESTS
 bool Room::test_capacity(int nb_etudiants){//test si la capacité est dépassée
-    return true;
-}
-bool Room::test_id(const Room& p_room){//verifie que 2 id de salle soit differents
-    if(p_room.id == this->id)
+    if (nb_etudiants > capacity)
         return false;
     return true;
 }
+bool Room::is_same_id(const Room& p_room){//verifie que 2 id de salle soit differents
+    if(p_room.id == id)
+        return true;
+    return false;
+}
 void Room::descritpion(){
+    cout<<"ROOM "<<this->get_id()<<" : "<<endl;
     cout<<"Room type : "<<this->get_type()<<endl;
     cout<<"Room id : "<<this->get_id()<<endl;
     cout<<"Room capacity : "<<this->get_capacity()<<endl;
