@@ -38,65 +38,7 @@ Room::Room(int p_type, int p_capacity, int p_location) : type(p_type), capacity(
 Room::~Room(){
 }
 
-//GETTER
-
-/** @brief (one liner)
-  *
-  * (documentation goes here)
-  */
-int Room::get_type(){
-    return this->type;
-}
-
-/** @brief (one liner)
-  *
-  * (documentation goes here)
-  */
-int Room::get_id(){
-    return this->id;
-}
-
-/** @brief (one liner)
-  *
-  * (documentation goes here)
-  */
-int Room::get_capacity(){
-    return this->capacity;
-}
-
-/** @brief (one liner)
-  *
-  * (documentation goes here)
-  */
-int Room::get_location(){
-    return this->location;
-}
-//SETTER
-
-/** @brief (one liner)
-  *
-  * (documentation goes here)
-  */
-void Room::set_type(int p_type){
-    this->type = p_type;
-}
-
-/** @brief (one liner)
-  *
-  * (documentation goes here)
-  */
-void Room::set_capacity(int p_capacity){
-    this->capacity = p_capacity;
-}
-
-/** @brief (one liner)
-  *
-  * (documentation goes here)
-  */
-void Room::set_location(int p_location){
-    this->location = p_location;
-}
-//TESTS
+///TESTS
 
 /** @brief (one liner)
   *

@@ -8,24 +8,25 @@ class Students
     public:
         //CTOR / DTOR
         Students();//Default
-        Students(int p_TransportTime, int p_Transport, double p_distance);
+        Students(int p_TransportTime, int p_Transport, int p_distance);
         virtual ~Students();
 
         //GETTER
-        double get_transportTime();
-        int get_transport();
-        double get_distance();
-        int get_flexibility();
-        int get_id();
+        double get_transportTime(){ return TransportTime;}
+        int get_transport(){ return Transport;}
+        int get_distance(){ return distance;}
+        int get_flexibility(){ return flexibility;}
+        int get_id(){ return id;}
 
         //SETTER
-        void set_transportTime(double p_transportTime);
-        void set_transport(int p_transport);
-        void set_distance(double p_distance);
-        void set_flexibility(int p_flexibility);
+        void set_transportTime(double p_transportTime) { TransportTime = p_transportTime;}
+        void set_transport(int p_transport){ Transport = p_transport;}
+        void set_distance(int p_distance){distance = p_distance;}
+        void set_flexibility(int p_flexibility){flexibility = p_flexibility;}
 
         //TEST
         void descritpion();
+        void flexibility_evaluation();
 
     protected:
 
@@ -33,7 +34,7 @@ class Students
         static int id_count;
         double TransportTime;
         int Transport;
-        double distance;
+        int distance;
         int flexibility;
         int id ;
 

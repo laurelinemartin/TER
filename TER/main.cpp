@@ -1,5 +1,6 @@
 #include "Room.h"
 #include "Students.h"
+#include "Teacher.h"
 
 using namespace std;
 
@@ -21,14 +22,20 @@ int main()
 
     cout<<testWithLocCtor->is_same_id(*testWithLocCtor)<<endl;*/
 
-    //TEST ON STUDENTS
+    /*//TEST ON STUDENTS
     //CTOR
     //Default
     Students *testDefaultCtor = new Students();
     testDefaultCtor->descritpion();
 
     Students *testCtor = new Students(20, 2, 22.3);
-    testCtor->descritpion();
+    testCtor->descritpion();*/
+
+    //TEST ON TEACHER
+    //CTOR
+    //Default
+    Teacher *testDefaultCtor = new Teacher();
+    testDefaultCtor->description();
 
     return 0;
 }

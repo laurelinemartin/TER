@@ -13,14 +13,14 @@ class Room
         Room(int p_type, int p_capacity, int p_location); //with location
         ~Room();
          //GETTER
-        int get_type();
-        int get_id();
-        int get_capacity();
-        int get_location();
+        int get_type() {return type;}
+        int get_id() {return id;}
+        int get_capacity() {return capacity;}
+        int get_location() {return location;}
         //SETTER
-        void set_type(int p_type);
-        void set_capacity(int p_capacity);
-        void set_location(int p_location);
+        void set_type(int p_type) { type = p_type;}
+        void set_capacity(int p_capacity) { capacity = p_capacity;}
+        void set_location(int p_location) { location = p_location;}
         //TESTS
         bool test_capacity(int nb_etudiants); //test si la capacité est dépassée
         bool is_same_id(const Room& p_room);//verifie que 2 id de salle soit differents
