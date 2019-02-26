@@ -1,7 +1,6 @@
 #ifndef ROOM_H
 #define ROOM_H
 
-#include <string>
 #include <iostream>
 
 using namespace std;
@@ -12,6 +11,7 @@ class Room
         Room(); //default
         Room(int p_type, int p_capacity); //without location
         Room(int p_type, int p_capacity, int p_location); //with location
+        ~Room();
          //GETTER
         int get_type();
         int get_id();
@@ -19,7 +19,6 @@ class Room
         int get_location();
         //SETTER
         void set_type(int p_type);
-        void set_id(int p_id);
         void set_capacity(int p_capacity);
         void set_location(int p_location);
         //TESTS
@@ -29,7 +28,7 @@ class Room
     protected:
 
     private:
-        static int nbRoom;
+        static int id_count;
         int type; //{AMPHI = 0, TD = 1, TP = 2};
         int id;
         int capacity;

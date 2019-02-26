@@ -1,11 +1,17 @@
 # depslib dependency file v1.0
-1551184538 source:/home/ben/Bureau/TER/TER/main.cpp
+1551187744 source:/home/ben/Bureau/TER/TER/main.cpp
 	"Room.h"
+	"Students.h"
 
-1551185370 /home/ben/Bureau/TER/TER/include/Room.h
-	<string>
+1551187134 /home/ben/Bureau/TER/TER/include/Room.h
 	<iostream>
 
-1551185349 source:/home/ben/Bureau/TER/TER/src/Room.cpp
+1551187323 source:/home/ben/Bureau/TER/TER/src/Room.cpp
 	"Room.h"
+
+1551187691 source:/home/ben/Bureau/TER/TER/src/Students.cpp
+	"Students.h"
+
+1551187773 /home/ben/Bureau/TER/TER/include/Students.h
+	<iostream>
 
