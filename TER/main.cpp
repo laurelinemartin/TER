@@ -1,6 +1,6 @@
-#include "Room.h"
-#include "Students.h"
-#include "Teacher.h"
+#include "include/Room.h"
+#include "include/Students.h"
+#include "include/Teacher.h"
 
 using namespace std;
 

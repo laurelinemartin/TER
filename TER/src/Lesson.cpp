@@ -1,4 +1,4 @@
-#include "Lesson.h"
+#include "../include/Lesson.h"
 
 Lesson::Lesson()
 {

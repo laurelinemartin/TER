@@ -1,4 +1,4 @@
-#include "Teacher.h"
+#include "../include/Teacher.h"
 
 int Teacher::id_count = 0;
 

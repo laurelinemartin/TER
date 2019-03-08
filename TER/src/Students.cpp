@@ -1,4 +1,4 @@
-#include "Students.h"
+#include "../include/Students.h"
 int Students::id_count = 0;
 
 Students::Students() : TransportTime(0), Transport(0), distance(0), flexibility(0)
