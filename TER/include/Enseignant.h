@@ -1,14 +1,14 @@
-#ifndef TEACHER_H
-#define TEACHER_H
+#ifndef Enseignant_H
+#define Enseignant_H
 
 #include <iostream>
 using namespace std;
-class Teacher
+class Enseignant
 {
     public:
-        Teacher();
-        Teacher (double p_DispoStart, double DispoEnd);
-        virtual ~Teacher();
+        Enseignant();
+        Enseignant (double p_DispoStart, double DispoEnd);
+        virtual ~Enseignant();
         double get_DispoStart();
         double get_DispoEnd();
         int get_id();
@@ -25,4 +25,4 @@ class Teacher
         double DispoEnd;
 };
 
-#endif // TEACHER_H
+#endif // Enseignant_H

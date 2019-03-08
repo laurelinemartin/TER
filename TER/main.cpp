@@ -1,6 +1,6 @@
-#include "include/Room.h"
-#include "include/Students.h"
-#include "include/Teacher.h"
+#include "include/Salle.h"
+#include "include/Eleve.h"
+#include "include/Enseignant.h"
 
 using namespace std;
 
@@ -34,8 +34,8 @@ int main()
     //TEST ON TEACHER
     //CTOR
     //Default
-    Teacher *testDefaultCtor = new Teacher();
-    testDefaultCtor->description();
+    //Teacher *testDefaultCtor = new Teacher();
+    //testDefaultCtor->description();
 
     return 0;
 }

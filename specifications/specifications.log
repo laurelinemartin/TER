@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.9.4)  8 MAR 2019 12:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.14)  8 MAR 2019 14:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **specifications.tex
 (./specifications.tex
 LaTeX2e <2017-04-15>
-Babel <3.12> and hyphenation patterns for 9 language(s) loaded.
+Babel <3.18> and hyphenation patterns for 5 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
@@ -349,53 +349,48 @@ File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2017/06/29 3.12 The Babel package
+Package: babel 2018/02/14 3.18 The Babel package
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
-File: switch.def 2017/06/29 3.12 Babel switching mechanism
+File: switch.def 2018/02/14 3.18 Babel switching mechanism
 )
-(/usr/share/texlive/texmf-dist/tex/generic/babel-french/frenchb.ldf
-Language: frenchb 2017/07/08 v3.3b French support from the babel system
-
 (/usr/share/texlive/texmf-dist/tex/generic/babel-french/french.ldf
-Language: french 2017/07/08 v3.3b French support from the babel system
+Language: french 2018/02/04 v3.4b French support from the babel system
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2017/06/29 3.12 Babel common definitions
-
-(/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
-File: switch.def 2017/06/29 3.12 Babel switching mechanism
-)
+File: babel.def 2018/02/14 3.18 Babel common definitions
 \babel@savecnt=\count87
 \U@D=\dimen103
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@dirlevel=\count88
 )
-\FB@nonchar=\count88
-\FBcolonsp=\toks16
-\FBthinsp=\toks17
-Package babel Info: Making : an active character on input line 321.
-Package babel Info: Making ; an active character on input line 322.
-Package babel Info: Making ! an active character on input line 323.
-Package babel Info: Making ? an active character on input line 324.
-\FBguillsp=\toks18
-\FBguill@level=\count89
-\FB@everypar=\toks19
+\l@acadian = a dialect from \language\l@french 
+\FB@nonchar=\count89
+Package babel Info: Making : an active character on input line 411.
+Package babel Info: Making ; an active character on input line 412.
+Package babel Info: Making ! an active character on input line 413.
+Package babel Info: Making ? an active character on input line 414.
+\FBguill@level=\count90
+\FB@everypar=\toks16
 \FB@Mht=\dimen104
-\mc@charclass=\count90
-\mc@charfam=\count91
-\mc@charslot=\count92
-\std@mcc=\count93
-\dec@mcc=\count94
+\mc@charclass=\count91
+\mc@charfam=\count92
+\mc@charslot=\count93
+\std@mcc=\count94
+\dec@mcc=\count95
+\c@FBcaption@count=\count96
 \listindentFB=\skip43
 \descindentFB=\skip44
 \labelwidthFB=\skip45
 \leftmarginFB=\skip46
 \parindentFFN=\dimen105
 \FBfnindent=\skip47
-)))
+))
 (/usr/share/texlive/texmf-dist/tex/latex/carlisle/scalefnt.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks20
+\KV@toks@=\toks17
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/makeidx.sty
 Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
@@ -443,38 +438,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--29
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--36
+Underfull \hbox (badness 10000) in paragraph at lines 38--39
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--39
+Underfull \hbox (badness 10000) in paragraph at lines 40--42
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--41
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
 
  []
 
 [2] (./specifications.aux) ) 
 Here is how much of TeX's memory you used:
- 1962 strings out of 494829
- 24141 string characters out of 6178001
- 86223 words of memory out of 5000000
- 5306 multiletter control sequences out of 15000+600000
+ 2011 strings out of 494894
+ 24875 string characters out of 6179472
+ 90221 words of memory out of 5000000
+ 5358 multiletter control sequences out of 15000+600000
  11296 words of font info for 30 fonts, out of 8000000 for 9000
- 59 hyphenation exceptions out of 8191
- 30i,6n,30p,228b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/user/.texlive2017/texmf-var/fonts/pk/ljfour
-/jknappen/ec/ecbx1200.600pk> </home/user/.texlive2017/texmf-var/fonts/pk/ljfour
-/jknappen/ec/ecrm1095.600pk> </home/user/.texlive2017/texmf-var/fonts/pk/ljfour
-/jknappen/ec/ecbx1440.600pk> </home/user/.texlive2017/texmf-var/fonts/pk/ljfour
-/jknappen/ec/ecrm1200.600pk> </home/user/.texlive2017/texmf-var/fonts/pk/ljfour
-/jknappen/ec/ecrm1728.600pk>
-Output written on specifications.pdf (2 pages, 40505 bytes).
+ 14 hyphenation exceptions out of 8191
+ 28i,6n,30p,196b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/ben/.texlive2017/texmf-var/fonts/pk/ljfour/
+jknappen/ec/ecbx1200.600pk> </home/ben/.texlive2017/texmf-var/fonts/pk/ljfour/j
+knappen/ec/ecrm1095.600pk> </home/ben/.texlive2017/texmf-var/fonts/pk/ljfour/jk
+nappen/ec/ecbx1440.600pk> </home/ben/.texlive2017/texmf-var/fonts/pk/ljfour/jkn
+appen/ec/ecrm1200.600pk> </home/ben/.texlive2017/texmf-var/fonts/pk/ljfour/jkna
+ppen/ec/ecrm1728.600pk>
+Output written on specifications.pdf (2 pages, 42569 bytes).
 PDF statistics:
- 158 PDF objects out of 1000 (max. 8388607)
+ 165 PDF objects out of 1000 (max. 8388607)
  26 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)

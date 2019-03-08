@@ -1,12 +1,12 @@
-#include "../include/Room.h"
+#include "../include/Salle.h"
 
-int Room::id_count = 0;
+int Salle::id_count = 0;
 
 /** @brief (one liner)
   *
   * (documentation goes here)
   */
-Room::Room() : type(0), capacity(0), location(0)
+Salle::Salle() : type(0), capacity(0), location(0)
 {
     id_count += 1;
     id = id_count;
@@ -16,7 +16,7 @@ Room::Room() : type(0), capacity(0), location(0)
   *
   * (documentation goes here)
   */
-Room::Room(int p_type, int p_capacity) : type(p_type), capacity(p_capacity), location(0){ //without location
+Salle::Salle(int p_type, int p_capacity) : type(p_type), capacity(p_capacity), location(0){ //without location
     id_count += 1;
     id = id_count;
 }
@@ -25,7 +25,7 @@ Room::Room(int p_type, int p_capacity) : type(p_type), capacity(p_capacity), loc
   *
   * (documentation goes here)
   */
-Room::Room(int p_type, int p_capacity, int p_location) : type(p_type), capacity(p_capacity), location(p_location){ //with location
+Salle::Salle(int p_type, int p_capacity, int p_location) : type(p_type), capacity(p_capacity), location(p_location){ //with location
     id_count += 1;
     id = id_count;
 }
@@ -35,7 +35,7 @@ Room::Room(int p_type, int p_capacity, int p_location) : type(p_type), capacity(
   *
   * (documentation goes here)
   */
-Room::~Room(){
+Salle::~Salle(){
 }
 
 ///TESTS
@@ -44,7 +44,7 @@ Room::~Room(){
   *
   * (documentation goes here)
   */
-bool Room::test_capacity(int nb_etudiants){//test si la capacité est dépassée
+bool Salle::test_capacity(int nb_etudiants){//test si la capacité est dépassée
     if (nb_etudiants > capacity)
         return false;
     return true;
@@ -57,8 +57,8 @@ bool Room::test_capacity(int nb_etudiants){//test si la capacité est dépassée
   *
   * (documentation goes here)
   */
-bool Room::is_same_id(const Room& p_room){//verifie que 2 id de salle soit differents
-    if(p_room.id == id)
+bool Salle::is_same_id(const Salle& p_Salle){//verifie que 2 id de salle soit differents
+    if(p_Salle.id == id)
         return true;
     return false;
 }
@@ -67,8 +67,8 @@ bool Room::is_same_id(const Room& p_room){//verifie que 2 id de salle soit diffe
   *
   * (documentation goes here)
   */
-void Room::descritpion(){
-    cout<<"ROOM "<<this->get_id()<<" : "<<endl;
+void Salle::descritpion(){
+    cout<<"Salle "<<this->get_id()<<" : "<<endl;
     cout<<"type : "<<this->get_type()<<endl;
     cout<<"capacity : "<<this->get_capacity()<<endl;
     cout<<"location : "<<this->get_location()<<endl;

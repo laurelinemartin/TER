@@ -1,15 +1,15 @@
-#ifndef STUDENTS_H
-#define STUDENTS_H
+#ifndef Eleve_H
+#define Eleve_H
 
 #include <iostream>
 using namespace std;
-class Students
+class Eleve
 {
     public:
         //CTOR / DTOR
-        Students();//Default
-        Students(int p_TransportTime, int p_Transport, int p_distance);
-        virtual ~Students();
+        Eleve();//Default
+        Eleve(int p_TransportTime, int p_Transport, int p_distance);
+        virtual ~Eleve();
 
         //GETTER
         double get_transportTime(){ return TransportTime;}
@@ -40,4 +40,4 @@ class Students
 
 };
 
-#endif // STUDENTS_H
+#endif // Eleve_H

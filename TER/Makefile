@@ -8,7 +8,7 @@ SUPPR = @rm -f
 EXEC = TER
 FSRC = src/
 FINC = include/
-SRC = main.cpp src/Lesson.cpp src/Room.cpp src/Students.cpp src/Teacher.cpp
+SRC = main.cpp src/Cours.cpp src/Salle.cpp src/Eleve.cpp src/Enseignant.cpp
 OBJ = $(SRC: .cpp=.o)
 
 all: $(EXEC)
@@ -19,19 +19,19 @@ compil: $(EXEC)
 $(EXEC): $(OBJ)
 	$(CXX) -o $(EXEC) $^
 
-Lesson.o: $(FSRC)Lesson.cpp $(FINC)Lesson.h
+Cours.o: $(FSRC)Cours.cpp $(FINC)Cours.h
 	$(CXX) -o $@ -c $< $(CFLAGS)
 
-Room.o: $(FSRC)Room.cpp $(FINC)Room.h
+Salle.o: $(FSRC)Salle.cpp $(FINC)Salle.h
 	$(CXX) -o $@ -c $< $(CFLAGS)
 
-Students.o: $(FSRC)Students.cpp $(FINC)Students.h
+Eleve.o: $(FSRC)Eleve.cpp $(FINC)Eleve.h
 	$(CXX) -o $@ -c $< $(CFLAGS)
 
-Teacher.o: $(FSRC)Teacher.cpp $(FINC)Teacher.h
+Enseignant.o: $(FSRC)Enseignant.cpp $(FINC)Enseignant.h
 	$(CXX) -o $@ -c $< $(CFLAGS)
 
-main.o: main.cpp $(FINC)Room.h $(FINC)Students.h $(FINC)Teacher.h
+main.o: main.cpp $(FINC)Salle.h $(FINC)Eleve.h $(FINC)Enseignant.h
 	$(CXX) -o $@ -c $< $(CFLAGS)
 
 clean: 
