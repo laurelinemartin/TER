@@ -26,7 +26,7 @@
 		Le module cours est une classe. C'est elle que l'on va déplacer lors de l'affectation. Elle contient : 
 		\begin{enumerate}
 			\item Durée : un entier
-			\item Une liste des étudiants assisantans à ce cours : $$un tableau ? un char* ?$$
+			\item Une liste des étudiants assisantans à ce cours : un tableau ? un char* ?
 			\item Le type de salle utilisé : un entier, 0 pour une salle de TP et 1 pour un autre salle
 			\item $$Un indice de flexibilité ?$$
 			\item Le nombres d'étudiant : un entier
@@ -35,7 +35,7 @@
 			\item L'horaire de début : un float
 			\item L'horaire de fin : un float
 		\end{enumerate}
-	\subsection{Module salle de classe}
+	\subsection{Module Salle de classe}
 		$$DESCRIPTION SALLE DE CLASSE$$
 		\begin{enumerate}
 			\item Numéro de salle : un entier
@@ -43,7 +43,7 @@
 			\item Un type de salle, c'est à dire une salle de TP, ou une salle classique : un entier, 0 pour une salle de TP et 1 pour un autre salle
 			\item Une capacité maximale : un entier
 		\end{enumerate}
-	\subsection{Module etudiant}
+	\subsection{Module Etudiant}
 		$$DESCRIPTION ETUDIANT$$
 		\begin{enumerate}
 			\item Temps de trajet : un entier
@@ -51,39 +51,43 @@
 			entre 15 et 45 min de la fac, 2 sinon
 			\item $$Flexibilité ?$$
 			\end{enumerate}
-	\subsection{Module professeur}
+	\subsection{Module Professeur}
 		$$DESCRIPTION PROFESSEUR$$
 		\begin{enumerate}
 			\item Un numéro de professeur : un entier
 			\item Une plage de disponibilité : $$JSP$$
 			\end{enumerate}
 	$$Conclure sur les liens entre chaque classes$$
+
 \section{Contraintes}
 	Pour optimiser, nous faisons face à plusieurs contraintes, toutes ne sont pas 
-	de même "importance". Nous allons donc devoir définir un ordre de priorité sur 
+	de même "importances". Nous allons donc devoir définir un ordre de priorité sur 
 	les contraintes, ainsi lors de l'optimisation par notre algorithme, nous 
 	pourrons ajuster et obtenir de meilleurs résultats même si certaines contraintes
 	"faibles" sont violées.\\
 	\subsection{Contraintes dures}
 		\begin{enumerate}
-			\item Avoir une personne à charge ce qui impose un horaire le matin et/ou le soir.
-			Exemple : Sois X l'heure de début d'un cours, si un enfant doit être déposé à l'école à 9h on a : X > 9 + (indice de distance de cet étudiant)*30 min
-					  Sois Y l'heure de fin d'un cours, si un enfant doit être récupéré à l'école à 17h on a : Y < 17 - (indice de distance de cet étudiant)*30 min
+			\item Avoir une personne à charge ce qui impose un horaire le matin et/ou le soir.\\
+			Exemple : Soit X l'heure de début d'un cours, si un enfant doit être déposé à l'école à 9h on a : X > 9 + (indice de distance de cet étudiant/professeur)*30 min.\\
+			Soit Y l'heure de fin d'un cours, si un enfant doit être récupéré à l'école à 17h on a : Y < 17 - (indice de distance de cet étudiant)*30 min
 			\item Avoir un travail, cela impose la même chose que la contraintes précédentes
 			\item Salle utilisée par deux cours différents pour des horaires 
-				qui se chevauchent
+			qui se chevauchent
 			\item Un élève qui suit deux cours dont les horaires se chevauchent
 		\end{enumerate}
 	\subsection{Contraintes faibles}
 		\begin{enumerate}
 			\item $$Jsp j'ai tout mis en contraintes durs$$
+			\item bin c'est relou ... il y a un google doc avec contrainte dur et contraintes faibles ... autant le suivre non ?
 		\end{enumerate}
 	$$Conclure sur les contraintes et leurs future utilisation$$\\
 	\subsection{Sélections par heuristiques}
 		Les différentes heuristiques que nous allons utiliser pour jouer sur les 
 		contraintes. $$surement tabou$$ \\
+		- Oui enfin on va pas utiliser que tabou. \\
+
 \section{Affectation}
-	On va affecter chaque cours à un horaires sans prendre en compte les transports. On ne va utiliser que les contraintes énoncés précédemment. \\
+	On va affecter chaque cours à un horaire et à une salle sans prendre en compte les transports. On ne va utiliser que les contraintes énoncés précédemment. \\
 	
 \section{Evaluation de chaque affectation}
 	blabla \\
