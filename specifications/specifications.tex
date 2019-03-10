@@ -23,9 +23,9 @@
 		Le module cours est une classe. C'est elle que l'on va déplacer lors de l'affectation. Elle contient : 
 		\begin{enumerate}
 			\item Durée : un entier
-			\item Une liste des étudiants assisantans à ce cours : $$un tableau ? un char* ?$$
+			\item Une liste des étudiants assistant à ce cours : $$un tableau ? un char* ? un tableau regroupant les id des etudiants (tableau d'int du coup)? $$
 			\item Le type de salle utilisé : un entier, 0 pour une salle de TP et 1 pour un autre salle
-			\item $$Un indice de flexibilité ?$$
+			\item $$Un indice de flexibilité ?  calculé en fonction de celle des etudiants ? $$
 			\item Le nombres d'étudiant : un entier
 			\item Un numéro de salle : un entier
 			\item Le numéro du professeur donnant ce cours : un entier
@@ -36,7 +36,7 @@
 		$$DESCRIPTION SALLE DE CLASSE$$
 		\begin{enumerate}
 			\item Numéro de salle : un entier
-			\item Une localisation : $$SOIS UN ENTIER SOIS UN CHAR* JSP$$
+			\item Une localisation : un entier - 0 pour proche de l'arrêt, 1 pour modérément éloigné, 2 pour éloigné-. 
 			\item Un type de salle, c'est à dire une salle de TP, ou une salle classique : un entier, 0 pour une salle de TP et 1 pour un autre salle
 			\item Une capacité maximale : un entier
 		\end{enumerate}
@@ -46,13 +46,13 @@
 			\item Temps de trajet : un entier
 			\item Distance entre son domicile et l'université : un entier, 0 si l'étudiant habite a moins de 15 min de la fac, 1 si il habite
 			entre 15 et 45 min de la fac, 2 sinon
-			\item $$Flexibilité ?$$
+			\item $$Flexibilité ? calculé en fonction de la distance de trajet, le temps + contrainte forte pas encore défini dans les structures $$
 			\end{enumerate}
 	\subsection{Module professeur}
 		$$DESCRIPTION PROFESSEUR$$
 		\begin{enumerate}
 			\item Un numéro de professeur : un entier
-			\item Une plage de disponibilité : $$JSP$$
+			\item Une plage de disponibilité : $$fourni individuellement par chaque professeur$$
 			\end{enumerate}
 	$$Conclure sur les liens entre chaque classes$$
 \section{Contraintes}
