@@ -75,8 +75,7 @@
 		\begin{enumerate}
 			\item 3 : Avoir un travail, cela impose la même chose que la contraintes précédentes
 		\end{enumerate}
-	\subsection{Module Contraintes}
-		\begin{itemize}
+	\subsection{Module Contraintes}                                                           		\begin{itemize}
 			\item identifiant : un entier non unique correspondant à une des contrainte precedement. L'identifiant représente une hierarchie dans les contraintes, de la plus forte a la plus faible 
 			\item un tableau d'entier contenant les identifiant des étudiants sujet à cette contrainte.
 	%\subsection{Sélections par heuristiques}
@@ -91,6 +90,6 @@
 	On évalue ensuite chaque optimum local trouvé afin de définir lequel viole le moins de contraintes. Elle correspond à la somme des contraintes violées. Les contraintes sont hiérarchisées comme vu précédemment, ainsi lors de la somme des contraintes on pondère en fonction de cette hiérarchisation.
 	
 \section{Début de reflexion sur l'implémentation des transports}
-	Pour les transports, on supposera que chaque élève arrivera par le bus précédant le début du premier cours de sa journée. De cette manière a chaque itération de l'affectation des cours, on pourra recalculer la congestion de chaque bus (qui sera utilisé comme fonction objectif du projet une fois les transport implémentés).La congestion peut être représentée par le pourcentage de remplissage du bus à chaque arrêt.
+	Pour les transports, on supposera que chaque élève arrivera par le bus précédant le début du premier cours de sa journée. De cette manière a chaque itération de l'affectation des cours, on pourra recalculer la congestion de chaque bus (qui sera utilisé comme fonction objectif du projet une fois les transport implémentés).La congestion peut être représentée par le pourcentage de remplissage du bus à chaque arrêt. 
 
 \end{document}
