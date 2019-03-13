@@ -3,6 +3,13 @@
 \usepackage[T1]{fontenc}
 \usepackage[french]{babel}
 \usepackage{makeidx}
+\usepackage{textcomp}
+\usepackage{graphicx}
+\usepackage{mathtools,amssymb,amsthm}
+\usepackage{lmodern}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{longtable}
 
 \title{TER 2019 - Spécifications}
 \author{Maxime Gonthier - Benjamin Guillot - Laureline Martin}
@@ -11,15 +18,18 @@
 	\maketitle
 
 \newpage
+\tableofcontents
+
+\newpage
 \section{Les données}
-	On va donc répartir les données de la fac en 4 module\\
+	On va répartir les données concernant la fac en 4 modules.\\
 	\begin{itemize}
 		\item Module cours
 		\item Module salle de classe
 		\item Module étudiant
 		\item Module professeur
 	\end{itemize}
-	\subsection{Module cours}
+	\subsection{Module Cours}
 		Le module cours est une classe représentant un cours sur un temps donné.\\
 		Lors des affectations, on modifiera pour chaque instance a deplacer l'horaire de début.\\
 		Elle contient : 
@@ -34,7 +44,7 @@
 			\item L'horaire de début : un entier pour l'heure, un entier pour la minute (structure implémentée specialement pour le projet)  
 			\item L'horaire de fin : un entier pour l'heure, un entier pour la minute.
 		\end{enumerate}
-	\subsection{Module salle de classe}
+	\subsection{Module Salle de classe}
 		Le module salle représente la localisation du cours sur un temps donné.
 		\begin{enumerate}
 			\item Numéro de salle : un entier (identifiant unique)
@@ -42,23 +52,26 @@
 			\item Un type de salle : un entier, 0 pour une salle de TP et 1 pour une autre salle (on pourra ajouter d'autres type de salle si necessaire).
 			\item Une capacité maximale : un entier
 		\end{enumerate}
-	\subsection{Module etudiant}
+	\subsection{Module Etudiant}
 		Le module étudiant représente un élève sur le temps d'exécution du programme.
 		\begin{enumerate}
 			\item Distance entre son domicile et l'université : un entier, 0 si l'étudiant habite a moins de 15 min de la fac, 1 si il habite entre 15 et 45 min de la fac, 2 sinon.
 			\item Flexibilité : un entier calculé en fonction de la distance de trajet et des contraintes forte et faible. 
 			\end{enumerate}
-	\subsection{Module professeur}
+	\subsection{Module Professeur}
 		Le module professeur représente un professeur sur le temps d'exécution du programme.
 		\begin{enumerate}
 			\item Un numéro de professeur : un entier (identifiant unique)
 			\item plage de disponibilité début : un entier pour l'heure, un entier pour la minute.
 			\item plage de disponibilité fin : un entier pour l'heure, un entier pour la minute.
 			\end{enumerate}
-	$$Conclure sur les liens entre chaque classes$$
+	\subsection{Conclusion des liens entre les modules}
+		\centerline{\includegraphics[scale=0.5]{modelter.png}}
+		Modélisation.\\
+
 \section{Contraintes}
 	Pour optimiser, nous faisons face à plusieurs contraintes, toutes ne sont pas 
-	de même "importance". Nous allons donc devoir définir un ordre de priorité sur 
+	de même "importances". Nous allons donc devoir définir un ordre de priorité sur 
 	les contraintes, ainsi lors de l'optimisation par notre algorithme, nous 
 	pourrons ajuster et obtenir de meilleurs résultats même si certaines contraintes
 	"faibles" sont violées.\\
@@ -75,8 +88,14 @@
 		\begin{enumerate}
 			\item 3 : Avoir un travail, cela impose la même chose que la contraintes précédentes
 		\end{enumerate}
+<<<<<<< HEAD
 	\subsection{Module Contraintes}                                                           		\begin{itemize}
 			\item identifiant : un entier non unique correspondant à une des contrainte precedente. L'identifiant représente une hierarchie dans les contraintes, de la plus forte a la plus faible 
+=======
+	\subsection{Module Contraintes}  
+		\begin{itemize}
+			\item identifiant : un entier non unique correspondant à une des contrainte precedement. L'identifiant représente une hierarchie dans les contraintes, de la plus forte a la plus faible 
+>>>>>>> Lau
 			\item un tableau d'entier contenant les identifiant des étudiants sujet à cette contrainte.
 	%\subsection{Sélections par heuristiques}
 		%Les différentes heuristiques que nous allons utiliser pour jouer sur les 
