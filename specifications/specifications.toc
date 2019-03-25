@@ -1,14 +1,32 @@
-\select@language {french}
-\contentsline {section}{\numberline {1}Les donn\IeC {\'e}es}{}
-\contentsline {subsection}{\numberline {1.1}Module Cours}{}
-\contentsline {subsection}{\numberline {1.2}Module Salle de classe}{}
-\contentsline {subsection}{\numberline {1.3}Module Etudiant}{}
-\contentsline {subsection}{\numberline {1.4}Module Professeur}{}
-\contentsline {subsection}{\numberline {1.5}Conclusion des liens entre les modules}{}
-\contentsline {section}{\numberline {2}Contraintes}{}
-\contentsline {subsection}{\numberline {2.1}Contraintes dures}{}
-\contentsline {subsection}{\numberline {2.2}Contraintes faibles}{}
-\contentsline {subsection}{\numberline {2.3}Module Contraintes}{}
-\contentsline {section}{\numberline {3}Affectation}{}
-\contentsline {section}{\numberline {4}Evaluation de chaque affectation}{}
-\contentsline {section}{\numberline {5}D\IeC {\'e}but de reflexion sur l'impl\IeC {\'e}mentation des transports}{}
+\babel@toc {french}{}
+\contentsline {section}{\numberline {1}Introduction}{}
+\contentsline {section}{\numberline {2}Mod\IeC {\'e}lisation des donn\IeC {\'e}es en entr\IeC {\'e}e}{}
+\contentsline {subsection}{\numberline {2.1}Module Cours}{}
+\contentsline {subsubsection}{\numberline {2.1.1}Classe Cours}{}
+\contentsline {subsection}{\numberline {2.2}Module Salle d'enseignement}{}
+\contentsline {subsubsection}{\numberline {2.2.1}Classe Salle}{}
+\contentsline {subsubsection}{\numberline {2.2.2}Matrice d'adjacence entre les salles}{}
+\contentsline {subsubsection}{\numberline {2.2.3}Matrice d'adjacence entre salles et arr\IeC {\^e}t de bus}{}
+\contentsline {subsection}{\numberline {2.3}Module Etudiant}{}
+\contentsline {subsubsection}{\numberline {2.3.1}Classe \IeC {\'E}tudiants}{}
+\contentsline {subsection}{\numberline {2.4}Module Professeur}{}
+\contentsline {subsubsection}{\numberline {2.4.1}Classe Professeur}{}
+\contentsline {subsection}{\numberline {2.5}Liens entre les modules}{}
+\contentsline {section}{\numberline {3}Module Contraintes}{}
+\contentsline {subsection}{\numberline {3.1}Contraintes dures}{}
+\contentsline {subsubsection}{\numberline {3.1.1}Entre deux cours}{}
+\contentsline {subsubsection}{\numberline {3.1.2}Entre un cours et un professeur}{}
+\contentsline {subsubsection}{\numberline {3.1.3}Entre un cours et une salle}{}
+\contentsline {subsection}{\numberline {3.2}Contraintes faibles}{}
+\contentsline {section}{\numberline {4}Affectation}{}
+\contentsline {section}{\numberline {5}Impl\IeC {\'e}mentation des bus}{}
+\contentsline {section}{\numberline {6}Les fonctions principales}{}
+\contentsline {subsection}{\numberline {6.1}Flexibilit\IeC {\'e}}{}
+\contentsline {subsubsection}{\numberline {6.1.1}Calcul flexibilit\IeC {\'e} \IeC {\'e}tudiant}{}
+\contentsline {subsubsection}{\numberline {6.1.2}Calcul indice de flexibilit\IeC {\'e}}{}
+\contentsline {subsection}{\numberline {6.2}Verifications des contraintes}{}
+\contentsline {subsubsection}{\numberline {6.2.1}entre Professeur et Cours}{}
+\contentsline {subsubsection}{\numberline {6.2.2}entre Cours et Cours}{}
+\contentsline {subsubsection}{\numberline {6.2.3}entre Cours et Salle}{}
+\contentsline {subsubsection}{\numberline {6.2.4}Verification des contraintes faibles}{}
+\contentsline {section}{\numberline {7}M\IeC {\'e}trique d'\IeC {\'e}valuation}{}
