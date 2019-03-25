@@ -123,7 +123,10 @@ A la fin du projet le but est de fournir une planification de l'emploi du temps 
 	(Si les solutions trouvées boucle (c'est à dire si les résultats restent similaires) alors on va éloigner le voisnage A REDIRE MIEUX)
 	(Relier l'affectation aux bus)	
 \section{Implémentation des bus}
-	Pour les transports, on supposera que chaque élève arrivera par le bus précédant le début du premier cours de sa journée. De cette manière a chaque itération de l'affectation des cours, on pourra recalculer la congestion de chaque bus (qui sera utilisé comme fonction objectif du projet une fois les transport implémentés).La congestion peut être représentée par le pourcentage de remplissage du bus à chaque arrêt. 
+	Pour les transports, on supposera que chaque élève arrivera par le bus précédant le début du premier cours de sa journée. 
+	De cette manière a chaque itération de l'affectation des cours, on pourra recalculer la congestion de chaque bus
+	(qui sera utilisé comme fonction objectif du projet une fois les transport implémentés).La congestion sera représenté par le maximun du dépassement de la limite de confort du bus lors du trajet.
+	On utilisera la fonction $$calcul congestion$$ décrite ci dessous pour calculer cette valeur pour chaque bus.
 	
 \section{Les fonctions principales}
 	\subsection{Flexibilité}
@@ -156,7 +159,47 @@ A la fin du projet le but est de fournir une planification de l'emploi du temps 
 			Prend en entrée un Cours et un Étudiant.
 			On vérifie que l'heure de début du premier cours ou du dernier (+ sa durée) de l'étudiant laisse une assez grande marge en fonction de sa contrainte faible.
 			Si possible cette valeur sera prise en compte pour modifier les emploi du temps et faire commencer (au plus tard) les cours à 9h, et finir (au plus tôt) à 17h.
+		\subsection{Fonctions répétés à chaque itération de l'algorithme}
+			\subsubsection{Calcul congestion}
+				Prend en entrée les élèves, un par un.
+				Pour chaque élève on regarde l'heure du début de son premier cours ainsi que la distance entre la salle de ce cours et l'arrêt de bus. 
+				Ainsi on en déduit le bus que cet étudiant doit emprunter. On fais ensuite la somme des maximums du dépassement de la limite
+				de confort pour chaque bus. Cette valeur sera la variable $$congeston$$.
+			\subsubsection{Nouvelle planification}
+				On prend en entrée Cours.
+				On modifie l'heure de début de un ou plusieurs cours. Pour faire cela on va s'inspirer d'une heuristique tabou.
+				On va donc à partir de la planification initiale explorer son voisnage c'est à dire des explorer planifications identiques à l'exception
+				de un ou deux horaires de début de cours.
+				Les positions explorées seront stockées dans un fichier de sortie répertoriant les horaires de début de chaque cours.
+				Le numéro des cours ayant été modifié sera également stocké.
+			\subsubsection{Nouveau bus}
+				On prend en entrée les cours qui ont été modifié.
+				On va alors affecter a chaque élève dont l'heure du premier cours a été modifié le bus y correspondant.
+
+\section{Fonctionemment global de l'application}
+	\subsection{Données initiales}
+		On considère que les données fournit en entrées sont : 
+		\begin{itemize}
+				\item Une planification de base de la journée, c'est à dire un horaire de déut pour chaque cours.
+				\item Les cours, les élèves, les professeurs et les salles d'enseignements
+				\item Le nombre de bus total sur la journée ainsi que leurs horaires d'arrivée à l'université
+				\item Les distances entre les salles et les distances entre les salles et l'arrêt de bus de l'université.
+			\end{itemize}
+	\subsection{Itérations}
+		A chaque itérations on va :
+		\begin{itemize}
+				\item Créer une nouvelle planification en appellant la fonction $$Nouvelle planification$$.
+				\item En déduire les bus dont les voyageurs ont été modifié avec la fonction $$Nouveau bus$$.
+				\item Calculer la congestion avec la fonction $$Calcul congestion$$.
+				\item Evaluation et stockage de la planification et de sa congestion associé dans un fichier de sortie.
+			\end{itemize}
+	\subsection{Arrêt de l'application}
+		L'application s'arrêtera sois à partir d'un certains nombre d'itérations données, sois si la congestion
+		converge.		
 \section{Métrique d'évaluation}
-	(congestion + contraites faibles)
+	Chaque planification sera évalué selon deux critères. Dans un premier temps on va répertorier le nombre de contraintes faibles violées.
+	Dans un second temps on va regarder le résultat de la fonction $$calcul congestion$$.
+	Un score sera calculé ainsi : 
+	$$score  = congestion + nb\_contrfaible$$
 
 \end{document}
