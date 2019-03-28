@@ -174,7 +174,7 @@ A la fin du projet le but est de fournir une planification de l'emploi du temps 
 				Pour chaque élève on regarde l'heure du début de son premier cours ainsi que la distance entre la salle de ce cours et l'arrêt de bus. 
 				Ainsi on en déduit le bus que cet étudiant doit emprunter.\\
 				On va donc pouvoir affecter à chaque bus un entier $E$ représentant le nombre d'étudiant présent dans un bus.\\
-				On fais ensuite la somme des maximums du dépassement de la limite de confort pour chaque bus. Cette valeur sera la variable $$congeston$$.
+				On fais ensuite la somme des maximums du dépassement de la limite de confort pour chaque bus. Cette valeur sera la variable $$congestion$$.
 			\subsubsection{Nouvelle planification}
 				On prend en entrée Cours.
 				On modifie l'heure de début de un ou plusieurs cours. Pour faire cela on va s'inspirer d'une heuristique tabou.
@@ -185,7 +185,7 @@ A la fin du projet le but est de fournir une planification de l'emploi du temps 
 			\subsubsection{Nouveau bus}
 				On prend en entrée les cours qui ont été modifié.
 				On va alors affecter a chaque élève dont l'heure du premier cours a été modifié le bus y correspondant.\\
-				On à, grâce a la première itération, une référence du nombre de personnes non étudiantes montant à chaque arrêt. Ainsi ce nombre ne changera pas tandis que le nombre d'étudiants $E$ par bus sera modifié, nous permettant de recalculer la congestion. 
+				On a, grâce a la première itération, une référence du nombre de personnes non étudiantes montant à chaque arrêt. Ainsi ce nombre ne changera pas tandis que le nombre d'étudiants $E$ par bus sera modifié, nous permettant de recalculer la congestion. 
 
 \section{Fonctionemment global de l'application}
 	\subsection{Données initiales}
