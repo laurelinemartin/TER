@@ -85,7 +85,17 @@ A la fin du projet le but est de fournir une planification de l'emploi du temps 
 	\subsection{Liens entre les modules}
 		\centerline{\includegraphics[scale=0.5]{modelter.png}}
 		Modélisation.\\
-
+	\subsection{Module Bus}
+	Pour les transports, on supposera que chaque élève arrivera par le bus précédant le début du premier cours de sa journée. 
+	De cette manière a chaque itération de l'affectation des cours, on pourra recalculer la congestion de chaque bus
+	(qui sera utilisé comme fonction objectif du projet une fois les transport implémentés).La congestion sera représenté par le maximum du dépassement de la limite de confort du bus lors du trajet.
+	On utilisera la fonction $$calcul congestion$$ décrite ci dessous pour calculer cette valeur pour chaque bus.
+	On pourra représenter un bus de la façon suivante :\\
+	\begin{itemize}
+		\item liste\_arrêt : une liste de tout les arrêts par lequel passe le bus. Pour chaque arrêt on aura le nombre de personne entrante et sortante du bus.
+		\item seuil\_confort : un entier représentant le nombre de personnes que peu contenir le bus avant que la fréquentation ne devienne désagréable pour les usagers.
+		\item capacité\_max : un entier représentant le nombre maximum de personnes pouvant être dans le bus en même temps.
+	\end{itemize}
 \section{Module Contraintes}
 	Pour optimiser, nous faisons face à plusieurs contraintes, toutes ne sont pas 
 	de même "importances". Nous allons donc devoir définir un ordre de priorité sur 
@@ -108,6 +118,10 @@ A la fin du projet le but est de fournir une planification de l'emploi du temps 
 				\begin{enumerate}
 					\item 	La salle doit avoir une capacité supérieure ou égale au nombre d'élèves suivant le cours et doit correspondre au type de salle dont le cours a besoin.
 				\end{enumerate}
+			\subsection{Pour un Bus}
+				\begin{enumerate}
+					\item Le nombre d'Étudiants $E$ ne doit pas dépasser la capacité $capacité_max$ du bus.
+				\end{enumerate}
 	On ne précise pas la contraintes entre cours et étudiant car un étudiant est défini par ses cours.
 	\subsection{Contraintes faibles}
 		\begin{enumerate}
@@ -120,13 +134,8 @@ A la fin du projet le but est de fournir une planification de l'emploi du temps 
 	On va affecter chaque cours à un horaires sans prendre en compte les transports. On ne va utiliser que les contraintes énoncés précédemment. \\
 	A chaque cours on affec		te une horaire de début (l'horaire de fin est calculé en conséquence), tel que les contraintes dures sont validées.
 	On va utiliser une heuristique tabou. On commence avec un emploi du temps par défaut. Le voisinage correspond à la modification d'un cours. A chaque itération on recalcule le nombre de contraintes violées. Un optimum local sera une solution viable, c'est à dire qui ne viole pas les contraintes dures.
-	(Si les solutions trouvées boucle (c'est à dire si les résultats restent similaires) alors on va éloigner le voisnage A REDIRE MIEUX)
+	(Si les solutions trouvées boucle (c'est à dire si les résultats restent similaires) alors on va éloigner le voisinage A REDIRE MIEUX)
 	(Relier l'affectation aux bus)	
-\section{Implémentation des bus}
-	Pour les transports, on supposera que chaque élève arrivera par le bus précédant le début du premier cours de sa journée. 
-	De cette manière a chaque itération de l'affectation des cours, on pourra recalculer la congestion de chaque bus
-	(qui sera utilisé comme fonction objectif du projet une fois les transport implémentés).La congestion sera représenté par le maximun du dépassement de la limite de confort du bus lors du trajet.
-	On utilisera la fonction $$calcul congestion$$ décrite ci dessous pour calculer cette valeur pour chaque bus.
 	
 \section{Les fonctions principales}
 	\subsection{Flexibilité}
@@ -163,8 +172,9 @@ A la fin du projet le but est de fournir une planification de l'emploi du temps 
 			\subsubsection{Calcul congestion}
 				Prend en entrée les élèves, un par un.
 				Pour chaque élève on regarde l'heure du début de son premier cours ainsi que la distance entre la salle de ce cours et l'arrêt de bus. 
-				Ainsi on en déduit le bus que cet étudiant doit emprunter. On fais ensuite la somme des maximums du dépassement de la limite
-				de confort pour chaque bus. Cette valeur sera la variable $$congeston$$.
+				Ainsi on en déduit le bus que cet étudiant doit emprunter.\\
+				On va donc pouvoir affecter à chaque bus un entier $E$ représentant le nombre d'étudiant présent dans un bus.\\
+				On fais ensuite la somme des maximums du dépassement de la limite de confort pour chaque bus. Cette valeur sera la variable $$congeston$$.
 			\subsubsection{Nouvelle planification}
 				On prend en entrée Cours.
 				On modifie l'heure de début de un ou plusieurs cours. Pour faire cela on va s'inspirer d'une heuristique tabou.
@@ -174,7 +184,8 @@ A la fin du projet le but est de fournir une planification de l'emploi du temps 
 				Le numéro des cours ayant été modifié sera également stocké.
 			\subsubsection{Nouveau bus}
 				On prend en entrée les cours qui ont été modifié.
-				On va alors affecter a chaque élève dont l'heure du premier cours a été modifié le bus y correspondant.
+				On va alors affecter a chaque élève dont l'heure du premier cours a été modifié le bus y correspondant.\\
+				On à, grâce a la première itération, une référence du nombre de personnes non étudiantes montant à chaque arrêt. Ainsi ce nombre ne changera pas tandis que le nombre d'étudiants $E$ par bus sera modifié, nous permettant de recalculer la congestion. 
 
 \section{Fonctionemment global de l'application}
 	\subsection{Données initiales}
