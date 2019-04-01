@@ -1,4 +1,4 @@
-\babel@toc {french}{}
+\select@language {french}
 \contentsline {section}{\numberline {1}Introduction}{}
 \contentsline {section}{\numberline {2}Mod\IeC {\'e}lisation des donn\IeC {\'e}es en entr\IeC {\'e}e}{}
 \contentsline {subsection}{\numberline {2.1}Module Cours}{}
@@ -11,9 +11,9 @@
 \contentsline {subsubsection}{\numberline {2.3.1}Classe \IeC {\'E}tudiants}{}
 \contentsline {subsection}{\numberline {2.4}Module Professeur}{}
 \contentsline {subsubsection}{\numberline {2.4.1}Classe Professeur}{}
-\contentsline {subsection}{\numberline {2.5}Liens entre les modules}{}
-\contentsline {subsection}{\numberline {2.6}Module Bus}{}
-\contentsline {section}{\numberline {3}Module Contraintes}{}
+\contentsline {subsection}{\numberline {2.5}Module Bus}{}
+\contentsline {subsection}{\numberline {2.6}Liens entre les modules}{}
+\contentsline {section}{\numberline {3}Mod\IeC {\'e}lisation des Contraintes}{}
 \contentsline {subsection}{\numberline {3.1}Contraintes dures}{}
 \contentsline {subsubsection}{\numberline {3.1.1}Entre deux cours}{}
 \contentsline {subsubsection}{\numberline {3.1.2}Entre un cours et un professeur}{}
@@ -25,12 +25,12 @@
 \contentsline {subsection}{\numberline {5.1}Flexibilit\IeC {\'e}}{}
 \contentsline {subsubsection}{\numberline {5.1.1}Calcul flexibilit\IeC {\'e} \IeC {\'e}tudiant}{}
 \contentsline {subsubsection}{\numberline {5.1.2}Calcul indice de flexibilit\IeC {\'e}}{}
-\contentsline {subsection}{\numberline {5.2}Verifications des contraintes}{}
-\contentsline {subsubsection}{\numberline {5.2.1}entre Professeur et Cours}{}
-\contentsline {subsubsection}{\numberline {5.2.2}entre Cours et Cours}{}
-\contentsline {subsubsection}{\numberline {5.2.3}entre Cours et Salle}{}
-\contentsline {subsubsection}{\numberline {5.2.4}Verification des contraintes faibles}{}
-\contentsline {subsection}{\numberline {5.3}Fonctions r\IeC {\'e}p\IeC {\'e}t\IeC {\'e}s \IeC {\`a} chaque it\IeC {\'e}ration de l'algorithme}{}
+\contentsline {subsection}{\numberline {5.2}V\IeC {\'e}rifications des contraintes}{}
+\contentsline {subsubsection}{\numberline {5.2.1}Entre Professeur et Cours}{}
+\contentsline {subsubsection}{\numberline {5.2.2}Entre Cours et Cours}{}
+\contentsline {subsubsection}{\numberline {5.2.3}Entre Cours et Salle}{}
+\contentsline {subsubsection}{\numberline {5.2.4}Verifications des contraintes faibles}{}
+\contentsline {subsection}{\numberline {5.3}Fonctions r\IeC {\'e}p\IeC {\'e}t\IeC {\'e}es \IeC {\`a} chaque it\IeC {\'e}ration de l'algorithme}{}
 \contentsline {subsubsection}{\numberline {5.3.1}Calcul congestion}{}
 \contentsline {subsubsection}{\numberline {5.3.2}Nouvelle planification}{}
 \contentsline {subsubsection}{\numberline {5.3.3}Nouveau bus}{}
