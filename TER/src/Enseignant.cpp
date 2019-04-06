@@ -33,11 +33,6 @@ double Enseignant::get_DispoEnd()
     return DispoEnd;
 }
 
-int Enseignant::get_id()
-{
-    return id;
-}
-
 void Enseignant::set_DispoStart(double p_DispoStart)
 {
     DispoStart = p_DispoStart;
