@@ -1,4 +1,4 @@
-\select@language {french}
+\babel@toc {french}{}
 \contentsline {section}{\numberline {1}Introduction}{}
 \contentsline {section}{\numberline {2}Mod\IeC {\'e}lisation des donn\IeC {\'e}es en entr\IeC {\'e}e}{}
 \contentsline {subsection}{\numberline {2.1}Module Cours}{}
