@@ -2,7 +2,7 @@
 #include "include/Cours.h"
 #include "include/Eleve.h"
 #include "include/Enseignant.h"
-#include "include/Contraintes.h"
+//#include "include/Contraintes.h"
 
 using namespace std;
 
@@ -50,7 +50,7 @@ int main()
 
     /****************************TEST CONTRAINTES************************************/
     
-    cout<<"contrainte_cours_salle : "<<contrainte_cours_salle(*test1, *test)<<endl;
+    //cout<<"contrainte_cours_salle : "<<contrainte_cours_salle(*test1, *test)<<endl;
 
     return 0;
 }

@@ -1,4 +1,6 @@
 #include "../include/Cours.h"
+#include "../include/Contraintes.h"
+
 
 Cours::Cours() : num_cours(0), duree(0), type_salle(),
                 num_salle(0), num_ens(0), debut(0){}
@@ -9,11 +11,10 @@ Cours::Cours(int p_num_cours, int p_duree, int p_type_salle,
                                                                 num_salle(p_num_salle), debut(p_debut),
                                                                 liste_etu(p_liste_etu), liste_ens(p_liste_ens)
 {
-    if(find(liste_ens.begin(), liste_ens.end(), p_num_ens) != liste_ens.end()) {
+    if (contrainte_professeur_cours(*this)) 
         this->num_ens = p_num_ens;
-    } else {
-        cout<<p_num_ens<<" n'est pas dans la liste d'enseignant pouvant enseigner ce cours"<<endl;
-    }
+    else 
+        cout<<"l'enseignant designé n'est pas dans la liste"<<endl;
 }
 
 Cours::~Cours()
@@ -30,11 +31,10 @@ void Cours::add_enseignants(int enseignant){
 }
 
 void Cours::set_num_ens(int p_num_ens){
-    if(find(liste_ens.begin(), liste_ens.end(), p_num_ens) != liste_ens.end()) {
+    if (contrainte_professeur_cours(*this)) 
         this->num_ens = p_num_ens;
-    } else {
-        cout<<p_num_ens<<" n'est pas dans la liste d'enseignant pouvant enseigner ce cours"<<endl;
-    }
+    else 
+        cout<<"l'enseignant designé n'est pas dans la liste"<<endl;
 }
 
 void Cours::description(){

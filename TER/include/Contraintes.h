@@ -16,6 +16,12 @@ bool contrainte_cours_salle(Salle &p_salle, Cours &p_cours){
     return true;
 }
 
+bool contrainte_professeur_cours(Cours &p_cours){
+    if(find(p_cours.get_liste_ens().begin(), p_cours.get_liste_ens().end(), p_cours.get_num_ens()) !=  p_cours.get_liste_ens().end())
+        return true;
+    return false;
+}
+
 /*typedef struct horaire{
 	int heure;
 	int minute;

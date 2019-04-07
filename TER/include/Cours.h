@@ -8,11 +8,6 @@
 #include "Enseignant.h"
 using namespace std;
 
-typedef struct horaire{
-	int heure;
-	int minute;
-}HORAIRE;
-
 class Cours
 {
     public:
@@ -46,9 +41,6 @@ class Cours
         void add_eleve(int eleve);
         void add_enseignants(int enseignant);
         void description();
-
-        
-
 
     protected:
 
