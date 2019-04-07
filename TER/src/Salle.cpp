@@ -5,23 +5,23 @@ int Salle::id_count = 0;
 /** @brief Constructeur de la salle
   * 
   */
-Salle::Salle() : type(0), capacity(0), location(0){
+Salle::Salle() : type_salle(0), capacite(0), localisation(0){
     id_count += 1;
-    id = id_count;
+    num_salle = id_count;
 }
 
 /** @brief Constructeur
   */
-Salle::Salle(int p_type, int p_capacity) : type(p_type), capacity(p_capacity), location(0){ //without location
+Salle::Salle(int p_type_salle, int p_capacite) : type_salle(p_type_salle), capacite(p_capacite), localisation(0){ //without location
     id_count += 1;
-    id = id_count;
+    num_salle = id_count;
 }
 
 /** @brief Constructeur
   */
-Salle::Salle(int p_type, int p_capacity, int p_location) : type(p_type), capacity(p_capacity), location(p_location){ //with location
+Salle::Salle(int p_type_salle, int p_capacite, int p_localisation) : type_salle(p_type_salle), capacite(p_capacite), localisation( p_localisation){ //without location
     id_count += 1;
-    id = id_count;
+    num_salle = id_count;
 }
 
 
@@ -36,8 +36,8 @@ Salle::~Salle(){
   * Prends en argument un nombre d'étudiant. Renvoie faut si le nombre d'étudiant est
   * supérieur à la capacité de la salle, vrai sinon.
   */
-bool Salle::test_capacity(int nb_etudiants){
-    if (nb_etudiants > capacity)
+bool Salle::test_capacite(int nb_etudiants){
+    if (nb_etudiants > capacite)
         return false;
     return true;
 }
@@ -46,8 +46,8 @@ bool Salle::test_capacity(int nb_etudiants){
   * Prend en argument une salle. Revoie vrai si les deux salles sont idéntiques,
   * faux sinon.
   */
-bool Salle::is_same_id(const Salle& p_Salle){
-    if(p_Salle.id == id)
+bool Salle::test_num_salle(const Salle& p_Salle){
+    if(p_Salle.num_salle == this->num_salle)
         return true;
     return false;
 }
@@ -55,10 +55,10 @@ bool Salle::is_same_id(const Salle& p_Salle){
 /** @brief Affiche dans le terminal les informations de la salle
   */
 void Salle::descritpion(){
-    cout<<"Salle "<<this->get_id()<<" : "<<endl;
-    cout<<"type : "<<this->get_type()<<endl;
-    cout<<"capacity : "<<this->get_capacity()<<endl;
-    cout<<"location : "<<this->get_location()<<endl;
+    cout<<"num_salle :  "<<this->get_num_salle()<<endl;
+    cout<<"type_salle : "<<this->get_type_salle()<<endl;
+    cout<<"capacite : "<<this->get_capacite()<<endl;
+    cout<<"localisation : "<<this->get_localisation()<<endl;
 }
 
 

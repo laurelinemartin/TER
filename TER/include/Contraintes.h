@@ -4,9 +4,19 @@
 #include <vector>
 #include <iostream>
 #include "Eleve.h"
+#include "Cours.h"
+#include "Salle.h"
 using namespace std;
 
-typedef struct horaire{
+bool contrainte_cours_salle(Salle &p_salle, Cours &p_cours){
+    if(p_cours.get_liste_etu().size() > p_salle.get_capacite())
+        return false;
+    if(p_salle.get_type_salle() != p_cours.get_type_salle())
+        return false;
+    return true;
+}
+
+/*typedef struct horaire{
 	int heure;
 	int minute;
 }HORAIRE;
@@ -28,6 +38,6 @@ class Contraintes
     private:
         int identifiant;
         vector<int> etu_contraintes(int nbetu);
-};
+};*/
 
 #endif // Contraintes_H
