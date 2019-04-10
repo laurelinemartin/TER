@@ -2,46 +2,32 @@
 
 int Enseignant::id_count = 0;
 
-Enseignant::Enseignant() : DispoStart(0), DispoEnd(0)
+Enseignant::Enseignant() : plage(0)
 {
     id_count += 1;
-    id = id_count;
+    num_ens = id_count;
 }
 
-Enseignant::~Enseignant()
-{
-    //dtor
-}
+Enseignant::~Enseignant(){}
 
 /** @brief (one liner)
   *
   * (documentation goes here)
   */
-Enseignant::Enseignant(double p_DispoStart, double p_DispoEnd) : DispoStart(p_DispoStart), DispoEnd (p_DispoEnd)
+Enseignant::Enseignant(vector<int> p_plage)
 {
     id_count += 1;
-    id = id_count;
+    num_ens = id_count;
+    plage = p_plage;
 }
 
-double Enseignant::get_DispoStart()
-{
-    return DispoStart;
+double Enseignant::get_plage(){
+  return plage; }
+double Enseignant::get_num_ens(){
+  return num_ens;
 }
-
-double Enseignant::get_DispoEnd()
-{
-    return DispoEnd;
-}
-
-void Enseignant::set_DispoStart(double p_DispoStart)
-{
-    DispoStart = p_DispoStart;
-}
-
-void Enseignant::set_DispoEnd(double p_DispoEnd)
-{
-    DispoEnd = p_DispoEnd;
-}
+void Enseignant::set_plage(double p_plage){
+  plage = p_plage;}
 
 /** @brief (one liner)
   *
@@ -49,7 +35,6 @@ void Enseignant::set_DispoEnd(double p_DispoEnd)
   */
 void Enseignant::description()
 {
-    cout<<"Enseignant "<<this->get_id()<<" : "<<endl;
-    cout<<"DispoStart : "<<this->get_DispoStart()<<endl;
-    cout<<"DispoEnd : "<<this->get_DispoEnd()<<endl;
+    cout<<"Enseignant "<<this->get_num_ens()<<" : "<<endl;
+    cout<<"Plage disponibilités : "<<this->get_plage()<<endl;
 }
