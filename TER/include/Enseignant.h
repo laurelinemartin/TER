@@ -11,7 +11,7 @@ class Enseignant
         virtual ~Enseignant();
         double get_DispoStart();
         double get_DispoEnd();
-        int get_id();
+        int get_id(){return id;}
         void set_DispoStart(double p_DispoStart);
         void set_DispoEnd(double p_DispoEnd);
         void description();
