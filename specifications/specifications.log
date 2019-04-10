@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.9.4)  1 APR 2019 17:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.9.4)  1 APR 2019 17:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -757,7 +757,7 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \c@LT@chunks=\count116
 \LT@p@ftn=\toks33
 )
-No file specifications.aux.
+(./specifications.aux)
 \openout1 = `specifications.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
@@ -774,12 +774,11 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
 LaTeX Font Info:    ... okay on input line 16.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 16.
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 16.
 LaTeX Font Info:    Try loading font information for T1+lmr on input line 16.
-
 (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -896,33 +895,33 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-No file specifications.toc.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./specifications.toc
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 4.
+ [2])
 \tf@toc=\write3
 \openout3 = `specifications.toc'.
 
-[2]
+ [3]
 Underfull \hbox (badness 10000) in paragraph at lines 42--44
 
  []
 
-[3]
+[4]
 Overfull \hbox (10.26204pt too wide) in paragraph at lines 51--52
 []\T1/lmr/m/n/10.95 num_ens : un en-tier dé-si-gnant le pro-fes-seur don-nant c
 e cours(identifiant
  []
 
-[4]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 83.
-<modelter.png, id=21, 1023.825pt x 521.95pt>
+[5]
+<modelter.png, id=24, 1023.825pt x 521.95pt>
 File: modelter.png Graphic file (type png)
 <use modelter.png>
 Package pdftex.def Info: modelter.png  used on input line 96. on input line 96.
 
 Package pdftex.def Info: Requested size: 511.91124pt x 260.97435pt on input lin
 e 96.
- [5]
+ [6]
 Underfull \hbox (badness 10000) in paragraph at lines 97--98
 
  []
@@ -932,11 +931,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 100--105
 
  []
 
-[6 <./modelter.png>]
+[7 <./modelter.png>]
 
 LaTeX Warning: Command \' invalid in math mode on input line 123.
 
-[7]
+[8]
 
 LaTeX Warning: Command \' invalid in math mode on input line 141.
 
@@ -959,28 +958,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 151--153
 
  []
 
-[8] [9] [10] (./specifications.aux) ) 
+[9] [10] [11] (./specifications.aux) ) 
 Here is how much of TeX's memory you used:
- 5455 strings out of 494829
- 74725 string characters out of 6178001
- 132861 words of memory out of 5000000
+ 5459 strings out of 494829
+ 74801 string characters out of 6178001
+ 134861 words of memory out of 5000000
  8644 multiletter control sequences out of 15000+600000
  50948 words of font info for 47 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  41i,6n,30p,540b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm
-.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts
-/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</us
-r/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/pu
-blic/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/sha
-re/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/l
-m/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf
-/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.p
-fb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb>
-Output written on specifications.pdf (10 pages, 204851 bytes).
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-r
+m.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/font
+s/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</u
+sr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/p
+ublic/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/sh
+are/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/
+lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texm
+f/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.
+pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb>
+Output written on specifications.pdf (11 pages, 208076 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
- 60 compressed objects within 1 object stream
+ 87 PDF objects out of 1000 (max. 8388607)
+ 62 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
