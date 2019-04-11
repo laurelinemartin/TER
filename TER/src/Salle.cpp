@@ -54,7 +54,7 @@ bool Salle::test_num_salle(const Salle& p_Salle){
 
 /** @brief Affiche dans le terminal les informations de la salle
   */
-void Salle::descritpion(){
+void Salle::description(){
     cout<<"num_salle :  "<<this->get_num_salle()<<endl;
     cout<<"type_salle : "<<this->get_type_salle()<<endl;
     cout<<"capacite : "<<this->get_capacite()<<endl;

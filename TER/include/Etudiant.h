@@ -8,35 +8,32 @@ class Etudiant
     public:
         //CTOR / DTOR
         Etudiant();//Default
-        Etudiant(int p_TransportTime, int p_Transport, int p_distance);
+        Etudiant(int p_distance, int p_heure_debut);
         virtual ~Etudiant();
 
         //GETTER
-        double get_transportTime(){ return TransportTime;}
-        int get_transport(){ return Transport;}
-        int get_distance(){ return distance;}
-        int get_flexibility(){ return flexibility;}
-        int get_id(){ return id;}
+        int get_num_etu(){return num_etu;}
+        int get_distance(){return distance;}
+        int get_contrainte(){return contrainte;}
+        int get_heure_debut(){return heure_debut;}
 
         //SETTER
-        void set_transportTime(double p_transportTime) { TransportTime = p_transportTime;}
-        void set_transport(int p_transport){ Transport = p_transport;}
         void set_distance(int p_distance){distance = p_distance;}
-        void set_flexibility(int p_flexibility){flexibility = p_flexibility;}
-
-        //TEST
-        void descritpion();
-        void flexibility_evaluation();
+        void set_contrainte(int p_contrainte){contrainte = p_contrainte;}
+        void set_heure_debut(int p_heure_debut){heure_debut = p_heure_debut;}
+        
+        //FONCTIONS DE BASE
+        void description();
 
     protected:
 
     private:
         static int id_count;
-        double TransportTime;
-        int Transport;
-        int distance;
-        int flexibility;
-        int id ;
+        int num_etu;
+        int distance; //0 = -15min | 1 = entre 15 et 45min | 2 = plus de 45min
+        int contrainte; //0 = aucune contrainte | 1 = contrainte travail | 2 = contrainte enfant | 3 = contraintes 1 et 2
+        int heure_debut; 
+        
 
 };
 

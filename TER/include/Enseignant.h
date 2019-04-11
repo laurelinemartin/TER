@@ -13,12 +13,15 @@ class Enseignant
         virtual ~Enseignant();
 
         // Getteurs
-        vector<int> get_plage();
-        int get_num_ens();
+        vector<int> get_plage(){return plage;}
+        int get_num_ens(){return num_ens;}
         
         // Setteurs
-        void set_plage(vector<int> p_plage);
+        void set_plage(vector<int> p_plage){plage = p_plage;}
+
+        //FONCTIONS DE BASE
         void description();
+        void add_dispo(int dispo);
 
     protected:
 

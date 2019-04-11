@@ -44,9 +44,30 @@ int main()
 
     //Constructeurs avec des données
     test1 = new Salle(0, 50);
-    test1->descritpion();
+    test1->description();
     test2 = new Salle(0, 45, 2);
-    test2->descritpion();
+    test2->description();
+
+    /****************************TEST ETUDIANTS************************************/
+    Etudiant *etu1, *etu2;
+    //Constructeur par defaut
+    etu1 = new Etudiant();
+    etu1->description();
+    //Constructeurs avec des données
+    etu2 = new Etudiant(1, 30);
+    etu2->description();
+
+    /****************************TEST ENSEIGNANT************************************/
+    Enseignant *ens1, *ens2;
+    //Constructeur par defaut
+    ens1 = new Enseignant();
+    ens1->description();
+    //Constructeurs avec des données
+    vector<int> p_plage;
+    p_plage.push_back(3);
+    ens2 = new Enseignant(p_plage);
+    ens2->add_dispo(17);
+    ens2->description();
 
     /****************************TEST CONTRAINTES************************************/
     

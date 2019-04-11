@@ -27,7 +27,7 @@ class Salle
         //FONCTIONS DE BASE
         bool test_capacite(int nb_etudiants); //test si la capacité est dépassée
         bool test_num_salle(const Salle& p_Salle);//verifie que 2 id de salle soit differents
-        void descritpion();
+        void description();
 
     protected:
 

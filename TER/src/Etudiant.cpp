@@ -1,16 +1,16 @@
 #include "../include/Etudiant.h"
 int Etudiant::id_count = 0;
 
-Etudiant::Etudiant() : TransportTime(0), Transport(0), distance(0), flexibility(0)
+Etudiant::Etudiant() : distance(0), contrainte(0), heure_debut(0)
 {
     id_count+= 1;
-    id = id_count;
+    num_etu = id_count;
 }
 
-Etudiant::Etudiant(int p_TransportTime, int p_Transport, int p_distance) : TransportTime(p_TransportTime), Transport(p_Transport), distance(p_distance), flexibility(0)
+Etudiant::Etudiant(int p_distance, int p_heure_debut) : distance(p_distance), heure_debut(p_heure_debut), contrainte(0)
 {
     id_count += 1;
-    id = id_count;
+    num_etu = id_count;
 }
 
 Etudiant::~Etudiant()
@@ -22,10 +22,9 @@ Etudiant::~Etudiant()
   *
   * (documentation goes here)
   */
-void Etudiant::descritpion(){
-    cout<<"STUDENT "<<this->get_id()<<" : "<<endl;
-    cout<<"Transport Time : "<<this->get_transportTime()<<endl;
-    cout<<"transport : "<<this->get_transport()<<endl;
+void Etudiant::description(){
+    cout<<"Etudiant : "<<this->get_num_etu()<<endl;
     cout<<"distance : "<<this->get_distance()<<endl;
-    cout<<"flexibility : "<<this->get_flexibility()<<endl;
+    cout<<"contrainte : "<<this->get_contrainte()<<endl;
+    cout<<"heure_debut : "<<this->get_heure_debut()<<endl;
 }
