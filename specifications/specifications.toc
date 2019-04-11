@@ -9,8 +9,8 @@
 \contentsline {subsubsection}{\numberline {2.2.3}Matrice d'adjacence entre salles et arr\IeC {\^e}t de bus}{}
 \contentsline {subsection}{\numberline {2.3}Module Etudiant}{}
 \contentsline {subsubsection}{\numberline {2.3.1}Classe \IeC {\'E}tudiants}{}
-\contentsline {subsection}{\numberline {2.4}Module Professeur}{}
-\contentsline {subsubsection}{\numberline {2.4.1}Classe Professeur}{}
+\contentsline {subsection}{\numberline {2.4}Module Enseignant}{}
+\contentsline {subsubsection}{\numberline {2.4.1}Classe Enseignant}{}
 \contentsline {subsection}{\numberline {2.5}Module Bus}{}
 \contentsline {subsection}{\numberline {2.6}Liens entre les modules}{}
 \contentsline {section}{\numberline {3}Mod\IeC {\'e}lisation des Contraintes}{}

@@ -75,12 +75,12 @@ A la fin du projet, le but est de fournir une planification de l'emploi du temps
 			\item contrainte : un entier, représente la contrainte faible à laquelle un étudiant peut être associé. 0 s'il n'est associé à aucune contrainte, 1 s'il associé à la contrainte travail, 2 s'il est associé à la contrainte enfant, 3 s'il est associé aux deux contraintes précédentes. 
 			\item heure\_debut : un entier, représente l'heure du premier cours de la journée de l'étudiant.
 			\end{enumerate}
-	\subsection{Module Professeur}
-		Le module professeur représente un professeur.
-		\subsubsection{Classe Professeur}
+	\subsection{Module Enseignant}
+		Le module Enseignant représente un enseignant.
+		\subsubsection{Classe Enseignant}
 		\begin{enumerate}
 			\item num\_ens : un entier (identifiant unique)
-			\item plage : un tableau dont chaque case représente un bloc horaire (15 min par exemple). Si $x_i$ vaut 0 alors c'est l'horaire du début de la disponibilité, si $x_i$ vaut 1 c'est la fin de la disponibilité du professeur.
+			\item plage : un tableau dont chaque case représente un bloc horaire (15 min par exemple). Si $x_i$ vaut 0 alors c'est l'horaire du début de la disponibilité, si $x_i$ vaut 1 c'est la fin de la disponibilité de l'enseignant.
 			\end{enumerate}
 
 	\subsection{Module Bus}
