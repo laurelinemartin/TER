@@ -3,7 +3,7 @@
 
 #include <vector>
 #include <iostream>
-#include "Eleve.h"
+#include "Etudiant.h"
 #include "Cours.h"
 #include "Salle.h"
 using namespace std;

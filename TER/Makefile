@@ -8,7 +8,7 @@ SUPPR = @rm -f
 EXEC = TER
 FSRC = src/
 FINC = include/
-SRC = main.cpp src/Cours.cpp src/Salle.cpp src/Eleve.cpp src/Enseignant.cpp
+SRC = main.cpp src/Cours.cpp src/Salle.cpp src/Etudiant.cpp src/Enseignant.cpp
 OBJ = $(SRC: .cpp=.o)
 
 all: $(EXEC)
@@ -25,13 +25,13 @@ Cours.o: $(FSRC)Cours.cpp $(FINC)Cours.h
 Salle.o: $(FSRC)Salle.cpp $(FINC)Salle.h
 	$(CXX) -o $@ -c $< $(CFLAGS)
 
-Eleve.o: $(FSRC)Eleve.cpp $(FINC)Eleve.h
+Etudiant.o: $(FSRC)Etudiant.cpp $(FINC)Etudiant.h
 	$(CXX) -o $@ -c $< $(CFLAGS)
 
 Enseignant.o: $(FSRC)Enseignant.cpp $(FINC)Enseignant.h
 	$(CXX) -o $@ -c $< $(CFLAGS)
 
-main.o: main.cpp $(FINC)Salle.h $(FINC)Eleve.h $(FINC)Enseignant.h
+main.o: main.cpp $(FINC)Salle.h $(FINC)Etudiant.h $(FINC)Enseignant.h
 	$(CXX) -o $@ -c $< $(CFLAGS)
 
 clean: 

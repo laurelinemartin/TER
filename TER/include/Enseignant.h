@@ -2,13 +2,14 @@
 #define Enseignant_H
 
 #include <iostream>
+#include <vector>
 using namespace std;
 class Enseignant
 {
     public:
         // Constructeurs / Destructeur
         Enseignant();
-        Enseignant (vector<int> p_plage);
+        Enseignant(vector<int> p_plage);
         virtual ~Enseignant();
 
         // Getteurs

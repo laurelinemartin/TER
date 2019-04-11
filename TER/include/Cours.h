@@ -4,7 +4,7 @@
 #include <vector>
 #include <iostream>
 #include <algorithm>
-#include "Eleve.h"
+#include "Etudiant.h"
 #include "Enseignant.h"
 using namespace std;
 
@@ -38,7 +38,7 @@ class Cours
         void set_debut(int p_debut){debut = p_debut;}
 
         //FONCTIONS DE BASE 
-        void add_eleve(int eleve);
+        void add_etu(int eleve);
         void add_enseignants(int enseignant);
         void description();
 

@@ -22,8 +22,8 @@ Cours::~Cours()
     //dtor
 }
 
-void Cours::add_eleve(int eleve){
-    liste_etu.push_back(eleve);
+void Cours::add_etu(int etu){
+    liste_etu.push_back(etu);
 }
 
 void Cours::add_enseignants(int enseignant){

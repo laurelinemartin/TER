@@ -1,6 +1,6 @@
 #include "include/Salle.h"
 #include "include/Cours.h"
-#include "include/Eleve.h"
+#include "include/Etudiant.h"
 #include "include/Enseignant.h"
 //#include "include/Contraintes.h"
 
@@ -14,8 +14,8 @@ int main()
     //Constructeur par defaut
     test = new Cours();
 
-    test->add_eleve(1);
-    test->add_eleve(2);
+    test->add_etu(1);
+    test->add_etu(2);
     test->add_enseignants(5);
     test->add_enseignants(6);
 

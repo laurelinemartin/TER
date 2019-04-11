@@ -21,12 +21,12 @@ Enseignant::Enseignant(vector<int> p_plage)
     plage = p_plage;
 }
 
-double Enseignant::get_plage(){
+vector<int> Enseignant::get_plage(){
   return plage; }
-double Enseignant::get_num_ens(){
+int Enseignant::get_num_ens(){
   return num_ens;
 }
-void Enseignant::set_plage(double p_plage){
+void Enseignant::set_plage(vector<int> p_plage){
   plage = p_plage;}
 
 /** @brief (one liner)
