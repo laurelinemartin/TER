@@ -15,6 +15,7 @@ Cours::Cours(int p_num_cours, int p_duree, int p_type_salle,
         this->num_ens = p_num_ens;
     else 
         cout<<"l'enseignant designé n'est pas dans la liste"<<endl;
+    
 }
 
 Cours::~Cours()

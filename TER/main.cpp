@@ -2,7 +2,7 @@
 #include "include/Cours.h"
 #include "include/Etudiant.h"
 #include "include/Enseignant.h"
-//#include "include/Contraintes.h"
+#include "include/Contraintes.h"
 
 using namespace std;
 
@@ -72,6 +72,36 @@ int main()
     /****************************TEST CONTRAINTES************************************/
     
     //cout<<"contrainte_cours_salle : "<<contrainte_cours_salle(*test1, *test)<<endl;
+    Cours* cours1;
+    Cours* cours2;
+    
+    
+     vector<int> p_liste_etu, p_liste_ens;
+
+    p_liste_etu.push_back(1); p_liste_etu.push_back(2);
+    p_liste_ens.push_back(5), p_liste_ens.push_back(6);
+
+    cours1 = new Cours(1, 2, 3, 4, 9, 6, p_liste_etu, p_liste_ens);
+
+    cours1->add_etu(3);
+    cours1->add_enseignants(7);
+    cours1->set_num_ens(10);
+    cours1->set_num_ens(5);
+
+    cours1->description();
+    
+    cours2 = new Cours(1, 2, 3, 4, 9, 12, p_liste_etu, p_liste_ens);
+
+    cours2->add_etu(3);
+    cours2->add_enseignants(7);
+    cours2->set_num_ens(10);
+    cours2->set_num_ens(5);
+
+    cours2->description();
+
+	//~ bool a = test_contraintes(*cours1,*cours2);
+	bool a = contrainte_cours_cours(*cours1,*cours2);
+	printf(a ? "true" : "false");
 
     return 0;
 }
