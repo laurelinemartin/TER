@@ -22,7 +22,7 @@ int main()
     c1->description();
     c2 = new Cours(2, 2, 1, 2, 2, 2, p_liste_etu, p_liste_ens);
     c2->description();
-    vector<*Cours> liste_cours;
+    vector<Cours *> liste_cours;
     liste_cours.push_back(c1);
     liste_cours.push_back(c2);
     for(int i = 0; i < liste_cours.size(); i ++){
