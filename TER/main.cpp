@@ -8,18 +8,38 @@ using namespace std;
 
 int main()
 {
+    Cours *c1;
+    Cours *c2;
+    Cours *c3;
+    Cours *c4;
+    vector<int> p_liste_etu, p_liste_ens;
+    p_liste_etu.push_back(1); p_liste_etu.push_back(2);
+    p_liste_ens.push_back(1), p_liste_ens.push_back(2);
+    /*Cours(int p_num_cours, int p_duree, int p_type_salle,
+              int p_num_salle, int p_num_ens, int p_debut,
+              vector<int> p_liste_etu, vector<int> p_liste_ens)*/
+    c1 = new Cours(1, 2, 1, 1, 1, 1, p_liste_etu, p_liste_ens);
+    c1->description();
+    c2 = new Cours(2, 2, 1, 2, 2, 2, p_liste_etu, p_liste_ens);
+    c2->description();
+    vector<*Cours> liste_cours;
+    liste_cours.push_back(c1);
+    liste_cours.push_back(c2);
+    for(int i = 0; i < liste_cours.size(); i ++){
+        cout<<liste_cours[i]<<endl;
+    }
     /****************************TEST COURS************************************/
     //remplacer Eleve et Enseignant par int dans le .h pour ces tests
-    Cours *test;
+    //Cours *c1;
     //Constructeur par defaut
-    test = new Cours();
+    /*c1 = new Cours();
 
-    test->add_etu(1);
-    test->add_etu(2);
-    test->add_enseignants(5);
-    test->add_enseignants(6);
+    c1->add_etu(1);
+    c1->add_etu(2);
+    c1->add_enseignants(5);
+    c1->add_enseignants(6);
 
-    test->description();
+    c1->description(); */
 
     //Constructeur avec des données 
     /*vector<int> p_liste_etu, p_liste_ens;
@@ -37,19 +57,19 @@ int main()
     test->description();*/
     
     /****************************TEST SALLE************************************/
-    Salle *test1, *test2;
+    //Salle *test1, *test2;
     //Constructeur par defaut
     /*test1 = new Salle();
     test1->descritpion();*/
 
     //Constructeurs avec des données
-    test1 = new Salle(0, 50);
+   /* test1 = new Salle(0, 50);
     test1->description();
     test2 = new Salle(0, 45, 2);
     test2->description();
 
     /****************************TEST ETUDIANTS************************************/
-    Etudiant *etu1, *etu2;
+    /* Etudiant *etu1, *etu2;
     //Constructeur par defaut
     etu1 = new Etudiant();
     etu1->description();
@@ -58,7 +78,7 @@ int main()
     etu2->description();
 
     /****************************TEST ENSEIGNANT************************************/
-    Enseignant *ens1, *ens2;
+    /*Enseignant *ens1, *ens2;
     //Constructeur par defaut
     ens1 = new Enseignant();
     ens1->description();
@@ -72,7 +92,7 @@ int main()
     /****************************TEST CONTRAINTES************************************/
     
     //cout<<"contrainte_cours_salle : "<<contrainte_cours_salle(*test1, *test)<<endl;
-    Cours* cours1;
+    /*Cours* cours1;
     Cours* cours2;
     
     
@@ -103,5 +123,5 @@ int main()
 	bool a = contrainte_cours_cours(*cours1,*cours2);
 	printf(a ? "true" : "false");
 
-    return 0;
+    return 0; */
 }
