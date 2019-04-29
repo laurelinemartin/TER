@@ -6,22 +6,71 @@
 #include "include/Planification.h"
 
 using namespace std;
+int TAILLE = 10;
 
 int main()
 {
-    int **T = matrice_adjacence(10,0.2);
-    for (int j = 0; j < 10; j++)
+    int **T = matrice_adjacence_GNO(TAILLE,0.5);
+    printf("\n MATRICE DU GNO \n");
+    printf("\n 0  1  2  3  4  5  6  7  8  9  INDICES\n");
+    printf("----------------------------------------\n");
+    for (int j = 0; j < TAILLE; j++)
     {
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < TAILLE; i++)
         {
             printf(" %d ",T[i][j]);
         }
         printf("\n");
     }
-    coloration (10, 2);
-    int i = trouver_degre_entrant_nul(T,10);
-    printf("degré entrant nul : %d\n",i);
+    printf("\n");
 
+    int *couleur = coloration (TAILLE, 5);
+    printf("COLORATION\n");
+    printf("\n 0  1  2  3  4  5  6  7  8  9  INDICES\n");
+    printf("----------------------------------------\n");
+    for (int j = 0; j < TAILLE; j++)
+    {
+        printf(" %d ",couleur[j]);
+    }
+    printf("\n");
+    printf("\n");
+
+    
+
+    int **TO = matrice_graphe_oriente(T,TAILLE);
+    printf("\n MATRICE DU GO \n");
+    printf("\n 0  1  2  3  4  5  6  7  8  9  INDICES\n");
+    printf("----------------------------------------\n");
+    for (int j = 0; j < TAILLE; j++)
+    {
+        for (int i = 0; i < TAILLE; i++)
+        {
+            printf(" %d ",TO[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf("\n");
+    printf("PREMIER SOMMET DE DEGRE ENTRANT NUL\n");
+    int i = trouver_degre_entrant_nul(TO,TAILLE);
+    printf("degré entrant nul : %d\n",i);
+    printf("\n");
+
+    int *TYPE = type_cours(TAILLE);
+    int *NBELEVES = nb_eleves(TYPE,TAILLE);
+    printf("\n TYPE DE COURS ET NOMBRES D'ELEVES ASSOCIES\n");
+    printf("\n 0  1  2  3  4  5  6  7  8  9  INDICES\n");
+    printf("----------------------------------------\n");
+    for (int i = 0; i < TAILLE; i++)
+    {
+        printf(" %d ",TYPE[i]);
+    }
+    printf("\n");
+    for (int i = 0; i < TAILLE; i++)
+    {
+        printf(" %d ",NBELEVES[i]);
+    }
+    printf("\n");
 
    /* Cours *c1;
     Cours *c2;

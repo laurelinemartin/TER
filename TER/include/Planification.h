@@ -12,9 +12,12 @@
 
 using namespace std;
 
-int **matrice_adjacence (int N, float K);
+int **matrice_adjacence_GNO (int N, float K);
 int *coloration (int N, int Nb);
 int trouver_degre_entrant_nul (int **T, int N);
+int **matrice_graphe_oriente (int **T, int N);
+int *nb_eleves (int *TYPE, int N);
+int *type_cours (int N);
 
 
 #endif // Planification_H
