@@ -3,31 +3,44 @@
 #include "include/Etudiant.h"
 #include "include/Enseignant.h"
 #include "include/Contraintes.h"
+#include "include/Planification.h"
 
 using namespace std;
 
 int main()
 {
-    Cours *c1;
+    int **T = matrice_adjacence(10,0.2);
+    for (int j = 0; j < 10; j++)
+    {
+        for (int i = 0; i < 10; i++)
+        {
+            printf(" %d ",T[i][j]);
+        }
+        printf("\n");
+    }
+    coloration (10, 2);
+    int i = trouver_degre_entrant_nul(T,10);
+    printf("degré entrant nul : %d\n",i);
+
+
+   /* Cours *c1;
     Cours *c2;
     Cours *c3;
     Cours *c4;
     vector<int> p_liste_etu, p_liste_ens;
     p_liste_etu.push_back(1); p_liste_etu.push_back(2);
     p_liste_ens.push_back(1), p_liste_ens.push_back(2);
-    /*Cours(int p_num_cours, int p_duree, int p_type_salle,
-              int p_num_salle, int p_num_ens, int p_debut,
-              vector<int> p_liste_etu, vector<int> p_liste_ens)*/
+    
     c1 = new Cours(1, 2, 1, 1, 1, 1, p_liste_etu, p_liste_ens);
     c1->description();
     c2 = new Cours(2, 2, 1, 2, 2, 2, p_liste_etu, p_liste_ens);
     c2->description();
     vector<*Cours> liste_cours;
-    liste_cours.push_back(c1);
+   liste_cours.push_back(c1);
     liste_cours.push_back(c2);
     for(int i = 0; i < liste_cours.size(); i ++){
         cout<<liste_cours[i]<<endl;
-    }
+    } */
     /****************************TEST COURS************************************/
     //remplacer Eleve et Enseignant par int dans le .h pour ces tests
     //Cours *c1;
