@@ -18,6 +18,8 @@ int trouver_degre_entrant_nul (int **T, int N);
 int **matrice_graphe_oriente (int **T, int N);
 int *nb_eleves (int *TYPE, int N);
 int *type_cours (int N);
+bool test_coloration(int *Horaires, int *couleur, int N, int *TYPE, int heure_a_teste, int sommet_a_teste);
+int *planification(int **T, int sommet_depart, int *couleur, int N, int *TYPE);
 
 
 #endif // Planification_H

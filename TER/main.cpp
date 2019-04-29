@@ -52,8 +52,8 @@ int main()
 
     printf("\n");
     printf("PREMIER SOMMET DE DEGRE ENTRANT NUL\n");
-    int i = trouver_degre_entrant_nul(TO,TAILLE);
-    printf("degré entrant nul : %d\n",i);
+    int premier_sommet = trouver_degre_entrant_nul(TO,TAILLE);
+    printf("degré entrant nul : %d\n",premier_sommet);
     printf("\n");
 
     int *TYPE = type_cours(TAILLE);
@@ -69,6 +69,16 @@ int main()
     for (int i = 0; i < TAILLE; i++)
     {
         printf(" %d ",NBELEVES[i]);
+    }
+    printf("\n");
+
+    int *PLANIFICATION = planification(TO,premier_sommet,couleur,TAILLE,TYPE);
+    printf("\n PLANIFICATION \n");
+    printf("\n 0  1  2  3  4  5  6  7  8  9  INDICES\n");
+    printf("----------------------------------------\n");
+    for (int i = 0; i < TAILLE; i++)
+    {
+        printf(" %d ",PLANIFICATION[i]);
     }
     printf("\n");
 

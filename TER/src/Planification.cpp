@@ -133,10 +133,42 @@ int *nb_eleves (int *TYPE, int N)
 	return T;
 }
 
+bool test_coloration(int *Horaires, int *couleur, int N, int *TYPE, int heure_a_teste, int sommet_a_teste)
+{
+	int duree = 0;
+	int Test[N];
+	for(int i = 0; i < N; i++)
+	{
+		if(TYPE[i] == 0){duree = 12;}else{duree = 6;}
+		if((heure_a_teste >= Horaires[i]) && (heure_a_teste <= Horaires[i] + duree))
+		{
+			Test[i] = couleur[i];
+		}
+		else
+		{
+			Test[i] = 100;
+		}
+	}
+
+	for(int i = 0; i < N; i++)
+	{
+		if((Test[i] == couleur[sommet_a_teste]) && (i!=sommet_a_teste) && (Test[i] != 100))
+		{
+			{
+				return false;
+			}
+		}
+	}
+	return true;
+}
+
+
+//Pour le moment TD c'est 3h et CM 1h30, a changer ptet je sais pas 
+//fin c'est fixe, y a pas de 4h 2h etc...
 //Pour représenter les heures par créneau de 15 min :
 //0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 : indices
 //8       9       10        11          12          14 : heure
-int *planification(int **T, int sommet_depart, int *couleur, int N)
+int *planification(int **T, int sommet_depart, int *couleur, int N, int *TYPE)
 {
 	int *Horaires = (int*)malloc(N*sizeof(int*));
 	Horaires[sommet_depart] = 0;
@@ -145,7 +177,30 @@ int *planification(int **T, int sommet_depart, int *couleur, int N)
 	{
 		if(T[i][sommet_depart] == 1)
 		{
-			//H[i] = 
+			if(TYPE[sommet_depart] == 0)
+			{
+				for(int j = 0; j < 20; j++)
+				{
+					if(test_coloration(Horaires, couleur, N, TYPE, Horaires[sommet_depart] + 13 + j, i) == true)
+					{
+						Horaires[i] = Horaires[sommet_depart] + 13 + j;
+						j = 30;
+					}
+				}
+
+			}
+			else
+			{
+				for(int j = 0; j < 20; j++)
+				{
+					if(test_coloration(Horaires, couleur, N, TYPE, Horaires[sommet_depart] + 7 + j,i) == true)
+					{
+						Horaires[i] = Horaires[sommet_depart] + 7 + j;
+						j = 30;
+					}
+				}
+			}
 		}
 	}
+	return Horaires;
 }
