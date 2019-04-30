@@ -160,6 +160,7 @@ bool test_coloration(int *Horaires, int *couleur, int N, int *TYPE, int heure_a_
 	return true;
 }
 
+
 bool testConnnexe(int **T, int N, int sommet){
 	int degre = 0;
 	for(int i = 0; i < N; i ++){
@@ -169,8 +170,10 @@ bool testConnnexe(int **T, int N, int sommet){
 		degre += T [i][sommet];
 	}
 	if (degre != 0){
+		//printf("sommet %d connexe\n", sommet);
 		return true;
 	}
+	//printf("sommet %d non connexe\n", sommet);
 	return false;
 
 }
@@ -179,26 +182,26 @@ bool testConnnexe(int **T, int N, int sommet){
 //Pour le moment TD c'est 3h et CM 1h30, a changer ptet je sais pas 
 //fin c'est fixe, y a pas de 4h 2h etc...
 //Pour représenter les heures par créneau de 15 min :
-//0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 : indices
-//8       9       10        11          12          14 : heure
+//0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34: indices
+//    8       9       10          11          12          13          14          15          16: heure
 int *planification(int **T, int sommet_depart, int *couleur, int N, int *TYPE)
 {
 	int *Horaires = (int*)malloc(N*sizeof(int*));
 	Horaires[sommet_depart] = 0;
 
-	for(int i = 0; i < N; i++)
+	for(int i = 1; i < N; i++)
 	{
 		for(int k = 0; k < N; k++)
 		{
 			if(T[i][k] == 1)
 			{
-				if(TYPE[k] == 0)//si le cours est un td
+				if(TYPE[i] == 0)//si le cours est un td
 				{
 					for(int j = 0; j < 20; j++)
 					{
-						if(test_coloration(Horaires, couleur, N, TYPE, Horaires[k] + 13 + j, i) == true)
+						if(test_coloration(Horaires, couleur, N, TYPE, Horaires[i] + 13 + j, i) == true)
 						{
-							Horaires[i] = Horaires[k] + 13 + j;
+							Horaires[k] = Horaires[i] + 13 + j;
 							break;
 						}
 					}
@@ -208,9 +211,9 @@ int *planification(int **T, int sommet_depart, int *couleur, int N, int *TYPE)
 				{
 					for(int j = 0; j < 20; j++)
 					{
-						if(test_coloration(Horaires, couleur, N, TYPE, Horaires[k] + 7 + j,i) == true)
+						if(test_coloration(Horaires, couleur, N, TYPE, Horaires[i] + 7 + j,i) == true)
 						{
-							Horaires[i] = Horaires[k] + 7 + j;
+							Horaires[k] = Horaires[i] + 7 + j;
 							break;
 						}
 					}
@@ -222,9 +225,9 @@ int *planification(int **T, int sommet_depart, int *couleur, int N, int *TYPE)
 					{
 						for(int j = 0; j < 20; j++)
 						{
-							if(test_coloration(Horaires, couleur, N, TYPE, Horaires[k] + 13 + j, i) == true)
+							if(test_coloration(Horaires, couleur, N, TYPE, Horaires[i] + 13 + j, i) == true)
 							{
-								Horaires[i] = Horaires[k] + 13 + j;
+								Horaires[k] = Horaires[i] + 13 + j;
 								break;
 							}
 						}
@@ -233,9 +236,9 @@ int *planification(int **T, int sommet_depart, int *couleur, int N, int *TYPE)
 					{
 						for(int j = 0; j < 20; j++)
 						{
-							if(test_coloration(Horaires, couleur, N, TYPE, Horaires[k] + 7 + j,i) == true)
+							if(test_coloration(Horaires, couleur, N, TYPE, Horaires[i] + 7 + j,i) == true)
 							{
-								Horaires[i] = Horaires[k] + 7 + j;
+								Horaires[k] = Horaires[i] + 7 + j;
 								break;
 							}
 						}

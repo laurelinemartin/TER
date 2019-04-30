@@ -4,13 +4,14 @@
 #include "include/Enseignant.h"
 #include "include/Contraintes.h"
 #include "include/Planification.h"
+#include "include/Bus.h"
 
 using namespace std;
 int TAILLE = 10;
 
 int main()
 {
-    int **T = matrice_adjacence_GNO(TAILLE,0.1);
+    int **T = matrice_adjacence_GNO(TAILLE,0.4);
     printf("\n MATRICE DU GNO \n");
     printf("\n 0  1  2  3  4  5  6  7  8  9  INDICES\n");
     printf("----------------------------------------\n");
@@ -72,40 +73,23 @@ int main()
     }
     printf("\n");
 
-    int *PLANIFICATION = planification(TO,premier_sommet,couleur,TAILLE,TYPE);
+    int *Horaires = planification(TO,premier_sommet,couleur,TAILLE,TYPE);
     printf("\n PLANIFICATION \n");
     printf("\n 0  1  2  3  4  5  6  7  8  9  INDICES\n");
     printf("----------------------------------------\n");
     for (int i = 0; i < TAILLE; i++)
     {
-        printf(" %d ",PLANIFICATION[i]);
+        printf(" %d ",Horaires[i]);
     }
     printf("\n");
 
-   /* Cours *c1;
-    Cours *c2;
-    Cours *c3;
-    Cours *c4;
-    vector<int> p_liste_etu, p_liste_ens;
-    p_liste_etu.push_back(1); p_liste_etu.push_back(2);
-    p_liste_ens.push_back(1), p_liste_ens.push_back(2);
-    
-    c1 = new Cours(1, 2, 1, 1, 1, 1, p_liste_etu, p_liste_ens);
-    c1->description();
-    c2 = new Cours(2, 2, 1, 2, 2, 2, p_liste_etu, p_liste_ens);
-    c2->description();
+    int congestion_totale = calcul_congestion_totale(Horaires,NBELEVES,34,TAILLE);
+    printf("\n Calcul congestion \n");
+    printf("----------------------------------------\n");
+    printf("%d\n",congestion_totale);
+    printf("\n");
 
-    vector<*Cours> liste_cours;
-   liste_cours.push_back(c1);
-
-    vector<Cours *> liste_cours;
-    liste_cours.push_back(c1);
-
-    liste_cours.push_back(c2);
-    for(int i = 0; i < liste_cours.size()-1; i ++){
-        cout<<liste_cours[i]<<endl;
-    } */
-
+  
 
 
 
