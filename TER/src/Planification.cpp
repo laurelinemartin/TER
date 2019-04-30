@@ -251,3 +251,24 @@ int *planification(int **T, int sommet_depart, int *couleur, int N, int *TYPE)
 	return Horaires;
 }
 
+bool test_solution_valide(int *Horaires, int N, int *couleur, int *TYPE, int **T)
+{
+	for(int i = 0; i < N; i++)
+	{
+		if(test_coloration(Horaires, couleur, N, TYPE, Horaires[i],i) == false) 
+		{
+			return false;
+		}
+		if(test_lien(Horaires, N, T, i) == false)
+		{
+			return false;
+		}
+	}
+	return true;
+}
+
+bool test_lien(int *Horaires, int N, int **T)
+{
+	if(
+	return true;
+}
