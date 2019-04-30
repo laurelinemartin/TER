@@ -11,7 +11,7 @@
 \usepackage{array}
 \usepackage{longtable}
 
-\title{TER 2019 - Spécifications}
+\title{TER 2019 - Rapport}
 \author{Maxime Gonthier - Benjamin Guillot - Laureline Martin}
 \begin{document}
 \pagenumbering{gobble}\clearpage
@@ -22,20 +22,20 @@
 
 \newpage
 \section{Introduction}
-	Ce rapport a pour objectif de décrire dans un premier temps les données que nous allons utiliser dans notre projet et nous détaillerons les étapes à suivre pour exploiter ces données. Dans un second temps nous expliquerons le calcul de la congestion. Enfin nous expliquerons la stratégie d'optimisations que nous utiliserons. Tous cela sera expliciter sous la forme d'un exemple simple.
+	Ce rapport a pour objectif de décrire dans un premier temps les données que nous allons utiliser dans notre projet, nous détaillerons les étapes à suivre pour exploiter ces données. Dans un second temps nous expliquerons le calcul de la congestion. Enfin nous expliquerons la stratégie d'optimisations que nous utiliserons. Tous cela sera expliciter sous la forme d'un exemple simple.
 
 \section{Les données initiales}
-	\subsection{La courbe de traffic}
-		La courbe de traffic est le nombre de personnes qui montent et descendent du bus à chaque arrêt. Dans notre cas d'étude, c'est à dire l'université, nous considérons que tous les étudiants montent au premier arrêt (une gare) et descendent au terminus (l'université). La courbe de traffic ajoute des montées et des descentes à chaque arrêt, ce sont des non-étudiants. \\
+	\subsection{La courbe de trafic}
+		La courbe de trafic représente le nombre de personnes qui montent et descendent du bus à chaque arrêt. Dans notre cas d'étude, nous considérons que tous les étudiants montent au premier arrêt (gare des chantiers) et descendent au terminus (l'université). La courbe de trafic est aussi composée des montées et des descentes à chaque arrêt de personnes non-étudiants. \\
 		Dans notre exemple nous avons : \\
 		\begin{tabular}{ | c | c | c | c | c | c |}
  			\hline			
-   			Numéro de l'arrêt & 1 & 2 & 3 & 4 & 5\\
-   			Montées & 50 & 15 & 10 & 2 & 0 \\
-   			Descentes & 0 & 5 & 10 & 8 & 54\\
+   			Numéro de l'arrêt	& 1 	& 2 	& 3 	& 4 	& 5\\
+   			montées				& 50 	& 15 	& 10 	& 2 	& 0\\
+   			Descentes			& 0 	& 5 	& 10 	& 8 	& 54\\
  			\hline  
  		\end{tabular}\\
- 		La valeur de montée du premier arrêt est choisis arbitrairement et la valeur de descente du terminus considère que tous le monde descend à cet arrêt, pour plus de simplicité. 
+ 		La valeur de montée des non-étudiants au premier arrêt est composée .
  		Pour obtenir les données des arrêts intermédiaires nous choisirons une valeur aléatoire, choisis dans un intervalle différent en fonction de l'heure, l'objectif est de représenter la congestion forte des heures de pointes de manière un peu plus précise : \\
  		\begin{tabular}{ | c | c | c | c | c | c | c | c | c | c |}
  			\hline			
