@@ -10,7 +10,7 @@ int TAILLE = 10;
 
 int main()
 {
-    int **T = matrice_adjacence_GNO(TAILLE,0.5);
+    int **T = matrice_adjacence_GNO(TAILLE,0.1);
     printf("\n MATRICE DU GNO \n");
     printf("\n 0  1  2  3  4  5  6  7  8  9  INDICES\n");
     printf("----------------------------------------\n");

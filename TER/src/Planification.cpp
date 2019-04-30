@@ -154,12 +154,25 @@ bool test_coloration(int *Horaires, int *couleur, int N, int *TYPE, int heure_a_
 	{
 		if((Test[i] == couleur[sommet_a_teste]) && (i!=sommet_a_teste) && (Test[i] != 100))
 		{
-			{
-				return false;
-			}
+			return false;
 		}
 	}
 	return true;
+}
+
+bool testConnnexe(int **T, int N, int sommet){
+	int degre = 0;
+	for(int i = 0; i < N; i ++){
+		degre += T[sommet][i];
+	}
+	for(int i = 0; i < N; i++){
+		degre += T [i][sommet];
+	}
+	if (degre != 0){
+		return true;
+	}
+	return false;
+
 }
 
 
@@ -175,32 +188,63 @@ int *planification(int **T, int sommet_depart, int *couleur, int N, int *TYPE)
 
 	for(int i = 0; i < N; i++)
 	{
-		if(T[i][sommet_depart] == 1)
+		for(int k = 0; k < N; k++)
 		{
-			if(TYPE[sommet_depart] == 0)
+			if(T[i][k] == 1)
 			{
-				for(int j = 0; j < 20; j++)
+				if(TYPE[k] == 0)//si le cours est un td
 				{
-					if(test_coloration(Horaires, couleur, N, TYPE, Horaires[sommet_depart] + 13 + j, i) == true)
+					for(int j = 0; j < 20; j++)
 					{
-						Horaires[i] = Horaires[sommet_depart] + 13 + j;
-						j = 30;
+						if(test_coloration(Horaires, couleur, N, TYPE, Horaires[k] + 13 + j, i) == true)
+						{
+							Horaires[i] = Horaires[k] + 13 + j;
+							break;
+						}
 					}
-				}
 
-			}
-			else
-			{
-				for(int j = 0; j < 20; j++)
+				}
+				else //si le cours est un cm
 				{
-					if(test_coloration(Horaires, couleur, N, TYPE, Horaires[sommet_depart] + 7 + j,i) == true)
+					for(int j = 0; j < 20; j++)
 					{
-						Horaires[i] = Horaires[sommet_depart] + 7 + j;
-						j = 30;
+						if(test_coloration(Horaires, couleur, N, TYPE, Horaires[k] + 7 + j,i) == true)
+						{
+							Horaires[i] = Horaires[k] + 7 + j;
+							break;
+						}
 					}
 				}
 			}
+			else {
+				if(testConnnexe(T, N, i) == true){
+					if(TYPE[k] == 0)//si le cours est un td
+					{
+						for(int j = 0; j < 20; j++)
+						{
+							if(test_coloration(Horaires, couleur, N, TYPE, Horaires[k] + 13 + j, i) == true)
+							{
+								Horaires[i] = Horaires[k] + 13 + j;
+								break;
+							}
+						}
+					}
+					else //si le cours est un cm
+					{
+						for(int j = 0; j < 20; j++)
+						{
+							if(test_coloration(Horaires, couleur, N, TYPE, Horaires[k] + 7 + j,i) == true)
+							{
+								Horaires[i] = Horaires[k] + 7 + j;
+								break;
+							}
+						}
+					}
+				}
+			}	
 		}
 	}
+
 	return Horaires;
 }
+
