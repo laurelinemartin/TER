@@ -7,11 +7,20 @@
 #include "include/Bus.h"
 
 using namespace std;
-int TAILLE = 10;
+int TAILLE;
+int NBCOLOR;
 
 int main()
-{
-    int **T = matrice_adjacence_GNO(TAILLE,0.4);
+{   
+    float proba;
+    printf("entrez la probabilitée de lien entre 2 cours :\n");
+    scanf("%f",&proba);
+    printf("entrez le nombre de cours pour la planification:\n");
+    scanf("%d",&TAILLE);
+    printf("entrez le nombre de salles disponibles pour la planification:\n");
+    scanf("%d", &NBCOLOR);
+    printf("lancement de l'application avec une probabilitée de %f, %d cours et %d salles\n",proba, TAILLE, NBCOLOR);
+    int **T = matrice_adjacence_GNO(TAILLE,proba);
     printf("\n MATRICE DU GNO \n");
     printf("\n 0  1  2  3  4  5  6  7  8  9  INDICES\n");
     printf("----------------------------------------\n");
@@ -25,7 +34,7 @@ int main()
     }
     printf("\n");
 
-    int *couleur = coloration (TAILLE, 5);
+    int *couleur = coloration (TAILLE, NBCOLOR);
     printf("COLORATION\n");
     printf("\n 0  1  2  3  4  5  6  7  8  9  INDICES\n");
     printf("----------------------------------------\n");

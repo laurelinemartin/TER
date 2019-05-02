@@ -259,16 +259,19 @@ bool test_solution_valide(int *Horaires, int N, int *couleur, int *TYPE, int **T
 		{
 			return false;
 		}
-		if(test_lien(Horaires, N, T, i) == false)
+		/*if(test_lien(Horaires, N, T) == false)
 		{
 			return false;
-		}
+		}*/
 	}
 	return true;
 }
 
 bool test_lien(int *Horaires, int N, int **T)
 {
-	if(
+	for (int i = 0; i < N; i++)
+	{
+		if(T[i]);
+	}
 	return true;
 }
