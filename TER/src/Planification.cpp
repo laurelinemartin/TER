@@ -199,9 +199,9 @@ int *planification(int **T, int sommet_depart, int *couleur, int N, int *TYPE)
 				{
 					for(int j = 0; j < 20; j++)
 					{
-						if(test_coloration(Horaires, couleur, N, TYPE, Horaires[i] + 13 + j, i) == true)
+						if(test_coloration(Horaires, couleur, N, TYPE, Horaires[k] + 13 + j, i) == true)
 						{
-							Horaires[k] = Horaires[i] + 13 + j;
+							Horaires[i] = Horaires[k] + 13 + j;
 							break;
 						}
 					}
@@ -211,9 +211,9 @@ int *planification(int **T, int sommet_depart, int *couleur, int N, int *TYPE)
 				{
 					for(int j = 0; j < 20; j++)
 					{
-						if(test_coloration(Horaires, couleur, N, TYPE, Horaires[i] + 7 + j,i) == true)
+						if(test_coloration(Horaires, couleur, N, TYPE, Horaires[k] + 7 + j,i) == true)
 						{
-							Horaires[k] = Horaires[i] + 7 + j;
+							Horaires[i] = Horaires[k] + 7 + j;
 							break;
 						}
 					}
@@ -225,9 +225,9 @@ int *planification(int **T, int sommet_depart, int *couleur, int N, int *TYPE)
 					{
 						for(int j = 0; j < 20; j++)
 						{
-							if(test_coloration(Horaires, couleur, N, TYPE, Horaires[i] + 13 + j, i) == true)
+							if(test_coloration(Horaires, couleur, N, TYPE, Horaires[k] + 13 + j, i) == true)
 							{
-								Horaires[k] = Horaires[i] + 13 + j;
+								Horaires[i] = Horaires[k] + 13 + j;
 								break;
 							}
 						}
@@ -236,9 +236,9 @@ int *planification(int **T, int sommet_depart, int *couleur, int N, int *TYPE)
 					{
 						for(int j = 0; j < 20; j++)
 						{
-							if(test_coloration(Horaires, couleur, N, TYPE, Horaires[i] + 7 + j,i) == true)
+							if(test_coloration(Horaires, couleur, N, TYPE, Horaires[k] + 7 + j,i) == true)
 							{
-								Horaires[k] = Horaires[i] + 7 + j;
+								Horaires[i] = Horaires[k] + 7 + j;
 								break;
 							}
 						}
