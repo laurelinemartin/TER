@@ -14,13 +14,17 @@ int NBCOLOR;
 int main()
 {   
     float proba;
+    /*
     printf("entrez la probabilitée de lien entre 2 cours :\n");
     scanf("%f",&proba);
     printf("entrez le nombre de cours pour la planification:\n");
     scanf("%d",&TAILLE);
     printf("entrez le nombre de salles disponibles pour la planification:\n");
     scanf("%d", &NBCOLOR);
-    printf("lancement de l'application avec une probabilitée de %f, %d cours et %d salles\n",proba, TAILLE, NBCOLOR);
+    printf("lancement de l'application avec une probabilitée de %f, %d cours et %d salles\n",proba, TAILLE, NBCOLOR);*/
+    proba = 0.4;
+    TAILLE = 10;
+    NBCOLOR = 5;
     int **T = matrice_adjacence_GNO(TAILLE,proba);
     printf("\n MATRICE DU GNO \n");
     printf("\n 0  1  2  3  4  5  6  7  8  9  INDICES\n");
