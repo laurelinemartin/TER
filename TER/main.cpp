@@ -4,6 +4,7 @@
 #include "include/Enseignant.h"
 #include "include/Contraintes.h"
 #include "include/Planification.h"
+#include "include/Algo.h"
 #include "include/Bus.h"
 
 using namespace std;
@@ -95,7 +96,22 @@ int main()
     int congestion_totale = calcul_congestion_totale(Horaires,NBELEVES,34,TAILLE);
     printf("\n Calcul congestion \n");
     printf("----------------------------------------\n");
-    printf("%d\n",congestion_totale);
+    printf("Congestion totale : %d\n",congestion_totale);
+    printf("\n");
+
+    int *Horaires_tabou = Algo_tabou(Horaires, TAILLE, premier_sommet, couleur, TYPE,TO);
+    printf("\n 0  1  2  3  4  5  6  7  8  9  INDICES\n");
+    printf("----------------------------------------\n");
+    for (int i = 0; i < TAILLE; i++)
+    {
+        printf(" %d ",Horaires_tabou[i]);
+    }
+    printf("\n");
+
+    congestion_totale = calcul_congestion_totale(Horaires_tabou,NBELEVES,34,TAILLE);
+    printf("\n Calcul congestion tabou \n");
+    printf("----------------------------------------\n");
+    printf("Congestion totale tabou : %d\n",congestion_totale);
     printf("\n");
 
   

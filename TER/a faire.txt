@@ -1,9 +1,8 @@
 mediane pour la congestion
 tabou
-reparer planification initiale
 algo glouton
 mettre la probabilite d avoir été dans un cours precedent
-mettre en argument et faire un script des proba des arguments CHECK
+SCRIPT
 finir rapport strategie d opti
 
 ecrire un fichier .txt en sortie avec les données et avec les meilleures solutions et leurs congestion
