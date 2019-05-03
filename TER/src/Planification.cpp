@@ -178,6 +178,19 @@ bool testConnnexe(int **T, int N, int sommet){
 
 }
 
+bool test_lien(int *Horaires, int N, int **T, int heure_a_teste, int sommet_a_teste)
+{
+	for (int i = 0; i < N; i++)
+	{
+		if((T[sommet_a_teste][i] == 1) && (heure_a_teste == Horaires[i]) && (sommet_a_teste != i))
+		{
+			//printf("false test lien\n");
+			return false;
+		}
+	}
+	//printf("true test lien\n");
+	return true;
+}
 
 //Pour le moment TD c'est 3h et CM 1h30, a changer ptet je sais pas 
 //fin c'est fixe, y a pas de 4h 2h etc...
@@ -197,24 +210,30 @@ int *planification(int **T, int sommet_depart, int *couleur, int N, int *TYPE)
 			{
 				if(TYPE[i] == 0)//si le cours est un td
 				{
-					for(int j = 0; j < 20; j++)
+					for(int j = 0; j < 35; j++)
 					{
 						if(test_coloration(Horaires, couleur, N, TYPE, Horaires[k] + 13 + j, i) == true)
 						{
-							Horaires[i] = Horaires[k] + 13 + j;
-							break;
+							if(test_lien(Horaires, N, T, Horaires[k] + 13 + j, i) == true)
+							{
+								Horaires[i] = Horaires[k] + 13 + j;
+								break;
+							}
 						}
 					}
 
 				}
 				else //si le cours est un cm
 				{
-					for(int j = 0; j < 20; j++)
+					for(int j = 0; j < 35; j++)
 					{
 						if(test_coloration(Horaires, couleur, N, TYPE, Horaires[k] + 7 + j,i) == true)
 						{
-							Horaires[i] = Horaires[k] + 7 + j;
-							break;
+							if(test_lien(Horaires, N, T, Horaires[k] + 7 + j, i) == true)
+							{
+								Horaires[i] = Horaires[k] + 7 + j;
+								break;
+							}
 						}
 					}
 				}
@@ -227,8 +246,11 @@ int *planification(int **T, int sommet_depart, int *couleur, int N, int *TYPE)
 						{
 							if(test_coloration(Horaires, couleur, N, TYPE, Horaires[k] + 13 + j, i) == true)
 							{
-								Horaires[i] = Horaires[k] + 13 + j;
-								break;
+								if(test_lien(Horaires, N, T, Horaires[k] + 13 + j, i) == true)
+								{
+									Horaires[i] = Horaires[k] + 13 + j;
+									break;
+								}
 							}
 						}
 					}
@@ -238,8 +260,11 @@ int *planification(int **T, int sommet_depart, int *couleur, int N, int *TYPE)
 						{
 							if(test_coloration(Horaires, couleur, N, TYPE, Horaires[k] + 7 + j,i) == true)
 							{
-								Horaires[i] = Horaires[k] + 7 + j;
-								break;
+								if(test_lien(Horaires, N, T, Horaires[k] + 7 + j, i) == true)
+								{
+									Horaires[i] = Horaires[k] + 7 + j;
+									break;
+								}
 							}
 						}
 					}
@@ -267,11 +292,3 @@ bool test_solution_valide(int *Horaires, int N, int *couleur, int *TYPE, int **T
 	return true;
 }
 
-bool test_lien(int *Horaires, int N, int **T)
-{
-	for (int i = 0; i < N; i++)
-	{
-		if(T[i]);
-	}
-	return true;
-}
