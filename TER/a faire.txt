@@ -1,7 +1,7 @@
 mediane pour la congestion
 tabou
 algo glouton
-mettre la probabilite d avoir été dans un cours precedent
+mettre la probabilite d avoir été dans un cours precedent demander a barth peut etre
 SCRIPT
 finir rapport strategie d opti
 

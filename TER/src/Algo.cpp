@@ -3,19 +3,42 @@
 #include "../include/Bus.h"
 #include <time.h>
 
-int *Algo_glouton(int *Horaires, int N, int sommet_depart, int *couleur, int *Type)
+int *Tri_nb_eleves(int *Nb_eleves)
 {
-
+	int min = Nb_eleves[0];
+	int Tab_triee[N];
+	Tab_triee[0] = 0;
+	for (int i = 1; i < N; i++)
+	{
+		temp = Nb_eleves[i];
+		if(min > temp)
+		{
+			
+		}
+	}
 }
 
-int *Algo_tabou(int *Horaires, int N, int sommet_depart, int *couleur, int *Type, int **T)
+int *Algo_glouton(int **T, int sommet_depart, int *couleur, int N, int *TYPE, int *Nb_eleves)
+{
+	int *Horaires = (int*)malloc(N*sizeof(int*));
+	Horaires[sommet_depart] = 0;
+
+	for(int i = 1; i < N; i++)
+	{
+
+	}
+}
+
+int *Algo_tabou(int *Horaires, int N, int sommet_depart, int *couleur, int *Type, int **T, int Nb_iterations)
 {
 	srand(time(NULL));
-	int sommet_modifie = rand()%N;
-	printf("Le sommet modifie est le : %d\n", sommet_modifie);
+	
+		int sommet_modifie = rand()%N;
+		printf("Le sommet modifie est le : %d\n", sommet_modifie);
 
-	Horaires[sommet_modifie] += 4;
-	planification2(Horaires, sommet_depart, couleur, N, Type, sommet_modifie, T);
+		Horaires[sommet_modifie] += 4;
+		return planification2(Horaires, sommet_depart, couleur, N, Type, sommet_modifie, T);
+	
 	
 }
 
