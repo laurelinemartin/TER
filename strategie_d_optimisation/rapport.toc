@@ -1,9 +1,10 @@
 \select@language {french}
 \contentsline {section}{\numberline {1}Introduction}{}
 \contentsline {section}{\numberline {2}Les donn\IeC {\'e}es initiales}{}
-\contentsline {subsection}{\numberline {2.1}La courbe de traffic}{}
+\contentsline {subsection}{\numberline {2.1}La courbe de trafic}{}
 \contentsline {subsection}{\numberline {2.2}L'emploi du temps}{}
 \contentsline {section}{\numberline {3}Calcul de congestion}{}
 \contentsline {section}{\numberline {4}Strat\IeC {\'e}gie d'optimisation}{}
-\contentsline {subsection}{\numberline {4.1}Mise en rapport de la congestion et des sommets}{}
-\contentsline {subsection}{\numberline {4.2}Recherche tabou}{}
+\contentsline {subsection}{\numberline {4.1}Solution initiale}{}
+\contentsline {subsection}{\numberline {4.2}Mise en rapport de la congestion et des sommets}{}
+\contentsline {subsection}{\numberline {4.3}Recherche tabou}{}
