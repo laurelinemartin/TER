@@ -8,11 +8,13 @@
 \usepackage{mathtools,amssymb,amsthm}
 \usepackage{lmodern}
 \usepackage{multirow}
+\usepackage{listings}
 \usepackage{array}
 \usepackage{longtable}
 
 \title{TER 2019 - Rapport}
 \author{Maxime Gonthier - Benjamin Guillot - Laureline Martin}
+
 \begin{document}
 \pagenumbering{gobble}\clearpage
 \maketitle
@@ -62,6 +64,7 @@
 			\centerline{\includegraphics[scale=0.8]{Captures/exemple4.png}}
 		\end{enumerate}
 		Chaque cours possède un nombre d'étudiants choisis aléatoirement entre 16 et 32 pour un TD et entre 16 et 100 pour un cours magistral. les TDs représentent trois quart des cours. Ainsi dans notre exemple nous avons : \\
+		\\
 		\begin{tabular}{ | c | c | c | c | c | c | c | c | c | c | c |}
  			\hline			
    			Numéro du sommet & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10\\
@@ -86,22 +89,41 @@
  	Il faudra pour les bus suivants prendre en compte les élèves déjà présent à l'université avant de calculer le nombre de personnes dans le bus.
 
 \section{Stratégie d'optimisation}
+	\subsection{Solution initiale}
+		Dans un premier temps nous allons rechercher une solution initiale respectant les contraintes. De la même manière que dans la partie 2.2.6 (plus haut).
+		Cette solution va simplement mettre le sommet 1 à 8h puis placer les autres sommets en respectant les contraintes et en les mettant le plus tôt possible.
 	\subsection{Mise en rapport de la congestion et des sommets}
-		Il faut dans un premier temps déterminer quels sommets sont les plus impactant en terme de congestion. Une manière de les trier peut être par ordre décroissant de leurs nombre d'étudiants. Ensuite on rechercherais une solution gloutonne où les sommets ayant le plus d'étudiants ont lieu à des horaires où les autres cours ont peu d'étudiants, c'est à dire que nous allons minimiser la somme des étudiants ayant cours au même moments. Si il y a un choix à faire on place le cours avec le plus d'étudiant sur l'horaire où la congestion des non-étudiants est la plus faible (c'est à dire s'éloigner de l'horaire 7:8h. Evidemment le point de départ sera toujours un sommet de degré entrant nul. Dans notre exemple on aurait pour le tri : \\
+		Une approche possible pour trouver une meilleure solution serait d'utiliser une approche gloutonne.
+		Il faut dans un premier temps déterminer quels sommets sont les plus impactant en terme de congestion. Une manière de les trier peut être par ordre décroissant de leurs nombre d'étudiants. Ensuite on rechercherais une solution gloutonne où les sommets ayant le plus d'étudiants ont lieu à des horaires où les autres cours ont peu d'étudiants, c'est à dire que nous allons minimiser la somme des étudiants ayant cours au même moments. Evidemment le point de départ sera toujours un sommet de degré entrant nul. Dans notre exemple on aurait pour le tri : \\
+		\\
 		\begin{tabular}{ | c | c | c | c | c | c | c | c | c | c | c |}
  			\hline			
    			Numéro du sommet & 2 & 3 & 10 & 4 & 8 & 5 & 6 & 7 & 1 & 9\\
    			Nombre d'élèves & 70 & 60 & 50 & 30 & 30 & 25 & 20 & 16 & 16 & 14\\
  			\hline  
  		\end{tabular}\\	
- 		On place en premier le sommet 1 à 8h car il a moins d'étudiants que le 4 et que nous avons décider d'éloigner les cours chargées des horaires de congestions des non-étudiants en cas de conflits.. Ensuite on place le sommet 2 à 9h pour ne pas être en même temps que le 4. Ainsi de suite. Une fois arrivé à l'horaire limite de notre exemple (14h) on place les sommets au endroit où la somme des étudiants sera le plus faible possible. Ainsi le sommet 6 va à la même horaire que le sommet 5, le 7 à la même horaire que le 8, impossible ils ont la même couleur, donc le 7 va a la même horaire que le suivant, le 4 etc...
+ 		\\
+ 		On place le sommet 1 à 8h car il est de degré entrant nul. Puis on place le sommet 2 à 9h. Ainsi de suite. Une fois arrivé à l'horaire limite de notre exemple (14h) on place les sommets aux endroits où la somme des étudiants sera le plus faible possible. Ainsi le sommet 6 va à la même horaire que le sommet 5, le 7 à la même horaire que le 8, impossible ils ont la même couleur, donc le 7 va a la même horaire que le suivant, le 4 etc...
  		Après l'optimisation gloutonne on aura : \\
  		\centerline{\includegraphics[scale=0.8]{Captures/exemple5.png}}\\
- 		On reclacule ensuite la congestion de chaque bus comme vue précedemment.
+ 		On recalcule ensuite la congestion de chaque bus comme vue précedemment.
 
  	\subsection{Recherche tabou}
- 		A partir de la première solution obtenu grace à l'approche gloutonne nous allons explorer le voisinage de cette dernière pour tenter de trouver des optimums locaux.\\
- 		On va modifier l'horaire des cours 1 à 1 de manière aléatoire en commencant par le cours ayant le plus d'étudiant. Pour chaque solution on recalcule la congestion et on interdit la configuration pour les prochaines solutions. Dans notre exemple on va dans un premier temps bouger le sommet 2 de 9h à 10h. Ensuite on recherche la solution suivante en prenant en compte cette modification. On procède de la sorte pendant un nombre d'itérations arbitraire. En effet on ne peux pas savoir quand arrêter la simulation car on ne peux pas être sûr qu'un optimum local est aussi global.\\
- 		Ensuite nous allons appliquer le même procéder mais en faisant varier les horaires deux sommets à la fois a chaque itérations.
- 		A MIEUX ECRIRE / RAJOUTER DES CHOSES
+ 		A partir de la solution initiale nous allons explorer le voisinage de cette dernière pour tenter de trouver des optimums locaux.\\
+ 		
+ 		Pour essayer de trouver une meilleur planification et réduire au mieux la congestion on va procéder de la façon suivante :\\
+ 		\begin{lstlisting}
+Pour chaque sommet:
+  modifier l'heure tout en respectant les contraintes.
+  Pour chaque nouvel horaire:
+    calculer la nouvelle congestion.
+    Si la congestion est meilleur qu'avant le changement,
+      on fixe ce sommet a ce nouvel horaire et on reitere 
+      le processus sur les prochains sommets.
+    Sinon, on replace le sommet a son horaire initial 
+      et on passe au sommet suivant.
+		\end{lstlisting}
+		Pour chaque sommet, on regarde tout les horaires possibles, même si on trouve une meilleur congestion pendant la recherche. On cherche la meilleur congestion possible pour ce sommet.
+		On pourra également utiliser le même procédé en modifiant les sommets 2 à 2 pour essayer de trouver un meilleur résultat.
+			
 \end{document}

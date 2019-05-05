@@ -136,15 +136,28 @@ int *nb_eleves (int *TYPE, int N)
 bool test_coloration(int *Horaires, int *couleur, int N, int *TYPE, int heure_a_teste, int sommet_a_teste)
 {
 	int duree = 0;
-	int Test[N];
+	//int Test[N];
 	for(int i = 0; i < N; i++)
 	{
-		if(TYPE[i] == 0){duree = 12;}else{duree = 6;}
-		if((heure_a_teste >= Horaires[i]) && (heure_a_teste <= Horaires[i] + duree))
+		if((couleur[i] == couleur[sommet_a_teste])&& (sommet_a_teste != i))
 		{
-			Test[i] = couleur[i];
+			if(TYPE[i] == 0){duree = 12;}else{duree = 6;}
+			if((heure_a_teste >= Horaires[i]) && (heure_a_teste <= Horaires[i] + duree))
+			{
+				return false;
+			}
+
 		}
-		else
+	}
+
+
+		//if(TYPE[i] == 0){duree = 12;}else{duree = 6;}
+		/*if((heure_a_teste >= Horaires[i]) && (heure_a_teste <= Horaires[i] + duree) && (sommet_a_teste != i))
+		{
+			//Test[i] = couleur[i];
+			return false;
+		} */
+		/*else
 		{
 			Test[i] = 100;
 		}
@@ -156,7 +169,7 @@ bool test_coloration(int *Horaires, int *couleur, int N, int *TYPE, int heure_a_
 		{
 			return false;
 		}
-	}
+	}*/
 	return true;
 }
 
@@ -178,11 +191,13 @@ bool testConnnexe(int **T, int N, int sommet){
 
 }
 
-bool test_lien(int *Horaires, int N, int **T, int heure_a_teste, int sommet_a_teste)
+bool test_lien(int *Horaires, int N, int **T, int heure_a_teste, int sommet_a_teste, int *TYPE)
 {
+	int duree = 0;
 	for (int i = 0; i < N; i++)
 	{
-		if((T[sommet_a_teste][i] == 1) && (heure_a_teste == Horaires[i]) && (sommet_a_teste != i))
+		if(TYPE[i] == 0) { duree = 12;} else {duree = 6;}
+		if((T[sommet_a_teste][i] == 1) && (heure_a_teste >= Horaires[i]) && (heure_a_teste <= Horaires[i] + duree) && (sommet_a_teste != i))
 		{
 			//printf("false test lien\n");
 			return false;
@@ -201,6 +216,11 @@ int *planification(int **T, int sommet_depart, int *couleur, int N, int *TYPE)
 {
 	int *Horaires = (int*)malloc(N*sizeof(int*));
 	Horaires[sommet_depart] = 0;
+	for (int i = 0; i < N; i++)
+	{
+		Horaires[i] = 0;
+		//c
+	}
 
 	for(int i = 1; i < N; i++)
 	{
@@ -210,13 +230,14 @@ int *planification(int **T, int sommet_depart, int *couleur, int N, int *TYPE)
 			{
 				if(TYPE[i] == 0)//si le cours est un td
 				{
-					for(int j = 1; j < 35; j++)
+					for(int j = 0; j <= 36; j++)
 					{
-						if(test_coloration(Horaires, couleur, N, TYPE, Horaires[k] + 13*j, i) == true)
+						if(test_coloration(Horaires, couleur, N, TYPE, Horaires[k] + 13 + j, i) == true)
 						{
-							if(test_lien(Horaires, N, T, Horaires[k] + 13*j, i) == true)
+							if(test_lien(Horaires, N, T, Horaires[k] + 13 + j, i, TYPE) == true)
 							{
-								Horaires[i] = Horaires[k] + 13*j;
+								Horaires[i] = Horaires[k] + 13 + j;
+								//printf("Horaire de %d : %d\n",i,Horaires[i]);
 								break;
 							}
 						}
@@ -225,13 +246,14 @@ int *planification(int **T, int sommet_depart, int *couleur, int N, int *TYPE)
 				}
 				else //si le cours est un cm
 				{
-					for(int j = 1; j < 35; j++)
+					for(int j = 0; j <= 36; j++)
 					{
-						if(test_coloration(Horaires, couleur, N, TYPE, Horaires[k] + 7 *j,i) == true)
+						if(test_coloration(Horaires, couleur, N, TYPE, Horaires[k] + 7 + j,i) == true)
 						{
-							if(test_lien(Horaires, N, T, Horaires[k] + 7 *j, i) == true)
+							if(test_lien(Horaires, N, T, Horaires[k] + 7 + j, i, TYPE) == true)
 							{
-								Horaires[i] = Horaires[k] + 7 *j;
+								Horaires[i] = Horaires[k] + 7 + j;
+								//printf("Horaire de %d : %d\n",i,Horaires[i]);
 								break;
 							}
 						}
@@ -242,13 +264,14 @@ int *planification(int **T, int sommet_depart, int *couleur, int N, int *TYPE)
 				if(testConnnexe(T, N, i) == true){
 					if(TYPE[k] == 0)//si le cours est un td
 					{
-						for(int j = 1; j < 35; j++)
+						for(int j = 1; j <= 36; j++)
 						{
-							if(test_coloration(Horaires, couleur, N, TYPE, Horaires[k] + 13 *j, i) == true)
+							if(test_coloration(Horaires, couleur, N, TYPE, Horaires[k] + 13  + j, i) == true)
 							{
-								if(test_lien(Horaires, N, T, Horaires[k] + 13 * j, i) == true)
+								if(test_lien(Horaires, N, T, Horaires[k] + 13 + j, i, TYPE) == true)
 								{
-									Horaires[i] = Horaires[k] + 13 * j;
+									Horaires[i] = Horaires[k] + 13 + j;
+									//printf("Horaire de %d : %d\n",i,Horaires[i]);
 									break;
 								}
 							}
@@ -256,13 +279,14 @@ int *planification(int **T, int sommet_depart, int *couleur, int N, int *TYPE)
 					}
 					else //si le cours est un cm
 					{
-						for(int j = 1; j < 35; j++)
+						for(int j = 1; j <= 36; j++)
 						{
-							if(test_coloration(Horaires, couleur, N, TYPE, Horaires[k] + 7 * j,i) == true)
+							if(test_coloration(Horaires, couleur, N, TYPE, Horaires[k] + 7 + j,i) == true)
 							{
-								if(test_lien(Horaires, N, T, Horaires[k] + 7 * j, i) == true)
+								if(test_lien(Horaires, N, T, Horaires[k] + 7 + j, i, TYPE) == true)
 								{
-									Horaires[i] = Horaires[k] + 7 * j;
+									Horaires[i] = Horaires[k] + 7 + j;
+									//printf("Horaire de %d : %d\n",i,Horaires[i]);
 									break;
 								}
 							}
@@ -280,18 +304,49 @@ int *planification(int **T, int sommet_depart, int *couleur, int N, int *TYPE)
 }
 
 bool test_solution_valide(int *Horaires, int N, int *couleur, int *TYPE, int **T)
-{
+{	
+/**
+	TEST COLORATION
+	bool res = true;
+	int dureei, dureej;
 	for(int i = 0; i < N; i++)
 	{
-		if(test_coloration(Horaires, couleur, N, TYPE, Horaires[i],i) == false) 
+		for(int j = i; j < N-1; j ++)
 		{
-			return false;
+			if(couleur[i] == couleur[j+1]){
+				if(TYPE[i] == 0) dureei = 13; else dureei = 7;
+				if(TYPE[j] == 0) dureej = 13; else dureej = 7;
+				if(Horaires[i] > Horaires[j]){
+					if(Horaires[j] +dureej >= Horaires[i])
+						res = false;			
+				}
+				else if (Horaires[i] < Horaires[j]){
+					if(Horaires[i] + dureei >= Horaires[j])
+						res = false;
+				}
+			}
 		}
-		/*if(test_lien(Horaires, N, T) == false)
+	}
+	return res;
+	*/
+
+
+	//TEST LIEN
+	int duree = 0;
+	for (int i = 0; i < N; i++)
+	{
+		for (int j = i; j < N; j++)
 		{
-			return false;
-		}*/
+			if(T[i][j] == 1) {
+				if(TYPE[j] == 0) duree = 12; else duree = 6;
+			if((test_lien(Horaires, N, T, Horaires[i] + duree, j, TYPE) == false) && (i != j))
+			{
+				return false;
+			}
+		}
+		}
 	}
 	return true;
 }
+
 

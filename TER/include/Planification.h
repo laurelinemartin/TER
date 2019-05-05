@@ -19,9 +19,10 @@ int **matrice_graphe_oriente (int **T, int N);
 int *nb_eleves (int *TYPE, int N);
 int *type_cours (int N);
 bool test_coloration(int *Horaires, int *couleur, int N, int *TYPE, int heure_a_teste, int sommet_a_teste);
-bool test_lien(int *Horaires, int N, int **T, int heure_a_teste, int sommet_a_teste);
+bool test_lien(int *Horaires, int N, int **T, int heure_a_teste, int sommet_a_teste, int *TYPE);
 int *planification(int **T, int sommet_depart, int *couleur, int N, int *TYPE);
 bool testConnnexe(int **T, int N, int sommet);
+bool test_solution_valide(int *Horaires, int N, int *couleur, int *TYPE, int **T);
 
 
 #endif // Planification_H
