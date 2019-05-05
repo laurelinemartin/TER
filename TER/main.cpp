@@ -6,6 +6,7 @@
 #include "include/Planification.h"
 #include "include/Algo.h"
 #include "include/Bus.h"
+#include "include/IO.h"
 
 using namespace std;
 int TAILLE;
@@ -13,6 +14,7 @@ int NBCOLOR;
 
 int main()
 {   
+    initFichier();
     float proba;
     /*
     printf("entrez la probabilitée de lien entre 2 cours :\n");
@@ -97,7 +99,13 @@ int main()
     }
     printf("\n");
 
+    cout << "avant calcul total" << endl;
     int congestion_totale = calcul_congestion_totale(Horaires,NBELEVES,34,TAILLE);
+    cout << "apres calcul total" << endl;
+    /// Ecriture fichier ///
+    ecrireCongestionTotale(congestion_totale);
+    cout << "apres ecriture fichier" << endl;
+    /// Ecriture Terminal ///
     printf("\n Calcul congestion \n");
     printf("----------------------------------------\n");
     printf("Congestion totale : %d\n",congestion_totale);
