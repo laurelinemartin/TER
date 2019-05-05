@@ -1,6 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.9.4)  30 APR 2019 12:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.9.4)  5 MAY 2019 17:38
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
 **rapport.tex
 (./rapport.tex
@@ -731,11 +732,36 @@ Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
 \multirow@dima=\skip59
 \bigstrutjot=\dimen126
 )
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count112
+\lst@gtempboxa=\box28
+\lst@token=\toks32
+\lst@length=\count113
+\lst@currlwidth=\dimen127
+\lst@column=\count114
+\lst@pos=\count115
+\lst@lostspace=\dimen128
+\lst@width=\dimen129
+\lst@newlines=\count116
+\lst@lineno=\count117
+\lst@maxwidth=\dimen130
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count118
+\lst@skipnumbers=\count119
+\lst@framebox=\box29
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
-\col@sep=\dimen127
-\extrarowheight=\dimen128
-\NC@list=\toks32
+\col@sep=\dimen131
+\extrarowheight=\dimen132
+\NC@list=\toks33
 \extratabsurround=\skip60
 \backup@length=\skip61
 )
@@ -745,75 +771,61 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTright=\skip63
 \LTpre=\skip64
 \LTpost=\skip65
-\LTchunksize=\count112
-\LTcapwidth=\dimen129
-\LT@head=\box28
-\LT@firsthead=\box29
-\LT@foot=\box30
-\LT@lastfoot=\box31
-\LT@cols=\count113
-\LT@rows=\count114
-\c@LT@tables=\count115
-\c@LT@chunks=\count116
-\LT@p@ftn=\toks33
-) (./rapport.aux
-! Undefined control sequence.
-l.6 \babel@aux
-              {french}{}
-? 
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.6 \babel@aux{f
-                rench}{}
-? 
-)
+\LTchunksize=\count120
+\LTcapwidth=\dimen133
+\LT@head=\box30
+\LT@firsthead=\box31
+\LT@foot=\box32
+\LT@lastfoot=\box33
+\LT@cols=\count121
+\LT@rows=\count122
+\c@LT@tables=\count123
+\c@LT@chunks=\count124
+\LT@p@ftn=\toks34
+) (./rapport.aux)
 \openout1 = `rapport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 16.
- (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 18.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 16.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 18.
 
 (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Info: Redefining \degres on input line 16.
-LaTeX Info: Redefining \dots on input line 16.
-LaTeX Info: Redefining \up on input line 16.
+LaTeX Info: Redefining \degres on input line 18.
+LaTeX Info: Redefining \dots on input line 18.
+LaTeX Info: Redefining \up on input line 18.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count117
-\scratchdimen=\dimen130
-\scratchbox=\box32
-\nofMPsegments=\count118
-\nofMParguments=\count119
-\everyMPshowfont=\toks34
-\MPscratchCnt=\count120
-\MPscratchDim=\dimen131
-\MPnumerator=\count121
-\makeMPintoPDFobject=\count122
-\everyMPtoPDFconversion=\toks35
+\scratchcounter=\count125
+\scratchdimen=\dimen134
+\scratchbox=\box34
+\nofMPsegments=\count126
+\nofMParguments=\count127
+\everyMPshowfont=\toks35
+\MPscratchCnt=\count128
+\MPscratchDim=\dimen135
+\MPnumerator=\count129
+\makeMPintoPDFobject=\count130
+\everyMPtoPDFconversion=\toks36
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -870,176 +882,185 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 18.
+\c@lstlisting=\count131
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 20.
 
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 18.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 20.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 18.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 20.
 
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 18.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 20.
 
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 18.
+(Font)              <12> on input line 20.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 18.
+(Font)              <8> on input line 20.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 18.
-LaTeX Font Info:    Try loading font information for U+msa on input line 18.
+(Font)              <6> on input line 20.
+LaTeX Font Info:    Try loading font information for U+msa on input line 20.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 18.
+LaTeX Font Info:    Try loading font information for U+msb on input line 20.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [2
+) [1
 
-] (./rapport.toc
-! Undefined control sequence.
-l.1 \babel@toc
-               {french}{}
-? 
 
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2 ...ne {section}{\numberline {1}Introduction}{}
-                                                  
-? 
-
-! LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.2 ...ne {section}{\numberline {1}Introduction}{}
-                                                  
-? 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./rapport.toc
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 4.
 )
 \tf@toc=\write3
 \openout3 = `rapport.toc'.
 
- [3]
-Overfull \hbox (88.30643pt too wide) in paragraph at lines 29--47
+ [2]
+Overfull \hbox (88.30643pt too wide) in paragraph at lines 31--49
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 29--47
+Underfull \hbox (badness 10000) in paragraph at lines 31--49
 
  []
 
-<Captures/exemple1.png, id=18, 289.08pt x 289.08pt>
+<Captures/exemple1.png, id=14, 289.08pt x 289.08pt>
 File: Captures/exemple1.png Graphic file (type png)
 <use Captures/exemple1.png>
-Package pdftex.def Info: Captures/exemple1.png  used on input line 54. on input
- line 54.
+Package pdftex.def Info: Captures/exemple1.png  used on input line 56. on input
+ line 56.
 Package pdftex.def Info: Requested size: 231.2643pt x 231.2643pt on input line 
-54.
+56.
 
-Overfull \hbox (33.425pt too wide) in paragraph at lines 53--55
+Overfull \hbox (33.425pt too wide) in paragraph at lines 55--57
 [] 
  []
 
-[4]
-<Captures/exemple2.png, id=22, 289.08pt x 289.08pt>
+[3]
+<Captures/exemple2.png, id=18, 289.08pt x 289.08pt>
 File: Captures/exemple2.png Graphic file (type png)
 <use Captures/exemple2.png>
-Package pdftex.def Info: Captures/exemple2.png  used on input line 57. on input
- line 57.
+Package pdftex.def Info: Captures/exemple2.png  used on input line 59. on input
+ line 59.
 Package pdftex.def Info: Requested size: 231.2643pt x 231.2643pt on input line 
-57.
+59.
 
-Overfull \hbox (33.425pt too wide) in paragraph at lines 56--58
+Overfull \hbox (33.425pt too wide) in paragraph at lines 58--60
 [] 
  []
 
-<Captures/exemple3.png, id=23, 289.08pt x 289.08pt>
+<Captures/exemple3.png, id=19, 289.08pt x 289.08pt>
 File: Captures/exemple3.png Graphic file (type png)
 <use Captures/exemple3.png>
-Package pdftex.def Info: Captures/exemple3.png  used on input line 60. on input
- line 60.
-Package pdftex.def Info: Requested size: 231.2643pt x 231.2643pt on input line 
-60.
-
-Overfull \hbox (33.425pt too wide) in paragraph at lines 59--61
-[] 
- []
-
-[5 <./Captures/exemple1.png> <./Captures/exemple2.png>]
-<Captures/exemple4.png, id=27, 578.16pt x 201.90431pt>
-File: Captures/exemple4.png Graphic file (type png)
-<use Captures/exemple4.png>
-Package pdftex.def Info: Captures/exemple4.png  used on input line 62. on input
+Package pdftex.def Info: Captures/exemple3.png  used on input line 62. on input
  line 62.
-Package pdftex.def Info: Requested size: 462.52863pt x 161.52365pt on input lin
-e 62.
+Package pdftex.def Info: Requested size: 231.2643pt x 231.2643pt on input line 
+62.
 
 Overfull \hbox (33.425pt too wide) in paragraph at lines 61--63
 [] 
  []
 
+[4 <./Captures/exemple1.png> <./Captures/exemple2.png>]
+<Captures/exemple4.png, id=23, 578.16pt x 201.90431pt>
+File: Captures/exemple4.png Graphic file (type png)
+<use Captures/exemple4.png>
+Package pdftex.def Info: Captures/exemple4.png  used on input line 64. on input
+ line 64.
+Package pdftex.def Info: Requested size: 462.52863pt x 161.52365pt on input lin
+e 64.
 
-Overfull \hbox (39.23315pt too wide) in paragraph at lines 64--72
+Overfull \hbox (33.425pt too wide) in paragraph at lines 63--65
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--72
+Underfull \hbox (badness 10000) in paragraph at lines 66--75
 
  []
 
-[6 <./Captures/exemple3.png> <./Captures/exemple4.png>]
-<Captures/exemple5.png, id=33, 578.16pt x 192.87056pt>
+
+Overfull \hbox (39.23315pt too wide) in paragraph at lines 66--75
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--75
+
+ []
+
+[5 <./Captures/exemple3.png> <./Captures/exemple4.png>]
+<Captures/exemple5.png, id=29, 578.16pt x 192.87056pt>
 File: Captures/exemple5.png Graphic file (type png)
 <use Captures/exemple5.png>
-Package pdftex.def Info: Captures/exemple5.png  used on input line 99. on input
- line 99.
+Package pdftex.def Info: Captures/exemple5.png  used on input line 108. on inpu
+t line 108.
 Package pdftex.def Info: Requested size: 462.52863pt x 154.29663pt on input lin
-e 99.
- [7] [8 <./Captures/exemple5.png>] (./rapport.aux) ) 
+e 108.
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--110
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--110
+
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 112--113
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--115
+
+ []
+
+
+Overfull \hbox (14.49303pt too wide) in paragraph at lines 120--121
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (14.49303pt too wide) in paragraph at lines 121--122
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[7 <./Captures/exemple5.png>] (./rapport.aux) ) 
 Here is how much of TeX's memory you used:
- 5474 strings out of 494829
- 75164 string characters out of 6178001
- 133867 words of memory out of 5000000
- 8657 multiletter control sequences out of 15000+600000
+ 7071 strings out of 494829
+ 96058 string characters out of 6178001
+ 157577 words of memory out of 5000000
+ 10242 multiletter control sequences out of 15000+600000
  41976 words of font info for 44 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 41i,6n,30p,790b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc
-/dvips/lm/lm-ec.enc} </home/user/.texlive2017/texmf-var/fonts/pk/ljfour/jknappe
-n/ec/ecrm1095.600pk></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/sh
-are/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public
-/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/tex
-mf/fonts/type1/public/lm/lmr17.pfb>
-Output written on rapport.pdf (8 pages, 193847 bytes).
+ 41i,6n,32p,603b,964s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvip
+s/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/t
+exmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/l
+mr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fo
+nts/type1/public/lm/lmr17.pfb>
+Output written on rapport.pdf (7 pages, 189800 bytes).
 PDF statistics:
- 70 PDF objects out of 1000 (max. 8388607)
- 40 compressed objects within 1 object stream
+ 57 PDF objects out of 1000 (max. 8388607)
+ 34 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

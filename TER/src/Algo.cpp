@@ -40,7 +40,7 @@ int *Algo_tabou(int *Horaires, int N, int sommet_depart, int *couleur, int *Type
 }
 
 int *planification2(int *Horaires, int sommet_depart, int *couleur, int N, int *TYPE, int sommet_fixe, int **T)
-{
+{/*
 	for(int i = 0; i < N; i++)
 	{
 		if(i != sommet_fixe)
@@ -128,5 +128,5 @@ int *planification2(int *Horaires, int sommet_depart, int *couleur, int N, int *
 		Horaires[i] += 2;
 	} 
 	
-	return Horaires;
+	return Horaires; */
 }
