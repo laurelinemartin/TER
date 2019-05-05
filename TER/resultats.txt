@@ -1,3 +1,4 @@
-Les 10 meilleurs résultats : 
-
-Congestion totale : 40
+CONGESTION DES BUS : 
+-------------------------
+Congestion du bus n°9 : 8
+Congestion totale : 24

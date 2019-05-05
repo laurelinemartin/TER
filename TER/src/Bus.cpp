@@ -1,6 +1,4 @@
 #include "../include/Bus.h"
-#include "../include/Planification.h"
-#include <time.h>
 
 int calcul_congestion_bus(int *Nb_eleves_bus, int heure_bus)
 {
@@ -23,7 +21,8 @@ int calcul_congestion_bus(int *Nb_eleves_bus, int heure_bus)
         congestion++;
     }
     if(congestion > 0){
-        printf("congestion du bus %d : %d\n",heure_bus, congestion);
+        ecrireCongestionBus(heure_bus, congestion);
+        printf("congestion du bus %d : %d\n", heure_bus, congestion);
     }
     return congestion;
 }
@@ -55,6 +54,7 @@ int calcul_congestion_totale(int *Horaires, int *Nb_eleves_cours, int heure_max,
 
     for(int i = 0; i < heure_max; i++)
     {
+
         congestion_totale += calcul_congestion_bus(Nb_eleves_bus, i);
     }
     //calculer la mediane ailleur

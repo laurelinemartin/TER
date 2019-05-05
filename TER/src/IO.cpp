@@ -8,7 +8,9 @@ void initFichier(){
 }
 
 void ecrireSolution(){
-
+	ecrirePlanification();
+	ecrireCongestionBus(0, 0);
+	ecrireCongestionTotale(0);
 }
 
 void ecrirePlanification(){
