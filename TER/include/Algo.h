@@ -1,9 +1,12 @@
-#ifndef Algo_H
-#define Algo_H
+#ifndef ALGO_H
+#define ALGO_H
 
 #include <vector>
 #include <iostream>
 #include <algorithm>
+#include "Planification.h"
+#include "Bus.h"
+#include <time.h>
 using namespace std;
 
 int *Tri_nb_eleves(int *Nb_eleves);
@@ -12,4 +15,4 @@ int *Algo_tabou(int *Horaires, int N, int sommet_depart, int *couleur, int *Type
 
 int *planification2(int *Horaires, int sommet_depart, int *couleur, int N, int *TYPE, int sommet_fixe, int **T);
 
-#endif // Bus_H
+#endif // ALGO_H
