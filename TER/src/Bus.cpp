@@ -34,7 +34,8 @@ int calcul_congestion_totale(int *Horaires, int *Nb_eleves_cours, int heure_max,
     int capacite_max = 60;
 
     //mettre une proba de venir d'un autre cours avant
-    int *Nb_eleves_bus = (int*)malloc(N*sizeof(int*));
+    //Initialisation tableau
+    int *Nb_eleves_bus = (int*)malloc(heure_max*sizeof(int*));
     for(int i = 0; i < heure_max; i++){
         Nb_eleves_bus[i] = 0;
     }
@@ -54,7 +55,7 @@ int calcul_congestion_totale(int *Horaires, int *Nb_eleves_cours, int heure_max,
 
     for(int i = 0; i < heure_max; i++)
     {
-        congestion_totale += calcul_congestion_bus(Nb_eleves_bus,i);
+        congestion_totale += calcul_congestion_bus(Nb_eleves_bus, i);
     }
     //calculer la mediane ailleur
     return congestion_totale;

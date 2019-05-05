@@ -1,10 +1,17 @@
-mediane pour la congestion
-tabou
-algo glouton
-mettre la probabilite d avoir été dans un cours precedent demander a barth peut etre
-SCRIPT
-finir rapport strategie d opti
+##########################
+### Les choses à faire ###
+##########################
 
-ecrire un fichier .txt en sortie avec les données et avec les meilleures solutions et leurs congestion
-
-rapport final
+1. Médiane pour la congestion
+2. Les algos :
+	2.1. Algo tabou
+	2.2. algo glouton
+3. mettre la probabilite d avoir été dans un cours precedent demander a Barth peut etre
+4. SCRIPT
+5. ecrire un fichier .txt en sortie avec les données et avec les meilleures solutions et leurs congestions
+	- Nouveau fichier IO
+	- 10 meilleures solutions (m.a.j : faire une variable pour fixer le nombre de slution souhéitées)
+6. Rapports :
+	finir rapport strategie d opti
+	rapport final
+	Man user

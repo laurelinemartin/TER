@@ -1,7 +1,4 @@
 #include "../include/Algo.h"
-#include "../include/Planification.h"
-#include "../include/Bus.h"
-#include <time.h>
 
 int *Tri_nb_eleves(int *Nb_eleves)
 {
