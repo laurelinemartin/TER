@@ -29,17 +29,31 @@ int *Algo_glouton(int **T, int sommet_depart, int *couleur, int N, int *TYPE, in
 	}
 }
 
-int *Algo_tabou(int *Horaires, int N, int sommet_depart, int *couleur, int *Type, int **T, int Nb_iterations)
+int *Algo_tabou(int *Horaires, int N, int sommet_depart, int *couleur, int *Type, int **TO, int Nb_iterations, int heure_max, int Nb_eleves)
 {
-	srand(time(NULL));
-	
-		int sommet_modifie = rand()%N;
+	int meilleure_solution;
+	int meilleure_congestion;
+	int temp = 0;
+	for (int i = 0; i < N; i++)
+	{
+		int sommet_modifie = i;
+		meilleure_solution = Horaires[sommet_modifie];
 		printf("Le sommet modifie est le : %d\n", sommet_modifie);
-
-		Horaires[sommet_modifie] += 4;
-		return planification2(Horaires, sommet_depart, couleur, N, Type, sommet_modifie, T);
-	
-	
+		while(Horaires[sommet_modifie] < heure_max)
+		{
+			Horaires[sommet_modifie] += 1;
+			if (test_solution_valide(Horaires, N, couleur, Type, TO) == true)
+			{
+				printf("Solution valide avec %d à l'heure : %d\n",sommet_modifie,Horaires[sommet_modifie]);
+				//calcul congestion
+				meilleure_congestion = calcul_congestion_totale(Horaires,Nb_eleves,heure_max,N);
+				meilleure_solution = Horaires[sommet_modifie];
+				//print dans le fichier de sortie
+				//reagreder derriere aussi
+			}
+		}
+		//fixer a la meilleure solution valide la aussi
+	}	
 }
 
 int *planification2(int *Horaires, int sommet_depart, int *couleur, int N, int *TYPE, int sommet_fixe, int **T)
