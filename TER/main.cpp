@@ -22,9 +22,9 @@ int main()
     printf("entrez le nombre de salles disponibles pour la planification:\n");
     scanf("%d", &NBCOLOR);
     printf("lancement de l'application avec une probabilitée de %f, %d cours et %d salles\n",proba, TAILLE, NBCOLOR);*/
-    proba = 0.4;
+    proba = 0.2;
     TAILLE = 10;
-    NBCOLOR = 5;
+    NBCOLOR = 10;
     int **T = matrice_adjacence_GNO(TAILLE,proba);
     printf("\n MATRICE DU GNO \n");
     printf("\n 0  1  2  3  4  5  6  7  8  9  INDICES\n");

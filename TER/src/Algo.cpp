@@ -5,7 +5,7 @@
 
 int *Tri_nb_eleves(int *Nb_eleves)
 {
-	int min = Nb_eleves[0];
+	/*int min = Nb_eleves[0];
 	int Tab_triee[N];
 	Tab_triee[0] = 0;
 	for (int i = 1; i < N; i++)
@@ -13,9 +13,9 @@ int *Tri_nb_eleves(int *Nb_eleves)
 		temp = Nb_eleves[i];
 		if(min > temp)
 		{
-			
+
 		}
-	}
+	}*/
 }
 
 int *Algo_glouton(int **T, int sommet_depart, int *couleur, int N, int *TYPE, int *Nb_eleves)
