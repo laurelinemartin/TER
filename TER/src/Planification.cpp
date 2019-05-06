@@ -135,14 +135,17 @@ int *nb_eleves (int *TYPE, int N)
 
 bool test_coloration(int *Horaires, int *couleur, int N, int *TYPE, int heure_a_teste, int sommet_a_teste)
 {
-	int duree = 0;
+	int duree1 = 0;
+	int duree2 = 0;
 	//int Test[N];
 	for(int i = 0; i < N; i++)
 	{
 		if((couleur[i] == couleur[sommet_a_teste])&& (sommet_a_teste != i))
 		{
-			if(TYPE[i] == 0){duree = 12;}else{duree = 6;}
-			if((heure_a_teste >= Horaires[i]) && (heure_a_teste <= Horaires[i] + duree))
+			if(TYPE[i] == 0){duree1 = 12;}else{duree1 = 6;}
+			if(TYPE[sommet_a_teste] == 0){duree2 = 12;}else{duree2 = 6;}
+			if(((heure_a_teste + duree2 >= Horaires[i]) &&  (heure_a_teste + duree2 <= Horaires[i] + duree1)) 
+				|| ((Horaires[i] + duree1 >= heure_a_teste) && (Horaires[i] <= heure_a_teste + duree2)))
 			{
 				return false;
 			}
@@ -208,7 +211,6 @@ bool test_lien(int *Horaires, int N, int **T, int heure_a_teste, int sommet_a_te
 }
 
 //Pour le moment TD c'est 3h et CM 1h30, a changer ptet je sais pas 
-//fin c'est fixe, y a pas de 4h 2h etc...
 //Pour représenter les heures par créneau de 15 min :
 //0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34: indices
 //    8       9       10          11          12          13          14          15          16: heure
@@ -305,31 +307,6 @@ int *planification(int **T, int sommet_depart, int *couleur, int N, int *TYPE)
 
 bool test_solution_valide(int *Horaires, int N, int *couleur, int *TYPE, int **TO)
 {	
-/**
-	TEST COLORATION
-	bool res = true;
-	int dureei, dureej;
-	for(int i = 0; i < N; i++)
-	{
-		for(int j = i; j < N-1; j ++)
-		{
-			if(couleur[i] == couleur[j+1]){
-				if(TYPE[i] == 0) dureei = 13; else dureei = 7;
-				if(TYPE[j] == 0) dureej = 13; else dureej = 7;
-				if(Horaires[i] > Horaires[j]){
-					if(Horaires[j] +dureej >= Horaires[i])
-						res = false;			
-				}
-				else if (Horaires[i] < Horaires[j]){
-					if(Horaires[i] + dureei >= Horaires[j])
-						res = false;
-				}
-			}
-		}
-	}
-	return res;
-	*/
-
 	//TEST COLORATION
 	int dureei, dureej;
 	for (int i = 0; i < N; i++)
@@ -345,7 +322,7 @@ bool test_solution_valide(int *Horaires, int N, int *couleur, int *TYPE, int **T
 				
 					if(Horaires[j] +dureej > Horaires[i])
 					{
-						printf("Erreur : %d et %d\n",i,j);
+						//printf("Erreur couleur : %d et %d\n",i,j);
 						return false;	
 					}		
 				}
@@ -353,16 +330,14 @@ bool test_solution_valide(int *Horaires, int N, int *couleur, int *TYPE, int **T
 					
 					if(Horaires[i] + dureei > Horaires[j])
 					{
-						printf("Erreur : %d et %d\n",i,j);
+						//printf("Erreur couleur : %d et %d\n",i,j);
 						return false;
 					}
 				}
 			}
 		}
 	}
-	printf("return true color\n");
-	//return true;
-
+	//printf("return true color\n");
 
 	//TEST LIEN
 	int duree = 0;
@@ -379,7 +354,7 @@ bool test_solution_valide(int *Horaires, int N, int *couleur, int *TYPE, int **T
 		}
 		}
 	}
-	printf("return true lien\n");
+	//printf("return true lien\n");
 	return true;
 }
 

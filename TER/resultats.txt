@@ -1,5 +1,6 @@
 Les 10 meilleurs résultats : 
 
+<<<<<<< HEAD
 -------------------------
 Congestion du bus n°0 : 8
 -------------------------
@@ -11,3 +12,6 @@ Congestion du bus n°22 : 8
 -------------------------
 Congestion du bus n°29 : 8
 Congestion totale : 40
+=======
+Congestion totale : 16
+>>>>>>> e4cdc1a66c67e841713faf4367d4b31ccadfe401
