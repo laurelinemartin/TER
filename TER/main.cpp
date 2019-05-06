@@ -118,11 +118,12 @@ int main()
 
     bool a = test_solution_valide(Horaires,TAILLE,couleur,TYPE,TO);
     //a = true;
-    printf("sol valide ? : %d\n",a); //true = 1 false = 0
+    printf("solution planification initiale valide ? : %d\n",a); //true = 1 false = 0
 
     if(a == 1)
     {
         int *Horaires_tabou = Algo_tabou(Horaires, TAILLE, premier_sommet, couleur, TYPE,TO,1,HEUREMAX,NBELEVES);
+        printf("\n Planification tabou \n");
         printf("\n 0  1  2  3  4  5  6  7  8  9  INDICES\n");
         printf("----------------------------------------\n");
         for (int i = 0; i < TAILLE; i++)
@@ -130,13 +131,19 @@ int main()
           printf(" %d ",Horaires_tabou[i]);
         }
         printf("\n");
+
+        congestion_totale = calcul_congestion_totale(Horaires_tabou,NBELEVES,HEUREMAX,TAILLE);
+        printf("\n Calcul congestion tabou \n");
+        printf("----------------------------------------\n");
+        printf("Congestion totale tabou : %d\n",congestion_totale);
+        printf("\n");
+
+        a = test_solution_valide(Horaires_tabou,TAILLE,couleur,TYPE,TO);
+        //a = true;
+        printf("solution tabou1 valide ? : %d\n",a); //true = 1 false = 0
     }
 
-    /*congestion_totale = calcul_congestion_totale(Horaires_tabou,NBELEVES,34,TAILLE);
-    printf("\n Calcul congestion tabou \n");
-    printf("----------------------------------------\n");
-    printf("Congestion totale tabou : %d\n",congestion_totale);
-    printf("\n");*/
+    
 
   
 
