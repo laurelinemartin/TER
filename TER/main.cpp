@@ -11,6 +11,7 @@
 using namespace std;
 int TAILLE;
 int NBCOLOR;
+int HEUREMAX;
 
 int main()
 {   
@@ -26,7 +27,8 @@ int main()
     printf("lancement de l'application avec une probabilitée de %f, %d cours et %d salles\n",proba, TAILLE, NBCOLOR);*/
     proba = 0.3;
     TAILLE = 10;
-    NBCOLOR = 1000;
+    NBCOLOR = 10;
+    HEUREMAX = 34;
     int **T = matrice_adjacence_GNO(TAILLE,proba);
     printf("\n MATRICE DU GNO \n");
     printf("\n 0  1  2  3  4  5  6  7  8  9  INDICES\n");
@@ -102,6 +104,11 @@ int main()
     }
     printf("\n");
 
+<<<<<<< HEAD
+=======
+
+    cout << "avant calcul total" << endl;
+>>>>>>> 7ddf0e6646b8375c98797bc6eb1bad5778756cc9
     int congestion_totale = calcul_congestion_totale(Horaires,NBELEVES,34,TAILLE);
     /// Ecriture fichier ///
     ecrireCongestionTotale(congestion_totale);
@@ -111,18 +118,23 @@ int main()
     printf("Congestion totale : %d\n",congestion_totale);
     printf("\n");
 
-    /*int *Horaires_tabou = Algo_tabou(Horaires, TAILLE, premier_sommet, couleur, TYPE,TO,1);
-    printf("\n 0  1  2  3  4  5  6  7  8  9  INDICES\n");
-    printf("----------------------------------------\n");
-    for (int i = 0; i < TAILLE; i++)
-    {
-        printf(" %d ",Horaires_tabou[i]);
-    }
-    printf("\n"); */
+   
 
     bool a = test_solution_valide(Horaires,TAILLE,couleur,TYPE,TO);
     //a = true;
     printf("sol valide ? : %d\n",a); //true = 1 false = 0
+
+    if(a == 1)
+    {
+        int *Horaires_tabou = Algo_tabou(Horaires, TAILLE, premier_sommet, couleur, TYPE,TO,1,HEUREMAX,NBELEVES);
+        printf("\n 0  1  2  3  4  5  6  7  8  9  INDICES\n");
+        printf("----------------------------------------\n");
+        for (int i = 0; i < TAILLE; i++)
+        {
+          printf(" %d ",Horaires_tabou[i]);
+        }
+        printf("\n");
+    }
 
     /*congestion_totale = calcul_congestion_totale(Horaires_tabou,NBELEVES,34,TAILLE);
     printf("\n Calcul congestion tabou \n");

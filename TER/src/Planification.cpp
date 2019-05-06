@@ -303,7 +303,7 @@ int *planification(int **T, int sommet_depart, int *couleur, int N, int *TYPE)
 	return Horaires;
 }
 
-bool test_solution_valide(int *Horaires, int N, int *couleur, int *TYPE, int **T)
+bool test_solution_valide(int *Horaires, int N, int *couleur, int *TYPE, int **TO)
 {	
 /**
 	TEST COLORATION
@@ -330,6 +330,39 @@ bool test_solution_valide(int *Horaires, int N, int *couleur, int *TYPE, int **T
 	return res;
 	*/
 
+	//TEST COLORATION
+	int dureei, dureej;
+	for (int i = 0; i < N; i++)
+	{
+		for (int j = 0; j < N; j++)
+		{
+			
+			if((couleur[i] == couleur[j]) && (i != j)) {
+				
+				if(TYPE[i] == 0) {dureei = 13;} else {dureei = 7;}
+				if(TYPE[j] == 0) {dureej = 13;} else {dureej = 7;}
+			if(Horaires[i] > Horaires[j]){
+				
+					if(Horaires[j] +dureej > Horaires[i])
+					{
+						printf("Erreur : %d et %d\n",i,j);
+						return false;	
+					}		
+				}
+				else {
+					
+					if(Horaires[i] + dureei > Horaires[j])
+					{
+						printf("Erreur : %d et %d\n",i,j);
+						return false;
+					}
+				}
+			}
+		}
+	}
+	printf("return true color\n");
+	//return true;
+
 
 	//TEST LIEN
 	int duree = 0;
@@ -337,15 +370,16 @@ bool test_solution_valide(int *Horaires, int N, int *couleur, int *TYPE, int **T
 	{
 		for (int j = i; j < N; j++)
 		{
-			if(T[i][j] == 1) {
+			if(TO[i][j] == 1) {
 				if(TYPE[j] == 0) duree = 12; else duree = 6;
-			if((test_lien(Horaires, N, T, Horaires[i] + duree, j, TYPE) == false) && (i != j))
+			if((test_lien(Horaires, N, TO, Horaires[i] + duree, j, TYPE) == false) && (i != j))
 			{
 				return false;
 			}
 		}
 		}
 	}
+	printf("return true lien\n");
 	return true;
 }
 
