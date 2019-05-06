@@ -15,7 +15,21 @@ void ecrireSolution(){
 }
 
 void ecrirePlanification(int* horaires, int horaireMax){
-  	vector<int> myvector (horaires, horaires + horaireMax);
+	FILE *sortie = fopen("resultats.txt", "a");
+	int cours = 0;
+	int heure = 8;
+	int minute = 0;
+  	//// tableau Horaires devient vector<int> vecHoraires
+  	vector<int> vecHoraires (horaires, horaires + horaireMax);
+  	//// tri de vecHoraire
+  	//// sort(vecHoraires.begin(), vecHoraires.end());
+  	fprintf(sortie, "\nPLANIFICATION DES COURS :\n");
+  	for (auto x : vecHoraires) {
+  		if()
+  		fprintf(sortie, "Cours %d à %d h\n", cours, heure);
+  		cours++;
+    }
+    fclose(sortie);
 }
 
 void ecrireCongestionBus(int numBus, int congestionBus){

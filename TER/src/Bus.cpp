@@ -21,7 +21,7 @@ int calcul_congestion_bus(int *Nb_eleves_bus, int heure_bus)
         congestion++;
     }
     if(congestion > 0){
-        ecrireCongestionBus(heure_bus, congestion);
+        //ecrireCongestionBus(heure_bus, congestion);
         //printf("congestion du bus %d : %d\n",heure_bus, congestion);
     }
     return congestion;
