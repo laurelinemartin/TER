@@ -89,22 +89,22 @@ int main()
     }
     printf("\n");
 
-    int *Horaires = planification(TO,premier_sommet,couleur,TAILLE,TYPE);
+    int *Horaires = planification(TO, premier_sommet, couleur, TAILLE, TYPE);
     printf("\n PLANIFICATION \n");
+    /// Ecriture fichier ///
+    ecrirePlanification(Horaires, TAILLE);
+    /// Ecriture terminal ///
     printf("\n 0  1  2  3  4  5  6  7  8  9  INDICES\n");
     printf("----------------------------------------\n");
     for (int i = 0; i < TAILLE; i++)
     {
-        printf(" %d ",Horaires[i]);
+        printf(" %d ", Horaires[i]);
     }
     printf("\n");
 
-    cout << "avant calcul total" << endl;
     int congestion_totale = calcul_congestion_totale(Horaires,NBELEVES,34,TAILLE);
-    cout << "apres calcul total" << endl;
     /// Ecriture fichier ///
     ecrireCongestionTotale(congestion_totale);
-    cout << "apres ecriture fichier" << endl;
     /// Ecriture Terminal ///
     printf("\n Calcul congestion \n");
     printf("----------------------------------------\n");

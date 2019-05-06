@@ -4,16 +4,18 @@
 #include <vector>
 #include <stdio.h>
 #include <stdlib.h>
+#include <algorithm>
 
 using namespace std;
 
-//// Variables golables /////
+//// Variables golables ////
 #define nbResults 10
+#define lapseHeure 15
 
 void initFichier();
 void ecrireSolution();
 void ecrireSolution();
-void ecrirePlanification();
+void ecrirePlanification(int* horaires, int tailleTab);
 void ecrireCongestionBus(int numBus, int congestionBus);
 void ecrireCongestionTotale(int congestionTotale);
 

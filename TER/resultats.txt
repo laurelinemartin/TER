@@ -1,4 +1,13 @@
-CONGESTION DES BUS : 
+Les 10 meilleurs résultats : 
+
+-------------------------
+Congestion du bus n°0 : 8
+-------------------------
+Congestion du bus n°1 : 8
 -------------------------
 Congestion du bus n°9 : 8
-Congestion totale : 24
+-------------------------
+Congestion du bus n°22 : 8
+-------------------------
+Congestion du bus n°29 : 8
+Congestion totale : 40
