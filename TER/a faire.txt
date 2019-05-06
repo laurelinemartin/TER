@@ -9,8 +9,13 @@
 3. mettre la probabilite d avoir été dans un cours precedent demander a Barth peut etre
 4. SCRIPT
 5. ecrire un fichier .txt en sortie avec les données et avec les meilleures solutions et leurs congestions
-	- Nouveau fichier IO
+	- Nouveau fichier IO : ok
 	- 10 meilleures solutions (m.a.j : faire une variable pour fixer le nombre de slution souhéitées)
+	- Fonction d'initialisation du fichier : ok
+	- Fonction d'écriture d'une solution
+		- Afficher la planification
+		- Afficher la congestion par bus : ok
+		- Afficher la congestion finale : ok
 6. Rapports :
 	finir rapport strategie d opti
 	rapport final

@@ -104,11 +104,6 @@ int main()
     }
     printf("\n");
 
-<<<<<<< HEAD
-=======
-
-    cout << "avant calcul total" << endl;
->>>>>>> 7ddf0e6646b8375c98797bc6eb1bad5778756cc9
     int congestion_totale = calcul_congestion_totale(Horaires,NBELEVES,34,TAILLE);
     /// Ecriture fichier ///
     ecrireCongestionTotale(congestion_totale);

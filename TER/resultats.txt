@@ -1,17 +1,1366 @@
 Les 10 meilleurs résultats : 
 
-<<<<<<< HEAD
 -------------------------
-Congestion du bus n°0 : 8
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+Congestion totale : 32-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
 -------------------------
 Congestion du bus n°1 : 8
 -------------------------
-Congestion du bus n°9 : 8
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 1
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 1
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 3
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 3
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 5
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 7
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 7
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°1 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°2 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 7
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 7
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 7
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°16 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°17 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°18 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°19 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°20 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°21 : 8
+-------------------------
+Congestion du bus n°15 : 8
 -------------------------
 Congestion du bus n°22 : 8
 -------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°23 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°24 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°25 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°26 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
 Congestion du bus n°29 : 8
-Congestion totale : 40
-=======
-Congestion totale : 16
->>>>>>> e4cdc1a66c67e841713faf4367d4b31ccadfe401
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°30 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°31 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°1 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°2 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°3 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°4 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°5 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°6 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°7 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°8 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°9 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°10 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°11 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°12 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°13 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°16 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°17 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°18 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°19 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°20 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°21 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°22 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°23 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°24 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°25 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°26 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°29 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°30 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°31 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°1 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°2 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°3 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°1 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°2 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°3 : 3
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°14 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°27 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
+-------------------------
+Congestion du bus n°15 : 8
+-------------------------
+Congestion du bus n°28 : 8
