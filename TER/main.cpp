@@ -94,7 +94,7 @@ int main()
     int *Horaires = planification(TO, premier_sommet, couleur, TAILLE, TYPE);
     printf("\n PLANIFICATION \n");
     /// Ecriture fichier ///
-    ecrirePlanification(Horaires, TAILLE);
+    ecrirePlanification(Horaires, couleur, TAILLE);
     /// Ecriture terminal ///
     printf("\n 0  1  2  3  4  5  6  7  8  9  INDICES\n");
     printf("----------------------------------------\n");
