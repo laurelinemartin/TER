@@ -17,7 +17,7 @@ using namespace std;
 void initFichier();
 void ecrireSolution();
 void ecrireSolution();
-void ecrirePlanification(int* horaires, int tailleTab);
+void ecrirePlanification(int* horaires, int* salle, int tailleTab);
 void ecrireCongestionBus(int numBus, int congestionBus);
 void ecrireCongestionTotale(int congestionTotale);
 

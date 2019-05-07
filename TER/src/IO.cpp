@@ -14,7 +14,7 @@ void ecrireSolution(){
 	ecrireCongestionTotale(0);
 }
 
-void ecrirePlanification(int* horaires, int horaireMax){
+void ecrirePlanification(int* horaires, int* salles, int horaireMax){
 	FILE *sortie = fopen("resultats.txt", "a");
 	int cours = 0;
 	vector<int> heure;
@@ -25,7 +25,7 @@ void ecrirePlanification(int* horaires, int horaireMax){
   	fprintf(sortie, "\nPLANIFICATION DES COURS :\n");
   	for (auto x : vecHoraires) {
   		heure = convertHeure(x);
-  		fprintf(sortie, "Cours %d à %d h %d\n", cours, heure[0], heure[1]);
+  		fprintf(sortie, "Cours %d à %d h %d salle : %d\n", cours, heure[0], heure[1], salles[cours]);
   		cours++;
     }
     fclose(sortie);
