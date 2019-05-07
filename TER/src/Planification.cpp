@@ -266,7 +266,7 @@ int *planification(int **T, int sommet_depart, int *couleur, int N, int *TYPE)
 				if(testConnnexe(T, N, i) == true){
 					if(TYPE[k] == 0)//si le cours est un td
 					{
-						for(int j = 1; j <= 36; j++)
+						for(int j = 0; j <= 36; j++)
 						{
 							if(test_coloration(Horaires, couleur, N, TYPE, Horaires[k] + 13  + j, i) == true)
 							{
@@ -281,7 +281,7 @@ int *planification(int **T, int sommet_depart, int *couleur, int N, int *TYPE)
 					}
 					else //si le cours est un cm
 					{
-						for(int j = 1; j <= 36; j++)
+						for(int j = 0; j <= 36; j++)
 						{
 							if(test_coloration(Horaires, couleur, N, TYPE, Horaires[k] + 7 + j,i) == true)
 							{

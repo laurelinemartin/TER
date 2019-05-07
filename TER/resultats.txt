@@ -2,14 +2,14 @@ Les 10 meilleurs résultats :
 
 
 PLANIFICATION DES COURS :
-Cours 0 à 8 h 0 salle : 3
-Cours 1 à 11 h 15 salle : 0
-Cours 2 à 10 h 0 salle : 1
-Cours 3 à 14 h 30 salle : 0
-Cours 4 à 11 h 15 salle : 7
-Cours 5 à 17 h 45 salle : 0
-Cours 6 à 14 h 30 salle : 7
-Cours 7 à 8 h 0 salle : 9
-Cours 8 à 17 h 45 salle : 7
-Cours 9 à 23 h 0 salle : 5
-Congestion totale : 24
+Cours 0 à 8 h 0 salle : 0
+Cours 1 à 11 h 15 salle : 3
+Cours 2 à 14 h 30 salle : 3
+Cours 3 à 17 h 45 salle : 2
+Cours 4 à 9 h 45 salle : 4
+Cours 5 à 14 h 30 salle : 0
+Cours 6 à 11 h 15 salle : 1
+Cours 7 à 17 h 45 salle : 1
+Cours 8 à 24 h 15 salle : 3
+Cours 9 à 29 h 15 salle : 4
+Congestion totale (nombre de bus dans lequel de seuil de confort à été dépassé): 24 / 34

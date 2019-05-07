@@ -11,7 +11,7 @@ void ecrireSolution(){
 //	int* tab[1];
 //	ecrirePlanification(tab, 0);
 	ecrireCongestionBus(0, 0);
-	ecrireCongestionTotale(0);
+	ecrireCongestionTotale(0,0);
 }
 
 void ecrirePlanification(int* horaires, int* salles, int horaireMax){
@@ -39,8 +39,8 @@ void ecrireCongestionBus(int numBus, int congestionBus){
 	fclose(sortie);
 }
 
-void ecrireCongestionTotale(int congestionTotale){
+void ecrireCongestionTotale(int congestionTotale, int nbbus){
 	FILE *sortie = fopen("resultats.txt", "a");
-	fprintf(sortie, "Congestion totale : %d", congestionTotale);
+	fprintf(sortie, "Congestion totale (nombre de bus dans lequel de seuil de confort à été dépassé): %d / %d", congestionTotale, nbbus);
 	fclose(sortie);
 }
