@@ -106,12 +106,9 @@ int main()
 
     int congestion_totale = calcul_congestion_totale(Horaires,NBELEVES,34,TAILLE);
     /// Ecriture fichier ///
-<<<<<<< HEAD
     ecrireSolution(Horaires, couleur, TAILLE, congestion_totale);
     // ecrireCongestionTotale(congestion_totale);
-=======
     ecrireCongestionTotale(congestion_totale, HEUREMAX);
->>>>>>> a3e1237df9af76ed603974fca082a1e3816a0deb
     /// Ecriture Terminal ///
     printf("\n Calcul congestion \n");
     printf("----------------------------------------\n");
