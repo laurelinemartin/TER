@@ -25,9 +25,9 @@ int main()
     printf("entrez le nombre de salles disponibles pour la planification:\n");
     scanf("%d", &NBCOLOR);
     printf("lancement de l'application avec une probabilitée de %f, %d cours et %d salles\n",proba, TAILLE, NBCOLOR);*/
-    proba = 0.3;
+    proba = 0.4;
     TAILLE = 10;
-    NBCOLOR = 10;
+    NBCOLOR = 5;
     HEUREMAX = 34;
     int **T = matrice_adjacence_GNO(TAILLE,proba);
     printf("\n MATRICE DU GNO \n");
@@ -106,8 +106,12 @@ int main()
 
     int congestion_totale = calcul_congestion_totale(Horaires,NBELEVES,34,TAILLE);
     /// Ecriture fichier ///
+<<<<<<< HEAD
     ecrireSolution(Horaires, couleur, TAILLE, congestion_totale);
     // ecrireCongestionTotale(congestion_totale);
+=======
+    ecrireCongestionTotale(congestion_totale, HEUREMAX);
+>>>>>>> a3e1237df9af76ed603974fca082a1e3816a0deb
     /// Ecriture Terminal ///
     printf("\n Calcul congestion \n");
     printf("----------------------------------------\n");

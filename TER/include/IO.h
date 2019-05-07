@@ -18,6 +18,6 @@ void initFichier();
 void ecrireSolution(int* horaires, int* salles, int horaireMax, int congestionTotale);
 void ecrirePlanification(int* horaires, int* salle, int tailleTab);
 void ecrireCongestionBus(int numBus, int congestionBus);
-void ecrireCongestionTotale(int congestionTotale);
+void ecrireCongestionTotale(int congestionTotale, int nbbus);
 
 #endif //IO_H
