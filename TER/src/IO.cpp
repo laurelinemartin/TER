@@ -7,11 +7,9 @@ void initFichier(){
 	fclose(sortie);
 }
 
-void ecrireSolution(){
-//	int* tab[1];
-//	ecrirePlanification(tab, 0);
-	ecrireCongestionBus(0, 0);
-	ecrireCongestionTotale(0);
+void ecrireSolution(int* horaires, int* salles, int horaireMax, int congestionTotale){
+	ecrirePlanification(horaires, salles, horaireMax);
+	ecrireCongestionTotale(congestionTotale);
 }
 
 void ecrirePlanification(int* horaires, int* salles, int horaireMax){

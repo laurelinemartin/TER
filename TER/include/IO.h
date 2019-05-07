@@ -15,8 +15,7 @@ using namespace std;
 #define lapseHeure 15
 
 void initFichier();
-void ecrireSolution();
-void ecrireSolution();
+void ecrireSolution(int* horaires, int* salles, int horaireMax, int congestionTotale);
 void ecrirePlanification(int* horaires, int* salle, int tailleTab);
 void ecrireCongestionBus(int numBus, int congestionBus);
 void ecrireCongestionTotale(int congestionTotale);

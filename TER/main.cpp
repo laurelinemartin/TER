@@ -94,7 +94,7 @@ int main()
     int *Horaires = planification(TO, premier_sommet, couleur, TAILLE, TYPE);
     printf("\n PLANIFICATION \n");
     /// Ecriture fichier ///
-    ecrirePlanification(Horaires, couleur, TAILLE);
+    // ecrirePlanification(Horaires, couleur, TAILLE);
     /// Ecriture terminal ///
     printf("\n 0  1  2  3  4  5  6  7  8  9  INDICES\n");
     printf("----------------------------------------\n");
@@ -106,7 +106,8 @@ int main()
 
     int congestion_totale = calcul_congestion_totale(Horaires,NBELEVES,34,TAILLE);
     /// Ecriture fichier ///
-    ecrireCongestionTotale(congestion_totale);
+    ecrireSolution(Horaires, couleur, TAILLE, congestion_totale);
+    // ecrireCongestionTotale(congestion_totale);
     /// Ecriture Terminal ///
     printf("\n Calcul congestion \n");
     printf("----------------------------------------\n");

@@ -1,6 +1,12 @@
 #include "../include/Algo.h"
 
 
+//// récupère un int qui correspond au nombre représentant
+//// l'heure dans la table Horaires.
+//// Considère que 2 = 8h00
+//// à chaque tour de boucle, min augmente du temps défini (ici une variable
+//// globale lapseHeure = 15)
+//// mets l'heure et les minutes dans un vecteur et le retourne
 vector<int> convertHeure(int num){
 	int heure = 8;
 	int min = 0;
