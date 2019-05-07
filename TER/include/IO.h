@@ -6,6 +6,7 @@
 #include <stdlib.h>
 #include <algorithm>
 #include <bits/stdc++.h> 
+#include "Algo.h"
 
 using namespace std;
 

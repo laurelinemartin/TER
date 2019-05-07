@@ -1,5 +1,23 @@
 #include "../include/Algo.h"
 
+
+vector<int> convertHeure(int num){
+	int heure = 8;
+	int min = 0;
+	vector<int> vecHeure;
+	for(int i = 2; i != num; i++){
+		min += lapseHeure;
+		if(min % 60 == 0){
+			heure++;
+			min = 0;
+		}
+	}
+	vecHeure.push_back(heure);
+	vecHeure.push_back(min);
+	return vecHeure;
+}
+
+
 int *Algo_tabou(int *Horaires, int N, int sommet_depart, int *couleur, int *Type, int **TO, int Nb_iterations, int heure_max, int* Nb_eleves)
 {
 	int meilleure_solution;
