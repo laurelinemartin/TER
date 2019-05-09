@@ -24,7 +24,7 @@ vector<int> convertHeure(int num){
 }
 
 
-int *Algo_tabou(int *Horaires, int N, int sommet_depart, int *couleur, int *Type, int **TO, int Nb_iterations, int heure_max, int* Nb_eleves)
+int *Algo_glouton(int *Horaires, int N, int sommet_depart, int *couleur, int *Type, int **TO, int Nb_iterations, int heure_max, int* Nb_eleves)
 {
 	int meilleure_solution;
 	int meilleure_congestion;
@@ -35,7 +35,7 @@ int *Algo_tabou(int *Horaires, int N, int sommet_depart, int *couleur, int *Type
 	{
 		sommet_modifie = i;
 		meilleure_solution = Horaires[sommet_modifie];
-		meilleure_congestion = calcul_congestion_totale(Horaires,Nb_eleves,heure_max,N);
+		meilleure_congestion = calcul_congestion_totale(Horaires,Nb_eleves,heure_max,N,TO);
 		printf("Le sommet modifie est le : %d\n", sommet_modifie);
 		while(j < heure_max - 1)
 		{
@@ -43,7 +43,7 @@ int *Algo_tabou(int *Horaires, int N, int sommet_depart, int *couleur, int *Type
 			if (test_solution_valide(Horaires, N, couleur, Type, TO) == true)
 			{
 				//printf("Solution valide avec %d à l'heure : %d\n",sommet_modifie,Horaires[sommet_modifie]);
-				temp = calcul_congestion_totale(Horaires,Nb_eleves,heure_max,N);
+				temp = calcul_congestion_totale(Horaires,Nb_eleves,heure_max,N,TO);
 				//printf("Sa congestion est : %d\n",temp);
 				if(temp < meilleure_congestion)
 				{

@@ -15,7 +15,7 @@ int HEUREMAX;
 
 int main()
 {   
-    initFichier();
+    //initFichier();
     float proba;
     /*
     printf("entrez la probabilitée de lien entre 2 cours :\n");
@@ -104,11 +104,11 @@ int main()
     }
     printf("\n");
 
-    int congestion_totale = calcul_congestion_totale(Horaires,NBELEVES,34,TAILLE);
+    int congestion_totale = calcul_congestion_totale(Horaires,NBELEVES,34,TAILLE,TO);
     /// Ecriture fichier ///
-    ecrireSolution(Horaires, couleur, TAILLE, congestion_totale);
+    //ecrireSolution(Horaires, couleur, TAILLE, congestion_totale);
     // ecrireCongestionTotale(congestion_totale);
-    ecrireCongestionTotale(congestion_totale, HEUREMAX);
+    //ecrireCongestionTotale(congestion_totale, HEUREMAX);
     /// Ecriture Terminal ///
     printf("\n Calcul congestion \n");
     printf("----------------------------------------\n");
@@ -119,30 +119,30 @@ int main()
 
     bool a = test_solution_valide(Horaires,TAILLE,couleur,TYPE,TO);
     //a = true;
-    printf("solution planification initiale valide ? : %d\n",a); //true = 1 false = 0
-
+    printf("Solution planification initiale valide ? : %d\n",a); //true = 1 false = 0
+    /*
     if(a == 1)
     {
-        int *Horaires_tabou = Algo_tabou(Horaires, TAILLE, premier_sommet, couleur, TYPE,TO,1,HEUREMAX,NBELEVES);
+        int *Horaires_glouton = Algo_glouton(Horaires, TAILLE, premier_sommet, couleur, TYPE,TO,1,HEUREMAX,NBELEVES);
         printf("\n Planification tabou \n");
         printf("\n 0  1  2  3  4  5  6  7  8  9  INDICES\n");
         printf("----------------------------------------\n");
         for (int i = 0; i < TAILLE; i++)
         {
-          printf(" %d ",Horaires_tabou[i]);
+          printf(" %d ",Horaires_glouton[i]);
         }
         printf("\n");
 
-        congestion_totale = calcul_congestion_totale(Horaires_tabou,NBELEVES,HEUREMAX,TAILLE);
-        printf("\n Calcul congestion tabou \n");
+        congestion_totale = calcul_congestion_totale(Horaires_glouton,NBELEVES,HEUREMAX,TAILLE,TO);
+        printf("\n Calcul congestion glouton \n");
         printf("----------------------------------------\n");
-        printf("Congestion totale tabou : %d\n",congestion_totale);
+        printf("Congestion totale glouton : %d\n",congestion_totale);
         printf("\n");
 
-        a = test_solution_valide(Horaires_tabou,TAILLE,couleur,TYPE,TO);
+        a = test_solution_valide(Horaires_glouton,TAILLE,couleur,TYPE,TO);
         //a = true;
-        printf("solution tabou1 valide ? : %d\n",a); //true = 1 false = 0
-    }
+        printf("Solution glouton valide ? : %d\n",a); //true = 1 false = 0
+    } */
 
     
 
@@ -153,33 +153,7 @@ int main()
 
 
 
-    /****************************TEST COURS************************************/
-    //remplacer Eleve et Enseignant par int dans le .h pour ces tests
-    //Cours *c1;
-    //Constructeur par defaut
-    /*c1 = new Cours();
-
-    c1->add_etu(1);
-    c1->add_etu(2);
-    c1->add_enseignants(5);
-    c1->add_enseignants(6);
-
-    c1->description(); */
-
-    //Constructeur avec des données 
-    /*vector<int> p_liste_etu, p_liste_ens;
-
-    p_liste_etu.push_back(1); p_liste_etu.push_back(2);
-    p_liste_ens.push_back(5), p_liste_ens.push_back(6);
-
-    test = new Cours(1, 2, 3, 4, 9, 6, p_liste_etu, p_liste_ens);
-
-    test->add_eleve(3);
-    test->add_enseignants(7);
-    test->set_num_ens(10);
-    test->set_num_ens(5);
-
-    test->description();*/
+   
     
     /****************************TEST SALLE************************************/
     //Salle *test1, *test2;
