@@ -122,11 +122,11 @@ int main()
     bool a = test_solution_valide(Horaires,TAILLE,couleur,TYPE,TO);
     //a = true;
     printf("Solution planification initiale valide ? : %d\n",a); //true = 1 false = 0
-    /*
+    
     if(a == 1)
     {
         int *Horaires_glouton = Algo_glouton(Horaires, TAILLE, premier_sommet, couleur, TYPE,TO,1,HEUREMAX,NBELEVES);
-        printf("\n Planification tabou \n");
+        printf("\n Planification gloutonne \n");
         printf("\n 0  1  2  3  4  5  6  7  8  9  INDICES\n");
         printf("----------------------------------------\n");
         for (int i = 0; i < TAILLE; i++)
@@ -136,93 +136,33 @@ int main()
         printf("\n");
 
         congestion_totale = calcul_congestion_totale(Horaires_glouton,NBELEVES,HEUREMAX,TAILLE,TO);
-        printf("\n Calcul congestion glouton \n");
+        printf("\n Calcul congestion gloutone \n");
         printf("----------------------------------------\n");
-        printf("Congestion totale glouton : %d\n",congestion_totale);
+        printf("Congestion totale gloutone : %d\n",congestion_totale);
         printf("\n");
 
         a = test_solution_valide(Horaires_glouton,TAILLE,couleur,TYPE,TO);
         //a = true;
-        printf("Solution glouton valide ? : %d\n",a); //true = 1 false = 0
-    } */
+        printf("Solution gloutone valide ? : %d\n",a); //true = 1 false = 0
+        
+        
+        int *Horaires_tabou_dur = Algo_tabou_dur(Horaires, TAILLE, premier_sommet, couleur, TYPE,TO,1,HEUREMAX,NBELEVES);
+        printf("\n Planification tabou dur\n");
+        printf("\n 0  1  2  3  4  5  6  7  8  9  INDICES\n");
+        printf("----------------------------------------\n");
+        for (int i = 0; i < TAILLE; i++)
+        {
+          printf(" %d ",Horaires_tabou_dur[i]);
+        }
+        printf("\n");
 
-    
+        congestion_totale = calcul_congestion_totale(Horaires_tabou_dur,NBELEVES,HEUREMAX,TAILLE,TO);
+        printf("\n Calcul congestion tabou dur \n");
+        printf("----------------------------------------\n");
+        printf("Congestion totale tabou dur : %d\n",congestion_totale);
+        printf("\n");
 
-  
-
-
-
-
-
-
-   
-    
-    /****************************TEST SALLE************************************/
-    //Salle *test1, *test2;
-    //Constructeur par defaut
-    /*test1 = new Salle();
-    test1->descritpion();*/
-
-    //Constructeurs avec des données
-   /* test1 = new Salle(0, 50);
-    test1->description();
-    test2 = new Salle(0, 45, 2);
-    test2->description();
-
-    /****************************TEST ETUDIANTS************************************/
-    /* Etudiant *etu1, *etu2;
-    //Constructeur par defaut
-    etu1 = new Etudiant();
-    etu1->description();
-    //Constructeurs avec des données
-    etu2 = new Etudiant(1, 30);
-    etu2->description();
-
-    /****************************TEST ENSEIGNANT************************************/
-    /*Enseignant *ens1, *ens2;
-    //Constructeur par defaut
-    ens1 = new Enseignant();
-    ens1->description();
-    //Constructeurs avec des données
-    vector<int> p_plage;
-    p_plage.push_back(3);
-    ens2 = new Enseignant(p_plage);
-    ens2->add_dispo(17);
-    ens2->description();
-
-    /****************************TEST CONTRAINTES************************************/
-    
-    //cout<<"contrainte_cours_salle : "<<contrainte_cours_salle(*test1, *test)<<endl;
-    /*Cours* cours1;
-    Cours* cours2;
-    
-    
-     vector<int> p_liste_etu, p_liste_ens;
-
-    p_liste_etu.push_back(1); p_liste_etu.push_back(2);
-    p_liste_ens.push_back(5), p_liste_ens.push_back(6);
-
-    cours1 = new Cours(1, 2, 3, 4, 9, 6, p_liste_etu, p_liste_ens);
-
-    cours1->add_etu(3);
-    cours1->add_enseignants(7);
-    cours1->set_num_ens(10);
-    cours1->set_num_ens(5);
-
-    cours1->description();
-    
-    cours2 = new Cours(1, 2, 3, 4, 9, 12, p_liste_etu, p_liste_ens);
-
-    cours2->add_etu(3);
-    cours2->add_enseignants(7);
-    cours2->set_num_ens(10);
-    cours2->set_num_ens(5);
-
-    cours2->description();
-
-	//~ bool a = test_contraintes(*cours1,*cours2);
-	bool a = contrainte_cours_cours(*cours1,*cours2);
-	printf(a ? "true" : "false");
-
-    return 0; */
+        a = test_solution_valide(Horaires_glouton,TAILLE,couleur,TYPE,TO);
+        printf("Solution tabou dur valide ? : %d\n",a);
+    }
 }
