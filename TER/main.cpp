@@ -76,7 +76,7 @@ int main()
     printf("\n");
 
     int *TYPE = type_cours(TAILLE);
-    int *NBELEVES = nb_eleves(TYPE,TAILLE);
+    int *NBELEVES = nb_eleves(TYPE, TAILLE);
     printf("\n TYPE DE COURS ET NOMBRES D'ELEVES ASSOCIES\n");
     printf("\n 0  1  2  3  4  5  6  7  8  9  INDICES\n");
     printf("----------------------------------------\n");
@@ -85,9 +85,11 @@ int main()
         printf(" %d ",TYPE[i]);
     }
     printf("\n");
+    int* tabEleves = tabCours(NBELEVES, TAILLE);
     for (int i = 0; i < TAILLE; i++)
     {
-        printf(" %d ",NBELEVES[i]);
+        printf("%d ", NBELEVES[i]);
+        printf("%d \t", tabEleves[i]);
     }
     printf("\n");
 
@@ -106,9 +108,8 @@ int main()
 
     int congestion_totale = calcul_congestion_totale(Horaires,NBELEVES,34,TAILLE);
     /// Ecriture fichier ///
-    ecrireSolution(Horaires, couleur, TAILLE, congestion_totale);
-    // ecrireCongestionTotale(congestion_totale);
-    ecrireCongestionTotale(congestion_totale, HEUREMAX);
+    ecrireSolution(Horaires, couleur, TAILLE, HEUREMAX, congestion_totale);
+    // ecrireCongestionTotale(congestion_totale, HEUREMAX);
     /// Ecriture Terminal ///
     printf("\n Calcul congestion \n");
     printf("----------------------------------------\n");
