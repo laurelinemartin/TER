@@ -1,6 +1,6 @@
 #include "../include/IO.h"
 using namespace std;
-/*
+
 void initFichier(){
 	FILE *sortie = fopen("resultats.txt", "w");
 	fprintf(sortie, "Les %d meilleurs résultats : \n\n", nbResults);
@@ -41,4 +41,4 @@ void ecrireCongestionTotale(int congestionTotale, int nbbus){
 	FILE *sortie = fopen("resultats.txt", "a");
 	fprintf(sortie, "Congestion totale (nombre de bus dans lequel de seuil de confort à été dépassé): %d / %d", congestionTotale, nbbus);
 	fclose(sortie);
-}*/
+}

@@ -85,11 +85,11 @@ int main()
         printf(" %d ",TYPE[i]);
     }
     printf("\n");
-    int* tabEleves = tabCours(NBELEVES, TAILLE);
+    // int* tabEleves = tabCours(NBELEVES, TAILLE);
     for (int i = 0; i < TAILLE; i++)
     {
         printf("%d ", NBELEVES[i]);
-        printf("%d \t", tabEleves[i]);
+//        printf("%d \t", tabEleves[i]);
     }
     printf("\n");
 
@@ -106,11 +106,11 @@ int main()
     }
     printf("\n");
 
-    int congestion_totale = calcul_congestion_totale(Horaires,NBELEVES,34,TAILLE,TO);
+    int congestion_totale = calcul_congestion_totale(Horaires, NBELEVES, 34, TAILLE, TO);
     /// Ecriture fichier ///
-    //ecrireSolution(Horaires, couleur, TAILLE, congestion_totale);
+    ecrireSolution(Horaires, couleur, TAILLE, HEUREMAX, congestion_totale);
     // ecrireCongestionTotale(congestion_totale);
-    //ecrireCongestionTotale(congestion_totale, HEUREMAX);
+    // ecrireCongestionTotale(congestion_totale, HEUREMAX);
     /// Ecriture Terminal ///
     printf("\n Calcul congestion \n");
     printf("----------------------------------------\n");
