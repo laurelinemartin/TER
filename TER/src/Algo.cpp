@@ -42,7 +42,7 @@ int *Algo_glouton(int *Horaires, int N, int sommet_depart, int *couleur, int *Ty
 		sommet_modifie = i;
 		meilleure_solution = Horaires_glouton[sommet_modifie];
 		meilleure_congestion = calcul_congestion_totale(Horaires_glouton,Nb_eleves,heure_max,N,TO);
-		printf("Le sommet modifie est le : %d\n", sommet_modifie);
+		//printf("Le sommet modifie est le : %d\n", sommet_modifie);
 		while(j < heure_max - 1)
 		{
 			Horaires_glouton[sommet_modifie] = j;
@@ -64,7 +64,7 @@ int *Algo_glouton(int *Horaires, int N, int sommet_depart, int *couleur, int *Ty
 		}
 		j = 2;
 		Horaires_glouton[sommet_modifie] = meilleure_solution;
-		printf("L'horaires choisis pour %d est : %d\n",sommet_modifie,Horaires_glouton[sommet_modifie]);
+		//printf("L'horaires choisis pour %d est : %d\n",sommet_modifie,Horaires_glouton[sommet_modifie]);
 		//fixer a la meilleure solution valide la aussi
 	}
 	return Horaires_glouton;	
