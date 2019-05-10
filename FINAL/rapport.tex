@@ -29,19 +29,35 @@
 	Dans notre projet, les horaires d'activités sont celles de l'Université Versailles-Saint-Quentin, et plus précisément de l'UFR des Sciences, basé à Versailles. Ainsi en repensant ces horaires, on pourra minimiser la congestion sur la ligne de bus R, allant de la gare transilien Versailles-Chantier à l'UFR.\\
 	Ce rapport a pour objectif de décrire dans un premier temps les données que nous allons utiliser dans notre projet, nous détaillerons les étapes à suivre pour exploiter ces données. Dans un second temps les stratégies de résolution envisageables.\\
 	Afin de facilité la compréhension de ce rapport, nous allons expliciter les étapes sous la forme d'un exemple simple.
-
+	PLAN
+	
 \section{Les données initiales}
 
-\section{Objectis}
-\subsection{Contraintes}
-\subsection{Métriques sur les contraintes}
-
+\section{Objectif}
+	L'objectif de notre projet est de générer un emploi du temps, c'est à dire une planification qui respecte toutes les contraintes, dont la métrique est minimale.
+	\subsection{Contraintes}
+		\subsubsection{Entre deux cours}
+				\begin{enumerate}
+					\item Deux cours utilisent la même salle ne doivent pas avoir des horaires qui se chevauchent
+					\item Deux cours qui ont des horaires qui se chevauchent ne doivent pas avoir d'élèves en commun.
+					\item Le temps laissé entre deux cours doit être de 15 minutes minimum.
+				\end{enumerate}
+	
+	\subsection{Métriques sur les contraintes}
+		Le nombre d'étudiants $E$ ne doit pas dépasser la capacité $capacité_{max}$ du bus.
+	
 \section{Stratégies de résolution}
 \subsection{Algos}
 
-%~ \section{Présentation des résultats}
+\section{Présentation des résultats}
 
 \section{Conclusion}
+	\subsection{Pistes de reflexion abandonnées}
+		Le côté C++, les élèves, les plages d'horaires des profs, les contraintes d'enfant et de travail.
+	\subsection{Conclusion sur le problème}
+		Parler du pb, c'est dur ? Ca marche ?
+	\subsection{Ouverture}
+		Inverser les arcs, mettre plus de contraintes, mettre d'autres glouton, faire un recuit simulé.
 
 
 \end{document}
