@@ -32,6 +32,7 @@
 	PLAN
 	
 \section{Les données initiales}
+	pas parler des valeurs, juste des structures
 
 \section{Objectif}
 	L'objectif de notre projet est de générer un emploi du temps, c'est à dire une planification qui respecte toutes les contraintes, dont la métrique est minimale.
@@ -44,13 +45,52 @@
 				\end{enumerate}
 	
 	\subsection{Métriques sur les contraintes}
-		Le nombre d'étudiants $E$ ne doit pas dépasser la capacité $capacité_{max}$ du bus.
+		Ce que nous évaluons c'est le dépassements du seuil de confort du bus. Dans notre cas le seuil de confort est fixé à 50, au dela le score de congestion est incrémenté à chaque arrêt de bus.
+		Le nombre d'étudiants dans un bus ne doit pas dépasser la capacité $capacité_{max}$ du bus (fixé à 60 dans notre cas). Ainsi si il y a plus de 60 élèves pour un bus, le surplus d'élèves sera envoyé dans le bus précedent l'horaires du bus surchargé.
 	
 \section{Stratégies de résolution}
-\subsection{Algos}
+	expliquer en francais les algos et pourquoi on les a choisis
+	parler des données utilisées par l'algo
+	\subsection{Planification initiale}
+		Dans un premier temps nous allons créer une planification initiale qui sera utilisé comme point de départ par chaque algorithme.
+		Cette solution va simplement mettre le sommet initial à la première horaire de la journée puis placer les autres sommets en respectant les contraintes et en les mettant le plus tôt possible.
+		Le sommet initial est le sommet de degré entrant nul d'indice le plus faible.
+
+	\subsection{Données utilisées}
+		Voir l'exemple en annexe pour plus de clarté.
+		\subsubsection{Le nombre de personnes par bus}
+		Dans notre cas d'étude, nous considérons que tous les étudiants montent au premier arrêt (gare des chantiers) et descendent au terminus (l'université).\\
+		Nous allons aussi créer le nombre de montée et de descentes à chaque arrêt.
+ 		Pour obtenir les données des arrêts intermédiaires nous choisirons une valeur aléatoire, choisis dans un intervalle différent en fonction de l'heure, l'objectif est de représenter la congestion forte des heures de pointes de manière un peu plus précise : \\
+ 		\begin{tabular}{ | c | c | c | c | c | c | c | c | c | c |}
+ 			\hline			
+   			Horaire & 7-8h & 8-9h & 9-10h & 10-11h & 11-12h & 12-13h & 13-14h & 14-15h & 15-16h\\
+   			Montées & [5:15] & [5:15] & [3:10] & [2:8] & [1:5] & [1:5] & [1:5] & [2:8] & [3:10]\\
+   			Descentes & [0:5] & [0:5] & [1:6] & [1:6] & [1:5] & [1:5] & [0:5] & [0:5] & [1:5]\\
+ 			\hline  
+ 		\end{tabular}\\
+
+	\subsection{L'emploi du temps}
+		L'emploi du temps est un graphe dont les sommets sont des cours et les liens des contraintes entre les cours.
+		Pour plus de clarté nous considérons ici que chaque professeur est disponible sur toute la durée de la journée.
+		\begin{enumerate}
+			\item On créer un graphe non orienté en numérotant les sommets de 1 jusqu'au nombre de cours.
+			\item On relie les sommets entre eux lorsque qu'il y a une contrainte (même étudiant sur des horaires qui se chevauchent). Pour cela on créé une matrice d'adjacence avec un degré moyen choisis arbitrairement. Pour N sommets et K le degré moyen, la probabilité qu'ily ai une arête à insérer dans chaque case est K/N.
+			\item On oriente les arêtes désormais des arcs du plus faible au plus fort
+			\item Il y a obligatoirement un ou plusieurs sommets de degré entrant nul, ces sommets de notre DAG seront des points de départs possible pour notre planification.
+			\item On colorie le graphe, chaque couleur représente une salle.		
+			\item Nous agencons l'emploi du temps en respectant le fait que deux couleurs et deux sommets reliés par un arc ne peuvent pas être sur la même plage horaire. Par défaut le sommet duquel nous partirons est le sommet de degré entrant nul d'indice le plus faible.
+		\end{enumerate}
+		Chaque cours possède un nombre d'étudiants choisis aléatoirement entre 16 et 32 pour un TD et entre 16 et 100 pour un cours magistral. les TDs représentent trois quart des cours.\\
+		\\
+	
+	\subsection{Algorithmes}
+		\subsubsection{Algorithme glouton}
+			Notre approche gloutonne va chercher pour chaque sommet, l'horaires à laquelle la congestion est la plus faible. Il n'y a pas de remise en cause, c'est à dire qu'une fois qu'un sommet a été fixé, on ne le modifie plus.
 
 \section{Présentation des résultats}
-
+	comparer les algos, comparer en fct des données en entrées
+	
 \section{Conclusion}
 	\subsection{Pistes de reflexion abandonnées}
 		Le côté C++, les élèves, les plages d'horaires des profs, les contraintes d'enfant et de travail.
@@ -59,5 +99,8 @@
 	\subsection{Ouverture}
 		Inverser les arcs, mettre plus de contraintes, mettre d'autres glouton, faire un recuit simulé.
 
+\section{Annexes}
+	\subsection{Exemple d'utilisation}
+	\subsection{Algo en code clair et commenté}
 
 \end{document}
