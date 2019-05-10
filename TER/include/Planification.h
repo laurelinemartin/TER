@@ -17,6 +17,8 @@ int *coloration (int N, int Nb);
 int trouver_degre_entrant_nul (int **T, int N);
 int **matrice_graphe_oriente (int **T, int N);
 int *nb_eleves (int *TYPE, int N);
+int plusGrand(int* T, int i, int j);
+int* tabCours(int* nbEleves, int N);
 int *type_cours (int N);
 bool test_coloration(int *Horaires, int *couleur, int N, int *TYPE, int heure_a_teste, int sommet_a_teste);
 bool test_lien(int *Horaires, int N, int **T, int heure_a_teste, int sommet_a_teste, int *TYPE);

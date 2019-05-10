@@ -133,6 +133,34 @@ int *nb_eleves (int *TYPE, int N)
 	return T;
 }
 
+int plusGrand(int* T, int i, int j){
+	int grand = T[i];
+	int indice = i;
+	for(int k = i; k < j; k++){
+		if(T[k] > grand){
+			grand = T[k];
+			indice = k;
+		}
+	}
+	return indice;
+}
+
+int* tabCours(int* nbEleves, int N){
+	int *tabNbEleveDesc = (int*)malloc(N*sizeof(int*));;
+	int indice = 0;
+	int temp;
+	printf("Cours avec le plus d'élèves -> moins d'élèves\n");
+	for(int i = 0; i < N; i++){
+		indice = plusGrand(nbEleves, i, N);
+		tabNbEleveDesc[i] = indice;
+		// printf("%d ", T[i]);
+		temp = nbEleves[i];
+		nbEleves[i] = nbEleves[indice];
+		nbEleves[indice] = temp;
+	}
+	return tabNbEleveDesc;
+}
+
 bool test_coloration(int *Horaires, int *couleur, int N, int *TYPE, int heure_a_teste, int sommet_a_teste)
 {
 	int duree1 = 0;

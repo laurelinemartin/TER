@@ -12,8 +12,8 @@
 	- Nouveau fichier IO : ok
 	- 10 meilleures solutions (m.a.j : faire une variable pour fixer le nombre de slution souhéitées)
 	- Fonction d'initialisation du fichier : ok
-	- Fonction d'écriture d'une solution
-		- Afficher la planification
+	- Fonction d'écriture d'une solution : ok
+		- Afficher la planification : ok
 		- Afficher la congestion par bus : ok
 		- Afficher la congestion finale : ok
 6. Rapports :

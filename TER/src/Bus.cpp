@@ -27,20 +27,52 @@ int calcul_congestion_bus(int *Nb_eleves_bus, int heure_bus)
     return congestion;
 }
 
-int calcul_congestion_totale(int *Horaires, int *Nb_eleves_cours, int heure_max, int N)
+int calcul_congestion_totale(int *Horaires, int *Nb_eleves_cours, int heure_max, int N, int **T)
 {
     int congestion_totale = 0;
     int capacite_max = 60;
+    //variable utilisé pour répartir les élèves d'un cour père dans les cours fils
+    int eleves_restant = 0;
 
     //mettre une proba de venir d'un autre cours avant
-    //Initialisation tableau
+    //Initialisation du tableau
     int *Nb_eleves_bus = (int*)malloc(heure_max*sizeof(int*));
     for(int i = 0; i < heure_max; i++){
         Nb_eleves_bus[i] = 0;
     }
+
     for(int i = 0; i < heure_max; i++){
         Nb_eleves_bus[Horaires[i]-1] += Nb_eleves_cours[i];
+    }
 
+        //Prise en compte des élèves déjà à l'université
+        for(int i = 0; i < N; i++)
+        {
+            eleves_restant = Nb_eleves_cours[i];
+            printf("Eleves restant de %d avant la boucle : %d\n",i,eleves_restant);
+            for(int k = 0; k < N; k++)
+            {
+                if((T[k][i] == 1) && (Horaires [k] < Horaires[i])  && (eleves_restant >= 1))
+                {
+                    printf("Lien de %d vers %d\n",i,k);
+                    if(Nb_eleves_bus[Horaires[k]-1] <= eleves_restant)
+                    {
+                        Nb_eleves_bus[Horaires[k]-1] = 0;
+                        eleves_restant -= Nb_eleves_bus[Horaires[k]-1];
+                        printf("if 1 Eleves restant de %d : %d\n",i,eleves_restant);
+                    }
+                    else
+                    {
+                        //Nb_eleves_bus[Horaires[k]-1] = Nb_eleves_cours[k] - eleves_restant;
+                        Nb_eleves_bus[Horaires[k]-1] -= eleves_restant;
+                        eleves_restant = 0;
+                        printf("if 2 Eleves restant de %d : %d\n",i,eleves_restant);
+                    }       
+                }
+            }
+        }   
+
+    for(int i = 0; i < heure_max; i++){
         if(Nb_eleves_bus[i] > capacite_max)
         {
             Nb_eleves_bus[i - 1] += Nb_eleves_bus[i] - capacite_max;
@@ -48,16 +80,14 @@ int calcul_congestion_totale(int *Horaires, int *Nb_eleves_cours, int heure_max,
         }
     }
 
-    /*for(int i = 0; i < heure_max; i++){
-    printf("Nb eleve bus %d : %d \n ",i ,Nb_eleves_bus[i]); }*/
-   
-
+    for(int i = 0; i < heure_max; i++){
+    printf("Nb eleve bus %d : %d \n ",i ,Nb_eleves_bus[i]); }
+    
     for(int i = 0; i < heure_max; i++)
     {
-
         congestion_totale += calcul_congestion_bus(Nb_eleves_bus, i);
     }
-    //calculer la mediane ailleur
+    //calculer la mediane ailleurs
     return congestion_totale;
 }
 
