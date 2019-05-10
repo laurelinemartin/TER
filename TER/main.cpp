@@ -26,8 +26,8 @@ int main()
     scanf("%d", &NBCOLOR);
     printf("lancement de l'application avec une probabilitée de %f, %d cours et %d salles\n",proba, TAILLE, NBCOLOR);*/
     proba = 0.4;
-    TAILLE = 10;
-    NBCOLOR = 5;
+    TAILLE = 500;
+    NBCOLOR = 250;
     HEUREMAX = 34;
     int **T = matrice_adjacence_GNO(TAILLE,proba);
     printf("\n MATRICE DU GNO \n");
@@ -145,6 +145,14 @@ int main()
         //a = true;
         printf("Solution gloutone valide ? : %d\n",a); //true = 1 false = 0
         
+        printf("\n Planification initiale t'es toujours la ?\n");
+        printf("\n 0  1  2  3  4  5  6  7  8  9  INDICES\n");
+        printf("----------------------------------------\n");
+        for (int i = 0; i < TAILLE; i++)
+        {
+          printf(" %d ",Horaires[i]);
+        }
+        printf("\n");
         
         int *Horaires_tabou_dur = Algo_tabou_dur(Horaires, TAILLE, premier_sommet, couleur, TYPE,TO,1,HEUREMAX,NBELEVES);
         printf("\n Planification tabou dur\n");
@@ -162,7 +170,7 @@ int main()
         printf("Congestion totale tabou dur : %d\n",congestion_totale);
         printf("\n");
 
-        a = test_solution_valide(Horaires_glouton,TAILLE,couleur,TYPE,TO);
+        a = test_solution_valide(Horaires_tabou_dur,TAILLE,couleur,TYPE,TO);
         printf("Solution tabou dur valide ? : %d\n",a);
     }
 }
