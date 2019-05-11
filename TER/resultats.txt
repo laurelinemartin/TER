@@ -27,3 +27,40 @@ Cours 8 à 27 h 30 salle : 0
 Cours 9 à 34 h 0 salle : 4
 Congestion totale (nombre de bus dans lequel de seuil de confort à été dépassé): 16 / 34
 >>>>>>> 74dc0608721cb5ae21264c7c8d35740dbfbe20c2
+
+PLANIFICATION DES COURS :
+Cours 0 à 8 h 0 salle : 4
+Cours 1 à 11 h 15 salle : 2
+Cours 2 à 13 h 0 salle : 4
+Cours 3 à 16 h 15 salle : 4
+Cours 4 à 16 h 15 salle : 3
+Cours 5 à 11 h 15 salle : 4
+Cours 6 à 13 h 0 salle : 2
+Cours 7 à 11 h 15 salle : 0
+Cours 8 à 19 h 30 salle : 3
+Cours 9 à 26 h 0 salle : 3
+Congestion totale (nombre de bus dans lequel de seuil de confort à été dépassé): 16 / 34
+PLANIFICATION DES COURS :
+Cours 0 à 8 h 0 salle : 0
+Cours 1 à 11 h 15 salle : 4
+Cours 2 à 14 h 30 salle : 3
+Cours 3 à 11 h 15 salle : 3
+Cours 4 à 17 h 45 salle : 4
+Cours 5 à 11 h 15 salle : 2
+Cours 6 à 24 h 15 salle : 3
+Cours 7 à 14 h 30 salle : 2
+Cours 8 à 17 h 45 salle : 1
+Cours 9 à 24 h 15 salle : 1
+Congestion totale (nombre de bus dans lequel de seuil de confort à été dépassé): 8 / 34
+PLANIFICATION DES COURS :
+Cours 0 à 8 h 0 salle : 2
+Cours 1 à 11 h 15 salle : 3
+Cours 2 à 11 h 15 salle : 0
+Cours 3 à 11 h 15 salle : 1
+Cours 4 à 14 h 30 salle : 4
+Cours 5 à 17 h 45 salle : 0
+Cours 6 à 17 h 45 salle : 2
+Cours 7 à 14 h 30 salle : 3
+Cours 8 à 24 h 15 salle : 2
+Cours 9 à 30 h 45 salle : 2
+Congestion totale (nombre de bus dans lequel de seuil de confort à été dépassé): 25 / 34
