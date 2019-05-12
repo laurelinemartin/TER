@@ -105,7 +105,7 @@ int *Algo_tabou_dur(int *Horaires, int N, int sommet_depart, int *couleur, int *
 	{
 		for(int l = 0; l < k+1; l++)
 		{
-			if(i == Sommets_interdits[l]) {i++; l = 0; printf("sommet deja exploré : %d\n",i-1);}
+			if(i == Sommets_interdits[l]) {i++; l = 0;}
 		}
 		sommet_modifie = i;
 		horaire_initiale = Horaires_tabou_dur[sommet_modifie];
@@ -122,7 +122,7 @@ int *Algo_tabou_dur(int *Horaires, int N, int sommet_depart, int *couleur, int *
 					meilleur_sommet = i;
 					meilleure_solution = Horaires_tabou_dur[i];
 					meilleure_congestion = temp;
-					printf("Meilleure solution sommet %d à l'heure %d de congestion %d\n",i,meilleure_solution,meilleure_congestion);
+					//printf("Meilleure solution sommet %d à l'heure %d de congestion %d\n",i,meilleure_solution,meilleure_congestion);
 				}
 				//print dans le fichier de sortie
 			}
