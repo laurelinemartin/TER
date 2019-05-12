@@ -1214,3 +1214,15 @@ Cours 7 à 16 h 15 salle : 18
 Cours 8 à 14 h 30 salle : 11
 Cours 9 à 21 h 0 salle : 9
 Congestion totale (nombre de bus dans lequel de seuil de confort à été dépassé): 32 / 34
+PLANIFICATION DES COURS :
+Cours 0 à 8 h 0 salle : 15
+Cours 1 à 11 h 15 salle : 4
+Cours 2 à 14 h 30 salle : 22
+Cours 3 à 11 h 15 salle : 12
+Cours 4 à 11 h 15 salle : 2
+Cours 5 à 17 h 45 salle : 6
+Cours 6 à 17 h 45 salle : 22
+Cours 7 à 11 h 15 salle : 6
+Cours 8 à 14 h 30 salle : 13
+Cours 9 à 22 h 45 salle : 8
+Congestion totale (nombre de bus dans lequel de seuil de confort à été dépassé): 8 / 34
