@@ -36,12 +36,12 @@ int calcul_congestion_totale(int *Horaires, int *Nb_eleves_cours, int heure_max,
 
     //mettre une proba de venir d'un autre cours avant
     //Initialisation du tableau
-    int *Nb_eleves_bus = (int*)malloc(heure_max*sizeof(int*));
+    int *Nb_eleves_bus = (int*)malloc(heure_max*3*sizeof(int*));
     for(int i = 0; i < heure_max; i++){
         Nb_eleves_bus[i] = 0;
     }
 
-    for(int i = 0; i < heure_max; i++){
+    for(int i = 0; i < N; i++){
         Nb_eleves_bus[Horaires[i]-1] += Nb_eleves_cours[i];
     }
 
@@ -73,18 +73,20 @@ int calcul_congestion_totale(int *Horaires, int *Nb_eleves_cours, int heure_max,
             }
         }   
 	*/
-    for(int i = 0; i < heure_max; i++){
+    for (int j = 0; j < 2; j++){
+    for(int i = 0; i < heure_max*3; i++){
         if(Nb_eleves_bus[i] > capacite_max)
         {
             Nb_eleves_bus[i - 1] += Nb_eleves_bus[i] - capacite_max;
             Nb_eleves_bus[i] = capacite_max;
         }
     }
+    }
 
     /*for(int i = 0; i < heure_max; i++){
     printf("Nb eleve bus %d : %d \n ",i ,Nb_eleves_bus[i]); }*/
     
-    for(int i = 0; i < heure_max; i++)
+    for(int i = 0; i < heure_max*3; i++)
     {
         congestion_totale += calcul_congestion_bus(Nb_eleves_bus, i);
     }
