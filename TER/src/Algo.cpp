@@ -101,9 +101,9 @@ int *Algo_tabou_dur(int *Horaires, int N, int sommet_depart, int *couleur, int *
 			Horaires_tabou_dur[sommet_modifie] = j;
 			if (test_solution_valide(Horaires_tabou_dur, N, couleur, Type, TO) == true)
 			{
-				printf("Solution valide avec %d à l'heure : %d\n",sommet_modifie,Horaires_tabou_dur[sommet_modifie]);
+				//printf("Solution valide avec %d à l'heure : %d\n",sommet_modifie,Horaires_tabou_dur[sommet_modifie]);
 				temp = calcul_congestion_totale(Horaires_tabou_dur,Nb_eleves,heure_max,N,TO);
-				printf("Sa congestion est : %d\n",temp);
+				//printf("Sa congestion est : %d\n",temp);
 				if(temp < meilleure_congestion)
 				{
 					meilleur_sommet = i;

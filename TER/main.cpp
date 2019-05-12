@@ -26,7 +26,7 @@ int main()
     scanf("%d", &NBCOLOR);
     printf("lancement de l'application avec une probabilitée de %f, %d cours et %d salles\n",proba, TAILLE, NBCOLOR);*/
     proba = 0.4;
-    TAILLE = 50;
+    TAILLE = 10;
     NBCOLOR = 25;
     HEUREMAX = 34;
     int **T = matrice_adjacence_GNO(TAILLE,proba);
