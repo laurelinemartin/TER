@@ -6,7 +6,7 @@
 2. Les algos :
 	2.1. Algo tabou
 	2.2. algo glouton
-3. mettre la probabilite d avoir été dans un cours precedent demander a Barth peut etre
+3. mettre le fait d avoir été dans un cours precedent
 4. SCRIPT
 5. ecrire un fichier .txt en sortie avec les données et avec les meilleures solutions et leurs congestions
 	- Nouveau fichier IO : ok

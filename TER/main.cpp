@@ -12,6 +12,7 @@ using namespace std;
 int TAILLE;
 int NBCOLOR;
 int HEUREMAX;
+int NB_ITERATIONS;
 
 int main()
 {   
@@ -29,6 +30,7 @@ int main()
     TAILLE = 10;
     NBCOLOR = 25;
     HEUREMAX = 34;
+    NB_ITERATIONS = 5;
     int **T = matrice_adjacence_GNO(TAILLE,proba);
     printf("\n MATRICE DU GNO \n");
     printf("\n 0  1  2  3  4  5  6  7  8  9  INDICES\n");
@@ -126,7 +128,7 @@ int main()
     if(a == 1)
     {
 		int *Horaires_glouton = (int*)malloc(TAILLE*sizeof(int*));
-        Horaires_glouton = Algo_glouton(Horaires, TAILLE, premier_sommet, couleur, TYPE,TO,1,HEUREMAX,NBELEVES);
+        Horaires_glouton = Algo_glouton(Horaires, TAILLE, premier_sommet, couleur, TYPE,TO,HEUREMAX,NBELEVES);
         printf("\n Planification gloutonne \n");
         printf("\n 0  1  2  3  4  5  6  7  8  9  INDICES\n");
         printf("----------------------------------------\n");
@@ -146,9 +148,9 @@ int main()
         //a = true;
         printf("Solution gloutone valide ? : %d\n",a); //true = 1 false = 0
         
-       free(Horaires_glouton);
+        free(Horaires_glouton);
         
-        int *Horaires_tabou_dur = Algo_tabou_dur(Horaires, TAILLE, premier_sommet, couleur, TYPE,TO,1,HEUREMAX,NBELEVES);
+        int *Horaires_tabou_dur = Algo_tabou_dur(Horaires, TAILLE, premier_sommet, couleur, TYPE,TO,NB_ITERATIONS,HEUREMAX,NBELEVES);
         printf("\n Planification tabou dur\n");
         printf("\n 0  1  2  3  4  5  6  7  8  9  INDICES\n");
         printf("----------------------------------------\n");

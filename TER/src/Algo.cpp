@@ -24,7 +24,7 @@ vector<int> convertHeure(int num){
 }
 
 
-int *Algo_glouton(int *Horaires, int N, int sommet_depart, int *couleur, int *Type, int **TO, int Nb_iterations, int heure_max, int* Nb_eleves)
+int *Algo_glouton(int *Horaires, int N, int sommet_depart, int *couleur, int *Type, int **TO, int heure_max, int* Nb_eleves)
 {
 	int *Horaires_glouton = (int*)malloc(N*sizeof(int*));
 	for (int i = 0; i < N; i++)
@@ -77,6 +77,12 @@ int *Algo_tabou_dur(int *Horaires, int N, int sommet_depart, int *couleur, int *
 	{
 		Horaires_tabou_dur[i] = Horaires[i];
 	}
+
+	int *Sommets_interdits = (int*)malloc(Nb_iterations*sizeof(int*));
+	for (int i = 0; i < Nb_iterations; i++)
+	{
+		Sommets_interdits[i] = 1000;
+	}
 	
 	int meilleure_solution;
 	int meilleure_congestion;
@@ -91,9 +97,16 @@ int *Algo_tabou_dur(int *Horaires, int N, int sommet_depart, int *couleur, int *
 	meilleure_solution = Horaires_tabou_dur[sommet_modifie];
 	meilleure_congestion = calcul_congestion_totale(Horaires_tabou_dur,Nb_eleves,heure_max,N,TO);
 	
+	for(int k = 0; k < Nb_iterations; k++)
+	{
+
 	//printf("Le sommet modifie est le : %d\n", sommet_modifie);
 	for(int i = 0; i < N; i++)
 	{
+		for(int l = 0; l < k+1; l++)
+		{
+			if(i == Sommets_interdits[l]) {i++; l = 0; printf("sommet deja exploré : %d\n",i-1);}
+		}
 		sommet_modifie = i;
 		horaire_initiale = Horaires_tabou_dur[sommet_modifie];
 		while(j < heure_max - 1)
@@ -121,6 +134,10 @@ int *Algo_tabou_dur(int *Horaires, int N, int sommet_depart, int *couleur, int *
 		//fixer a la meilleure solution valide la aussi
 	}
 	Horaires_tabou_dur[meilleur_sommet] = meilleure_solution;
-	printf("Le sommet modifié au final est %d à l'horaire : %d",meilleur_sommet,Horaires_tabou_dur[meilleur_sommet]);
+	printf("Le sommet modifié au final est %d à l'horaire : %d\n",meilleur_sommet,Horaires_tabou_dur[meilleur_sommet]);
+
+	Sommets_interdits[k] = meilleur_sommet;
+	}
+	free(Sommets_interdits);
 	return Horaires_tabou_dur;
 }
