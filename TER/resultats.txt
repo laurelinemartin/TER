@@ -1734,3 +1734,45 @@ Cours 37 à 27 h 45 salle : 52
 Cours 38 à 44 h 0 salle : 18
 Cours 39 à 52 h 15 salle : 68
 Congestion totale (nombre de bus dans lequel de seuil de confort à été dépassé): 104 / 34
+PLANIFICATION DES COURS :
+Cours 0 à 8 h 0 salle : 14
+Cours 1 à 11 h 15 salle : 64
+Cours 2 à 11 h 15 salle : 2
+Cours 3 à 13 h 0 salle : 43
+Cours 4 à 14 h 30 salle : 74
+Cours 5 à 11 h 15 salle : 27
+Cours 6 à 16 h 15 salle : 74
+Cours 7 à 11 h 15 salle : 3
+Cours 8 à 14 h 45 salle : 6
+Cours 9 à 14 h 30 salle : 29
+Cours 10 à 14 h 30 salle : 66
+Cours 11 à 18 h 0 salle : 50
+Cours 12 à 24 h 30 salle : 72
+Cours 13 à 17 h 45 salle : 19
+Cours 14 à 18 h 0 salle : 17
+Cours 15 à 16 h 15 salle : 55
+Cours 16 à 14 h 30 salle : 12
+Cours 17 à 17 h 45 salle : 12
+Cours 18 à 11 h 15 salle : 11
+Cours 19 à 9 h 45 salle : 49
+Cours 20 à 18 h 0 salle : 45
+Cours 21 à 19 h 30 salle : 34
+Cours 22 à 11 h 15 salle : 13
+Cours 23 à 24 h 30 salle : 51
+Cours 24 à 13 h 0 salle : 61
+Cours 25 à 9 h 45 salle : 32
+Cours 26 à 27 h 45 salle : 48
+Cours 27 à 34 h 15 salle : 65
+Cours 28 à 40 h 45 salle : 71
+Cours 29 à 47 h 15 salle : 53
+Cours 30 à 53 h 45 salle : 60
+Cours 31 à 19 h 30 salle : 10
+Cours 32 à 26 h 0 salle : 19
+Cours 33 à 32 h 30 salle : 40
+Cours 34 à 13 h 0 salle : 53
+Cours 35 à 24 h 30 salle : 18
+Cours 36 à 31 h 0 salle : 67
+Cours 37 à 37 h 30 salle : 29
+Cours 38 à 50 h 30 salle : 74
+Cours 39 à 57 h 0 salle : 50
+Congestion totale (nombre de bus dans lequel de seuil de confort à été dépassé): 124 / 34

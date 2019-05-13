@@ -133,40 +133,47 @@ int main()
         printf("\n 0  1  2  3  4  5  6  7  8  9  INDICES\n");
         printf("----------------------------------------\n");
         for (int i = 0; i < TAILLE; i++)
-        {
-          printf(" %d ",Horaires_glouton[i]);
-        }
+        {printf(" %d ",Horaires_glouton[i]);}
         printf("\n");
-
         congestion_totale = calcul_congestion_totale(Horaires_glouton,NBELEVES,HEUREMAX,TAILLE,TO);
         printf("\n Calcul congestion gloutone \n");
         printf("----------------------------------------\n");
         printf("Congestion totale gloutone : %d\n",congestion_totale);
         printf("\n");
-
         a = test_solution_valide(Horaires_glouton,TAILLE,couleur,TYPE,TO);
-        //a = true;
         printf("Solution gloutone valide ? : %d\n",a); //true = 1 false = 0
-        
         free(Horaires_glouton);
-        
+
         int *Horaires_tabou_dur = Algo_tabou_dur(Horaires, TAILLE, premier_sommet, couleur, TYPE,TO,NB_ITERATIONS,HEUREMAX,NBELEVES);
         printf("\n Planification tabou dur\n");
         printf("\n 0  1  2  3  4  5  6  7  8  9  INDICES\n");
         printf("----------------------------------------\n");
         for (int i = 0; i < TAILLE; i++)
-        {
-          printf(" %d ",Horaires_tabou_dur[i]);
-        }
+        {printf(" %d ",Horaires_tabou_dur[i]);}
         printf("\n");
-
         congestion_totale = calcul_congestion_totale(Horaires_tabou_dur,NBELEVES,HEUREMAX,TAILLE,TO);
         printf("\n Calcul congestion tabou dur \n");
         printf("----------------------------------------\n");
         printf("Congestion totale tabou dur : %d\n",congestion_totale);
         printf("\n");
-
         a = test_solution_valide(Horaires_tabou_dur,TAILLE,couleur,TYPE,TO);
         printf("Solution tabou dur valide ? : %d\n",a);
+        free(Horaires_tabou_dur);
+
+        /*int *Horaires_tabou_roulette = Algo_tabou_roulette(Horaires, TAILLE, premier_sommet, couleur, TYPE,TO,NB_ITERATIONS,HEUREMAX,NBELEVES);
+        printf("\n Planification tabou dur\n");
+        printf("\n 0  1  2  3  4  5  6  7  8  9  INDICES\n");
+        printf("----------------------------------------\n");
+        for (int i = 0; i < TAILLE; i++)
+        {printf(" %d ",Horaires_tabou_roulette[i]);}
+        printf("\n");
+        congestion_totale = calcul_congestion_totale(Horaires_tabou_roulette,NBELEVES,HEUREMAX,TAILLE,TO);
+        printf("\n Calcul congestion tabou dur \n");
+        printf("----------------------------------------\n");
+        printf("Congestion totale tabou dur : %d\n",congestion_totale);
+        printf("\n");
+        a = test_solution_valide(Horaires_tabou_roulette,TAILLE,couleur,TYPE,TO);
+        printf("Solution tabou dur valide ? : %d\n",a);
+        free(Horaires_tabou_roulette);*/
     }
 }

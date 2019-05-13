@@ -4,7 +4,7 @@
 
 1. Médiane pour la congestion
 2. Les algos :
-	2.1. Algo tabou
+	2.1. Algo tabou dur et roulette
 	2.2. algo glouton
 3. mettre le fait d avoir été dans un cours precedent
 4. SCRIPT
