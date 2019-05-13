@@ -198,7 +198,6 @@ int main(int argc, char** argv)
         printf("Congestion totale gloutone : %d\n", congestion_totale);
         printf("\n");
         printf("Solution gloutone valide ? : %d\n",a); //true = 1 false = 0
-
         free(Horaires_glouton);
 ////////////////////////
 
@@ -225,7 +224,6 @@ int main(int argc, char** argv)
         printf("Congestion totale tabou dur : %d\n",congestion_totale);
         printf("\n");
         printf("Solution tabou dur valide ? : %d\n",a);
-
         free(Horaires_tabou_dur);
 /////////////////////
 
@@ -233,21 +231,21 @@ int main(int argc, char** argv)
 //////////////////////////
 //// Tabou roulette : ////
 //////////////////////////
-        /*int *Horaires_tabou_roulette = Algo_tabou_roulette(Horaires, TAILLE, premier_sommet, couleur, TYPE,TO,NB_ITERATIONS,HEUREMAX,NBELEVES);
-        printf("\n Planification tabou dur\n");
+        int *Horaires_tabou_roulette = Algo_tabou_roulette(Horaires, TAILLE, premier_sommet, couleur, TYPE,TO,NB_ITERATIONS,HEUREMAX,NBELEVES);
+        printf("\n Planification tabou roulette\n");
         printf("\n 0  1  2  3  4  5  6  7  8  9  INDICES\n");
         printf("----------------------------------------\n");
         for (int i = 0; i < TAILLE; i++)
         {printf(" %d ",Horaires_tabou_roulette[i]);}
         printf("\n");
         congestion_totale = calcul_congestion_totale(Horaires_tabou_roulette,NBELEVES,HEUREMAX,TAILLE,TO);
-        printf("\n Calcul congestion tabou dur \n");
+        printf("\n Calcul congestion tabou roulette \n");
         printf("----------------------------------------\n");
-        printf("Congestion totale tabou dur : %d\n",congestion_totale);
+        printf("Congestion totale tabou roulette : %d\n",congestion_totale);
         printf("\n");
         a = test_solution_valide(Horaires_tabou_roulette,TAILLE,couleur,TYPE,TO);
-        printf("Solution tabou dur valide ? : %d\n",a);
-        free(Horaires_tabou_roulette);*/
+        printf("Solution tabou roulette valide ? : %d\n",a);
+        free(Horaires_tabou_roulette);
 //////////////////////////
 
 
