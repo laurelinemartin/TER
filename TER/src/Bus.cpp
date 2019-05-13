@@ -37,7 +37,7 @@ int calcul_congestion_totale(int *Horaires, int *Nb_eleves_cours, int heure_max,
     //mettre une proba de venir d'un autre cours avant
     //Initialisation du tableau
     int *Nb_eleves_bus = (int*)malloc(heure_max*3*sizeof(int*));
-    for(int i = 0; i < heure_max; i++){
+    for(int i = 0; i < heure_max*3; i++){
         Nb_eleves_bus[i] = 0;
     }
 

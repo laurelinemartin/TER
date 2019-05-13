@@ -12,6 +12,7 @@ using namespace std;
 int TAILLE;
 int NBCOLOR;
 int HEUREMAX;
+int NB_ITERATIONS;
 
 int main()
 {   
@@ -25,10 +26,17 @@ int main()
     printf("entrez le nombre de salles disponibles pour la planification:\n");
     scanf("%d", &NBCOLOR);
     printf("lancement de l'application avec une probabilitée de %f, %d cours et %d salles\n",proba, TAILLE, NBCOLOR);*/
+<<<<<<< HEAD
     proba = 0.1;
     TAILLE = 10;
     NBCOLOR = 40;
+=======
+    proba = 0.4;
+    TAILLE = 40;
+    NBCOLOR = 75;
+>>>>>>> 7928d99638afd87d5fc25bd67afdb3288c8b2be5
     HEUREMAX = 34;
+    NB_ITERATIONS = 10;
     int **T = matrice_adjacence_GNO(TAILLE,proba);
     printf("\n MATRICE DU GNO \n");
     printf("\n 0  1  2  3  4  5  6  7  8  9  INDICES\n");
@@ -126,45 +134,52 @@ int main()
     if(a == 1)
     {
 		int *Horaires_glouton = (int*)malloc(TAILLE*sizeof(int*));
-        Horaires_glouton = Algo_glouton(Horaires, TAILLE, premier_sommet, couleur, TYPE,TO,1,HEUREMAX,NBELEVES);
+        Horaires_glouton = Algo_glouton(Horaires, TAILLE, premier_sommet, couleur, TYPE,TO,HEUREMAX,NBELEVES);
         printf("\n Planification gloutonne \n");
         printf("\n 0  1  2  3  4  5  6  7  8  9  INDICES\n");
         printf("----------------------------------------\n");
         for (int i = 0; i < TAILLE; i++)
-        {
-          printf(" %d ",Horaires_glouton[i]);
-        }
+        {printf(" %d ",Horaires_glouton[i]);}
         printf("\n");
-
         congestion_totale = calcul_congestion_totale(Horaires_glouton,NBELEVES,HEUREMAX,TAILLE,TO);
         printf("\n Calcul congestion gloutone \n");
         printf("----------------------------------------\n");
         printf("Congestion totale gloutone : %d\n",congestion_totale);
         printf("\n");
-
         a = test_solution_valide(Horaires_glouton,TAILLE,couleur,TYPE,TO);
-        //a = true;
         printf("Solution gloutone valide ? : %d\n",a); //true = 1 false = 0
-        
-       free(Horaires_glouton);
-        
-        int *Horaires_tabou_dur = Algo_tabou_dur(Horaires, TAILLE, premier_sommet, couleur, TYPE,TO,1,HEUREMAX,NBELEVES);
+        free(Horaires_glouton);
+
+        int *Horaires_tabou_dur = Algo_tabou_dur(Horaires, TAILLE, premier_sommet, couleur, TYPE,TO,NB_ITERATIONS,HEUREMAX,NBELEVES);
         printf("\n Planification tabou dur\n");
         printf("\n 0  1  2  3  4  5  6  7  8  9  INDICES\n");
         printf("----------------------------------------\n");
         for (int i = 0; i < TAILLE; i++)
-        {
-          printf(" %d ",Horaires_tabou_dur[i]);
-        }
+        {printf(" %d ",Horaires_tabou_dur[i]);}
         printf("\n");
-
         congestion_totale = calcul_congestion_totale(Horaires_tabou_dur,NBELEVES,HEUREMAX,TAILLE,TO);
         printf("\n Calcul congestion tabou dur \n");
         printf("----------------------------------------\n");
         printf("Congestion totale tabou dur : %d\n",congestion_totale);
         printf("\n");
-
         a = test_solution_valide(Horaires_tabou_dur,TAILLE,couleur,TYPE,TO);
         printf("Solution tabou dur valide ? : %d\n",a);
+        free(Horaires_tabou_dur);
+
+        /*int *Horaires_tabou_roulette = Algo_tabou_roulette(Horaires, TAILLE, premier_sommet, couleur, TYPE,TO,NB_ITERATIONS,HEUREMAX,NBELEVES);
+        printf("\n Planification tabou dur\n");
+        printf("\n 0  1  2  3  4  5  6  7  8  9  INDICES\n");
+        printf("----------------------------------------\n");
+        for (int i = 0; i < TAILLE; i++)
+        {printf(" %d ",Horaires_tabou_roulette[i]);}
+        printf("\n");
+        congestion_totale = calcul_congestion_totale(Horaires_tabou_roulette,NBELEVES,HEUREMAX,TAILLE,TO);
+        printf("\n Calcul congestion tabou dur \n");
+        printf("----------------------------------------\n");
+        printf("Congestion totale tabou dur : %d\n",congestion_totale);
+        printf("\n");
+        a = test_solution_valide(Horaires_tabou_roulette,TAILLE,couleur,TYPE,TO);
+        printf("Solution tabou dur valide ? : %d\n",a);
+        free(Horaires_tabou_roulette);*/
     }
 }

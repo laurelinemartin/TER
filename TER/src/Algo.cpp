@@ -24,7 +24,7 @@ vector<int> convertHeure(int num){
 }
 
 
-int *Algo_glouton(int *Horaires, int N, int sommet_depart, int *couleur, int *Type, int **TO, int Nb_iterations, int heure_max, int* Nb_eleves)
+int *Algo_glouton(int *Horaires, int N, int sommet_depart, int *couleur, int *Type, int **TO, int heure_max, int* Nb_eleves)
 {
 	int *Horaires_glouton = (int*)malloc(N*sizeof(int*));
 	for (int i = 0; i < N; i++)
@@ -77,6 +77,12 @@ int *Algo_tabou_dur(int *Horaires, int N, int sommet_depart, int *couleur, int *
 	{
 		Horaires_tabou_dur[i] = Horaires[i];
 	}
+
+	int *Sommets_interdits = (int*)malloc(Nb_iterations*sizeof(int*));
+	for (int i = 0; i < Nb_iterations; i++)
+	{
+		Sommets_interdits[i] = 1000;
+	}
 	
 	int meilleure_solution;
 	int meilleure_congestion;
@@ -91,9 +97,16 @@ int *Algo_tabou_dur(int *Horaires, int N, int sommet_depart, int *couleur, int *
 	meilleure_solution = Horaires_tabou_dur[sommet_modifie];
 	meilleure_congestion = calcul_congestion_totale(Horaires_tabou_dur,Nb_eleves,heure_max,N,TO);
 	
+	for(int k = 0; k < Nb_iterations; k++)
+	{
+
 	//printf("Le sommet modifie est le : %d\n", sommet_modifie);
 	for(int i = 0; i < N; i++)
 	{
+		for(int l = 0; l < k+1; l++)
+		{
+			if(i == Sommets_interdits[l]) {i++; l = 0;}
+		}
 		sommet_modifie = i;
 		horaire_initiale = Horaires_tabou_dur[sommet_modifie];
 		while(j < heure_max - 1)
@@ -109,7 +122,7 @@ int *Algo_tabou_dur(int *Horaires, int N, int sommet_depart, int *couleur, int *
 					meilleur_sommet = i;
 					meilleure_solution = Horaires_tabou_dur[i];
 					meilleure_congestion = temp;
-					printf("Meilleure solution sommet %d à l'heure %d de congestion %d\n",i,meilleure_solution,meilleure_congestion);
+					//printf("Meilleure solution sommet %d à l'heure %d de congestion %d\n",i,meilleure_solution,meilleure_congestion);
 				}
 				//print dans le fichier de sortie
 			}
@@ -121,6 +134,92 @@ int *Algo_tabou_dur(int *Horaires, int N, int sommet_depart, int *couleur, int *
 		//fixer a la meilleure solution valide la aussi
 	}
 	Horaires_tabou_dur[meilleur_sommet] = meilleure_solution;
-	printf("Le sommet modifié au final est %d à l'horaire : %d",meilleur_sommet,Horaires_tabou_dur[meilleur_sommet]);
+	printf("Le sommet modifié au final est %d à l'horaire : %d\n",meilleur_sommet,Horaires_tabou_dur[meilleur_sommet]);
+
+	Sommets_interdits[k] = meilleur_sommet;
+	}
+	free(Sommets_interdits);
 	return Horaires_tabou_dur;
+}
+
+int *Algo_tabou_roulette(int *Horaires, int N, int sommet_depart, int *couleur, int *Type, int **TO, int Nb_iterations, int heure_max, int* Nb_eleves)
+{/*
+	int *Horaires_tabou_roulette = (int*)malloc(N*sizeof(int*));
+	for (int i = 0; i < N; i++)
+	{
+		Horaires_tabou_roulette[i] = Horaires[i];
+	}
+
+	int *Sommets_interdits = (int*)malloc(Nb_iterations*sizeof(int*));
+	for (int i = 0; i < Nb_iterations; i++)
+	{
+		Sommets_interdits[i] = 1000;
+	}
+
+	int *Proba_roulette = (int*)malloc(N*sizeof(int*));
+	for (int i = 0; i < N; i++)
+	{
+		Proba_roulette[i] = 0;
+	}
+	
+	int meilleure_solution;
+	int meilleure_congestion;
+	int meilleur_sommet = 0;
+	int temp = 0;
+	int horaire_initiale;
+	int j = 2;
+	int sommet_modifie;
+	
+	//Initialisation au sommet 0
+	sommet_modifie = 0;
+	meilleure_solution = Horaires_tabou_roulette[sommet_modifie];
+	meilleure_congestion = calcul_congestion_totale(Horaires_tabou_roulette,Nb_eleves,heure_max,N,TO);
+	
+	for(int k = 0; k < Nb_iterations; k++)
+	{
+
+	//printf("Le sommet modifie est le : %d\n", sommet_modifie);
+	for(int i = 0; i < N; i++)
+	{
+		for(int l = 0; l < k+1; l++)
+		{
+			if(i == Sommets_interdits[l]) {i++; l = 0;}
+		}
+		sommet_modifie = i;
+		horaire_initiale = Horaires_tabou_dur[sommet_modifie];
+		while(j < heure_max - 1)
+		{
+			Horaires_tabou_dur[sommet_modifie] = j;
+			if (test_solution_valide(Horaires_tabou_dur, N, couleur, Type, TO) == true)
+			{
+				//printf("Solution valide avec %d à l'heure : %d\n",sommet_modifie,Horaires_tabou_dur[sommet_modifie]);
+				temp = calcul_congestion_totale(Horaires_tabou_dur,Nb_eleves,heure_max,N,TO);
+				//printf("Sa congestion est : %d\n",temp);
+				if(temp < meilleure_congestion)
+				{
+					Proba_roulette[i]
+					//meilleur_sommet = i;
+					//meilleure_solution = Horaires_tabou_dur[i];
+					//meilleure_congestion = temp;
+					//printf("Meilleure solution sommet %d à l'heure %d de congestion %d\n",i,meilleure_solution,meilleure_congestion);
+				}
+				//print dans le fichier de sortie
+			}
+			j++;
+		}
+		j = 2;
+		Horaires_tabou_roulette[sommet_modifie] = horaire_initiale;
+		//printf("L'horaires choisis pour %d est : %d\n",sommet_modifie,Horaires[sommet_modifie]);
+		//fixer a la meilleure solution valide la aussi
+	}
+	Horaires_tabou_roulette[meilleur_sommet] = meilleure_solution;
+	//meilleur_sommet = i;
+					//meilleure_solution = Horaires_tabou_dur[i];
+					//meilleure_congestion = temp;
+	printf("Le sommet modifié au final dans l'algo roulette est %d à l'horaire : %d\n",meilleur_sommet,Horaires_tabou_roulette[meilleur_sommet]);
+
+	Sommets_interdits[k] = meilleur_sommet;
+	}
+	free(Sommets_interdits);
+	return Horaires_tabou_roulette;*/
 }
