@@ -15,7 +15,7 @@ int HEUREMAX;
 
 int main()
 {   
-    //initFichier();
+    initFichier();
     float proba;
     /*
     printf("entrez la probabilitée de lien entre 2 cours :\n");
@@ -25,9 +25,9 @@ int main()
     printf("entrez le nombre de salles disponibles pour la planification:\n");
     scanf("%d", &NBCOLOR);
     printf("lancement de l'application avec une probabilitée de %f, %d cours et %d salles\n",proba, TAILLE, NBCOLOR);*/
-    proba = 0.4;
+    proba = 0.1;
     TAILLE = 10;
-    NBCOLOR = 25;
+    NBCOLOR = 40;
     HEUREMAX = 34;
     int **T = matrice_adjacence_GNO(TAILLE,proba);
     printf("\n MATRICE DU GNO \n");
