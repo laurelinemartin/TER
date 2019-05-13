@@ -1,11 +1,12 @@
 #ifndef Planification_H
 #define Planification_H
 
-#include <vector>
-#include <iostream>
 #include "Etudiant.h"
 #include "Cours.h"
 #include "Salle.h"
+#include "Contraintes.h"
+#include <vector>
+#include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h> //Ne pas oublier d'inclure le fichier time.h

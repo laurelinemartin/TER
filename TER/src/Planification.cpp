@@ -1,6 +1,4 @@
-#include "../include/Contraintes.h"
 #include "../include/Planification.h"
-#include <time.h>
 
 int **matrice_adjacence_GNO (int N, float K)
 {
@@ -177,7 +175,6 @@ bool test_coloration(int *Horaires, int *couleur, int N, int *TYPE, int heure_a_
 			{
 				return false;
 			}
-
 		}
 	}
 
