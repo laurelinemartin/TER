@@ -148,7 +148,8 @@ int main(int argc, char** argv)
     int congestion_totale = calcul_congestion_totale(Horaires, NBELEVES, 34, TAILLE, TO);
     
     //// Ecriture fichier
-    // ecrireSolution(Horaires, couleur, TAILLE, HEUREMAX, congestion_totale);
+    ecrireInformation("Planification initiale : \n");
+    ecrireSolution(Horaires, couleur, TAILLE, HEUREMAX, congestion_totale);
 
     //// Ecriture terminal
     printf("\n PLANIFICATION \n");

@@ -5,7 +5,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <algorithm>
-#include <bits/stdc++.h> 
+#include <bits/stdc++.h>
+#include <fstream>
 #include "Algo.h"
 
 using namespace std;
@@ -15,6 +16,7 @@ using namespace std;
 #define lapseHeure 15
 
 void initFichier();
+void ecrireInformation(char* s);
 void ecrireSolution(int* horaires, int* salles, int horaireMax, int nbBus, int congestionTotale);
 void ecrirePlanification(int* horaires, int* salle, int tailleTab);
 void ecrireCongestionBus(int numBus, int congestionBus);
