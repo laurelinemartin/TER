@@ -8,7 +8,7 @@
 	2.2. algo glouton
 3. mettre le fait d avoir été dans un cours precedent
 4. SCRIPT
-5. ecrire un fichier .txt en sortie avec les données et avec les meilleures solutions et leurs congestions
+5. Ecrire un fichier .txt en sortie avec les données et avec les meilleures solutions et leurs congestions
 	- Nouveau fichier IO : ok
 	- 10 meilleures solutions (m.a.j : faire une variable pour fixer le nombre de slution souhéitées)
 	- Fonction d'initialisation du fichier : ok
@@ -16,7 +16,7 @@
 		- Afficher la planification : ok
 		- Afficher la congestion par bus : ok
 		- Afficher la congestion finale : ok
-	- Fonction de lecture des paramètres
+5. Lire un fichier avec les paramètres d'entrées
 		* Tête de fichier params.txt *
 		proba
 		nombre cours
@@ -24,7 +24,8 @@
 		nombre bus
 		nombre itérations
 		**
-		Faire une fonction pour chaque ligne
+		(m.a.j : ++ variables d'entrée : intervalle bus, etc.)
+	- Faire une fonction pour chaque ligne : ok
 6. Rapports :
 	finir rapport strategie d opti
 	rapport final
