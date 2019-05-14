@@ -16,6 +16,15 @@
 		- Afficher la planification : ok
 		- Afficher la congestion par bus : ok
 		- Afficher la congestion finale : ok
+	- Fonction de lecture des paramètres
+		* Tête de fichier params.txt *
+		proba
+		nombre cours
+		nombre salles
+		nombre bus
+		nombre itérations
+		**
+		Faire une fonction pour chaque ligne
 6. Rapports :
 	finir rapport strategie d opti
 	rapport final

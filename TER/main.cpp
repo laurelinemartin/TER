@@ -32,12 +32,20 @@ int main(int argc, char** argv)
 /////////////////////////
 //// Les variables : ////
 /////////////////////////
-    proba = 0.4;
-    TAILLE = 40;
-    NBCOLOR = 75;
-    HEUREMAX = 34;
-    NB_ITERATIONS = 10;
+    // proba = 0.4;
+    // TAILLE = 40;
+    // NBCOLOR = 75;
+    // HEUREMAX = 34;
+    // NB_ITERATIONS = 10;
+
+    //// Lecture fichier
+    proba = lectureProbabilite();
+    TAILLE = lectureNombreCours();
+    NBCOLOR = lectureNombreSalles();
+    HEUREMAX = lectureNombreBus();
+    NB_ITERATIONS = lectureNombreIterations();
 /////////////////////////
+
 
 //////////////////////////////////
 //// La matrice d'adjacence : ////
@@ -148,7 +156,7 @@ int main(int argc, char** argv)
     int congestion_totale = calcul_congestion_totale(Horaires, NBELEVES, 34, TAILLE, TO);
     
     //// Ecriture fichier
-    ecrireInformation("Planification initiale : \n");
+    ecrireInformation("\n\n * Planification initiale : \n");
     ecrireSolution(Horaires, couleur, TAILLE, HEUREMAX, congestion_totale);
 
     //// Ecriture terminal
@@ -210,6 +218,7 @@ int main(int argc, char** argv)
         a = test_solution_valide(Horaires_tabou_dur, TAILLE, couleur, TYPE, TO);
 
         /// Sortie fichier
+        ecrireInformation("\n\n * Algo tabou dur :\n");
         ecrireSolution(Horaires_tabou_dur, couleur, TAILLE, HEUREMAX, congestion_totale);
 
         /// Sortie terminal
@@ -232,22 +241,29 @@ int main(int argc, char** argv)
 //// Tabou roulette : ////
 //////////////////////////
         int *Horaires_tabou_roulette = Algo_tabou_roulette(Horaires, TAILLE, premier_sommet, couleur, TYPE,TO,NB_ITERATIONS,HEUREMAX,NBELEVES);
+        congestion_totale = calcul_congestion_totale(Horaires_tabou_roulette,NBELEVES,HEUREMAX,TAILLE,TO);
+        a = test_solution_valide(Horaires_tabou_roulette,TAILLE,couleur,TYPE,TO);
+
+        //// Ecriture fichier
+        ecrireInformation("\n\n * Algo tabou roulette :\n");
+        ecrireSolution(Horaires_tabou_roulette, couleur, TAILLE, HEUREMAX, congestion_totale);
+
+        //// Ecriture terminal
         printf("\n Planification tabou roulette\n");
         printf("\n 0  1  2  3  4  5  6  7  8  9  INDICES\n");
         printf("----------------------------------------\n");
-        for (int i = 0; i < TAILLE; i++)
-        {printf(" %d ",Horaires_tabou_roulette[i]);}
+        for (int i = 0; i < TAILLE; i++){
+            printf(" %d ",Horaires_tabou_roulette[i]);
+        }
         printf("\n");
-        congestion_totale = calcul_congestion_totale(Horaires_tabou_roulette,NBELEVES,HEUREMAX,TAILLE,TO);
-        printf("\n Calcul congestion tabou roulette \n");
+        printf("\n Calcul congestion tabou roulette\n");
         printf("----------------------------------------\n");
-        printf("Congestion totale tabou roulette : %d\n",congestion_totale);
+        printf("Congestion totale tabou roulette : %d\n", congestion_totale);
         printf("\n");
-        a = test_solution_valide(Horaires_tabou_roulette,TAILLE,couleur,TYPE,TO);
-        printf("Solution tabou roulette valide ? : %d\n",a);
+        printf("Solution tabou roulette valide ? : %d\n", a);
+
         free(Horaires_tabou_roulette);
 //////////////////////////
-
 
     }
 }
