@@ -7,20 +7,23 @@ int **matrice_adjacence_GNO (int N, float K)
 	{
 		T[i] = (int*) malloc(N*sizeof(int));
 	}
+
+	for(int i = 0; i < N; i++){
+		for(int j = 0; j < N; j++){
+			T[i][j] = 0;
+		}
+	}
+
 	int x = 0;
 	srand(time(NULL));
-	for (int j = 0; j < N; j++)
-	{
-		for(int i = j; i < N; i++)
-		{
+	for (int j = 0; j < N; j++){
+		for(int i = j; i < N; i++){
 			x = rand()%100;
-			if ((x <= (K*100)) && (i !=j))
-			{
+			if ((x <= (K*100)) && (i !=j)){
 				T[i][j] = 1;
 				T[j][i] = 1;
 			}
-			else
-			{
+			else{
 				T[i][j] = 0;
 				T[j][i] = 0;
 			}
@@ -35,6 +38,10 @@ int **matrice_adjacence_GNO (int N, float K)
 int *coloration (int N, int Nb)
 {
 	int *T = (int*)malloc(N*sizeof(int*));
+	for(int i = 0; i < N; i++){
+		T[i] = 0;
+	}
+
 	int couleur = 0;
 	srand(time(NULL));
 	for (int i = 0; i < N; i++)
@@ -45,7 +52,7 @@ int *coloration (int N, int Nb)
 	return T;
 }
 
-int trouver_degre_entrant_nul (int **T, int N)
+/* int trouver_degre_entrant_nul (int **T, int N)
 {
 	for (int i = 0; i < N; i++)
 	{
@@ -63,25 +70,26 @@ int trouver_degre_entrant_nul (int **T, int N)
 	}
 	perror("Erreur ce n'est pas un DAG" ); 
  	exit(0);
-}
+}*/
 
-int **matrice_graphe_oriente (int **T, int N)
-{
+int **matrice_graphe_oriente (int **T, int N){
 	int **TO = (int**)malloc(N*sizeof(int*));
-	for (int i = 0; i < N; i++)
-	{
+	for (int i = 0; i < N; i++){
 		TO[i] = (int*) malloc(N*sizeof(int));
 	}
-	for (int j = 0; j < N; j++)
-	{
-		for(int i = j; i < N; i++)
-		{
-			if(T[i][j] == 1)
-			{
+
+	for(int i = 0; i < N; i++){
+		for(int j = 0; j < N; j++){
+			TO[i][j] = 0;
+		}
+	}
+
+	for (int j = 0; j < N; j++){
+		for(int i = j; i < N; i++){
+			if(T[i][j] == 1){
 				TO[i][j] = 1;
 			}
-			else 
-			{
+			else {
 				TO[i][j] = 0;
 			}
 		}
@@ -94,6 +102,10 @@ int *type_cours (int N)
 {
 	int type = 0;
 	int *T = (int*)malloc(N*sizeof(int*));
+	for(int i = 0; i < N; i++){
+		T[i] = 0;
+	}
+
 	srand(time(NULL));
 	for (int i = 0; i < N; i++)
 	{
@@ -114,16 +126,17 @@ int *nb_eleves (int *TYPE, int N)
 {
 	int nb = 0;
 	int *T = (int*)malloc(N*sizeof(int*));
+	for(int i = 0; i < N; i++){
+		T[i] = 0;
+	}
+
 	srand(time(NULL));
-	for (int i = 0; i < N; i++)
-	{
-		if(TYPE[i] == 0)
-		{
+	for (int i = 0; i < N; i++){
+		if(TYPE[i] == 0){
 			nb = (rand()%16) + 16;
 			T[i] = nb;
 		}
-		else
-		{
+		else{
 			nb = (rand()%84) + 16;
 			T[i] = nb;
 		}
@@ -145,6 +158,10 @@ int plusGrand(int* T, int i, int j){
 
 int* tabCours(int* nbEleves, int N){
 	int *tabNbEleveDesc = (int*)malloc(N*sizeof(int*));;
+	for(int i = 0; i < N; i++){
+		tabNbEleveDesc[i] = 0;
+	}
+
 	int indice = 0;
 	int temp;
 	printf("Cours avec le plus d'élèves -> moins d'élèves\n");
@@ -163,41 +180,16 @@ bool test_coloration(int *Horaires, int *couleur, int N, int *TYPE, int heure_a_
 {
 	int duree1 = 0;
 	int duree2 = 0;
-	//int Test[N];
-	for(int i = 0; i < N; i++)
-	{
-		if((couleur[i] == couleur[sommet_a_teste])&& (sommet_a_teste != i))
-		{
+	for(int i = 0; i < N; i++){
+		if((couleur[i] == couleur[sommet_a_teste])&& (sommet_a_teste != i)){
 			if(TYPE[i] == 0){duree1 = 12;}else{duree1 = 6;}
 			if(TYPE[sommet_a_teste] == 0){duree2 = 12;}else{duree2 = 6;}
 			if(((heure_a_teste + duree2 >= Horaires[i]) &&  (heure_a_teste + duree2 <= Horaires[i] + duree1)) 
-				|| ((Horaires[i] + duree1 >= heure_a_teste) && (Horaires[i] <= heure_a_teste + duree2)))
-			{
+				|| ((Horaires[i] + duree1 >= heure_a_teste) && (Horaires[i] <= heure_a_teste + duree2))){
 				return false;
 			}
 		}
 	}
-
-
-		//if(TYPE[i] == 0){duree = 12;}else{duree = 6;}
-		/*if((heure_a_teste >= Horaires[i]) && (heure_a_teste <= Horaires[i] + duree) && (sommet_a_teste != i))
-		{
-			//Test[i] = couleur[i];
-			return false;
-		} */
-		/*else
-		{
-			Test[i] = 100;
-		}
-	}
-
-	for(int i = 0; i < N; i++)
-	{
-		if((Test[i] == couleur[sommet_a_teste]) && (i!=sommet_a_teste) && (Test[i] != 100))
-		{
-			return false;
-		}
-	}*/
 	return true;
 }
 
@@ -211,27 +203,25 @@ bool testConnnexe(int **T, int N, int sommet){
 		degre += T [i][sommet];
 	}
 	if (degre != 0){
-		//printf("sommet %d connexe\n", sommet);
 		return true;
 	}
-	//printf("sommet %d non connexe\n", sommet);
 	return false;
-
 }
 
 bool test_lien(int *Horaires, int N, int **T, int heure_a_teste, int sommet_a_teste, int *TYPE)
 {
 	int duree = 0;
-	for (int i = 0; i < N; i++)
-	{
-		if(TYPE[i] == 0) { duree = 12;} else {duree = 6;}
-		if((T[sommet_a_teste][i] == 1) && (heure_a_teste >= Horaires[i]) && (heure_a_teste <= Horaires[i] + duree) && (sommet_a_teste != i))
-		{
-			//printf("false test lien\n");
+	for (int i = 0; i < N; i++){
+		if(TYPE[i] == 0){ 
+			duree = 12;
+		} 
+		else {
+			duree = 6;
+		}
+		if((T[sommet_a_teste][i] == 1) && (heure_a_teste >= Horaires[i]) && (heure_a_teste <= Horaires[i] + duree) && (sommet_a_teste != i)){
 			return false;
 		}
 	}
-	//printf("true test lien\n");
 	return true;
 }
 
@@ -239,32 +229,20 @@ bool test_lien(int *Horaires, int N, int **T, int heure_a_teste, int sommet_a_te
 //Pour représenter les heures par créneau de 15 min :
 //0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34: indices
 //    8       9       10          11          12          13          14          15          16: heure
-int *planification(int **T, int sommet_depart, int *couleur, int N, int *TYPE)
-{
+int *planification(int **T, int sommet_depart, int *couleur, int N, int *TYPE){
 	int *Horaires = (int*)malloc(N*sizeof(int*));
-	Horaires[sommet_depart] = 0;
-	for (int i = 0; i < N; i++)
-	{
+	for (int i = 0; i < N; i++){
 		Horaires[i] = 0;
-		//c
 	}
 
-	for(int i = 1; i < N; i++)
-	{
-		for(int k = 0; k < N; k++)
-		{
-			if(T[i][k] == 1)
-			{
-				if(TYPE[i] == 0)//si le cours est un td
-				{
-					for(int j = 0; j <= 36; j++)
-					{
-						if(test_coloration(Horaires, couleur, N, TYPE, Horaires[k] + 13 + j, i) == true)
-						{
-							if(test_lien(Horaires, N, T, Horaires[k] + 13 + j, i, TYPE) == true)
-							{
+	for(int i = 1; i < N; i++){
+		for(int k = 0; k < N; k++){
+			if(T[i][k] == 1){
+				if(TYPE[i] == 0){//si le cours est un td
+					for(int j = 0; j <= 36; j++){
+						if(test_coloration(Horaires, couleur, N, TYPE, Horaires[k] + 13 + j, i) == true){
+							if(test_lien(Horaires, N, T, Horaires[k] + 13 + j, i, TYPE) == true){
 								Horaires[i] = Horaires[k] + 13 + j;
-								//printf("Horaire de %d : %d\n",i,Horaires[i]);
 								break;
 							}
 						}
@@ -330,15 +308,11 @@ int *planification(int **T, int sommet_depart, int *couleur, int N, int *TYPE)
 	return Horaires;
 }
 
-bool test_solution_valide(int *Horaires, int N, int *couleur, int *TYPE, int **TO)
-{	
+bool test_solution_valide(int *Horaires, int N, int *couleur, int *TYPE, int **TO){	
 	//TEST COLORATION
 	int dureei, dureej;
-	for (int i = 0; i < N; i++)
-	{
-		for (int j = 0; j < N; j++)
-		{
-			
+	for (int i = 0; i < N; i++){
+		for (int j = 0; j < N; j++){
 			if((couleur[i] == couleur[j]) && (i != j)) {
 				
 				if(TYPE[i] == 0) {dureei = 13;} else {dureei = 7;}

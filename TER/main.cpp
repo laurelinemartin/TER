@@ -110,7 +110,7 @@ int main(int argc, char** argv)
 ///////////////////////////////////////
 //// Sommet de degré entrant nul : ////
 ///////////////////////////////////////
-    int premier_sommet = trouver_degre_entrant_nul(TO,TAILLE);
+    int premier_sommet = 0;
 
     //// Ecriture terminal
     printf("PREMIER SOMMET DE DEGRE ENTRANT NUL\n");
@@ -193,6 +193,10 @@ int main(int argc, char** argv)
         Horaires_glouton = Algo_glouton(Horaires, TAILLE, premier_sommet, couleur, TYPE,TO,HEUREMAX,NBELEVES);
         congestion_totale = calcul_congestion_totale(Horaires_glouton,NBELEVES,HEUREMAX,TAILLE,TO);
         a = test_solution_valide(Horaires_glouton,TAILLE,couleur,TYPE,TO);
+
+        //// Ecriture fichier
+        ecrireInformation("\n\n * Algo glouton :\n");
+        ecrireSolution(Horaires_glouton, couleur, TAILLE, HEUREMAX, congestion_totale);
 
         //// Ecriture terminal
         printf("\n Planification gloutonne \n");
