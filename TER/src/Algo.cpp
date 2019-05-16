@@ -8,8 +8,8 @@
 //// globale lapseHeure = 15)
 //// mets l'heure et les minutes dans un vecteur et le retourne
 vector<int> convertHeure(int num){
-	int heure = 8;
-	int min = 0;
+	int heure = 7;
+	int min = 30;
 	vector<int> vecHeure;
 	for(int i = 2; i != num; i++){
 		min += lapseHeure;

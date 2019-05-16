@@ -95,8 +95,8 @@ int calcul_congestion_totale(int *Horaires, int *Nb_eleves_cours, int heure_max,
 
     ecrireCongestionBus(Nb_eleves_bus, N);
 
-    /*for(int i = 0; i < heure_max; i++){
-    printf("Nb eleve bus %d : %d \n ",i ,Nb_eleves_bus[i]); }*/
+    for(int i = 0; i < heure_max; i++){
+    printf("Nb eleve bus %d : %d \n ",i ,Nb_eleves_bus[i]); }
     
     for(int i = 0; i < heure_max*3; i++)
     {

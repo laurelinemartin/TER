@@ -183,7 +183,7 @@ int main(int argc, char** argv)
     //// Ecriture Terminal
     printf("Solution planification initiale valide ? : %d\n",a); //true = 1 false = 0
 ///////////////////////////////
-
+    /*
     if(a == 1)
         {
 
@@ -269,6 +269,6 @@ int main(int argc, char** argv)
 
         free(Horaires_tabou_roulette);
 //////////////////////////
-
-    }
+     
+    } */
 }
