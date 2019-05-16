@@ -170,9 +170,14 @@ int *Algo_tabou_roulette(int *Horaires, int N, int sommet_depart, int *couleur, 
 	
 	//La boucle k permet d'itérer l'algo plusieurs fois
 	for(int k = 0; k < Nb_iterations; k++){
+		temp = 0;
+		choix_roulette = 0;
+		horaire_initiale = 0;
 		//On reinitialise les probas
 		for (int o = 0; o < N; o++){
 			Valeurs_roulette[o] = 0;
+			Meilleure_congestion[o] = 0;
+			Meilleure_solution[o] = 0;
 		}
 		congestion_initiale = calcul_congestion_totale(Horaires_tabou_roulette,Nb_eleves,heure_max,N,TO);
 		printf("Congestion initiale à l'itération %d : %d\n",k,congestion_initiale);
@@ -211,13 +216,14 @@ int *Algo_tabou_roulette(int *Horaires, int N, int sommet_depart, int *couleur, 
 			//On marque la valeurs de modification par rapport a la congestion initiale. Ainsi si on a 10 de congestion initiale et 8 en congestion pour le sommet i,
 			//Alors on marque 2 dans le tableau. Pour le sommet suivant si il modifie de 3 on marque 5. Ainsi ca donne un tableau comme cela : 
 			//2 4 8 15 16 17 17.
-			if(i != 0){
-				Valeurs_roulette[i] = congestion_initiale - Meilleure_congestion[i] + Valeurs_roulette[i-1];
-			}
-			else{
-				Valeurs_roulette[i] = congestion_initiale - Meilleure_congestion[i];
-			}
+			if(Meilleure_congestion[i] < congestion_initiale){ Valeurs_roulette[i] = congestion_initiale - Meilleure_congestion[i]; }
+			else { Valeurs_roulette[i] = 0; }
 		}
+		for (int p = 1; p < N; p++) { 
+			if (Valeurs_roulette[p] == 0) { Valeurs_roulette[p] = Valeurs_roulette[p-1];} 
+			else { Valeurs_roulette[p] += Valeurs_roulette[p-1]; }
+		}
+
 		printf("Valeurs roulette\n");
 		for (int n = 0; n < N; n++) {
 			printf("%d ",Valeurs_roulette[n]);
