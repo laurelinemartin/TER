@@ -27,8 +27,8 @@ int calcul_congestion_bus(int *Nb_eleves_bus, int heure_bus)
     return congestion;
 }
 
-int* congestionBus(int* elevesCours, int N){
-   int* congestion = (int*)malloc(N*sizeof(int*));
+int* congestionBus(int heure_max, int N, int *Horaires, int *Nb_eleves_cours){
+   /*int* congestion = (int*)malloc(N*sizeof(int*));
     for(int i = 0; i < N; i++){
         congestion[i] = 0;
     }    
@@ -36,7 +36,30 @@ int* congestionBus(int* elevesCours, int N){
        congestion[i] = calcul_congestion_bus(elevesCours, i);
        cout << "bus " << congestion[i] << endl;
     }
-    return congestion;
+    return congestion;*/
+
+    int capacite_max = 60;
+    int *Nb_eleves_bus = (int*)malloc(heure_max*3*sizeof(int*));
+    for(int i = 0; i < heure_max*3; i++){
+        Nb_eleves_bus[i] = 0;
+    }
+
+    for(int i = 0; i < N; i++){
+        Nb_eleves_bus[Horaires[i]-1] += Nb_eleves_cours[i];
+    }
+
+    for (int j = 0; j < 2; j++){
+        for(int i = 1; i < heure_max*3; i++){
+            if(Nb_eleves_bus[i] > capacite_max){
+                Nb_eleves_bus[i - 1] += Nb_eleves_bus[i] - capacite_max;
+                Nb_eleves_bus[i] = capacite_max;
+            }
+        }
+    }
+
+    for(int i = 0; i < heure_max; i++){
+    printf("Nb eleve bus %d : %d \n ",i ,Nb_eleves_bus[i]); }
+    return Nb_eleves_bus;
 }
 
 int calcul_congestion_totale(int *Horaires, int *Nb_eleves_cours, int heure_max, int N, int **T){
@@ -93,10 +116,10 @@ int calcul_congestion_totale(int *Horaires, int *Nb_eleves_cours, int heure_max,
         }
     }
 
-    ecrireCongestionBus(Nb_eleves_bus, N);
+    
 
-    for(int i = 0; i < heure_max; i++){
-    printf("Nb eleve bus %d : %d \n ",i ,Nb_eleves_bus[i]); }
+    /*for(int i = 0; i < heure_max; i++){
+    printf("Nb eleve bus %d : %d \n ",i ,Nb_eleves_bus[i]); }*/
     
     for(int i = 0; i < heure_max*3; i++)
     {

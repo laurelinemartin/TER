@@ -158,7 +158,8 @@ int main(int argc, char** argv)
     //// Ecriture fichier
     ecrireInformation("\n\n * Planification initiale : \n");
     ecrireSolution(Horaires, couleur, TAILLE, HEUREMAX, congestion_totale);
-    //ecrireCongestionBus(NBELEVES, TAILLE);
+    int* Bus = congestionBus(HEUREMAX, TAILLE, Horaires,NBELEVES);
+    ecrireCongestionBus(Bus, HEUREMAX);
 
     //// Ecriture terminal
     printf("\n PLANIFICATION \n");
