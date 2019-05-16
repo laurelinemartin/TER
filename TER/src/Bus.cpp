@@ -27,6 +27,18 @@ int calcul_congestion_bus(int *Nb_eleves_bus, int heure_bus)
     return congestion;
 }
 
+int* congestionBus(int* elevesCours, int N){
+   int* congestion = (int*)malloc(N*sizeof(int*));
+    for(int i = 0; i < N; i++){
+        congestion[i] = 0;
+    }    
+    for(int i = 0; i < N; i++){
+       congestion[i] = calcul_congestion_bus(elevesCours, i);
+       cout << "bus " << congestion[i] << endl;
+    }
+    return congestion;
+}
+
 int calcul_congestion_totale(int *Horaires, int *Nb_eleves_cours, int heure_max, int N, int **T){
     int congestion_totale = 0;
     int capacite_max = 60;

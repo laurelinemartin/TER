@@ -25,6 +25,7 @@ void ecrireInformation(string s){
 void ecrireSolution(int* horaires, int* salles, int horaireMax, int nbBus, int congestionTotale){
 	ecrirePlanification(horaires, salles, horaireMax);
 	ecrireCongestionTotale(congestionTotale, nbBus);
+	// ecrireCongestionBus(bus);
 }
 
 void ecrirePlanification(int* horaires, int* salles, int horaireMax){
@@ -58,12 +59,53 @@ void ecrirePlanification(int* horaires, int* salles, int horaireMax){
     // fclose(sortie);
 }
 
-void ecrireCongestionBus(int numBus, int congestionBus){
-	FILE *sortie = fopen("resultats.txt", "a");
+void ecrireCongestionBus(int* bus, int N){
+	// FILE *sortie = fopen("resultats.txt", "a");
 	// fprintf(sortie, "CONGESTION DES BUS : \n");
-	fprintf(sortie, "-------------------------\n");
-	fprintf(sortie, "Congestion du bus n°%d : %d\n", numBus, congestionBus);
-	fclose(sortie);
+	// fprintf(sortie, "-------------------------\n");
+	// fprintf(sortie, "Congestion du bus n°%d : %d\n", numBus, congestionBus);
+	// fclose(sortie);
+	vector<int> heure;
+	ofstream fichier("congestion_bus.txt", ios::out);
+	if(fichier){
+		for(int i = 2; i < N; i++){
+			heure = convertHeure(i);
+			if(bus[i] < debOrange){
+				fichier << "Le bus à l'heure " 
+						<< heure[0] 
+						<< "h"
+						<< heure[1]
+						<< " : vert." 
+						<< " (" 
+						<< bus[i] 
+						<< ")" << endl;
+			}
+			else if(bus[i] < debRouge){
+				fichier << "Le bus à l'heure " 
+						<< heure[0] 
+						<< "h"
+						<< heure[1] 
+						<< " : orange." 
+						<< " (" 
+						<< bus[i] 
+						<< ")"  << endl; 
+			}
+			else{
+				fichier << "Le bus à l'heure " 
+						<< heure[0] 
+						<< "h"
+						<< heure[1]
+						<< " : rouge." 
+						<< " (" 
+						<< bus[i] 
+						<< ")"  << endl;
+			}
+		}
+		fichier.close();
+	}
+	else{
+		cerr << "Erreur ouverture du fichier !" << endl;
+	}
 }
 
 void ecrireCongestionTotale(int congestionTotale, int nbbus){
@@ -83,6 +125,9 @@ void ecrireCongestionTotale(int congestionTotale, int nbbus){
 		cerr << "Erreur ouverture !";
 	}
 }
+
+
+////////////////////////////////////////////////////////////////////
 
 float lectureProbabilite(){
 	float proba;
