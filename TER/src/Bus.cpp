@@ -5,7 +5,7 @@ int calcul_congestion_bus(int *Nb_eleves_bus, int heure_bus)
     int congestion = 0;
     int non_etudiant;
     int seuil_confort = 50;
-    srand(time(NULL));
+    
 
     for(int i = 0; i < 7; i++)
     {
@@ -131,6 +131,7 @@ int calcul_congestion_totale(int *Horaires, int *Nb_eleves_cours, int heure_max,
 
 int montee_descente(int heure_bus)
 {
+    srand(time(NULL));
     int non_etudiant = 0;
     if (heure_bus <= 6)
     {

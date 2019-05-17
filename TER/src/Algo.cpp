@@ -230,7 +230,11 @@ int *Algo_tabou_roulette(int *Horaires, int N, int sommet_depart, int *couleur, 
 		}
 		printf("\n");
 		
-		choix_roulette = rand()%Valeurs_roulette[N-1];
+		if (Valeurs_roulette[N-1] > 0) {
+			choix_roulette = rand()%Valeurs_roulette[N-1];
+		}
+		else { choix_roulette = 1; }
+		
 		printf("Choix roulette : %d\n",choix_roulette);
 
 		//On prend au hasard une valeur et on regarde ou elle tombe dans le tableau, ainsi plus on modifie la congestion, plus on a de chance d'être choisi.
