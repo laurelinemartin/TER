@@ -5,7 +5,6 @@
 #include <iostream>
 #include <algorithm>
 #include "Planification.h"
-#include "../include/IO.h"
 #include "Bus.h"
 #include <time.h>
 using namespace std;
