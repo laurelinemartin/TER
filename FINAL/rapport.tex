@@ -1,3 +1,4 @@
+
 \documentclass[a4paper,11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -27,35 +28,85 @@
 	Le projet décrit dans ce rapport est la réalisation d'Algorithmes d'optimisation pour un bureau des temps.\\
 	La mission d'un tel bureau est de permettre une décongestion des moyens et infrastructure de mobilité afin d'améliorée la qualité de vie des utilisateurs	 et de diminuer l'impact environnemental de ces structures. Il s'agira donc d'influer sur les causes de la congestion de mobilités en repensant les horaires d'activités.\\
 	Dans notre projet, les horaires d'activités sont celles de l'Université Versailles-Saint-Quentin, et plus précisément de l'UFR des Sciences, basé à Versailles. Ainsi en repensant ces horaires, on pourra minimiser la congestion sur la ligne de bus R, allant de la gare transilien Versailles-Chantier à l'UFR.\\
-	Ce rapport a pour objectif de décrire dans un premier temps les données que nous allons utiliser dans notre projet, nous détaillerons les étapes à suivre pour exploiter ces données. Dans un second temps les stratégies de résolution envisageables.\\
+	\\
+	Ce rapport a pour objectif de décrire dans un premier temps les données que nous allons utiliser dans notre projet. Ensuite nous définirons les objectifs à atteindre  puis les stratégies de résolutions envisagées afin d'atteindre ces objectifs.
+	Nous comparerons ensuite pour ces différentes stratégies les résultats obtenus afin d'identifier la meilleur stratégie.\\
 	Afin de facilité la compréhension de ce rapport, nous allons expliciter les étapes sous la forme d'un exemple simple.
-	PLAN
+	
 	
 \section{Les données initiales}
-	pas parler des valeurs, juste des structures
-
+	Cette section fait l'état des données utiliser pour le bon fonctionnement de l'application.\\
+	On a pour but de créer une planification pour un emploi du temps, c'est a dire un déroulement sur une journée des cours dans une université, ici l'UFR de Versailles.\\
+	\\
+	L'idée étant de modifier un emploi du temps afin de minimiser la congestion dans les bus du aux arrivées d'étudiant au débuts de leurs cours, il nous faut donc un emploi du temps de base sur lequel travailler.\\
+	On à donc comme donnée initiale différents cours, représentés sous la forme d'une matrice d'adjacence. \\
+	Cette représentation nous permet de facilement identifier quels cours ont des étudiants en communs.\\
+	\\
+	\begin{tabular}{ | c | c | c | c |}
+		\hline			
+		\       & Cours 1 & Cours 2 & Cours 3\\
+		Cours 1 &   0     &    1    &     0  \\
+		Cours 2 &   1     &    0    &     0  \\
+		Cours 3 &   0     &    0    &     0  \\
+		\hline  
+	\end{tabular}\\
+	Dans cette exemple on peut voir que le cours 1 et le cours 2 ont au moins un étudiant en commun.\\
+	On a besoin de cette information afin de pouvoir fournir une planification réaliste.\\
+	\\
+	Chaque cours à également un type, c'est soit :
+		\begin{itemize}
+			\item un CM : dans ce cas il aura au plus 100 élèves.
+			\item  un TD : dans ce cas il aura au plus 34 élèves.
+		\end{itemize}
+	Ces information seront utilisé pour savoir combien d'élèves arrives à chaque cours.\\
+	\\
+	Enfin parmi les données initiales il y a les bus. Ils sont représenté par une capacité ainsi qu'une heure. 
 \section{Objectif}
 	L'objectif de notre projet est de générer un emploi du temps, c'est à dire une planification qui respecte toutes les contraintes, dont la métrique est minimale.
 	\subsection{Contraintes}
 		\subsubsection{Entre deux cours}
 				\begin{enumerate}
-					\item Deux cours utilisent la même salle ne doivent pas avoir des horaires qui se chevauchent
+					\item Deux cours utilisent la même salle ne doivent pas avoir des horaires qui se chevauchent.
 					\item Deux cours qui ont des horaires qui se chevauchent ne doivent pas avoir d'élèves en commun.
 					\item Le temps laissé entre deux cours doit être de 15 minutes minimum.
 				\end{enumerate}
 	
 	\subsection{Métriques sur les contraintes}
-		Ce que nous évaluons c'est le dépassements du seuil de confort du bus. Dans notre cas le seuil de confort est fixé à 50, au dela le score de congestion est incrémenté à chaque arrêt de bus.
-		Le nombre d'étudiants dans un bus ne doit pas dépasser la capacité $capacité_{max}$ du bus (fixé à 60 dans notre cas). Ainsi si il y a plus de 60 élèves pour un bus, le surplus d'élèves sera envoyé dans le bus précedent l'horaires du bus surchargé.
+		Ce que nous évaluons c'est le dépassements du seuil de confort du bus. Dans notre cas le seuil de confort est fixé à 50 personnes, au delà le score de congestion est incrémenté à chaque arrêt de bus.
+		Le nombre d'étudiants dans un bus ne doit pas dépasser la capacité $capacité_{max}$ du bus (fixé à 60 dans notre cas). Ainsi si il y a plus de 60 élèves pour un bus, le surplus d'élèves sera envoyé dans le bus précédent l'horaires du bus surchargé.\\
+		Pour calculer le nombre d'élèves par bus, on utilise l'emploi du temps des données initiales. On peut ainsi récupéré pour chaque tranches horaires le nombre d'étudiants censé arriver pour suivre leur cours.\\
+		On à émit l'hypothèse que les élèves arrivent dans le bus précédant leurs cours, de ce fait on peut savoir précisément le nombre d'élève qu'il y aura dans un bus avant un cours.\\
+		On prend également en compte le fait que chaque bus comporte une part de non-étudiants, qui ne sera donc pas variable dans notre application. En effet une modification de la planification ne changera pas leur nombre.\\
+		A partir de ces information, on va pouvoir savoir si un bus atteint son seuil de congestion.
+		
+	\subsection{Objectif}
+		La métrique décrite dans le point précédent va nous permettre de donner un score a chaque planification que nous allons réaliser.\\
+		En effet, l'objectif étant de réduire la congestion des bus, on aura tendance a préférer une planification pour laquelle le score de congestion est faible.\\
+		C'est donc dans la modification de la planification que les contraintes vu plus haut interviennent.\\
+		On va donc devoir trouver une planification qui minimise la congestion des bus tout en respectant les trois contraintes vu précédemment.
 	
 \section{Stratégies de résolution}
-	expliquer en francais les algos et pourquoi on les a choisis
-	parler des données utilisées par l'algo
+	\subsection{Les algorithmes}
+		\subsubsection{L'algorithme glouton}
+		Cette algorithme est basé sur une heuristique simple : à partir d'une planification initiale, on fait varier les cours un par un sur tout les horaires possibles respectant les contraintes.\\
+		Pour chaque modification on recalcule la congestion des bus. Si la congestion est améliorée, alors on défini cet horaire comme étant le nouvel horaire du cours.\\
+		On parcours cependant tout les horaires possible afin de choisir celui qui améliore le plus la congestion. Si aucun n'améliore la congestion, on replace le cours a son horaire initial.\\
+		Enfin une fois qu'on a fixé le premier sommet, on passe au suivant et on recommence le même processus.
+		\subsubsection{L'algorithme tabou dur}
+		Dans cet algorithme, on utilise le même principe que pour l'algorithme glouton mais d'une façon différente.\\
+		Pour chaque cours, on fait varier l'heure de début tout en respectant les contraintes et on calcule la nouvelle congestion. On va également garder en mémoire la meilleure modification par sommet.\\
+		Après avoir effectué cette recherche sur tout les cours de la planification, on choisi de modifier le sommet ayant la meilleur amélioration de congestion.\\
+		On recommence ensuite ce procédé mais en interdisant l'optimisation d'un cours dont l'horaire à déjà été modifié.
+		\subsubsection{L'algorithme tabou roulette}
+		Cette algorithme ressemble à l'algorithme vu précédemment à ceci près qu'il laisse une part de hasard dans le choix de la modification a apporter dans la planification.\\
+		En effet on va dans cette algorithme pour chaque cours les horaires respectant les contraintes. Tout les horaires qui améliore la congestion sont ensuite gardé en mémoire.\\
+		Ensuite, parmi toute les solutions de tout les sommets, une seule est choisi aléatoirement. Cependant, plus une solution améliore la congestion, plus elle aura de chance d'être sélectionnée.\\
+		On réitère ensuite l'opération tout en interdisant l'optimisation d'un cours déjà modifié, comme pour l'algorithme précédent. 
 	\subsection{Planification initiale}
 		Dans un premier temps nous allons créer une planification initiale qui sera utilisé comme point de départ par chaque algorithme.
 		Cette solution va simplement mettre le sommet initial à la première horaire de la journée puis placer les autres sommets en respectant les contraintes et en les mettant le plus tôt possible.
 		Le sommet initial est le sommet de degré entrant nul d'indice le plus faible.
-
+		Ces sommets sont les cours de la matrice d'adjacence vu dans le premier point de ce rapport.
 	\subsection{Données utilisées}
 		Voir l'exemple en annexe pour plus de clarté.
 		\subsubsection{Le nombre de personnes par bus}
@@ -75,30 +126,38 @@
 		Pour plus de clarté nous considérons ici que chaque professeur est disponible sur toute la durée de la journée.
 		\begin{enumerate}
 			\item On créer un graphe non orienté en numérotant les sommets de 1 jusqu'au nombre de cours.
-			\item On relie les sommets entre eux lorsque qu'il y a une contrainte (même étudiant sur des horaires qui se chevauchent). Pour cela on créé une matrice d'adjacence avec un degré moyen choisis arbitrairement. Pour N sommets et K le degré moyen, la probabilité qu'ily ai une arête à insérer dans chaque case est K/N.
-			\item On oriente les arêtes désormais des arcs du plus faible au plus fort
+			\item On relie les sommets entre eux lorsque qu'il y a une contrainte (même étudiant sur des horaires qui se chevauchent). Pour cela on créé une matrice d'adjacence avec un degré moyen choisis arbitrairement. Pour N sommets et K le degré moyen, la probabilité qu'il y ai une arête à insérer dans chaque case est K/N.
+			\item On oriente les arêtes, désormais des arcs, du  sommet d'indice le plus faible au plus fort
 			\item Il y a obligatoirement un ou plusieurs sommets de degré entrant nul, ces sommets de notre DAG seront des points de départs possible pour notre planification.
 			\item On colorie le graphe, chaque couleur représente une salle.		
-			\item Nous agencons l'emploi du temps en respectant le fait que deux couleurs et deux sommets reliés par un arc ne peuvent pas être sur la même plage horaire. Par défaut le sommet duquel nous partirons est le sommet de degré entrant nul d'indice le plus faible.
+			\item Nous agençons l'emploi du temps en respectant le fait que deux couleurs et deux sommets reliés par un arc ne peuvent pas être sur la même plage horaire. Par défaut le sommet duquel nous partirons est le sommet de degré entrant nul d'indice le plus faible.
 		\end{enumerate}
 		Chaque cours possède un nombre d'étudiants choisis aléatoirement entre 16 et 32 pour un TD et entre 16 et 100 pour un cours magistral. les TDs représentent trois quart des cours.\\
-		\\
-	
-	\subsection{Algorithmes}
-		\subsubsection{Algorithme glouton}
-			Notre approche gloutonne va chercher pour chaque sommet, l'horaires à laquelle la congestion est la plus faible. Il n'y a pas de remise en cause, c'est à dire qu'une fois qu'un sommet a été fixé, on ne le modifie plus.
-
+		\\	
+		Cependant comme nous avons du les générer faute de données concrète, nous inclurons également dans cette section l'ensemble des variables utilisées pour les générer.
+	\subsection{Les variables}
+	les noms des variables sont simplifiés par rapport à leur nom réel dans l'application afin de les rendre plus explicite pour le lecteur.
+	\begin{itemize}
+		\item \textit{probabilité de lien} : la probabilité qu'il y ai un lien entre 2 cours. Un lien entre 2 cours signifie qu'ils ont au moins un étudiant en commun, il ne peuvent donc pas avoir lieu en même temps.
+		\item \textit{nombre de cours} : le nombre de cours que nous allons représenter lors du déroulement de l'application. C'est le nombre de cours que nous allons devoir modifier pour la planification.
+		\item  \textit{le nombre de salles} : le nombre de salles disponibles pour les cours.
+		\item \textit{heure maximum} : l'heure limite a laquelle on peut placer un cours. Dans nôtre application on représente le temps par tranche de 15min. Il va de 7h30 à 16h, on à donc 34 quart d'heure.
+	\end{itemize}
 \section{Présentation des résultats}
 	comparer les algos, comparer en fct des données en entrées
 	
 \section{Conclusion}
 	\subsection{Pistes de reflexion abandonnées}
-		Le côté C++, les élèves, les plages d'horaires des profs, les contraintes d'enfant et de travail.
+	Au commencement du développement de ce projet, nous avions penser représenter chaque éléments (cours, étudiants, professeurs, salles) par des classes. Ainsi, un langage de programmation orienté objet nous semblait tout indiqué. Mais nous savions également que nous allions avoir besoin de fonction procédurales donc nous avons opté pour l'utilisation du langage C++.\\
+	Au cours de nos recherches nous nous sommes rendu compte que nous pouvions modéliser notre problème en utilisant simplement des matrices, nous avons donc abandonnée l'idée de représenter les éléments du projets par des objets.\\
+	Cependant comme nous avions déjà commencé à programmer une partie du projet, nous avons décidé de garder le C++ comme langage de programmation, sont aspect hybride entre le procédural et l'orienté objet nous permettant de continuer a l'utiliser.
 	\subsection{Conclusion sur le problème}
-		Parler du pb, c'est dur ? Ca marche ?
+	Le problème d'optimisation pour un bureau des temps n'as pas de solution simple. Nous avons eu recourt à différentes heuristique afin de pouvoir fournir des planifications viables.\\
+	Ce problème est donc assez coûteux en temps en fonction de l'heuristique choisi. De plus nous ne pouvons pas affirmer a 100\% que nos planification sont les meilleurs possibles, cependant on peut essayer de s'en approcher.
 	\subsection{Ouverture}
-		Inverser les arcs, mettre plus de contraintes, mettre d'autres glouton, faire un recuit simulé.
-
+	Nous avons quelques pistes de réflexions qui pourrait améliorer l'efficacité de notre application.\\
+	On pourrait par exemple donner la possibilité d'inverser les arcs de la matrice représentant les cours lors des modifications de la planification.
+	On peut également essayer d'utiliser d'autres heuristiques que celles que nous avons choisit, comme un recuit simulé par exemple, ou alors changer la variable de décision de l'algorithme glouton.
 \section{Annexes}
 	\subsection{Exemple d'utilisation}
 	\subsection{Algo en code clair et commenté}
