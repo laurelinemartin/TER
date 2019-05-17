@@ -10,12 +10,9 @@ void initFichier(){
 	else{
 		cerr << "Erreur ouverture fichier !" << endl;
 	}
-	// FILE *sortie = fopen("resultats.txt", "w");
-	// fprintf(sortie, "Les %d meilleurs résultats : \n\n", nbResults);
-	// fclose(sortie);
 }
 
-void ecrireInformation(char* s){
+void ecrireInformation(string s){
 	ofstream fichier("resultats.txt", ios::out | ios::app);
 	if(fichier){
 		fichier << s << endl;
@@ -28,17 +25,16 @@ void ecrireInformation(char* s){
 void ecrireSolution(int* horaires, int* salles, int horaireMax, int nbBus, int congestionTotale){
 	ecrirePlanification(horaires, salles, horaireMax);
 	ecrireCongestionTotale(congestionTotale, nbBus);
+	// ecrireCongestionBus(bus);
 }
 
 void ecrirePlanification(int* horaires, int* salles, int horaireMax){
-	// FILE *sortie = fopen("resultats.txt", "a");
 	int cours = 0;
 	vector<int> heure;
   	//// tableau Horaires devient vector<int> vecHoraires
   	vector<int> vecHoraires (horaires, horaires + horaireMax);
   	//// tri de vecHoraire
   	//// sort(vecHoraires.begin(), vecHoraires.end());
-  	// fprintf(sortie, "\nPLANIFICATION DES COURS :\n");
 
   	ofstream fichier("resultats.txt", ios::out | ios::app); 
 	if(fichier){
@@ -53,7 +49,6 @@ void ecrirePlanification(int* horaires, int* salles, int horaireMax){
   					<< ", salle : "
   					<< salles[cours]
   					<< endl;
-  			// fprintf(sortie, "Cours %d à %d h %d salle : %d\n", cours, heure[0], heure[1], salles[cours]);
   			cours++;
    		 }
    		 fichier.close();
@@ -64,12 +59,53 @@ void ecrirePlanification(int* horaires, int* salles, int horaireMax){
     // fclose(sortie);
 }
 
-void ecrireCongestionBus(int numBus, int congestionBus){
-	FILE *sortie = fopen("resultats.txt", "a");
+void ecrireCongestionBus(int* bus, int N){
+	// FILE *sortie = fopen("resultats.txt", "a");
 	// fprintf(sortie, "CONGESTION DES BUS : \n");
-	fprintf(sortie, "-------------------------\n");
-	fprintf(sortie, "Congestion du bus n°%d : %d\n", numBus, congestionBus);
-	fclose(sortie);
+	// fprintf(sortie, "-------------------------\n");
+	// fprintf(sortie, "Congestion du bus n°%d : %d\n", numBus, congestionBus);
+	// fclose(sortie);
+	vector<int> heure;
+	ofstream fichier("congestion_bus.txt", ios::out);
+	if(fichier){
+		for(int i = 2; i < N; i++){
+			heure = convertHeure(i);
+			if(bus[i] < debOrange){
+				fichier << "Le bus à l'heure " 
+						<< heure[0] 
+						<< "h"
+						<< heure[1]
+						<< " : vert." 
+						<< " (" 
+						<< bus[i] 
+						<< ")" << endl;
+			}
+			else if(bus[i] < debRouge){
+				fichier << "Le bus à l'heure " 
+						<< heure[0] 
+						<< "h"
+						<< heure[1] 
+						<< " : orange." 
+						<< " (" 
+						<< bus[i] 
+						<< ")"  << endl; 
+			}
+			else{
+				fichier << "Le bus à l'heure " 
+						<< heure[0] 
+						<< "h"
+						<< heure[1]
+						<< " : rouge." 
+						<< " (" 
+						<< bus[i] 
+						<< ")"  << endl;
+			}
+		}
+		fichier.close();
+	}
+	else{
+		cerr << "Erreur ouverture du fichier !" << endl;
+	}
 }
 
 void ecrireCongestionTotale(int congestionTotale, int nbbus){
@@ -88,4 +124,88 @@ void ecrireCongestionTotale(int congestionTotale, int nbbus){
 	else{
 		cerr << "Erreur ouverture !";
 	}
+}
+
+
+////////////////////////////////////////////////////////////////////
+
+float lectureProbabilite(){
+	float proba;
+	ifstream fichier("params.txt", ios::in);
+	if(fichier){
+		fichier >> proba;
+		fichier.close();
+	}
+	else{
+		cerr << "Erreur lecture params.txt !";
+	}
+	return proba;
+}
+
+int lectureNombreCours(){
+	int nombreCours;
+	string saut;
+	ifstream fichier("params.txt", ios::in);
+	if(fichier){
+		for(int i = 0; i < 1; i++){
+			getline(fichier, saut);
+		}
+		fichier >> nombreCours;
+		fichier.close();
+	}
+	else{
+		cerr << "Erreur lecture params.txt !";
+	}
+	return nombreCours;
+}
+
+int lectureNombreSalles(){
+	int nombreSalles;
+	string saut;
+	ifstream fichier("params.txt", ios::in);
+	if(fichier){
+		for(int i = 0; i < 2; i++){
+			getline(fichier, saut);
+		}
+		fichier >> nombreSalles;
+		fichier.close();
+	}
+	else{
+		cerr << "Erreur lecture params.txt !";
+	}
+	return nombreSalles;
+}
+
+int lectureNombreBus(){
+	int nombreBus;
+	string saut;
+	ifstream fichier("params.txt", ios::in);
+	if(fichier){
+		for(int i = 0; i < 3; i++){
+			getline(fichier, saut);
+		}
+		fichier >> nombreBus;
+		fichier.close();
+	}
+	else{
+		cerr << "Erreur lecture params.txt !";
+	}
+	return nombreBus;
+}
+
+int lectureNombreIterations(){
+	int nombreIterations;
+	string saut;
+	ifstream fichier("params.txt", ios::in);
+	if(fichier){
+		for(int i = 0; i < 4; i++){
+			getline(fichier, saut);
+		}
+		fichier >> nombreIterations;
+		fichier.close();
+	}
+	else{
+		cerr << "Erreur lecture params.txt !";
+	}
+	return nombreIterations;
 }
