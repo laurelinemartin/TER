@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ################
 ### Makefile ###
 ################
@@ -8,7 +9,11 @@ SUPPR = @rm -f
 EXEC = TER
 FSRC = src/
 FINC = include/
+
 SRC = main.cpp src/Cours.cpp src/Salle.cpp src/Etudiant.cpp src/Enseignant.cpp src/Contraintes.cpp src/Planification.cpp src/Bus.cpp src/Algo.cpp src/IO.cpp
+
+SRC = main.cpp $(FSRC)/*.cpp 
+
 OBJ = $(SRC: .cpp=.o)
 
 all: $(EXEC)
@@ -18,6 +23,7 @@ compil: $(EXEC)
 
 $(EXEC): $(OBJ)
 	$(CXX) -o $(EXEC) $^
+
 
 Cours.o: $(FSRC)Cours.cpp $(FINC)Cours.h
 	$(CXX) -o $@ -c $< $(CFLAGS)
@@ -33,6 +39,7 @@ Enseignant.o: $(FSRC)Enseignant.cpp $(FINC)Enseignant.h
 	
 Contraintes.o: $(FSRC)Contraintes.cpp $(FINC)Contraintes.h
 	$(CXX) -o $@ -c $< $(CFLAGS)
+
 
 Planification.o: $(FSRC)Planification.cpp $(FINC)Planification.h
 	$(CXX) -o $@ -c $< $(CFLAGS)
@@ -51,4 +58,8 @@ main.o: main.cpp $(FINC)Salle.h $(FINC)Etudiant.h $(FINC)Enseignant.h $(FINC)Con
 
 clean: 
 	$(SUPPR) *.o
+
 	$(SUPPR) $(EXEC)
+
+	$(SUPPR) $(EXEC)
+

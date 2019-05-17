@@ -1,10 +1,7 @@
 #ifndef Planification_H
 #define Planification_H
 
-#include "Etudiant.h"
-#include "Cours.h"
-#include "Salle.h"
-#include "Contraintes.h"
+
 #include <vector>
 #include <iostream>
 #include <stdio.h>
