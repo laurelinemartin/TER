@@ -4,7 +4,7 @@ SUPPR = @rm -f
 EXEC = TER
 FSRC = src/
 FINC = include/
-SRC = main.cpp $(FSRC)/*.cpp
+SRC = main.cpp $(FSRC)/*.cpp 
 OBJ = $(SRC: .cpp=.o)
 
 all: $(EXEC)
