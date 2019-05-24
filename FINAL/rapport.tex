@@ -88,66 +88,69 @@
 	
 \section{Stratégies de résolution}
 	\subsection{Planification initiale}
-		Dans un premier temps nous allons créer une planification initiale qui sera utilisé comme point de départ par chaque algorithme.
-		Cette solution va simplement mettre le sommet initial à la première horaire de la journée puis placer les autres sommets en respectant les contraintes et en les mettant le plus tôt possible.
-		Le sommet initial est le sommet de degré entrant nul d'indice le plus faible.
-		Ces sommets sont les cours de la matrice d'adjacence vu dans le premier point de ce rapport.
+		Dans un premier temps, nous allons créer une planification initiale qui sera utilisée comme point de départ par chaque algorithme. Cette solution va simplement mettre le sommet initial à la première horaire de la journée puis placer les autres sommets en respectant les contraintes et en les mettant le plus tôt possible. Le sommet initial est le sommet de degré entrant nul d'indice le plus faible. Ces sommets sont les cours de la matrice d'adjacence vu dans le premier point de ce rapport.
+
 	\subsection{Les algorithmes}
 		\subsubsection{L'algorithme glouton}
-		Cette algorithme est basé sur une heuristique simple : à partir d'une planification initiale, on fait varier les cours un par un sur tout les horaires possibles respectant les contraintes.\\
-		Pour chaque modification on recalcule la congestion des bus. Si la congestion est améliorée, alors on défini cet horaire comme étant le nouvel horaire du cours.\\
-		On parcours cependant tout les horaires possible afin de choisir celui qui améliore le plus la congestion. Si aucun n'améliore la congestion, on replace le cours a son horaire initial.\\
-		Enfin une fois qu'on a fixé le premier sommet, on passe au suivant et on recommence le même processus.
+			Cet algorithme est basé sur une heuristique simple : à partir d'une planification initiale, on fait varier les cours un par un sur toutes les horaires possibles respectant les contraintes.\\
+			Pour chaque modification on recalcule la congestion des bus. Si la congestion est améliorée, alors on défini cet horaire comme étant le nouvel horaire du cours.\\
+			On parcours cependant toutes les horaires possibles afin de choisir celui qui améliore le plus la congestion. Si aucun n'améliore la congestion, le cours est placé à son horaire initial.\\
+			Une fois le premier sommet fixé, le sommet suivant est traité et ainsi de suite.
+
 		\subsubsection{L'algorithme tabou dur}
-		Dans cet algorithme, on utilise le même principe que pour l'algorithme glouton mais d'une façon différente.\\
-		Pour chaque cours, on fait varier l'heure de début tout en respectant les contraintes et on calcule la nouvelle congestion. On va également garder en mémoire la meilleure modification par sommet.\\
-		Après avoir effectué cette recherche sur tout les cours de la planification, on choisi de modifier le sommet ayant la meilleur amélioration de congestion.\\
-		On recommence ensuite ce procédé mais en interdisant l'optimisation d'un cours dont l'horaire à déjà été modifié.
+			Cet algorithme est basé sur le même principe que pour l'algorithme glouton mais d'une façon différente.\\
+			Pour chaque cours, l'heure de début varie tout en respectant les contraintes et une nouvelle valeur pour la congestion est calculée. La meilleure modification pour chaque sommet est gardée en mémoire.\\
+			Après avoir effectué cette recherche sur tout les cours de la planification, le sommet ayant la meilleure amélioration de congestion est modifié.\\
+			Ce procédé est ensuite répété mais en interdisant l'optimisation d'un cours dont l'horaire a déjà été modifiée.
+
 		\subsubsection{L'algorithme tabou roulette}
-		Cette algorithme ressemble à l'algorithme vu précédemment à ceci près qu'il laisse une part de hasard dans le choix de la modification a apporter dans la planification.\\
-		En effet on va dans cette algorithme considérer toutes les horaires respectants les cotraintes pour tout les cours. On calcule ensuite la congestion qui en résulterait pour chaque horaire.
-		Ensuite, parmi toute les solutions de tout les sommets, une seule est choisi aléatoirement. Cependant, plus une solution améliore la congestion, plus elle aura de chance d'être sélectionnée. C'est le même fonctionemment qu'une roulette dont les sous parties ne sont pas de tailles égales.\\
-		On réitère ensuite l'opération tout en interdisant l'optimisation d'un cours déjà modifié, comme pour l'algorithme précédent. 
+			Cet algorithme ressemble à l'algorithme tabou dur, à ceci près qu'il laisse une part de hasard dans le choix de la modification à apporter dans la planification.\\
+			En effet, cet algorithme traite toutes les horaires respectants les contraintes pour tous les cours. La congestion est ensuite calculée pour chaque horaire.\\
+			Ensuite, parmi toute les solutions de tous les sommets, une seule est choisie aléatoirement. Cependant, plus une solution améliore la congestion, plus elle aura de chance d'être sélectionnée. C'est le même fonctionemment qu'une roulette dont les sous parties ne sont pas de tailles égales.\\
+			L'opération est ensuite réitérée tout en interdisant l'optimisation d'un cours déjà modifié, comme pour l'algorithme précédent. 
 	
 	\subsection{Données utilisées}
 		Voir l'exemple en annexe pour plus de clarté.
+
 		\subsubsection{Le nombre de personnes par bus}
-		Dans notre cas d'étude, nous considérons que tous les étudiants montent au premier arrêt (gare des chantiers) et descendent au terminus (l'université).\\
-		Nous allons aussi créer le nombre de montée et de descentes à chaque arrêt.
- 		Pour obtenir les données des arrêts intermédiaires nous choisirons une valeur aléatoire, choisis dans un intervalle différent en fonction de l'heure, l'objectif est de représenter la congestion forte des heures de pointes de manière un peu plus précise : \\
- 		\begin{tabular}{ | c | c | c | c | c | c | c | c | c | c |}
- 			\hline			
-   			Horaire & 7-8h & 8-9h & 9-10h & 10-11h & 11-12h & 12-13h & 13-14h & 14-15h & 15-16h\\
-   			Montées & [5:15] & [5:15] & [3:10] & [2:8] & [1:5] & [1:5] & [1:5] & [2:8] & [3:10]\\
-   			Descentes & [0:5] & [0:5] & [1:6] & [1:6] & [1:5] & [1:5] & [0:5] & [0:5] & [1:5]\\
- 			\hline  
- 		\end{tabular}\\
+			Dans notre cas d'étude, nous considérons que tous les étudiants montent au premier arrêt (gare des chantiers) et descendent au terminus (l'université).\\
+			Nous allons aussi créer le nombre de montées et de descentes à chaque arrêt.
+ 			Pour obtenir les données des arrêts intermédiaires nous choisirons une valeur aléatoire, choisie dans un intervalle différent en fonction de l'heure. L'objectif est de représenter la congestion forte des heures de pointes de manière un peu plus précise : \\
+ 			\begin{tabular}{ | c | c | c | c | c | c | c | c | c | c |}
+ 				\hline			
+   				Horaire & 7-8h & 8-9h & 9-10h & 10-11h & 11-12h & 12-13h & 13-14h & 14-15h & 15-16h\\
+   				Montées & [5:15] & [5:15] & [3:10] & [2:8] & [1:5] & [1:5] & [1:5] & [2:8] & [3:10]\\
+   				Descentes & [0:5] & [0:5] & [1:6] & [1:6] & [1:5] & [1:5] & [0:5] & [0:5] & [1:5]\\
+ 				\hline  
+ 			\end{tabular}\\
 
 	\subsection{L'emploi du temps}
 		L'emploi du temps est un graphe dont les sommets sont des cours et les liens des étudiants en communs.
-		Pour plus de clarté nous considérons ici que chaque professeur est disponible sur toute la durée de la journée.
-		Le sommets du graphe sont également coloriées, chaque couleur représentant une salle.
+		Pour plus de clarté nous considérons ici que chaque professeur est disponible sur toute la durée de la journée.\\
+		Les sommets du graphe sont également coloriés, chaque couleur représentant une salle.
 		\begin{enumerate}
-			\item On créer un graphe non orienté en numérotant les sommets de 1 jusqu'au nombre de cours.
-			\item On relie les sommets entre eux lorsque qu'il y a une contrainte (même étudiant sur des horaires qui se chevauchent). Pour cela on créé une matrice d'adjacence avec un degré moyen choisis arbitrairement. Pour N sommets et K le degré moyen, la probabilité qu'il y ai une arête à insérer dans chaque case est K/N.
-			\item On oriente les arêtes, désormais des arcs, du  sommet d'indice le plus faible au plus fort
+			\item On crée un graphe non orienté en numérotant les sommets de 1 jusqu'au nombre de cours.
+			\item On relie les sommets entre eux lorsque qu'il y a une contrainte (étudiants en commun). Pour cela on crée une matrice d'adjacence avec un degré moyen choisit arbitrairement. Pour $N$ sommets et $K$ le degré moyen, la probabilité qu'il y ai une arête à insérer dans chaque case est $K/N$.
+			\item Les arêtes s'oriente, désormais des arcs, du sommet d'indice le plus faible au plus fort
 			\item Il y a obligatoirement un ou plusieurs sommets de degré entrant nul, ces sommets de notre DAG seront des points de départs possible pour notre planification.
-			\item On colorie le graphe, chaque couleur représente une salle.		
-			\item Nous agençons l'emploi du temps en respectant le fait que deux couleurs et deux sommets reliés par un arc ne peuvent pas être sur la même plage horaire. Par défaut le sommet duquel nous partirons est le sommet de degré entrant nul d'indice le plus faible.
+			\item Le graphe est colorié, chaque couleur représente une salle.		
+			\item L'emploi du temps est agencé en respectant le fait que deux couleurs et deux sommets reliés par un arc ne peuvent pas être sur la même plage horaire. Par défaut le sommet duquel nous partirons est le sommet de degré entrant nul d'indice le plus faible.
 		\end{enumerate}
-		Chaque cours possède un nombre d'étudiants choisis aléatoirement entre 16 et 32 pour un TD et entre 16 et 100 pour un cours magistral. les TDs représentent trois quart des cours.\\
+		Chaque cours possède un nombre d'étudiants choisit aléatoirement entre 16 et 32 pour un TD et entre 16 et 100 pour un cours magistral. les TDs représentent trois quart des cours.\\
 		\\	
-		Cependant comme nous avons du les générer faute de données concrète, nous inclurons également dans cette section l'ensemble des variables utilisées pour les générer.
+		Cependant comme nous avons dû les générer faute de données concrètes, nous inclurons également dans cette section l'ensemble des variables utilisées pour les générer.
+
 	\subsection{Les variables}
-	les noms des variables sont simplifiés par rapport à leur nom réel dans l'application afin de les rendre plus explicite pour le lecteur.
-	\begin{itemize}
-		\item \textit{probabilité de lien} : la probabilité qu'il y ai un lien entre 2 cours. Un lien entre 2 cours signifie qu'ils ont au moins un étudiant en commun, il ne peuvent donc pas avoir lieu en même temps.
-		\item \textit{nombre de cours} : le nombre de cours que nous allons représenter lors du déroulement de l'application. C'est le nombre de cours que nous allons devoir modifier pour la planification.
-		\item  \textit{le nombre de salles} : le nombre de salles disponibles pour les cours.
-		\item \textit{heure maximum} : l'heure limite a laquelle on peut placer un cours. Dans nôtre application on représente le temps par tranche de 15min. Il va de 7h30 à 16h, on à donc 34 quart d'heure.
-	\end{itemize}
+		Les noms des variables sont simplifiés par rapport à leur nom réel dans l'application afin de les rendre plus explicite pour le lecteur.
+		\begin{itemize}
+			\item \textit{probabilité de lien} : la probabilité qu'il y ai un lien entre 2 cours. Un lien entre 2 cours signifie qu'ils ont au moins un étudiant en commun, ils ne peuvent donc pas avoir lieu en même temps.
+			\item \textit{nombre de cours} : le nombre de cours que nous allons représenter lors du déroulement de l'application. C'est le nombre de cours que nous allons devoir modifier pour la planification.
+			\item  \textit{le nombre de salles} : le nombre de salles disponibles pour les cours.
+			\item \textit{heure maximum} : l'heure limite à laquelle on peut placer un cours. Dans notre cas d'étude, nous représentons le temps par tranche de 15 minutes. Il va de 7h30 à 16h, on à donc 34 quart d'heure.
+		\end{itemize}
+
 \section{Présentation des résultats}
-	comparer les algos, comparer en fct des données en entrées
+	Comparer les algos, comparer en fct des données en entrées
 	
 \section{Conclusion}
 	\subsection{Pistes de reflexion abandonnées}
