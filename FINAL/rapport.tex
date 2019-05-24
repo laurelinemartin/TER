@@ -55,13 +55,13 @@
 	\\
 	Chaque cours à également un type, c'est soit :
 		\begin{itemize}
-			\item un CM : dans ce cas il aura entre 16 et 100 élèves.
-			\item  un TD : dans ce cas il aura entre 16 et 34 élèves.
+			\item un CM
+			\item  un TD
 		\end{itemize}
-	Ces information seront utilisé pour savoir combien d'élèves arrives à chaque cours.\\
+	Ces information seront utilisé pour savoir combien d'élèves arrives à chaque cours, en effet chaque type de cours à un nombre différent d'élèves.\\
 	Nous avons aussi les salles de cours comme données, en effet chaque cours sera associé à un numéro de salle.
 	\\
-	Enfin parmi les données initiales il y a les bus. Ils sont représenté par une capacité ainsi qu'une heure. 
+	Enfin parmi les données initiales il y a les bus. Ils sont représenté par une capacité ainsi qu'une heure d'arrivé à l'UFR. 
 \section{Objectif}
 	L'objectif de notre projet est de générer un emploi du temps, c'est à dire une planification qui respecte toutes les contraintes et dont la métrique est minimale.
 	\subsection{Contraintes}
@@ -73,7 +73,7 @@
 				\end{enumerate}
 	
 	\subsection{Métriques sur les contraintes}
-		Ce que nous évaluons c'est le dépassements du seuil de confort du bus. Dans notre cas le seuil de confort est fixé à 50 personnes, au delà le score de congestion est incrémenté à chaque arrêt de bus.
+		Ce que nous évaluons sont le dépassements du seuil de confort du bus. Dans notre cas le seuil de confort est fixé à 50 personnes, au delà le score de congestion est incrémenté à chaque arrêt de bus.
 		Le nombre d'étudiants dans un bus ne doit pas dépasser la capacité $capacité_{max}$ du bus (fixé à 60 dans notre cas). Ainsi si il y a plus de 60 élèves pour un bus, le surplus d'élèves sera envoyé dans le bus précédent l'horaires du bus surchargé.\\
 		Pour calculer le nombre d'élèves par bus, on utilise l'emploi du temps des données initiales. On peut ainsi récupéré pour chaque tranches horaires le nombre d'étudiants censé arriver pour suivre leur cours.\\
 		On à émit l'hypothèse que les élèves arrivent dans le bus précédant leurs cours, de ce fait on peut savoir précisément le nombre d'élève qu'il y aura dans un bus avant un cours.\\
@@ -105,8 +105,8 @@
 		On recommence ensuite ce procédé mais en interdisant l'optimisation d'un cours dont l'horaire à déjà été modifié.
 		\subsubsection{L'algorithme tabou roulette}
 		Cette algorithme ressemble à l'algorithme vu précédemment à ceci près qu'il laisse une part de hasard dans le choix de la modification a apporter dans la planification.\\
-		En effet on va dans cette algorithme pour chaque cours les horaires respectant les contraintes. Tout les horaires qui améliore la congestion sont ensuite gardé en mémoire.\\
-		Ensuite, parmi toute les solutions de tout les sommets, une seule est choisi aléatoirement. Cependant, plus une solution améliore la congestion, plus elle aura de chance d'être sélectionnée.\\
+		En effet on va dans cette algorithme considérer toutes les horaires respectants les cotraintes pour tout les cours. On calcule ensuite la congestion qui en résulterait pour chaque horaire.
+		Ensuite, parmi toute les solutions de tout les sommets, une seule est choisi aléatoirement. Cependant, plus une solution améliore la congestion, plus elle aura de chance d'être sélectionnée. C'est le même fonctionemment qu'une roulette dont les sous parties ne sont pas de tailles égales.\\
 		On réitère ensuite l'opération tout en interdisant l'optimisation d'un cours déjà modifié, comme pour l'algorithme précédent. 
 	
 	\subsection{Données utilisées}
