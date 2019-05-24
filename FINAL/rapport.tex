@@ -34,11 +34,11 @@
 	
 	
 \section{Les données initiales}
-	Cette section fait l'état des données utiliser pour le bon fonctionnement de l'application.\\
-	On a pour but de créer une planification pour un emploi du temps, c'est a dire un déroulement sur une journée des cours dans une université, ici l'UFR de Versailles.\\
+	Cette section fait l'état des données utilisées pour le bon fonctionnement de l'application.\\
+	Nous avons pour but de créer une planification pour un emploi du temps, c'est-à-dire un déroulement sur une journée des cours dans une université, ici l'UFR de Versailles.\\
 	\\
-	L'idée étant de modifier un emploi du temps afin de minimiser la congestion dans les bus du aux arrivées d'étudiant au débuts de leurs cours, il nous faut donc un emploi du temps de base sur lequel travailler.\\
-	On à donc comme donnée initiale différents cours, représentés sous la forme d'une matrice d'adjacence. \\
+	L'idée étant de modifier un emploi du temps afin de minimiser la congestion dans les bus dûe aux arrivées d'étudiants au début de leurs cours. Il nous faut donc un emploi du temps de base sur lequel travailler.\\
+	Nous avons donc comme données initiales différents cours, représentés sous la forme d'une matrice d'adjacence. \\
 	Cette représentation nous permet de facilement identifier quels cours ont des étudiants en communs.\\
 	\\
 	\begin{tabular}{ | c | c | c | c |}
@@ -49,18 +49,19 @@
 		Cours 3 &   0     &    0    &     0  \\
 		\hline  
 	\end{tabular}\\
-	Dans cette exemple on peut voir que le cours 1 et le cours 2 ont au moins un étudiant en commun.\\
-	On a besoin de cette information afin de pouvoir fournir une planification réaliste.\\
+	Dans cette exemple, nous pouvons voir que le cours 1 et le cours 2 ont au moins un étudiant en commun.\\
+	Nous avons besoin de cette information afin de pouvoir fournir une planification réaliste.\\
 	\\
-	Chaque cours à également un type, c'est soit :
-		\begin{itemize}
-			\item un CM
-			\item  un TD
-		\end{itemize}
-	Ces information seront utilisé pour savoir combien d'élèves arrives à chaque cours, en effet chaque type de cours à un nombre différent d'élèves.\\
-	Nous avons aussi les salles de cours comme données, en effet chaque cours sera associé à un numéro de salle.
+	Chaque cours est également défini par son type :
+	\begin{itemize}
+		\item un CM ou
+		\item  un TD
+	\end{itemize}
+	Ces informations seront utilisées pour connaitre le nombre d'élèves arrivés à chaque cours. En effet, chaque type de cours a un nombre différent d'élèves.\\
+	Nous avons aussi les salles de cours comme données initiales, chaque cours sera associé à un numéro de salle.
 	\\
-	Enfin parmi les données initiales il y a les bus. Ils sont représenté par une capacité ainsi qu'une heure d'arrivé à l'UFR. 
+	Enfin parmi les données initiales, il y a les bus. Ils sont représentés par une capacité ainsi qu'une heure d'arrivé à l'UFR.
+	
 \section{Objectif}
 	L'objectif de notre projet est de générer un emploi du temps, c'est à dire une planification qui respecte toutes les contraintes et dont la métrique est minimale.
 	\subsection{Contraintes}
