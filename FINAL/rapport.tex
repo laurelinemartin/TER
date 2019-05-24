@@ -63,28 +63,28 @@
 	Enfin parmi les données initiales, il y a les bus. Ils sont représentés par une capacité ainsi qu'une heure d'arrivé à l'UFR.
 	
 \section{Objectif}
-	L'objectif de notre projet est de générer un emploi du temps, c'est à dire une planification qui respecte toutes les contraintes et dont la métrique est minimale.
+	L'objectif de notre projet est de générer un emploi du temps, c'est-à-dire une planification qui respecte toutes les contraintes et dont la métrique est minimale.
 	\subsection{Contraintes}
 		\subsubsection{Entre deux cours}
-				\begin{enumerate}
-					\item Deux cours utilisent la même salle ne doivent pas avoir des horaires qui se chevauchent.
-					\item Deux cours qui ont des horaires qui se chevauchent ne doivent pas avoir d'élèves en commun.
-					\item Le temps laissé entre deux cours doit être de 15 minutes minimum.
-				\end{enumerate}
+			\begin{enumerate}
+				\item Deux cours utilisent la même salle ne doivent pas avoir des horaires qui se chevauchent.
+				\item Deux cours qui ont des horaires qui se chevauchent ne doivent pas avoir d'élèves en commun.
+				\item Le temps laissé entre deux cours doit être de 15 minutes minimum.
+			\end{enumerate}
 	
 	\subsection{Métriques sur les contraintes}
-		Ce que nous évaluons sont le dépassements du seuil de confort du bus. Dans notre cas le seuil de confort est fixé à 50 personnes, au delà le score de congestion est incrémenté à chaque arrêt de bus.
-		Le nombre d'étudiants dans un bus ne doit pas dépasser la capacité $capacité_{max}$ du bus (fixé à 60 dans notre cas). Ainsi si il y a plus de 60 élèves pour un bus, le surplus d'élèves sera envoyé dans le bus précédent l'horaires du bus surchargé.\\
-		Pour calculer le nombre d'élèves par bus, on utilise l'emploi du temps des données initiales. On peut ainsi récupéré pour chaque tranches horaires le nombre d'étudiants censé arriver pour suivre leur cours.\\
-		On à émit l'hypothèse que les élèves arrivent dans le bus précédant leurs cours, de ce fait on peut savoir précisément le nombre d'élève qu'il y aura dans un bus avant un cours.\\
-		On prend également en compte le fait que chaque bus comporte une part de non-étudiants, qui ne sera donc pas variable dans notre application. En effet une modification de la planification ne changera pas leur nombre.\\
-		A partir de ces information, on va pouvoir savoir si un bus atteint son seuil de congestion.
+		Nous évaluons le dépassements du seuil de confort du bus. Dans notre cas d'étude, le seuil de confort est fixé à 50 personnes. Au delà de ce seuil, le score de congestion est incrémenté à chaque arrêt de bus.
+		Le nombre d'étudiants dans un bus ne doit pas dépasser la capacité $capacité_{max}$ du bus. Cette capacité maximale est fixée à 60 dans notre cas d'étude. Ainsi s'il y a plus de 60 élèves pour un bus, le surplus d'élèves empruntera le bus précédent l'horaire du bus surchargé.\\
+		Pour calculer le nombre d'élèves par bus, on utilise l'emploi du temps des données initiales. Nous pouvons ainsi récupérer pour chaque tranche horaire le nombre d'étudiants censé arriver pour suivre leur cours.\\
+		Nous posons l'hypothèse que les élèves arrivent dans le bus précédant leur cours, de ce fait on peut savoir précisément le nombre d'élèves qu'il y aura dans un bus avant un cours.\\
+		On prend également en compte le fait que chaque bus comporte une part de non-étudiants, qui ne sera donc pas variable dans notre application. En effet, une modification de la planification ne changera pas leur nombre.\\
+		A partir de ces informations, nous pouvons savoir si un bus atteint son seuil de congestion.
 		
 	\subsection{Objectif}
 		La métrique décrite dans le point précédent va nous permettre de donner un score a chaque planification que nous allons réaliser.\\
-		En effet, l'objectif étant de réduire la congestion des bus, on aura tendance a préférer une planification pour laquelle le score de congestion est faible.\\
+		En effet, l'objectif étant de réduire la congestion des bus, nous aurons tendance à préférer une planification pour laquelle le score de congestion est faible.\\
 		C'est donc dans la modification de la planification que les contraintes vu plus haut interviennent.\\
-		On va donc devoir trouver une planification qui minimise la congestion des bus tout en respectant les trois contraintes vu précédemment.
+		Nous allons donc devoir trouver une planification qui minimise la congestion des bus tout en respectant les trois contraintes vu précédemment.
 	
 \section{Stratégies de résolution}
 	\subsection{Planification initiale}
