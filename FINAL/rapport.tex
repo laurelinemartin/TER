@@ -124,8 +124,9 @@
  		\end{tabular}\\
 
 	\subsection{L'emploi du temps}
-		L'emploi du temps est un graphe dont les sommets sont des cours et les liens des contraintes entre les cours.
+		L'emploi du temps est un graphe dont les sommets sont des cours et les liens des étudiants en communs.
 		Pour plus de clarté nous considérons ici que chaque professeur est disponible sur toute la durée de la journée.
+		Le sommets du graphe sont également coloriées, chaque couleur représentant une salle.
 		\begin{enumerate}
 			\item On créer un graphe non orienté en numérotant les sommets de 1 jusqu'au nombre de cours.
 			\item On relie les sommets entre eux lorsque qu'il y a une contrainte (même étudiant sur des horaires qui se chevauchent). Pour cela on créé une matrice d'adjacence avec un degré moyen choisis arbitrairement. Pour N sommets et K le degré moyen, la probabilité qu'il y ai une arête à insérer dans chaque case est K/N.
@@ -150,18 +151,20 @@
 	
 \section{Conclusion}
 	\subsection{Pistes de reflexion abandonnées}
-	Au commencement du développement de ce projet, nous avions penser représenter chaque éléments (cours, étudiants, professeurs, salles) par des classes. Ainsi, un langage de programmation orienté objet nous semblait tout indiqué. Mais nous savions également que nous allions avoir besoin de fonction procédurales donc nous avons opté pour l'utilisation du langage C++.\\
+	Lors de nos recherches préliminaires, nous avions penser représenter chaque éléments (cours, étudiants, professeurs, salles) par des classes. Ainsi, un langage de programmation orienté objet nous semblait tout indiqué. Mais nous savions également que nous allions avoir besoin de fonction procédurales (les algorithmes apr exemple) donc nous avons opté pour l'utilisation du langage C++.\\
 	Au cours de nos recherches nous nous sommes rendu compte que nous pouvions modéliser notre problème en utilisant simplement des matrices, nous avons donc abandonnée l'idée de représenter les éléments du projets par des objets.\\
 	Cependant comme nous avions déjà commencé à programmer une partie du projet, nous avons décidé de garder le C++ comme langage de programmation, sont aspect hybride entre le procédural et l'orienté objet nous permettant de continuer a l'utiliser.
-	\subsection{Conclusion sur le problème}
+	\subsection{Conclusion sur les objectifs initiaux}
 	Le problème d'optimisation pour un bureau des temps n'as pas de solution simple. Nous avons eu recourt à différentes heuristique afin de pouvoir fournir des planifications viables.\\
 	Ce problème est donc assez coûteux en temps en fonction de l'heuristique choisi. De plus nous ne pouvons pas affirmer a 100\% que nos planification sont les meilleurs possibles, cependant on peut essayer de s'en approcher.
 	\subsection{Ouverture}
 	Nous avons quelques pistes de réflexions qui pourrait améliorer l'efficacité de notre application.\\
-	On pourrait par exemple donner la possibilité d'inverser les arcs de la matrice représentant les cours lors des modifications de la planification.
-	On peut également essayer d'utiliser d'autres heuristiques que celles que nous avons choisit, comme un recuit simulé par exemple, ou alors changer la variable de décision de l'algorithme glouton.
+	On pourrait par exemple donner aux algorithmes la possibilité d'inverser les arcs de la matrice d'adjacence des cours. Ainsi on ne serait pas limiter à l'ordre établie lors de la planification initiale (a re expliquer mieux).
+	On peut également essayer d'utiliser d'autres heuristiques que celles que nous avons choisit, comme un recuit simulé par exemple (a expliquer), ou alors changer la variable de décision (a expliquer) de l'algorithme glouton.
 \section{Annexes}
 	\subsection{Exemple d'utilisation}
+		Ici nous préciserons un exemple comme dans le rapport précedent, avec des graphes etc...
 	\subsection{Algo en code clair et commenté}
+		Ici nous decrirons le code de deux algos (roulette et glouton)
 
 \end{document}
