@@ -271,5 +271,5 @@ int main(int argc, char** argv)
         free(Horaires_tabou_roulette);
 //////////////////////////
      
-    } 
+    }
 }
