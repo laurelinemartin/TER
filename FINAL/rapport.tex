@@ -267,6 +267,161 @@ for (int i = 0; i < N; i++)
 	Horaires_glouton[sommet_modifie] = meilleure_solution;
 }
 \end{lstlisting}
+		\subsection{Algorithme tabou roulette}
+			Nous ne décrivons pas l'algorithme tabou dur car il est quasiment identique. La différence est explicité ci dessous.
+\begin{lstlisting}
+//Horaires_tabou_roulette est un tableau contenant la planification initiale. Chaque case représentant l'horaire d'un sommet.
+int *Horaires_tabou_roulette = (int*)malloc(N*sizeof(int*));
 
+//Tableau qui servira à vérifier si un sommet a déjà été modifié et ainsi l'interdire
+int *Sommets_interdits = (int*)malloc(Nb_iterations*sizeof(int*));
+
+//Tableau contenant la meilleure horaire pour un sommet donné
+int *Meilleure_solution = (int*)malloc(N*sizeof(int*));
+
+//Tableau contenant la meilleure solution pour un sommet donné
+	int *Meilleure_congestion = (int*)malloc(N*sizeof(int*));
+
+//Tableau contenant les probabilité qu'un sommet sois choisis par la roulette
+int *Valeurs_roulette = (int*)malloc(N*sizeof(int*));
+	
+//La boucle k permet d'itérer l'algo plusieurs fois
+for(int k = 0; k < Nb_iterations; k++){
+	//On initialise la congestion initiale 
+	congestion_initiale = calcul_congestion_totale(Horaires_tabou_roulette,Nb_eleves,heure_max,N,TO);
+	//La boucle i parcoure l'ensemble des sommets
+	for(int i = 0; i < N; i++){
+		//On cherche a savoir si le sommet courant est un sommet déjà modifié, si oui on ne le regarde pas
+		for(int l = 0; l < k+1; l++){
+			if(i == Sommets_interdits[l]) {i++; l = 0;}
+		}
+		//Initialisation des meilleures solution pour le sommet i
+		Meilleure_solution[i] = Horaires_tabou_roulette[i];
+		Meilleure_congestion[i] = calcul_congestion_totale(Horaires_tabou_roulette,Nb_eleves,heure_max,N,TO);
+		horaire_initiale = Horaires_tabou_roulette[i];
+
+		//La boucle j parcours l'ensemble des horaires possibles
+		while(j < heure_max - 1){
+			Horaires_tabou_roulette[i] = j;
+			//On verifie que l'horaire est bien valide
+			if (test_solution_valide(Horaires_tabou_roulette, N, couleur, Type, TO) == true){
+				temp = calcul_congestion_totale(Horaires_tabou_roulette,Nb_eleves,heure_max,N,TO);
+				//Si la congestion de cette horaire est meilleure, on met à jour le meilleur horaire et la meilleur congestion du sommet i
+				if(temp < Meilleure_congestion[i]){
+					Meilleure_congestion[i] = temp;
+					Meilleure_solution[i] = j;
+				}
+			}
+			j++;
+		}
+		//j commence à 2 car 2 correspond à 8h du matin, l'horaire minimale
+		j = 2;
+		//On remet l'horaire du sommet i a son horaire de base car on sait pas encore quel sommet sera modifié à cette itération de l'algo tabou
+		Horaires_tabou_roulette[i] = horaire_initiale;
+		//On remplit le tableau des proba de cette manière :
+		//On marque la valeurs de modification par rapport a la congestion initiale. Ainsi si on a 10 de congestion initiale et 8 en congestion pour le sommet i,
+		//Alors on marque 2 dans le tableau. Pour le sommet suivant si il modifie de 3 on marque 5. Ainsi ca donne un tableau comme cela : 
+		//2 4 8 15 16 17 17.
+		if(Meilleure_congestion[i] < congestion_initiale){ Valeurs_roulette[i] = congestion_initiale - Meilleure_congestion[i]; }
+		else { Valeurs_roulette[i] = 0; }
+	}
+	for (int p = 1; p < N; p++) { 
+		if (Valeurs_roulette[p] == 0) { Valeurs_roulette[p] = Valeurs_roulette[p-1];} 
+		else { Valeurs_roulette[p] += Valeurs_roulette[p-1]; }
+	}
+		
+	if (Valeurs_roulette[N-1] > 0) {
+		choix_roulette = rand()%Valeurs_roulette[N-1];
+	}
+	else { choix_roulette = 0; }
+
+	//On prend au hasard une valeur et on regarde ou elle tombe dans le tableau, ainsi plus on modifie la congestion, plus on a de chance d'être choisi.
+	if ((choix_roulette > 0) && (choix_roulette <= Valeurs_roulette[0])){
+		Horaires_tabou_roulette[0] = Meilleure_solution[0];
+		Sommets_interdits[k] = 0;
+	}
+	else{
+		for (int m = 1; m < N; m++){
+			if ((choix_roulette >= Valeurs_roulette[m-1]) && (choix_roulette <= Valeurs_roulette[m])){
+				//Mise a jour de la planification et des sommets interdits
+				Horaires_tabou_roulette[m] = Meilleure_solution[m];
+				Sommets_interdits[k] = m;
+				m = N;
+			}
+		}
+	}
+}
+\end{lstlisting}
+		\subsubsection{Planification initiale}
+\begin{lstlisting}
+//N le nombre de cours.
+for(int i = 1; i < N; i++){
+	//On va regarder tous les liens de i vers k pour tout i et tout k. Si il y a un lien, le cours i est placé avant le cours k. C'est le sens des flèches qui veut cela.
+	for(int k = 0; k < N; k++){
+		//Si il y a un lien entre le cours i et le cours k
+		if(T[i][k] == 1){
+			if(TYPE[i] == 0){//si le cours est un td
+				for(int j = 0; j <= 36; j++){
+					//Si la solution est valide à l'horaire k + la durée du cours + une constante j incrémenté pour tester toutes les possibilités d'horaire.
+					if(test_coloration(Horaires, couleur, N, TYPE, Horaires[k] + 13 + j, i) == true){
+						if(test_lien(Horaires, N, T, Horaires[k] + 13 + j, i, TYPE) == true){
+							//On met l'horaire de i avant celle de k.
+							Horaires[i] = Horaires[k] + 13 + j;
+							break;
+						}
+					}
+				}
+			}
+			else //si le cours est un cm, le code est le même.
+			{
+				for(int j = 0; j <= 36; j++)
+				{
+					if(test_coloration(Horaires, couleur, N, TYPE, Horaires[k] + 7 + j,i) == true)
+					{
+						if(test_lien(Horaires, N, T, Horaires[k] + 7 + j, i, TYPE) == true)
+						{
+							Horaires[i] = Horaires[k] + 7 + j;
+							break;
+						}
+					}
+				}
+			}
+		}
+		//Si il n'y a aucun lien vers le sommet k.
+		else {
+			if(testConnnexe(T, N, i) == true){
+				if(TYPE[k] == 0)//si le cours est un td
+				{
+					for(int j = 0; j <= 36; j++)
+					{
+						if(test_coloration(Horaires, couleur, N, TYPE, Horaires[k] + 13  + j, i) == true)
+						{
+							if(test_lien(Horaires, N, T, Horaires[k] + 13 + j, i, TYPE) == true)
+							{
+								Horaires[i] = Horaires[k] + 13 + j;
+								break;
+							}
+						}
+					}
+				}
+				else //si le cours est un cm.
+				{
+					for(int j = 0; j <= 36; j++)
+					{
+						if(test_coloration(Horaires, couleur, N, TYPE, Horaires[k] + 7 + j,i) == true)
+						{
+							if(test_lien(Horaires, N, T, Horaires[k] + 7 + j, i, TYPE) == true)
+							{
+								Horaires[i] = Horaires[k] + 7 + j;
+								break;
+							}
+						}
+					}
+				}
+			}
+		}	
+	}
+}
+\end{lstlisting}
 
 \end{document}
