@@ -12,6 +12,9 @@
 \usepackage{listings}
 \usepackage{array}
 \usepackage{longtable}
+\usepackage{pdfpages}
+
+
 
 \title{TER 2019 - Rapport}
 \author{Maxime Gonthier - Benjamin Guillot - Laureline Martin}
@@ -239,30 +242,43 @@
 //N est le nombre de cours.
 for (int i = 0; i < N; i++)
 {
-	//Horaires_glouton est un tableau contenant la planification initiale. Chaque case représentant l'horaire d'un sommet.
-	//Meilleure solution et meilleure congestion représentent respectivement la meilleure horaire pour le sommet i et la congestion associé à cette horaire.
-	//Meilleure horaire signifie horaire qui minimise au plus la congestion. Avant la boucle on les initialises à l'heure déjà attribué au sommet i.
+	//Horaires_glouton est un tableau contenant la planification 
+	//initiale. Chaque case representant l'horaire d'un sommet.
+	//Meilleure solution et meilleure congestion representent 
+	//respectivement la meilleure horaire pour le sommet i et 
+	//la congestion associee a cette horaire.
+	//Meilleure horaire signifie horaire qui minimise au plus la 
+	//congestion. Avant la boucle on les initialises a l'heure 
+	//deja attribue au sommet i.
 	sommet_modifie = i;
 	meilleure_solution = Horaires_glouton[sommet_modifie];
-	meilleure_congestion = calcul_congestion_totale(Horaires_glouton,Nb_eleves,heure_max,N,TO);
+	meilleure_congestion = calcul_congestion_totale(
+		Horaires_glouton,Nb_eleves,
+		heure_max,N,TO);
 	//Le while test tous les horaires possibles pour le sommet i.
 	while(j < heure_max - 1)
 	{
 		Horaires_glouton[sommet_modifie] = j;
 		//Si l'horaire j est valide
-		if (test_solution_valide(Horaires_glouton, N, couleur, Type, TO) == true)
+		if (test_solution_valide(Horaires_glouton, N, couleur, 
+			Type, TO) == true)
 		{
-			temp = calcul_congestion_totale(Horaires_glouton,Nb_eleves,heure_max,N,TO);
-			//Si la congestion à l'horaire j est meilleure que la meilleur congestion du sommet i, alors on remplace la meilleure congestion et la meilleure horaire par j.
+			temp = calcul_congestion_totale(Horaires_glouton,
+				Nb_eleves,heure_max,N,TO);
+			//Si la congestion a l'horaire j est meilleure 
+			//que la meilleure congestion du sommet i, 
+			//alors on remplace la meilleure congestion et
+			//la meilleure horaire par j.
 			if(temp < meilleure_congestion)
 			{
-				meilleure_solution = Horaires_glouton[sommet_modifie];
+				meilleure_solution = 
+					Horaires_glouton[sommet_modifie];
 				meilleure_congestion = temp;
 			}
 		}
 		j++;
 	}
-	//j commence à 2 car 2 correspond à 8h du matin.
+	//j commence a 2 car 2 correspond a 8h du matin.
 	j = 2;
 	Horaires_glouton[sommet_modifie] = meilleure_solution;
 }
