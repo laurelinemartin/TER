@@ -446,34 +446,34 @@ else {
 	  if(test_coloration(Horaires, couleur, N, TYPE, 
 		Horaires[k] + 13  + j, i) == true)
 	  {
-							if(test_lien(Horaires, N, T, Horaires[k] + 
-								13 + j, i, TYPE) == true)
-							{
-								Horaires[i] = Horaires[k] + 13 + j;
-								break;
-							}
-						}
-					}
-				}
-				else //si le cours est un cm.
-				{
-					for(int j = 0; j <= 36; j++)
-					{
-						if(test_coloration(Horaires, couleur, N, TYPE, 
-							Horaires[k] + 7 + j,i) == true)
-						{
-							if(test_lien(Horaires, N, T, Horaires[k] + 
-								7 + j, i, TYPE) == true)
-							{
-								Horaires[i] = Horaires[k] + 7 + j;
-								break;
-							}
-						}
-					}
-				}
-			}
-		}	
+		if(test_lien(Horaires, N, T, Horaires[k] + 
+			13 + j, i, TYPE) == true)
+		{
+			Horaires[i] = Horaires[k] + 13 + j;
+			break;
+		}
 	}
+   }
+  }
+  else //si le cours est un cm.
+  {
+	for(int j = 0; j <= 36; j++)
+    {
+		if(test_coloration(Horaires, couleur, N, TYPE, 
+			Horaires[k] + 7 + j,i) == true)
+		{
+			if(test_lien(Horaires, N, T, Horaires[k] + 
+				7 + j, i, TYPE) == true)
+			{
+				Horaires[i] = Horaires[k] + 7 + j;
+			    break;
+			}
+		}
+	}
+   }
+  }
+  }	
+ }
 }
 \end{lstlisting}
 
