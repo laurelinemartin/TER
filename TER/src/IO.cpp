@@ -109,13 +109,22 @@ void ecrireCongestionBus(int* bus, int N){
 }
 
 void ecrireCongestionTotale(int congestionTotale, int nbbus){
+	int aff = 0;
+	if (congestionTotale%8 == 0)
+	{
+		aff = congestionTotale/8;
+	}
+	else
+	{
+		aff = congestionTotale/8 + 1;
+	}
 	// FILE *sortie = fopen("resultats.txt", "a");
 	// fprintf(sortie, "Congestion totale (nombre de bus dans lequel de seuil de confort à été dépassé): %d / %d", congestionTotale, nbbus);
 	// fclose(sortie);
 	ofstream fichier("resultats.txt", ios::out | ios::app); 
 	if(fichier){
 		fichier << "Congestion totale (nombre de bus dans lequel de seuil de confort à été dépassé): "
-				<< congestionTotale/8
+				<< aff
 				<< " / "
 				<< nbbus
 				<< endl;

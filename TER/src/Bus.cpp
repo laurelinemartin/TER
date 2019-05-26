@@ -5,6 +5,7 @@ int calcul_congestion_bus(int *Nb_eleves_bus, int heure_bus)
     int congestion = 0;
     int non_etudiant;
     int seuil_confort = 50;
+    int oui_ou_non = 0;
     
 
     for(int i = 0; i < 7; i++)
