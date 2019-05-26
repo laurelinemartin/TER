@@ -1,0 +1,32 @@
+\select@language {french}
+\contentsline {section}{\numberline {1}Introduction}{}
+\contentsline {section}{\numberline {2}Les donn\IeC {\'e}es initiales}{}
+\contentsline {section}{\numberline {3}Objectif}{}
+\contentsline {subsection}{\numberline {3.1}Contraintes}{}
+\contentsline {subsubsection}{\numberline {3.1.1}Entre deux cours}{}
+\contentsline {subsection}{\numberline {3.2}M\IeC {\'e}triques sur les contraintes}{}
+\contentsline {subsection}{\numberline {3.3}Objectif}{}
+\contentsline {section}{\numberline {4}Strat\IeC {\'e}gies de r\IeC {\'e}solution}{}
+\contentsline {subsection}{\numberline {4.1}Planification initiale}{}
+\contentsline {subsection}{\numberline {4.2}Les algorithmes}{}
+\contentsline {subsubsection}{\numberline {4.2.1}L'algorithme glouton}{}
+\contentsline {subsubsection}{\numberline {4.2.2}L'algorithme tabou dur}{}
+\contentsline {subsubsection}{\numberline {4.2.3}L'algorithme tabou roulette}{}
+\contentsline {subsection}{\numberline {4.3}Donn\IeC {\'e}es utilis\IeC {\'e}es}{}
+\contentsline {subsubsection}{\numberline {4.3.1}Le nombre de personnes par bus}{}
+\contentsline {subsection}{\numberline {4.4}L'emploi du temps}{}
+\contentsline {subsection}{\numberline {4.5}Les variables}{}
+\contentsline {section}{\numberline {5}Pr\IeC {\'e}sentation des r\IeC {\'e}sultats}{}
+\contentsline {section}{\numberline {6}Conclusion}{}
+\contentsline {subsection}{\numberline {6.1}Pistes de reflexion abandonn\IeC {\'e}es}{}
+\contentsline {subsection}{\numberline {6.2}Conclusion sur les objectifs initiaux}{}
+\contentsline {subsection}{\numberline {6.3}Ouverture}{}
+\contentsline {section}{\numberline {7}Annexes}{}
+\contentsline {subsection}{\numberline {7.1}Exemple d'utilisation}{}
+\contentsline {subsubsection}{\numberline {7.1.1}Repr\IeC {\'e}sentation des mont\IeC {\'e}es et descentes du bus}{}
+\contentsline {subsubsection}{\numberline {7.1.2}L'emploi du temps}{}
+\contentsline {subsubsection}{\numberline {7.1.3}Calcul de la congestion}{}
+\contentsline {subsection}{\numberline {7.2}Explication de la programmation}{}
+\contentsline {subsubsection}{\numberline {7.2.1}Algorithme glouton}{}
+\contentsline {subsection}{\numberline {7.3}Algorithme tabou roulette}{}
+\contentsline {subsubsection}{\numberline {7.3.1}Planification initiale}{}

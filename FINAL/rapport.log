@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.9.4)  26 MAY 2019 13:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.9.4)  26 MAY 2019 17:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -782,65 +782,108 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \c@LT@tables=\count123
 \c@LT@chunks=\count124
 \LT@p@ftn=\toks34
-) (./rapport.aux)
-\openout1 = `rapport.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 19.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
-File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 19.
+(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2017/08/14 v0.5k Insert pages of external PDF documents (AM)
 
-(/usr/share/texmf/tex/latex/lm/t1lmr.fd
-File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-LaTeX Info: Redefining \degres on input line 19.
-LaTeX Info: Redefining \dots on input line 19.
-LaTeX Info: Redefining \up on input line 19.
+(/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
 
-(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count125
-\scratchdimen=\dimen134
-\scratchbox=\box34
-\nofMPsegments=\count126
-\nofMParguments=\count127
-\everyMPshowfont=\toks35
-\MPscratchCnt=\count128
-\MPscratchDim=\dimen135
-\MPnumerator=\count129
-\makeMPintoPDFobject=\count130
-\everyMPtoPDFconversion=\toks36
-) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/atbegshi.sty
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+))
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+))
+\AM@pagewidth=\dimen134
+\AM@pageheight=\dimen135
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2017/08/14 v0.5k Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box34
+\AM@global@opts=\toks35
+\AM@toc@title=\toks36
+\c@AM@survey=\count125
+\AM@templatesizebox=\box35
+) (./rapport.aux)
+\openout1 = `rapport.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 22.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 22.
+
+(/usr/share/texmf/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Info: Redefining \degres on input line 22.
+LaTeX Info: Redefining \dots on input line 22.
+LaTeX Info: Redefining \up on input line 22.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count126
+\scratchdimen=\dimen136
+\scratchbox=\box36
+\nofMPsegments=\count127
+\nofMParguments=\count128
+\everyMPshowfont=\toks37
+\MPscratchCnt=\count129
+\MPscratchDim=\dimen137
+\MPnumerator=\count130
+\makeMPintoPDFobject=\count131
+\everyMPtoPDFconversion=\toks38
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)))
+))
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
@@ -862,10 +905,6 @@ Package etexcmds Info: Could not find \expanded.
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
 )
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
-)
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
@@ -882,136 +921,137 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count131
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 21.
+\c@lstlisting=\count132
+\AtBeginShipoutBox=\box37
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/pdflscape.sty
+Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+))
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 24.
 
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 21.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 24.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 21.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 24.
 
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 21.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 24.
 
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 21.
+(Font)              <12> on input line 24.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 21.
+(Font)              <8> on input line 24.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 21.
-LaTeX Font Info:    Try loading font information for U+msa on input line 21.
+(Font)              <6> on input line 24.
+LaTeX Font Info:    Try loading font information for U+msa on input line 24.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 21.
+LaTeX Font Info:    Try loading font information for U+msb on input line 24.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./rapport.toc)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./rapport.toc
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 5.
+)
 \tf@toc=\write3
 \openout3 = `rapport.toc'.
 
  [2]
-Overfull \hbox (2.84299pt too wide) in paragraph at lines 28--34
+Overfull \hbox (2.84299pt too wide) in paragraph at lines 31--37
 \T1/lmr/m/n/10.95 Dans notre pro-jet, les ho-raires d'ac-ti-vi-tés sont celles 
 de l'Uni-ver-sité Versailles-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--34
-
- []
-
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 44.
-
-Underfull \hbox (badness 10000) in paragraph at lines 37--56
+Underfull \hbox (badness 10000) in paragraph at lines 31--37
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--56
+Underfull \hbox (badness 10000) in paragraph at lines 40--59
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--56
+Underfull \hbox (badness 10000) in paragraph at lines 40--59
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--59
 
  []
 
 [3]
 
-LaTeX Warning: Command \' invalid in math mode on input line 80.
+LaTeX Warning: Command \' invalid in math mode on input line 83.
 
 [4] [5]
-Overfull \hbox (88.30643pt too wide) in paragraph at lines 120--130
+Overfull \hbox (88.30643pt too wide) in paragraph at lines 123--133
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 120--130
+Underfull \hbox (badness 10000) in paragraph at lines 123--133
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 143--146
+Underfull \hbox (badness 10000) in paragraph at lines 146--149
 
  []
 
 [7]
-Overfull \hbox (4.02498pt too wide) in paragraph at lines 162--165
+Overfull \hbox (4.02498pt too wide) in paragraph at lines 165--168
 []\T1/lmr/m/n/10.95 Lors de nos re-cherches pré-li-mi-naires, nous avions pensé
  re-pré-sen-ter chaque
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 178--195
+Underfull \hbox (badness 10000) in paragraph at lines 181--198
 
  []
 
 
-Overfull \hbox (88.30643pt too wide) in paragraph at lines 178--195
+Overfull \hbox (88.30643pt too wide) in paragraph at lines 181--198
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 178--195
+Underfull \hbox (badness 10000) in paragraph at lines 181--198
 
  []
 
 <Captures/exemple1.png, id=37, 289.08pt x 289.08pt>
 File: Captures/exemple1.png Graphic file (type png)
 <use Captures/exemple1.png>
-Package pdftex.def Info: Captures/exemple1.png  used on input line 200. on inpu
-t line 200.
-Package pdftex.def Info: Requested size: 231.2643pt x 231.2643pt on input line 
-200.
-
-Overfull \hbox (33.425pt too wide) in paragraph at lines 199--201
-[] 
- []
-
-[9]
-<Captures/exemple2.png, id=41, 289.08pt x 289.08pt>
-File: Captures/exemple2.png Graphic file (type png)
-<use Captures/exemple2.png>
-Package pdftex.def Info: Captures/exemple2.png  used on input line 203. on inpu
+Package pdftex.def Info: Captures/exemple1.png  used on input line 203. on inpu
 t line 203.
 Package pdftex.def Info: Requested size: 231.2643pt x 231.2643pt on input line 
 203.
@@ -1020,10 +1060,11 @@ Overfull \hbox (33.425pt too wide) in paragraph at lines 202--204
 [] 
  []
 
-<Captures/exemple3.png, id=42, 289.08pt x 289.08pt>
-File: Captures/exemple3.png Graphic file (type png)
-<use Captures/exemple3.png>
-Package pdftex.def Info: Captures/exemple3.png  used on input line 206. on inpu
+[9]
+<Captures/exemple2.png, id=41, 289.08pt x 289.08pt>
+File: Captures/exemple2.png Graphic file (type png)
+<use Captures/exemple2.png>
+Package pdftex.def Info: Captures/exemple2.png  used on input line 206. on inpu
 t line 206.
 Package pdftex.def Info: Requested size: 231.2643pt x 231.2643pt on input line 
 206.
@@ -1032,62 +1073,608 @@ Overfull \hbox (33.425pt too wide) in paragraph at lines 205--207
 [] 
  []
 
+<Captures/exemple3.png, id=42, 289.08pt x 289.08pt>
+File: Captures/exemple3.png Graphic file (type png)
+<use Captures/exemple3.png>
+Package pdftex.def Info: Captures/exemple3.png  used on input line 209. on inpu
+t line 209.
+Package pdftex.def Info: Requested size: 231.2643pt x 231.2643pt on input line 
+209.
+
+Overfull \hbox (33.425pt too wide) in paragraph at lines 208--210
+[] 
+ []
+
 [10 <./Captures/exemple1.png> <./Captures/exemple2.png>]
 <Captures/exemple4.png, id=46, 578.16pt x 201.90431pt>
 File: Captures/exemple4.png Graphic file (type png)
 <use Captures/exemple4.png>
-Package pdftex.def Info: Captures/exemple4.png  used on input line 208. on inpu
-t line 208.
+Package pdftex.def Info: Captures/exemple4.png  used on input line 212. on inpu
+t line 212.
 Package pdftex.def Info: Requested size: 462.52863pt x 161.52365pt on input lin
-e 208.
+e 212.
 
-Overfull \hbox (135.62837pt too wide) in paragraph at lines 207--209
-\T1/lmr/m/n/10.95 pla-ni-fi-ca-tion ini-tiale : [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 210--219
-
- []
-
-
-Overfull \hbox (39.23315pt too wide) in paragraph at lines 210--219
+Overfull \hbox (33.425pt too wide) in paragraph at lines 210--213
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 210--219
+Underfull \hbox (badness 10000) in paragraph at lines 214--223
+
+ []
+
+
+Overfull \hbox (39.23315pt too wide) in paragraph at lines 214--223
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 214--223
 
  []
 
 [11 <./Captures/exemple3.png> <./Captures/exemple4.png>]
+Overfull \hbox (86.76361pt too wide) in paragraph at lines 246--247
+[][][][][][][][][][][][][][][][][] 
+ []
 
-./rapport.tex:242: Package inputenc Error: Unicode char Ã\expandafter (U+4F1)
-(inputenc)                not set up for use with LaTeX.
 
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.242 ...tion initiale. Chaque case reprÃ©sentant 
-                                                  l'horaire d'un sommet.
-? 
-./rapport.tex:242: Emergency stop.
- ...                                              
-                                                  
-l.242 ...tion initiale. Chaque case reprÃ©sentant 
-                                                  l'horaire d'un sommet.
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+Overfull \hbox (80.19356pt too wide) in paragraph at lines 247--248
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
 
- 
+
+Overfull \hbox (67.05345pt too wide) in paragraph at lines 248--249
+[][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (67.05345pt too wide) in paragraph at lines 249--250
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (86.76361pt too wide) in paragraph at lines 251--252
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (73.6235pt too wide) in paragraph at lines 252--253
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (47.34329pt too wide) in paragraph at lines 255--256
+[][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (7.92297pt too wide) in paragraph at lines 256--257
+[][][][][][][][][] 
+ []
+
+
+Overfull \hbox (93.33366pt too wide) in paragraph at lines 259--260
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (99.90372pt too wide) in paragraph at lines 264--265
+[][][][][][][][][][][][][][][][] 
+ []
+
+[12]
+Overfull \hbox (119.61388pt too wide) in paragraph at lines 267--268
+[][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (21.06308pt too wide) in paragraph at lines 268--269
+[][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (99.90372pt too wide) in paragraph at lines 269--270
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (73.6235pt too wide) in paragraph at lines 270--271
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (99.90372pt too wide) in paragraph at lines 271--272
+[][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (1.35292pt too wide) in paragraph at lines 273--274
+[][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (119.61388pt too wide) in paragraph at lines 276--277
+[][][][][][][] 
+ []
+
+
+Overfull \hbox (34.20319pt too wide) in paragraph at lines 277--278
+[][][][][][][][][] 
+ []
+
+
+Overfull \hbox (7.92297pt too wide) in paragraph at lines 282--283
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (47.34329pt too wide) in paragraph at lines 284--285
+[][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (80.19356pt too wide) in paragraph at lines 290--291
+[][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (27.63313pt too wide) in paragraph at lines 291--292
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 292.
+
+(/usr/share/texmf/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Overfull \hbox (34.20319pt too wide) in paragraph at lines 292--294
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (60.4834pt too wide) in paragraph at lines 294--295
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (73.6235pt too wide) in paragraph at lines 296--298
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (40.77324pt too wide) in paragraph at lines 298--299
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (1.35292pt too wide) in paragraph at lines 299--301
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (47.34329pt too wide) in paragraph at lines 301--302
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (67.05345pt too wide) in paragraph at lines 302--304
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (40.77324pt too wide) in paragraph at lines 304--305
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[13]
+Overfull \hbox (80.19356pt too wide) in paragraph at lines 312--313
+[][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (113.04382pt too wide) in paragraph at lines 315--316
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (27.63313pt too wide) in paragraph at lines 316--317
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (80.19356pt too wide) in paragraph at lines 318--319
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (119.61388pt too wide) in paragraph at lines 320--321
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (80.19356pt too wide) in paragraph at lines 321--322
+[][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (73.6235pt too wide) in paragraph at lines 322--323
+[][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (132.75398pt too wide) in paragraph at lines 323--324
+[][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (47.34329pt too wide) in paragraph at lines 324--326
+[][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (113.04382pt too wide) in paragraph at lines 326--327
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (1.35292pt too wide) in paragraph at lines 328--329
+[][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (73.6235pt too wide) in paragraph at lines 329--330
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (119.61388pt too wide) in paragraph at lines 330--331
+[][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (53.91335pt too wide) in paragraph at lines 331--332
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (218.16467pt too wide) in paragraph at lines 332--333
+[][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (73.6235pt too wide) in paragraph at lines 333--334
+[][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (178.74435pt too wide) in paragraph at lines 334--335
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (178.74435pt too wide) in paragraph at lines 335--336
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (7.92297pt too wide) in paragraph at lines 336--337
+[][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (80.19356pt too wide) in paragraph at lines 337--338
+[][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (106.47377pt too wide) in paragraph at lines 338--339
+[][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (73.6235pt too wide) in paragraph at lines 339--340
+[][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (53.91335pt too wide) in paragraph at lines 344--345
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (99.90372pt too wide) in paragraph at lines 346--347
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (80.19356pt too wide) in paragraph at lines 347--348
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (47.34329pt too wide) in paragraph at lines 349--350
+[][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (86.76361pt too wide) in paragraph at lines 350--351
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (86.76361pt too wide) in paragraph at lines 351--352
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[14]
+Overfull \hbox (113.04382pt too wide) in paragraph at lines 352--353
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (53.91335pt too wide) in paragraph at lines 353--354
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (152.46414pt too wide) in paragraph at lines 354--355
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (7.92297pt too wide) in paragraph at lines 356--357
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (73.6235pt too wide) in paragraph at lines 358--359
+[][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (165.60425pt too wide) in paragraph at lines 360--361
+[][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (93.33366pt too wide) in paragraph at lines 365--366
+[][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (99.90372pt too wide) in paragraph at lines 366--367
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (47.34329pt too wide) in paragraph at lines 370--371
+[][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (80.19356pt too wide) in paragraph at lines 374--375
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (53.91335pt too wide) in paragraph at lines 375--376
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (139.32404pt too wide) in paragraph at lines 377--378
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (80.19356pt too wide) in paragraph at lines 379--380
+[][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (93.33366pt too wide) in paragraph at lines 384--385
+[][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (139.32404pt too wide) in paragraph at lines 385--386
+[][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (67.05345pt too wide) in paragraph at lines 386--387
+[][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (21.06308pt too wide) in paragraph at lines 387--388
+[][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (185.3144pt too wide) in paragraph at lines 388--389
+[][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (14.49303pt too wide) in paragraph at lines 389--390
+[][][][][][][][][][][][] 
+ []
+
+[15]
+Overfull \hbox (126.18393pt too wide) in paragraph at lines 400--401
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (80.19356pt too wide) in paragraph at lines 401--402
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (7.92297pt too wide) in paragraph at lines 409--410
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (7.92297pt too wide) in paragraph at lines 410--411
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (1.35292pt too wide) in paragraph at lines 411--412
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (14.49303pt too wide) in paragraph at lines 413--414
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (14.49303pt too wide) in paragraph at lines 415--416
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (27.63313pt too wide) in paragraph at lines 416--417
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (21.06308pt too wide) in paragraph at lines 422--423
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (99.90372pt too wide) in paragraph at lines 426--427
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (53.91335pt too wide) in paragraph at lines 427--428
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (99.90372pt too wide) in paragraph at lines 429--430
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (73.6235pt too wide) in paragraph at lines 432--433
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[16]
+Overfull \hbox (7.92297pt too wide) in paragraph at lines 446--447
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (283.8652pt too wide) in paragraph at lines 449--450
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (224.73473pt too wide) in paragraph at lines 450--451
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (14.49303pt too wide) in paragraph at lines 451--452
+[][][][] 
+ []
+
+
+Overfull \hbox (290.43526pt too wide) in paragraph at lines 452--453
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (99.90372pt too wide) in paragraph at lines 453--454
+[][][][][] 
+ []
+
+
+Overfull \hbox (14.49303pt too wide) in paragraph at lines 454--455
+[][][][] 
+ []
+
+
+Overfull \hbox (40.77324pt too wide) in paragraph at lines 458--459
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (86.76361pt too wide) in paragraph at lines 460--461
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (257.58499pt too wide) in paragraph at lines 462--463
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (211.59462pt too wide) in paragraph at lines 463--464
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (283.8652pt too wide) in paragraph at lines 465--466
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (218.16467pt too wide) in paragraph at lines 466--467
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (14.49303pt too wide) in paragraph at lines 467--468
+[][][][] 
+ []
+
+
+Overfull \hbox (283.8652pt too wide) in paragraph at lines 468--469
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (99.90372pt too wide) in paragraph at lines 469--470
+[][][][][] 
+ []
+
+
+Overfull \hbox (14.49303pt too wide) in paragraph at lines 470--471
+[][][][] 
+ []
+
+[17] (./rapport.aux) ) 
 Here is how much of TeX's memory you used:
- 7065 strings out of 494829
- 96151 string characters out of 6178001
- 154577 words of memory out of 5000000
- 10237 multiletter control sequences out of 15000+600000
- 46239 words of font info for 45 fonts, out of 8000000 for 9000
+ 8328 strings out of 494829
+ 114545 string characters out of 6178001
+ 209359 words of memory out of 5000000
+ 11461 multiletter control sequences out of 15000+600000
+ 46604 words of font info for 46 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 41i,6n,32p,524b,971s stack positions out of 5000i,500n,10000p,200000b,80000s
-./rapport.tex:242:  ==> Fatal error occurred, no output PDF file produced!
+ 41i,7n,39p,524b,1544s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/sha
+re/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/
+lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/
+fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb
+></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/typ
+e1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr
+/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/publ
+ic/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/t
+exmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/l
+msy10.pfb>
+Output written on rapport.pdf (17 pages, 232857 bytes).
+PDF statistics:
+ 110 PDF objects out of 1000 (max. 8388607)
+ 75 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+
