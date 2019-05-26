@@ -61,6 +61,9 @@
 	Nous avons aussi les salles de cours comme données initiales, chaque cours sera associé à un numéro de salle.
 	\\
 	Enfin parmi les données initiales, il y a les bus. Ils sont représentés par une capacité ainsi qu'une heure d'arrivé à l'UFR.
+
+	ELEVES ARRIVE DANS LE BUS D AVANT
+	QUAND LE BUS DEPASSE 60 ON MET LES ELEVES DNAS LE BUS AVANT
 	
 \section{Objectif}
 	L'objectif de notre projet est de générer un emploi du temps, c'est-à-dire une planification qui respecte toutes les contraintes et dont la métrique est minimale.
@@ -92,6 +95,7 @@
 
 	\subsection{Les algorithmes}
 		\subsubsection{L'algorithme glouton}
+			A MIEUX EXPLIQUER LES 3 ALGOS
 			Cet algorithme est basé sur une heuristique simple : à partir d'une planification initiale, on fait varier les cours un par un sur toutes les horaires possibles respectant les contraintes.\\
 			Pour chaque modification on recalcule la congestion des bus. Si la congestion est améliorée, alors on défini cet horaire comme étant le nouvel horaire du cours.\\
 			On parcours cependant toutes les horaires possibles afin de choisir celui qui améliore le plus la congestion. Si aucun n'améliore la congestion, le cours est placé à son horaire initial.\\
@@ -151,6 +155,7 @@
 
 \section{Présentation des résultats}
 	Comparer les algos, comparer en fct des données en entrées
+	Moyenne de l'algo tabou roulette sur la meme horaire.
 	
 \section{Conclusion}
 	\subsection{Pistes de reflexion abandonnées}
@@ -169,9 +174,99 @@
 
 \section{Annexes}
 	\subsection{Exemple d'utilisation}
-		Ici nous préciserons un exemple comme dans le rapport précedent, avec des graphes etc...
+		\subsubsection{Représentation des montées et descentes du bus}
+			Nous considérons que tous les étudiants montent au premier arrêt (gare des chantiers) et descendent au terminus (l'université). On ajoute aussi à chaque arrêt les montées et descentes des non étudiants. Dans notre exemple nous avons : \\
+			\\
+			\begin{tabular}{ | c | c | c | c | c | c |}
+ 				\hline			
+   				Numéro de l'arrêt	& 1 	& 2 	& 3 	& 4 	& 5\\
+   				montées				& 50 	& 15 	& 10 	& 2 	& 0\\
+   				Descentes			& 0 	& 5 	& 10 	& 8 	& 54\\
+ 				\hline  
+ 			\end{tabular}\\
+ 			Pour obtenir les données des arrêts intermédiaires de montées et descentes nous choisirons une valeur aléatoire, choisis dans un intervalle différent en fonction de l'heure, l'objectif est de représenter la congestion forte des heures de pointes de manière un peu plus précise : \\
+ 			\begin{tabular}{ | c | c | c | c | c | c | c | c | c | c |}
+ 				\hline			
+   				Horaire & 7-8h & 8-9h & 9-10h & 10-11h & 11-12h & 12-13h & 13-14h & 14-15h & 15-16h\\
+   				Montées & [5:15] & [5:15] & [3:10] & [2:8] & [1:5] & [1:5] & [1:5] & [2:8] & [3:10]\\
+   				Descentes & [0:5] & [0:5] & [1:6] & [1:6] & [1:5] & [1:5] & [0:5] & [0:5] & [1:5]\\
+ 				\hline  
+ 			\end{tabular}\\
 
-	\subsection{Algo en code clair et commenté}
-		Ici nous decrirons le code de deux algos (roulette et glouton)
+		\subsubsection{L'emploi du temps}
+			Voici un exemple de création de la planification initiale : 
+			\begin{enumerate}
+				\item On créer un graphe non orienté en numérotant les sommets de 1 à 10.
+				\centerline{\includegraphics[scale=0.8]{Captures/exemple1.png}}
+				\item On relie les sommets entre eux lorsque qu'il y a une contrainte (même étudiant sur des horaires qui se chevauchent). Pour cela on créé une matrice d'adjacence avec un degré moyen choisis arbitrairement. Pour N sommets et K le degré moyen, la probabilité qu'ily ai une arête à insérer dans chaque case est K/N.
+				\item On oriente les arêtes désormais des arcs du plus faible au plus fort
+				\centerline{\includegraphics[scale=0.8]{Captures/exemple2.png}}
+				\item On remarque dans notre exemple qu'il y a deux sommets de degré entrant nul, ces deux sommets de notre DAG seront des points de départs possible pour notre planification.
+				\item On colorie le graphe, chaque couleur représente une salle.\\
+				\centerline{\includegraphics[scale=0.8]{Captures/exemple3.png}}
+				\item Nous agencons l'emploi du temps en respectant le fait que deux couleurs et deux sommets reliés par un arc ne peuvent pas être sur la même plage horaire. Par défaut le sommet duquel nous partirons est le sommet de degré entrant nul le plus faible, ici le numéro 1. C'est la planification initiale :
+				\centerline{\includegraphics[scale=0.8]{Captures/exemple4.png}}
+			\end{enumerate}
+			Chaque cours possède un nombre d'étudiants choisis aléatoirement entre 16 et 32 pour un TD et entre 16 et 100 pour un cours magistral. les TDs représentent trois quart des cours. Ainsi dans notre exemple nous avons : \\
+			\\
+			\begin{tabular}{ | c | c | c | c | c | c | c | c | c | c | c |}
+ 				\hline			
+   				Numéro du sommet & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10\\
+   				Type de cour & TD & CM & CM & TD & TD & TD & TD & TD & TD & CM \\
+   				Nombre d'élèves & 16 & 70 & 60 & 30 & 25 & 20 & 16 & 30 & 14 & 50\\
+ 				\hline  
+ 			\end{tabular}\\
+
+		\subsubsection{Calcul de la congestion}
+			A l'aide du tableau ci dessus nous allons pouvoir déterminer à chaque horaire le nombre d'étudiants arrivé au terminus et donc en conclure à l'aide du tableau des montées et des descentes le nombre de personnes à chaque arrêt. 
+			On considère que les etudiants prennent le bus arrivant 15 min avant leurs premier cour de la journée.
+			Dans notre exemple nous avons pour  8h le cours 1 et 4, ce qui représente 46 élèves. Ainsi le bus de arrivant a 7h45 ressemble à cela :  \\
+			\begin{tabular}{ | c | c | c | c | c | c | c |}
+ 				\hline			
+   				Numéro de l'arrêt & 1 & 2 & 3 & 4 & 5\\
+   				Différence montées/descentes & 10 & 7 & 10 & 11 & 0\\
+   				Nombre de personnes dans le bus & 56 & 53 & 60 & 56 & 57\\
+ 				\hline  
+ 			\end{tabular}\\
+ 			Ce tableau sera générés pour chaque bus. On mesurera dans chaque cas le dépassement à chaque arrêt en mettant un 1 si il y a dépassements, un 0 sinon.
+ 			Sachant que la limite de confort est de 50 dans le bus que nous étudions, ce bus nous donne une valeur de congestion de 5.\\
+ 			A partir de la on applique l'algorithme glouton et les deux algorithmes génétiques pour essayer d'améliorer notre fonction objectif.
+ 			Décrivons ces algos.
+
+	\subsection{Explication de la programmation}
+		\subsubsection{Algorithme glouton}
+\begin{lstlisting}
+//N est le nombre de cours.
+for (int i = 0; i < N; i++)
+{
+	//Horaires_glouton est un tableau contenant la planification initiale. Chaque case représentant l'horaire d'un sommet.
+	//Meilleure solution et meilleure congestion représentent respectivement la meilleure horaire pour le sommet i et la congestion associé à cette horaire.
+	//Meilleure horaire signifie horaire qui minimise au plus la congestion. Avant la boucle on les initialises à l'heure déjà attribué au sommet i.
+	sommet_modifie = i;
+	meilleure_solution = Horaires_glouton[sommet_modifie];
+	meilleure_congestion = calcul_congestion_totale(Horaires_glouton,Nb_eleves,heure_max,N,TO);
+	//Le while test tous les horaires possibles pour le sommet i.
+	while(j < heure_max - 1)
+	{
+		Horaires_glouton[sommet_modifie] = j;
+		//Si l'horaire j est valide
+		if (test_solution_valide(Horaires_glouton, N, couleur, Type, TO) == true)
+		{
+			temp = calcul_congestion_totale(Horaires_glouton,Nb_eleves,heure_max,N,TO);
+			//Si la congestion à l'horaire j est meilleure que la meilleur congestion du sommet i, alors on remplace la meilleure congestion et la meilleure horaire par j.
+			if(temp < meilleure_congestion)
+			{
+				meilleure_solution = Horaires_glouton[sommet_modifie];
+				meilleure_congestion = temp;
+			}
+		}
+		j++;
+	}
+	//j commence à 2 car 2 correspond à 8h du matin.
+	j = 2;
+	Horaires_glouton[sommet_modifie] = meilleure_solution;
+}
+\end{lstlisting}
+
 
 \end{document}

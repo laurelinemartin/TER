@@ -1,11 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.14)  17 MAY 2019 17:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.9.4)  26 MAY 2019 13:28
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
 **rapport.tex
 (./rapport.tex
 LaTeX2e <2017-04-15>
-Babel <3.18> and hyphenation patterns for 5 language(s) loaded.
+Babel <3.12> and hyphenation patterns for 9 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
@@ -349,48 +350,53 @@ File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2018/02/14 3.18 The Babel package
+Package: babel 2017/06/29 3.12 The Babel package
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
-File: switch.def 2018/02/14 3.18 Babel switching mechanism
+File: switch.def 2017/06/29 3.12 Babel switching mechanism
 )
+(/usr/share/texlive/texmf-dist/tex/generic/babel-french/frenchb.ldf
+Language: frenchb 2017/07/08 v3.3b French support from the babel system
+
 (/usr/share/texlive/texmf-dist/tex/generic/babel-french/french.ldf
-Language: french 2018/02/04 v3.4b French support from the babel system
+Language: french 2017/07/08 v3.3b French support from the babel system
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2018/02/14 3.18 Babel common definitions
+File: babel.def 2017/06/29 3.12 Babel common definitions
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2017/06/29 3.12 Babel switching mechanism
+)
 \babel@savecnt=\count87
 \U@D=\dimen103
-
-(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
-\bbl@dirlevel=\count88
 )
-\l@acadian = a dialect from \language\l@french 
-\FB@nonchar=\count89
-Package babel Info: Making : an active character on input line 411.
-Package babel Info: Making ; an active character on input line 412.
-Package babel Info: Making ! an active character on input line 413.
-Package babel Info: Making ? an active character on input line 414.
-\FBguill@level=\count90
-\FB@everypar=\toks16
+\FB@nonchar=\count88
+\FBcolonsp=\toks16
+\FBthinsp=\toks17
+Package babel Info: Making : an active character on input line 321.
+Package babel Info: Making ; an active character on input line 322.
+Package babel Info: Making ! an active character on input line 323.
+Package babel Info: Making ? an active character on input line 324.
+\FBguillsp=\toks18
+\FBguill@level=\count89
+\FB@everypar=\toks19
 \FB@Mht=\dimen104
-\mc@charclass=\count91
-\mc@charfam=\count92
-\mc@charslot=\count93
-\std@mcc=\count94
-\dec@mcc=\count95
-\c@FBcaption@count=\count96
+\mc@charclass=\count90
+\mc@charfam=\count91
+\mc@charslot=\count92
+\std@mcc=\count93
+\dec@mcc=\count94
 \listindentFB=\skip43
 \descindentFB=\skip44
 \labelwidthFB=\skip45
 \leftmarginFB=\skip46
 \parindentFFN=\dimen105
 \FBfnindent=\skip47
-))
+)))
 (/usr/share/texlive/texmf-dist/tex/latex/carlisle/scalefnt.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks17
+\KV@toks@=\toks20
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/makeidx.sty
 Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
@@ -566,32 +572,32 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 Package graphics Info: Driver file: pdftex.def on input line 99.
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+File: pdftex.def 2017/06/24 v1.0g Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen106
 \Gin@req@width=\dimen107
 )
 (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
-Package: mathtools 2018/01/08 v1.21 mathematical typesetting tools
+Package: mathtools 2017/05/24 v1.19 mathematical typesetting tools
 
 (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count97
-\calc@Bcount=\count98
+\calc@Acount=\count95
+\calc@Bcount=\count96
 \calc@Adimen=\dimen108
 \calc@Bdimen=\dimen109
 \calc@Askip=\skip48
 \calc@Bskip=\skip49
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count99
+\calc@Ccount=\count97
 \calc@Cskip=\skip50
 )
 (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2017/09/02 v2.17a AMS math features
+Package: amsmath 2016/11/05 v2.16a AMS math features
 \@mathmargin=\skip51
 
 For additional information on amsmath, use the `?' option.
@@ -600,7 +606,7 @@ Package: amstext 2000/06/29 v2.01 AMS text
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks18
+\@emptytoks=\toks21
 \ex@=\dimen110
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
@@ -610,13 +616,13 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count100
+\inf@bad=\count98
 LaTeX Info: Redefining \frac on input line 213.
-\uproot@=\count101
-\leftroot@=\count102
+\uproot@=\count99
+\leftroot@=\count100
 LaTeX Info: Redefining \overline on input line 375.
-\classnum@=\count103
-\DOTSCASE@=\count104
+\classnum@=\count101
+\DOTSCASE@=\count102
 LaTeX Info: Redefining \ldots on input line 472.
 LaTeX Info: Redefining \dots on input line 475.
 LaTeX Info: Redefining \cdots on input line 596.
@@ -625,26 +631,26 @@ LaTeX Info: Redefining \cdots on input line 596.
 \big@size=\dimen112
 LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
-\macc@depth=\count105
-\c@MaxMatrixCols=\count106
+\macc@depth=\count103
+\c@MaxMatrixCols=\count104
 \dotsspace@=\muskip10
-\c@parentequation=\count107
-\dspbrk@lvl=\count108
-\tag@help=\toks19
-\row@=\count109
-\column@=\count110
-\maxfields@=\count111
-\andhelp@=\toks20
+\c@parentequation=\count105
+\dspbrk@lvl=\count106
+\tag@help=\toks22
+\row@=\count107
+\column@=\count108
+\maxfields@=\count109
+\andhelp@=\toks23
 \eqnshift@=\dimen113
 \alignsep@=\dimen114
 \tagshift@=\dimen115
 \tagwidth@=\dimen116
 \totwidth@=\dimen117
 \lineht@=\dimen118
-\@envbody=\toks21
+\@envbody=\toks24
 \multlinegap=\skip52
 \multlinetaggap=\skip53
-\mathdisplay@stack=\toks22
+\mathdisplay@stack=\toks25
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
 )
@@ -652,7 +658,7 @@ LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count112
+\g_MT_multlinerow_int=\count110
 \l_MT_multwidth_dim=\dimen119
 \origjot=\skip54
 \l_MT_shortvdotswithinadjustabove_dim=\dimen120
@@ -673,16 +679,16 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
-Package: amsthm 2017/10/31 v2.20.4
-\thm@style=\toks23
-\thm@bodyfont=\toks24
-\thm@headfont=\toks25
-\thm@notefont=\toks26
-\thm@headpunct=\toks27
+Package: amsthm 2015/03/04 v2.20.2
+\thm@style=\toks26
+\thm@bodyfont=\toks27
+\thm@headfont=\toks28
+\thm@notefont=\toks29
+\thm@headpunct=\toks30
 \thm@preskip=\skip55
 \thm@postskip=\skip56
 \thm@headsep=\skip57
-\dth@everypar=\toks28
+\dth@everypar=\toks31
 )
 (/usr/share/texmf/tex/latex/lm/lmodern.sty
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
@@ -722,28 +728,28 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
 \multirow@colwidth=\skip58
-\multirow@cntb=\count113
+\multirow@cntb=\count111
 \multirow@dima=\skip59
 \bigstrutjot=\dimen126
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count114
+\lst@mode=\count112
 \lst@gtempboxa=\box28
-\lst@token=\toks29
-\lst@length=\count115
+\lst@token=\toks32
+\lst@length=\count113
 \lst@currlwidth=\dimen127
-\lst@column=\count116
-\lst@pos=\count117
+\lst@column=\count114
+\lst@pos=\count115
 \lst@lostspace=\dimen128
 \lst@width=\dimen129
-\lst@newlines=\count118
-\lst@lineno=\count119
+\lst@newlines=\count116
+\lst@lineno=\count117
 \lst@maxwidth=\dimen130
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count120
-\lst@skipnumbers=\count121
+\c@lstnumber=\count118
+\lst@skipnumbers=\count119
 \lst@framebox=\box29
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
@@ -755,7 +761,7 @@ Package: listings 2015/06/04 1.6 (Carsten Heinz)
 Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
 \col@sep=\dimen131
 \extrarowheight=\dimen132
-\NC@list=\toks30
+\NC@list=\toks33
 \extratabsurround=\skip60
 \backup@length=\skip61
 )
@@ -765,17 +771,17 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTright=\skip63
 \LTpre=\skip64
 \LTpost=\skip65
-\LTchunksize=\count122
+\LTchunksize=\count120
 \LTcapwidth=\dimen133
 \LT@head=\box30
 \LT@firsthead=\box31
 \LT@foot=\box32
 \LT@lastfoot=\box33
-\LT@cols=\count123
-\LT@rows=\count124
-\c@LT@tables=\count125
-\c@LT@chunks=\count126
-\LT@p@ftn=\toks31
+\LT@cols=\count121
+\LT@rows=\count122
+\c@LT@tables=\count123
+\c@LT@chunks=\count124
+\LT@p@ftn=\toks34
 ) (./rapport.aux)
 \openout1 = `rapport.aux'.
 
@@ -809,17 +815,17 @@ LaTeX Info: Redefining \up on input line 19.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count127
+\scratchcounter=\count125
 \scratchdimen=\dimen134
 \scratchbox=\box34
-\nofMPsegments=\count128
-\nofMParguments=\count129
-\everyMPshowfont=\toks32
-\MPscratchCnt=\count130
+\nofMPsegments=\count126
+\nofMParguments=\count127
+\everyMPshowfont=\toks35
+\MPscratchCnt=\count128
 \MPscratchDim=\dimen135
-\MPnumerator=\count131
-\makeMPintoPDFobject=\count132
-\everyMPtoPDFconversion=\toks33
+\MPnumerator=\count129
+\makeMPintoPDFobject=\count130
+\everyMPtoPDFconversion=\toks36
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -854,7 +860,7 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
 )
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
@@ -876,7 +882,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count133
+\c@lstlisting=\count131
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 21.
 
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
@@ -917,83 +923,171 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./rapport.toc
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 5.
-)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./rapport.toc)
 \tf@toc=\write3
 \openout3 = `rapport.toc'.
 
  [2]
-Overfull \hbox (2.84299pt too wide) in paragraph at lines 28--35
+Overfull \hbox (2.84299pt too wide) in paragraph at lines 28--34
 \T1/lmr/m/n/10.95 Dans notre pro-jet, les ho-raires d'ac-ti-vi-tés sont celles 
 de l'Uni-ver-sité Versailles-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 28--35
+Underfull \hbox (badness 10000) in paragraph at lines 28--34
+
+ []
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 44.
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--56
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--57
+Underfull \hbox (badness 10000) in paragraph at lines 37--56
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--57
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 38--57
+Underfull \hbox (badness 10000) in paragraph at lines 37--56
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 61--64
 
- []
-
-
-LaTeX Warning: Command \' invalid in math mode on input line 76.
+LaTeX Warning: Command \' invalid in math mode on input line 80.
 
 [4] [5]
-Overfull \hbox (88.30643pt too wide) in paragraph at lines 113--123
+Overfull \hbox (88.30643pt too wide) in paragraph at lines 120--130
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 113--123
+Underfull \hbox (badness 10000) in paragraph at lines 120--130
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 135--138
+Underfull \hbox (badness 10000) in paragraph at lines 143--146
 
  []
 
-[7] [8] [9] (./rapport.aux) ) 
-Here is how much of TeX's memory you used:
- 6840 strings out of 494894
- 94339 string characters out of 6179472
- 156718 words of memory out of 5000000
- 10020 multiletter control sequences out of 15000+600000
- 46239 words of font info for 45 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 41i,6n,32p,401b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/u
-sr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvi
-ps/lm/lm-rm.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/
-texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/
-lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/
-fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.p
-fb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/ty
-pe1/public/lm/lmri10.pfb>
-Output written on rapport.pdf (9 pages, 175141 bytes).
-PDF statistics:
- 71 PDF objects out of 1000 (max. 8388607)
- 51 compressed objects within 1 object stream
- 0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+[7]
+Overfull \hbox (4.02498pt too wide) in paragraph at lines 162--165
+[]\T1/lmr/m/n/10.95 Lors de nos re-cherches pré-li-mi-naires, nous avions pensé
+ re-pré-sen-ter chaque
+ []
 
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 178--195
+
+ []
+
+
+Overfull \hbox (88.30643pt too wide) in paragraph at lines 178--195
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 178--195
+
+ []
+
+<Captures/exemple1.png, id=37, 289.08pt x 289.08pt>
+File: Captures/exemple1.png Graphic file (type png)
+<use Captures/exemple1.png>
+Package pdftex.def Info: Captures/exemple1.png  used on input line 200. on inpu
+t line 200.
+Package pdftex.def Info: Requested size: 231.2643pt x 231.2643pt on input line 
+200.
+
+Overfull \hbox (33.425pt too wide) in paragraph at lines 199--201
+[] 
+ []
+
+[9]
+<Captures/exemple2.png, id=41, 289.08pt x 289.08pt>
+File: Captures/exemple2.png Graphic file (type png)
+<use Captures/exemple2.png>
+Package pdftex.def Info: Captures/exemple2.png  used on input line 203. on inpu
+t line 203.
+Package pdftex.def Info: Requested size: 231.2643pt x 231.2643pt on input line 
+203.
+
+Overfull \hbox (33.425pt too wide) in paragraph at lines 202--204
+[] 
+ []
+
+<Captures/exemple3.png, id=42, 289.08pt x 289.08pt>
+File: Captures/exemple3.png Graphic file (type png)
+<use Captures/exemple3.png>
+Package pdftex.def Info: Captures/exemple3.png  used on input line 206. on inpu
+t line 206.
+Package pdftex.def Info: Requested size: 231.2643pt x 231.2643pt on input line 
+206.
+
+Overfull \hbox (33.425pt too wide) in paragraph at lines 205--207
+[] 
+ []
+
+[10 <./Captures/exemple1.png> <./Captures/exemple2.png>]
+<Captures/exemple4.png, id=46, 578.16pt x 201.90431pt>
+File: Captures/exemple4.png Graphic file (type png)
+<use Captures/exemple4.png>
+Package pdftex.def Info: Captures/exemple4.png  used on input line 208. on inpu
+t line 208.
+Package pdftex.def Info: Requested size: 462.52863pt x 161.52365pt on input lin
+e 208.
+
+Overfull \hbox (135.62837pt too wide) in paragraph at lines 207--209
+\T1/lmr/m/n/10.95 pla-ni-fi-ca-tion ini-tiale : [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 210--219
+
+ []
+
+
+Overfull \hbox (39.23315pt too wide) in paragraph at lines 210--219
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 210--219
+
+ []
+
+[11 <./Captures/exemple3.png> <./Captures/exemple4.png>]
+
+./rapport.tex:242: Package inputenc Error: Unicode char Ã\expandafter (U+4F1)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.242 ...tion initiale. Chaque case reprÃ©sentant 
+                                                  l'horaire d'un sommet.
+? 
+./rapport.tex:242: Emergency stop.
+ ...                                              
+                                                  
+l.242 ...tion initiale. Chaque case reprÃ©sentant 
+                                                  l'horaire d'un sommet.
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+ 
+Here is how much of TeX's memory you used:
+ 7065 strings out of 494829
+ 96151 string characters out of 6178001
+ 154577 words of memory out of 5000000
+ 10237 multiletter control sequences out of 15000+600000
+ 46239 words of font info for 45 fonts, out of 8000000 for 9000
+ 59 hyphenation exceptions out of 8191
+ 41i,6n,32p,524b,971s stack positions out of 5000i,500n,10000p,200000b,80000s
+./rapport.tex:242:  ==> Fatal error occurred, no output PDF file produced!
