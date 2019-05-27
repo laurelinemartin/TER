@@ -4,8 +4,16 @@ int calcul_congestion_bus(int *Nb_eleves_bus, int heure_bus){
     int congestion = 0;
     int non_etudiant;
     int seuil_confort = 50;
+<<<<<<< HEAD
     //  Il y a 8 arrêts
     for(int i = 0; i < 7; i++){
+=======
+    int oui_ou_non = 0;
+    
+
+    for(int i = 0; i < 7; i++)
+    {
+>>>>>>> 1b68c9d7f7be5688ae70f64f68800bbcb4c0b28a
         non_etudiant = montee_descente(heure_bus);
         if((Nb_eleves_bus[heure_bus] + non_etudiant) > seuil_confort){
             congestion++;
