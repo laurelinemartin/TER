@@ -33,13 +33,11 @@ void ecrirePlanification(int* horaires, int* salles, int horaireMax){
 	vector<int> heure;
   	//// tableau Horaires devient vector<int> vecHoraires
   	vector<int> vecHoraires (horaires, horaires + horaireMax);
-  	//// tri de vecHoraire
-  	//// sort(vecHoraires.begin(), vecHoraires.end());
 
   	ofstream fichier("resultats.txt", ios::out | ios::app); 
 	if(fichier){
   		for (auto x : vecHoraires) {
-  			heure = convertHeure(x);
+  			heure = convertHeure8(x);
   			fichier << "Cours " 
   					<< cours 
   					<< " à " 
@@ -56,26 +54,21 @@ void ecrirePlanification(int* horaires, int* salles, int horaireMax){
     else{
     	cerr << "Erreur ouverture !";
     }
-    // fclose(sortie);
 }
 
 void ecrireCongestionBus(int* bus, int N){
-	// FILE *sortie = fopen("resultats.txt", "a");
-	// fprintf(sortie, "CONGESTION DES BUS : \n");
-	// fprintf(sortie, "-------------------------\n");
-	// fprintf(sortie, "Congestion du bus n°%d : %d\n", numBus, congestionBus);
-	// fclose(sortie);
 	vector<int> heure;
 	ofstream fichier("congestion_bus.txt", ios::out);
 	if(fichier){
-		for(int i = 2; i < N; i++){
-			heure = convertHeure(i);
+		for(int i = 0; i < N; i++){
+			heure = convertHeure730(i);
 			if(bus[i] < debOrange){
 				fichier << "Le bus à l'heure " 
 						<< heure[0] 
 						<< "h"
 						<< heure[1]
 						<< " : vert." 
+						<< " 1F49A ;	emoji ;	L1 ;	none ;	j "
 						<< " (" 
 						<< bus[i] 
 						<< ")" << endl;
@@ -109,13 +102,10 @@ void ecrireCongestionBus(int* bus, int N){
 }
 
 void ecrireCongestionTotale(int congestionTotale, int nbbus){
-	// FILE *sortie = fopen("resultats.txt", "a");
-	// fprintf(sortie, "Congestion totale (nombre de bus dans lequel de seuil de confort à été dépassé): %d / %d", congestionTotale, nbbus);
-	// fclose(sortie);
 	ofstream fichier("resultats.txt", ios::out | ios::app); 
 	if(fichier){
 		fichier << "Congestion totale (nombre de bus dans lequel de seuil de confort à été dépassé): "
-				<< congestionTotale/8
+				<< congestionTotale
 				<< " / "
 				<< nbbus
 				<< endl;

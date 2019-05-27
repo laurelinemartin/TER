@@ -7,9 +7,25 @@
 //// à chaque tour de boucle, min augmente du temps défini (ici une variable
 //// globale lapseHeure = 15)
 //// mets l'heure et les minutes dans un vecteur et le retourne
-vector<int> convertHeure(int num){
+vector<int> convertHeure730(int num){
 	int heure = 7;
 	int min = 30;
+	vector<int> vecHeure;
+	for(int i = 2; i != num; i++){
+		min += lapseHeure;
+		if(min % 60 == 0){
+			heure++;
+			min = 0;
+		}
+	}
+	vecHeure.push_back(heure);
+	vecHeure.push_back(min);
+	return vecHeure;
+}
+
+vector<int> convertHeure8(int num){
+	int heure = 8;
+	int min = 0;
 	vector<int> vecHeure;
 	for(int i = 2; i != num; i++){
 		min += lapseHeure;
