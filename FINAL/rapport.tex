@@ -105,9 +105,9 @@
 		Dans un premier temps, nous allons créer une planification initiale qui sera utilisée comme point de départ par chaque algorithme. Cette solution va simplement mettre le sommet initial à la première horaire de la journée puis placer les autres sommets en respectant les contraintes et en les mettant le plus tôt possible. Le sommet initial est le sommet de degré entrant nul d'indice le plus faible. Ces sommets sont les cours, représenté dans la matrice d'adjacence vu dans le premier point de ce rapport.\\
 		En pseudocode on a :\\
 		\begin{lstlisting}
-Mettre le sommet de degré entrant nul d'indice minimale à l'horaire minimale
+Mettre le sommet de degre entrant nul d indice minimale a l horaire minimale
 Pour chaque sommet sauf le premier sommet :
-  Mettre l'horaire le plus tôt respectant les contraintes.
+  Mettre l horaire le plus tot respectant les contraintes.
 		\end{lstlisting}
 
 	\subsection{Les algorithmes}
@@ -158,8 +158,8 @@ Pour chaque sommet :
     	Calculer la nouvelle congestion.
     	Si la congestion est meilleur qu'avant le changement,
       	on la conserve.
-  Chaque valeur de congestion est associé à une valeur proportionelle au taux de modification par rapport a la planification initiale
-  On choisit un nombre au hasard. Le sommet associé à la congestion choisis change son horaire à l'horaire donnant cette congestion.
+  Chaque valeur de congestion est associe a une valeur proportionelle au taux de modification par rapport a la planification initiale
+  On choisit un nombre au hasard. Le sommet associe a la congestion choisis change son horaire a l horaire donnant cette congestion.
   \end{lstlisting}
 	
 	\subsection{Données utilisées}
