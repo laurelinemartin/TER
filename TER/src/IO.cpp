@@ -56,7 +56,7 @@ void ecrirePlanification(int* horaires, int* salles, int horaireMax){
 	if(fichier){
   		for (auto x : vecHoraires) {
   			heure = convertHeure8(x);
-  			
+  			if(heure[0] <= 18){
   				fichier << "Cours " 
   						<< cours 
   						<< " à " 
@@ -66,6 +66,7 @@ void ecrirePlanification(int* horaires, int* salles, int horaireMax){
   						<< ", salle : "
   						<< salles[cours]
   						<< endl;
+  			}
   			
   			cours++;
    		 }
@@ -123,15 +124,10 @@ void ecrireCongestionBus(int* bus, int N){
 void ecrireCongestionTotale(int congestionTotale, int nbbus){
 	int aff = 0;
 	ofstream fichier("resultats.txt", ios::out | ios::app); 
-	if (congestionTotale%8 == 0){
-		aff = congestionTotale/8;
-	}
-	else{
-		aff = congestionTotale/8 + 1;
-	}
+	
 	if(fichier){
 		fichier << "Congestion totale (nombre de bus dans lequel de seuil de confort à été dépassé): "
-				<< aff
+				<< congestionTotale
 				<< " / "
 				<< nbbus
 				<< endl;
