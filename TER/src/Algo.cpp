@@ -11,7 +11,7 @@ vector<int> convertHeure730(int num){
 	int heure = 7;
 	int min = 30;
 	vector<int> vecHeure;
-	for(int i = 2; i != num; i++){
+	for(int i = 0; i != num; i++){
 		min += lapseHeure;
 		if(min % 60 == 0){
 			heure++;
