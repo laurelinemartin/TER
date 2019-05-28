@@ -126,7 +126,7 @@ void ecrireCongestionTotale(int congestionTotale, int nbbus){
 	ofstream fichier("resultats.txt", ios::out | ios::app); 
 	
 	if(fichier){
-		fichier << "Congestion totale (nombre de bus dans lequel de seuil de confort à été dépassé): "
+		fichier << "Congestion totale (nombre de bus dans lequel le seuil de confort à été dépassé): "
 				<< congestionTotale
 				<< " / "
 				<< nbbus
