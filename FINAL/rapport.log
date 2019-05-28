@@ -1,7 +1,6 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.9.4)  26 MAY 2019 17:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.9.4)  28 MAY 2019 09:14
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
 **rapport.tex
 (./rapport.tex
@@ -1573,83 +1572,38 @@ Overfull \hbox (7.92297pt too wide) in paragraph at lines 446--447
  []
 
 
-Overfull \hbox (283.8652pt too wide) in paragraph at lines 449--450
+Overfull \hbox (21.06308pt too wide) in paragraph at lines 449--450
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (224.73473pt too wide) in paragraph at lines 450--451
-[][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (14.49303pt too wide) in paragraph at lines 451--452
-[][][][] 
- []
-
-
-Overfull \hbox (290.43526pt too wide) in paragraph at lines 452--453
+Overfull \hbox (27.63313pt too wide) in paragraph at lines 452--453
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (99.90372pt too wide) in paragraph at lines 453--454
-[][][][][] 
- []
-
-
-Overfull \hbox (14.49303pt too wide) in paragraph at lines 454--455
-[][][][] 
- []
-
-
-Overfull \hbox (40.77324pt too wide) in paragraph at lines 458--459
+Overfull \hbox (47.34329pt too wide) in paragraph at lines 462--463
 [][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (86.76361pt too wide) in paragraph at lines 460--461
-[][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (257.58499pt too wide) in paragraph at lines 462--463
-[][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (211.59462pt too wide) in paragraph at lines 463--464
+Overfull \hbox (1.35292pt too wide) in paragraph at lines 463--464
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (283.8652pt too wide) in paragraph at lines 465--466
+Overfull \hbox (73.6235pt too wide) in paragraph at lines 465--466
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (218.16467pt too wide) in paragraph at lines 466--467
+Overfull \hbox (7.92297pt too wide) in paragraph at lines 466--467
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (14.49303pt too wide) in paragraph at lines 467--468
-[][][][] 
- []
-
-
-Overfull \hbox (283.8652pt too wide) in paragraph at lines 468--469
+Overfull \hbox (73.6235pt too wide) in paragraph at lines 468--469
 [][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (99.90372pt too wide) in paragraph at lines 469--470
-[][][][][] 
- []
-
-
-Overfull \hbox (14.49303pt too wide) in paragraph at lines 470--471
-[][][][] 
  []
 
 [17] (./rapport.aux) ) 
@@ -1671,7 +1625,7 @@ e1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr
 ic/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/t
 exmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/l
 msy10.pfb>
-Output written on rapport.pdf (17 pages, 232857 bytes).
+Output written on rapport.pdf (17 pages, 232811 bytes).
 PDF statistics:
  110 PDF objects out of 1000 (max. 8388607)
  75 compressed objects within 1 object stream

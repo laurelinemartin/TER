@@ -10,10 +10,28 @@ void initFichier(){
 	else{
 		cerr << "Erreur ouverture fichier !" << endl;
 	}
+	ofstram fichier2("congestion_bus.txt", ios::out);
+	if(fichier2){
+		fichier2 << "Congetion des bus" << endl;
+		fichier2.close();
+	}
+	else{
+		cer << "Erreur ouverture fichier !" << endl;
+	}
 }
 
 void ecrireInformation(string s){
 	ofstream fichier("resultats.txt", ios::out | ios::app);
+	if(fichier){
+		fichier << s << endl;
+	}
+	else{
+		cerr << "Erreur ouverture !";
+	}
+}
+
+void ecrireInformationCongestion(string s){
+	ofstream fichier("congestion_bus.txt", ios::out | ios::app);
 	if(fichier){
 		fichier << s << endl;
 	}
@@ -38,15 +56,17 @@ void ecrirePlanification(int* horaires, int* salles, int horaireMax){
 	if(fichier){
   		for (auto x : vecHoraires) {
   			heure = convertHeure8(x);
-  			fichier << "Cours " 
-  					<< cours 
-  					<< " à " 
-  					<< heure[0]
-  					<< " h "
-  					<< heure[1]
-  					<< ", salle : "
-  					<< salles[cours]
-  					<< endl;
+  			
+  				fichier << "Cours " 
+  						<< cours 
+  						<< " à " 
+  						<< heure[0]
+  						<< " h "
+  						<< heure[1]
+  						<< ", salle : "
+  						<< salles[cours]
+  						<< endl;
+  			
   			cours++;
    		 }
    		 fichier.close();
@@ -58,7 +78,7 @@ void ecrirePlanification(int* horaires, int* salles, int horaireMax){
 
 void ecrireCongestionBus(int* bus, int N){
 	vector<int> heure;
-	ofstream fichier("congestion_bus.txt", ios::out);
+	ofstream fichier("congestion_bus.txt", ios::out | ios::app);
 	if(fichier){
 		for(int i = 0; i < N; i++){
 			heure = convertHeure730(i);
@@ -68,7 +88,6 @@ void ecrireCongestionBus(int* bus, int N){
 						<< "h"
 						<< heure[1]
 						<< " : vert." 
-						<< " 1F49A ;	emoji ;	L1 ;	none ;	j "
 						<< " (" 
 						<< bus[i] 
 						<< ")" << endl;
