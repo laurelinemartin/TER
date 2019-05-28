@@ -1,4 +1,4 @@
-\select@language {french}
+\babel@toc {french}{}
 \contentsline {section}{\numberline {1}Introduction}{}
 \contentsline {section}{\numberline {2}Les donn\IeC {\'e}es initiales}{}
 \contentsline {section}{\numberline {3}Objectif}{}
