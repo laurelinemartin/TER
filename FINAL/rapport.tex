@@ -73,11 +73,8 @@
 	\end{itemize}
 	Ces informations seront utilisées pour connaitre le nombre d'élèves arrivés à chaque cours. En effet, chaque type de cours a un nombre différent d'élèves.\\
 	L'heure de début de journée corespond à l'horaire minimale de début d'un cours.
-
 	Le lapse de temps entre deux cours correspond au temps laissé entre deux cours, dans notre cas on fixe cette valeur à 15 minutes.
-
-	ELEVES ARRIVE DANS LE BUS D AVANT
-	QUAND LE BUS DEPASSE 60 ON MET LES ELEVES DNAS LE BUS AVANT
+	Avec les données initiales décrite ci dessus nous pourrons créer un emploi du temps initial.
 	
 \section{Objectif}
 	L'objectif de notre projet est de générer un emploi du temps, c'est-à-dire une planification qui respecte toutes les contraintes et dont la métrique est minimale.
@@ -105,27 +102,65 @@
 	
 \section{Stratégies de résolution}
 	\subsection{Planification initiale}
-		Dans un premier temps, nous allons créer une planification initiale qui sera utilisée comme point de départ par chaque algorithme. Cette solution va simplement mettre le sommet initial à la première horaire de la journée puis placer les autres sommets en respectant les contraintes et en les mettant le plus tôt possible. Le sommet initial est le sommet de degré entrant nul d'indice le plus faible. Ces sommets sont les cours de la matrice d'adjacence vu dans le premier point de ce rapport.
+		Dans un premier temps, nous allons créer une planification initiale qui sera utilisée comme point de départ par chaque algorithme. Cette solution va simplement mettre le sommet initial à la première horaire de la journée puis placer les autres sommets en respectant les contraintes et en les mettant le plus tôt possible. Le sommet initial est le sommet de degré entrant nul d'indice le plus faible. Ces sommets sont les cours, représenté dans la matrice d'adjacence vu dans le premier point de ce rapport.\\
+		En pseudocode on a :\\
+		\begin{lstlisting}
+Mettre le sommet de degré entrant nul d'indice minimale à l'horaire minimale
+Pour chaque sommet sauf le premier sommet :
+  Mettre l'horaire le plus tôt respectant les contraintes.
+		\end{lstlisting}
 
 	\subsection{Les algorithmes}
 		\subsubsection{L'algorithme glouton}
-			A MIEUX EXPLIQUER LES 3 ALGOS
 			Cet algorithme est basé sur une heuristique simple : à partir d'une planification initiale, on fait varier les cours un par un sur toutes les horaires possibles respectant les contraintes.\\
 			Pour chaque modification on recalcule la congestion des bus. Si la congestion est améliorée, alors on défini cet horaire comme étant le nouvel horaire du cours.\\
 			On parcours cependant toutes les horaires possibles afin de choisir celui qui améliore le plus la congestion. Si aucun n'améliore la congestion, le cours est placé à son horaire initial.\\
-			Une fois le premier sommet fixé, le sommet suivant est traité et ainsi de suite.
+			Une fois le premier sommet fixé, le sommet suivant est traité et ainsi de suite.\\
+			En pseudocode on a :\\
+\begin{lstlisting}
+Pour chaque sommet :
+  Pour chaque horaire :
+  	Si la planification a cette horaire respecte les contraintes :
+    	Calculer la nouvelle congestion.
+    	Si la congestion est meilleur qu'avant le changement,
+      	on fixe ce sommet a ce nouvel horaire et on reitere. 
+    Sinon, on replace le sommet a son horaire initial 
+      et on passe au sommet suivant.
+		\end{lstlisting}
 
 		\subsubsection{L'algorithme tabou dur}
 			Cet algorithme est basé sur le même principe que pour l'algorithme glouton mais d'une façon différente.\\
 			Pour chaque cours, l'heure de début varie tout en respectant les contraintes et une nouvelle valeur pour la congestion est calculée. La meilleure modification pour chaque sommet est gardée en mémoire.\\
 			Après avoir effectué cette recherche sur tout les cours de la planification, le sommet ayant la meilleure amélioration de congestion est modifié.\\
-			Ce procédé est ensuite répété mais en interdisant l'optimisation d'un cours dont l'horaire a déjà été modifiée.
+			Ce procédé est ensuite répété mais en interdisant l'optimisation d'un cours dont l'horaire a déjà été modifiée.\\
+			En pseudocode on a :\\
+\begin{lstlisting}
+Pour chaque sommet :
+  Pour chaque horaire :
+  	Si la planification a cette horaire respecte les contraintes :
+    	Calculer la nouvelle congestion.
+    	Si la congestion est meilleur qu'avant le changement,
+      	on la conserve.
+  On selectionne la meilleure congestion. 
+  On modifie l'horaire du sommet associe a cette congestion a l'horaire donnant cette congestion
+		\end{lstlisting}
 
 		\subsubsection{L'algorithme tabou roulette}
 			Cet algorithme ressemble à l'algorithme tabou dur, à ceci près qu'il laisse une part de hasard dans le choix de la modification à apporter dans la planification.\\
 			En effet, cet algorithme traite toutes les horaires respectants les contraintes pour tous les cours. La congestion est ensuite calculée pour chaque horaire.\\
 			Ensuite, parmi toute les solutions de tous les sommets, une seule est choisie aléatoirement. Cependant, plus une solution améliore la congestion, plus elle aura de chance d'être sélectionnée. C'est le même fonctionemment qu'une roulette dont les sous parties ne sont pas de tailles égales.\\
-			L'opération est ensuite réitérée tout en interdisant l'optimisation d'un cours déjà modifié, comme pour l'algorithme précédent. 
+			L'opération est ensuite réitérée tout en interdisant l'optimisation d'un cours déjà modifié, comme pour l'algorithme précédent.\\
+			En pseudocode on a :\\
+\begin{lstlisting}
+Pour chaque sommet :
+  Pour chaque horaire :
+  	Si la planification a cette horaire respecte les contraintes :
+    	Calculer la nouvelle congestion.
+    	Si la congestion est meilleur qu'avant le changement,
+      	on la conserve.
+  Chaque valeur de congestion est associé à une valeur proportionelle au taux de modification par rapport a la planification initiale
+  On choisit un nombre au hasard. Le sommet associé à la congestion choisis change son horaire à l'horaire donnant cette congestion.
+  \end{lstlisting}
 	
 	\subsection{Données utilisées}
 		Voir l'exemple en annexe pour plus de clarté.
