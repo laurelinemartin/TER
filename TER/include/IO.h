@@ -24,6 +24,7 @@ void ecrireSolution(int* horaires, int* salles, int horaireMax, int nbBus, int c
 void ecrirePlanification(int* horaires, int* salle, int tailleTab);
 void ecrireCongestionBus(int* bus, int heureMax);
 void ecrireCongestionTotale(int congestionTotale, int nbbus);
+void ecrireInformationCongestion(string s);
 
 float lectureProbabilite();
 int lectureNombreCours();

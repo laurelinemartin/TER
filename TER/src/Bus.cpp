@@ -90,7 +90,6 @@ int calcul_congestion_totale(int *Horaires, int *Nb_eleves_cours, int heure_max,
     }
 
         //Prise en compte des élèves déjà à l'université  
-        /* 
         for(int i = 0; i < N; i++)
         {
             eleves_restant = Nb_eleves_cours[i];
@@ -115,7 +114,7 @@ int calcul_congestion_totale(int *Horaires, int *Nb_eleves_cours, int heure_max,
                     }       
                 }
             }
-        } */
+        }
   
     Nb_eleves_bus = nbElevesBus(Horaires, Nb_eleves_cours, heure_max, N);  
     for(int i = 0; i < heure_max; i++)

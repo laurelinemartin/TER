@@ -10,13 +10,13 @@ void initFichier(){
 	else{
 		cerr << "Erreur ouverture fichier !" << endl;
 	}
-	ofstram fichier2("congestion_bus.txt", ios::out);
+	ofstream fichier2("congestion_bus.txt", ios::out);
 	if(fichier2){
-		fichier2 << "Congetion des bus" << endl;
+		fichier2 << "Congestion des bus" << endl;
 		fichier2.close();
 	}
 	else{
-		cer << "Erreur ouverture fichier !" << endl;
+		cerr << "Erreur ouverture fichier !" << endl;
 	}
 }
 

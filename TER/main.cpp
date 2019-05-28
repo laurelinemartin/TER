@@ -154,7 +154,7 @@ int main(int argc, char** argv)
     ecrireInformation("\n\n * Planification initiale : \n");
     ecrireSolution(Horaires, couleur, TAILLE, HEUREMAX, congestion_totale);
    // int* Bus = congestionBus(HEUREMAX, TAILLE, Horaires,NBELEVES);
-    ecrireInformation("* Nombre d'élèves par bus pour la planification initiale");
+    ecrireInformationCongestion("* Nombre d'élèves par bus pour la planification initiale");
     ecrireCongestionBus(nbElevesBus(Horaires, couleur, HEUREMAX, TAILLE), HEUREMAX);
     // ecrireCongestionBus(Bus, HEUREMAX);
 
@@ -205,7 +205,7 @@ int main(int argc, char** argv)
         //// Ecriture fichier
         ecrireInformation("\n\n * Algo glouton :\n");
         ecrireSolution(Horaires_glouton, couleur, TAILLE, HEUREMAX, congestion_totale);
-        ecrireInformation("* Nombre d'élèves par bus pour l'algo glouton");
+        ecrireInformationCongestion("* Nombre d'élèves par bus pour l'algo glouton");
         ecrireCongestionBus(nbElevesBus(Horaires_glouton, couleur, HEUREMAX, TAILLE), HEUREMAX);
 
         //// Ecriture terminal
@@ -242,7 +242,7 @@ int main(int argc, char** argv)
         /// Sortie fichier
         ecrireInformation("\n\n * Algo tabou dur :\n");
         ecrireSolution(Horaires_tabou_dur, couleur, TAILLE, HEUREMAX, congestion_totale);
-        ecrireInformation("* Nombre d'élèves par bus pour l'algo tabou dur");
+        ecrireInformationCongestion("* Nombre d'élèves par bus pour l'algo tabou dur");
         ecrireCongestionBus(nbElevesBus(Horaires_tabou_dur, couleur, HEUREMAX, TAILLE), HEUREMAX);
 
         /// Sortie terminal
@@ -279,7 +279,7 @@ int main(int argc, char** argv)
         //// Ecriture fichier
         ecrireInformation("\n\n * Algo tabou roulette :\n");
         ecrireSolution(Horaires_tabou_roulette, couleur, TAILLE, HEUREMAX, congestion_totale);
-        ecrireInformation("* Nombre d'élèves par bus pour l'algo tabou roulette");
+        ecrireInformationCongestion("* Nombre d'élèves par bus pour l'algo tabou roulette");
         ecrireCongestionBus(nbElevesBus(Horaires_tabou_roulette, couleur, HEUREMAX, TAILLE), HEUREMAX);
 
         //// Ecriture terminal
