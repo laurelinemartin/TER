@@ -177,8 +177,7 @@ int main(int argc, char** argv)
     printf("\n");
     printf("\n Calcul congestion \n");
     printf("----------------------------------------\n");
-    printf("Nombre d'arrêts de bus congestioné pour la planification initiale : %d\n",congestion_totale);
-    printf("Nombre de bus totalement congestioné : %d\n",congestion_totale/8);
+    printf("Nombre de bus congestioné : %d\n",congestion_totale);
     printf("\n");
 
 
@@ -224,8 +223,7 @@ int main(int argc, char** argv)
         }
         printf("\n Calcul congestion gloutone \n");
         printf("----------------------------------------\n");
-        printf("Nombre d'arrêts de bus congestioné pour la planification gloutone : %d\n", congestion_totale);
-        printf("Nombre de bus totalement congestioné : %d\n",congestion_totale/8);
+        printf("Nombre de bus congestioné : %d\n",congestion_totale);
         printf("\n");
         //printf("Solution gloutone valide ? : %d\n",a); //true = 1 false = 0
         free(Horaires_glouton);
@@ -261,8 +259,7 @@ int main(int argc, char** argv)
         }
         printf("\n Calcul congestion tabou dur \n");
         printf("----------------------------------------\n");
-        printf("Nombre d'arrêts de bus congestioné pour la planification tabou dur : %d\n",congestion_totale);
-        printf("Nombre de bus totalement congestioné : %d\n",congestion_totale/8);
+        printf("Nombre de bus congestioné : %d\n",congestion_totale);
         printf("\n");
         //printf("Solution tabou dur valide ? : %d\n",a);
         free(Horaires_tabou_dur);
@@ -299,8 +296,7 @@ int main(int argc, char** argv)
         printf("\n");
         printf("\n Calcul congestion tabou roulette\n");
         printf("----------------------------------------\n");
-        printf("Nombre d'arrêts de bus congestioné pour la planification tabou roulette : %d\n", congestion_totale);
-        printf("Nombre de bus totalement congestioné : %d\n",congestion_totale/8);
+        printf("Nombre de bus congestioné : %d\n",congestion_totale);
         printf("\n");
         //printf("Solution tabou roulette valide ? : %d\n", a);
 
