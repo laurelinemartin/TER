@@ -94,7 +94,7 @@
 		On prend également en compte le fait que chaque bus comporte une part de non-étudiants, qui ne sera donc pas variable dans notre application. En effet, une modification de la planification ne changera pas leur nombre.\\
 		A partir de ces informations, nous pouvons savoir si un bus atteint son seuil de congestion.
 		
-	\subsection{Objectif}
+	\subsection{Objectif à atteindre}
 		La métrique décrite dans le point précédent va nous permettre de donner un score a chaque planification que nous allons réaliser.\\
 		En effet, l'objectif étant de réduire la congestion des bus, nous aurons tendance à préférer une planification pour laquelle le score de congestion est faible.\\
 		C'est donc dans la modification de la planification que les contraintes vu plus haut interviennent.\\
@@ -203,8 +203,9 @@ Pour chaque sommet :
 		\end{itemize}
 
 \section{Présentation et analyse des résultats}
-	Nous allons tester nos algorithmes en choisissant différentes valeurs de degré moyen. Nous fixons le nombre de cours à 40. Par exemple pour un degré moyen de 3 on calcule la probabilité de lien entre deux cours à utiliser : 40/3 = 0.075. Le nombre de salles est fixé à 30. On itère les algorithmes tabou sur 10 itérations. Les valeurs affichées sont le nombre de bus totalement congestionés.\\
-	
+	Nous allons tester nos algorithmes en choisissant différentes valeurs de degré moyen. Nous fixons le nombre de cours à 40. Par exemple pour un degré moyen de 3 on calcule la probabilité de lien entre deux cours à utiliser : 40/3 = 0.075. Le nombre de salles est fixé à 30. On itère les algorithmes tabou sur 10 itérations. Les valeurs affichées sont le nombre de bus congestionés, c'est à dire dont le seuil de confort est dépassé à un moment du trajet.\\
+	Nous testerons chaque degré 15 fois ainsi nous pourrons calculer la moyenne de congestion totale de chaque méthode. On effectue un grand nombre de test car les liens entre cours sont différents à chaque itération du programme car ils sont générés aléatoirement.
+
 	Ce tableau représente le nombre de bus congestionés par méthode. Le degré moyen du graphe est 1 (0.025 probabilité de lien entre deux cours).\\ 
 	\begin{tabular}{|c|c|c|c|c|}
   		\hline
@@ -240,9 +241,13 @@ Pour chaque sommet :
   		\hline
   		15 & 10 & 10 & 10 & 10\\
   		\hline
-  		Moyenne & x & x & x & x\\
+  		Moyenne & 10.5 & 9.7 & 9.9 & 9.9 \\
+  		\hline
+  		Amélioration & X & 7.6\% & 5.7\% & 5.7\%\\
   		\hline
 	\end{tabular}
+	VALEUR PAREIL PAR ITERATION
+	Avec un degré moyen de 1 on observe que tous les résultats sont tres similaires. On a 10.5 bus congestioné pour la solution initale contre 9.9 et 9.7 pour les autres solutions. Cela améliore tres peu le nombre de bus congestioné, a peine 7\% au mieux. Ainsi on peut en conclure que pour un graphe dont le degré moyen est 1, il y a trop peu de liens entre les cours pour laisser la place à une amélioration. On remarque qu'avec un degré de 1 les horaires de la planification sont tous très tôt. Avec cette planification tous les bus du matin sont congestionés. Ainsi quand les autres algorithmes partent de cette solution, ils ne trouvent pas forcément beaucoup d'améliorations à faire pour améliorer la congestion puisqu'ils prennent les sommets 1 à 1. Ainsi on observe que notre méthode est limité si le degré est tres faible. En effet puisque l'on améliore les sommets 1 à 1, on ne pourra pas beaucoup s'éloigner de la planification initiale dans ce cas.
 
 	Ce tableau représente le nombre de bus congestionés par méthode. Le degré moyen du graphe est 5 (0.125 probabilité de lien entre deux cours).\\ 
 	\begin{tabular}{|c|c|c|c|c|}
@@ -279,9 +284,13 @@ Pour chaque sommet :
   		\hline
   		15 & 10 & 7 & 7 & 8\\
   		\hline
-  		Moyenne & X & X & X & X\\
+  		Moyenne & 11.8 & 8 & 8.5 & 7.9\\
+  		\hline
+  		Amélioration & X & 32.2\% & 28.0\% & 33.1\%\\
   		\hline
 	\end{tabular}
+	On observe que c'est l'algorithme glouton et l'algorithme tabou roulette qui améliore le plus la congestion avec environ 32\% d'amélioration. Dans ce cas on choisira donc d'utiliser l'algorithme tabou roulette. Il fait 10 itération, c'est à dire qu'il parcours l'ensemble des sommets 10 fois. Alors que l'algo glouton fais 40 itérations, il parcours l'ensemble des sommet autant de fois qu'il y a de sommets dans le graphe. L'algorithme roulette etant 4 fois moins couteux, il sera priviligié dans ce cas. fulgurance de rulette
+
 
 	Ce tableau représente le nombre de bus congestionés par méthode. Le degré moyen du graphe est 7 (0.175 probabilité de lien entre deux cours).\\ 
 	\begin{tabular}{|c|c|c|c|c|}
@@ -318,9 +327,12 @@ Pour chaque sommet :
   		\hline
   		15 & 9 & 8 & 7 & 8\\
   		\hline
-  		Moyenne & X & X & X & X\\
+  		Moyenne & 10.7 & 7.7 & 7.8 & 8.1\\
+  		\hline
+  		Amélioration & X & 28.0\% & 27.1\% & 24.3\%\\
   		\hline
 	\end{tabular}
+	Avec un degré moyen de 7, on observe que l'on modifie moins la congestion que pour un degré de 5. On passe par exemple de 32\% à 28\% pour l'algorithme glouton.
 
 	Ce tableau représente le nombre de bus congestionés par méthode. Le degré moyen du graphe est 10 (0.25 probabilité de lien entre deux cours).\\ 
 	\begin{tabular}{|c|c|c|c|c|}
@@ -357,7 +369,9 @@ Pour chaque sommet :
   		\hline
   		15 & 9 & 8 & 9 & 7\\
   		\hline
-  		Moyenne & X & X & X & X\\
+  		Moyenne 11.3 & 7.7 & 7.8 & 7.4\\
+  		\hline
+  		Amélioration & X & 31.9\% & 31.0\% & 34.5\%\\
   		\hline
 	\end{tabular}
 

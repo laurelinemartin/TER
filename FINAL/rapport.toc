@@ -1,11 +1,11 @@
-\babel@toc {french}{}
+\select@language {french}
 \contentsline {section}{\numberline {1}Introduction}{}
 \contentsline {section}{\numberline {2}Les donn\IeC {\'e}es initiales}{}
 \contentsline {section}{\numberline {3}Objectif}{}
 \contentsline {subsection}{\numberline {3.1}Contraintes}{}
 \contentsline {subsubsection}{\numberline {3.1.1}Entre deux cours}{}
 \contentsline {subsection}{\numberline {3.2}M\IeC {\'e}triques sur les contraintes}{}
-\contentsline {subsection}{\numberline {3.3}Objectif}{}
+\contentsline {subsection}{\numberline {3.3}Objectif \IeC {\`a} atteindre}{}
 \contentsline {section}{\numberline {4}Strat\IeC {\'e}gies de r\IeC {\'e}solution}{}
 \contentsline {subsection}{\numberline {4.1}Planification initiale}{}
 \contentsline {subsection}{\numberline {4.2}Les algorithmes}{}
