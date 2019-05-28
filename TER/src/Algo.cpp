@@ -42,6 +42,7 @@ vector<int> convertHeure8(int num){
 
 int *Algo_glouton(int *Horaires, int N, int sommet_depart, int *couleur, int *Type, int **TO, int heure_max, int* Nb_eleves)
 {
+	printf("Debut algo glouton\n");
 	int *Horaires_glouton = (int*)malloc(N*sizeof(int*));
 	for (int i = 0; i < N; i++)
 	{
@@ -83,11 +84,13 @@ int *Algo_glouton(int *Horaires, int N, int sommet_depart, int *couleur, int *Ty
 		//printf("L'horaires choisis pour %d est : %d\n",sommet_modifie,Horaires_glouton[sommet_modifie]);
 		//fixer a la meilleure solution valide la aussi
 	}
+	printf("Fin algo glouton\n");
 	return Horaires_glouton;	
 }
 
 int *Algo_tabou_dur(int *Horaires, int N, int sommet_depart, int *couleur, int *Type, int **TO, int Nb_iterations, int heure_max, int* Nb_eleves)
 {
+	printf("Debut algo tabou dur\n");
 	int *Horaires_tabou_dur = (int*)malloc(N*sizeof(int*));
 	for (int i = 0; i < N; i++)
 	{
@@ -144,11 +147,13 @@ int *Algo_tabou_dur(int *Horaires, int N, int sommet_depart, int *couleur, int *
 		Sommets_interdits[k] = meilleur_sommet;
 	}
 	free(Sommets_interdits);
+	printf("Fin algo tabou dur\n");
 	return Horaires_tabou_dur;
 }
 
 int *Algo_tabou_roulette(int *Horaires, int N, int sommet_depart, int *couleur, int *Type, int **TO, int Nb_iterations, int heure_max, int* Nb_eleves)
 {
+	printf("Debutalgo tabou roulette\n");
 	//Declaration d'un nouveau tableau pour ne pas ecraser le tableau contenant la planification initiale
 	int *Horaires_tabou_roulette = (int*)malloc(N*sizeof(int*));
 	for (int i = 0; i < N; i++){
@@ -196,7 +201,6 @@ int *Algo_tabou_roulette(int *Horaires, int N, int sommet_depart, int *couleur, 
 			Meilleure_solution[o] = 0;
 		}
 		congestion_initiale = calcul_congestion_totale(Horaires_tabou_roulette,Nb_eleves,heure_max,N,TO);
-		printf("Congestion initiale à l'itération %d : %d\n",k,congestion_initiale);
 
 		//La boucle i parcoure l'ensemble des sommets
 		for(int i = 0; i < N; i++){
@@ -240,24 +244,22 @@ int *Algo_tabou_roulette(int *Horaires, int N, int sommet_depart, int *couleur, 
 			else { Valeurs_roulette[p] += Valeurs_roulette[p-1]; }
 		}
 
-		printf("Valeurs roulette\n");
+		/*printf("Valeurs roulette\n");
 		for (int n = 0; n < N; n++) {
 			printf("%d ",Valeurs_roulette[n]);
 		}
-		printf("\n");
+		printf("\n");*/
 		
 		if (Valeurs_roulette[N-1] > 0) {
 			choix_roulette = rand()%Valeurs_roulette[N-1];
 		}
 		else { choix_roulette = 0; }
-		
-		printf("Choix roulette : %d\n",choix_roulette);
 
 		//On prend au hasard une valeur et on regarde ou elle tombe dans le tableau, ainsi plus on modifie la congestion, plus on a de chance d'être choisi.
 		if ((choix_roulette > 0) && (choix_roulette <= Valeurs_roulette[0])){
 			Horaires_tabou_roulette[0] = Meilleure_solution[0];
 			Sommets_interdits[k] = 0;
-			printf("Le sommet modifié au final dans l'lgo roulette est %d à l'horaire : %d\n", 0, Horaires_tabou_roulette[0]);
+			printf("Le sommet modifié au final dans l'algo roulette est %d à l'horaire : %d\n", 0, Horaires_tabou_roulette[0]);
 		}
 		else{
 			for (int m = 1; m < N; m++){
@@ -276,6 +278,6 @@ int *Algo_tabou_roulette(int *Horaires, int N, int sommet_depart, int *couleur, 
 	free(Meilleure_solution);
 	free(Meilleure_congestion);
 	free(Valeurs_roulette);
-	printf("fin algo roulette\n");
+	printf("Fin algo tabou roulette\n");
 	return Horaires_tabou_roulette;
 }
