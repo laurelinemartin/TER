@@ -16,7 +16,7 @@
 \contentsline {subsubsection}{\numberline {4.3.1}Le nombre de personnes par bus}{}
 \contentsline {subsection}{\numberline {4.4}L'emploi du temps}{}
 \contentsline {subsection}{\numberline {4.5}Les variables}{}
-\contentsline {section}{\numberline {5}Pr\IeC {\'e}sentation des r\IeC {\'e}sultats}{}
+\contentsline {section}{\numberline {5}Pr\IeC {\'e}sentation et analyse des r\IeC {\'e}sultats}{}
 \contentsline {section}{\numberline {6}Conclusion}{}
 \contentsline {subsection}{\numberline {6.1}Pistes de reflexion abandonn\IeC {\'e}es}{}
 \contentsline {subsection}{\numberline {6.2}Conclusion sur les objectifs initiaux}{}

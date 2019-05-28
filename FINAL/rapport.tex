@@ -1,4 +1,3 @@
-
 \documentclass[a4paper,11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -13,8 +12,6 @@
 \usepackage{array}
 \usepackage{longtable}
 \usepackage{pdfpages}
-
-
 
 \title{TER 2019 - Rapport}
 \author{Maxime Gonthier - Benjamin Guillot - Laureline Martin}
@@ -170,7 +167,165 @@
 			\item \textit{heure maximum} : l'heure limite à laquelle on peut placer un cours. Dans notre cas d'étude, nous représentons le temps par tranche de 15 minutes. Il va de 7h30 à 16h, on à donc 34 quart d'heure.
 		\end{itemize}
 
-\section{Présentation des résultats}
+\section{Présentation et analyse des résultats}
+	Nous allons tester nos algorithmes en choisissant différentes valeurs de degré moyen. Nous fixons le nombre de cours à 40. Par exemple pour un degré moyen de 3 on calcule la probabilité de lien entre deux cours à utiliser : 40/3 = 0.075. Le nombre de salles est fixé à 30. On itère les algorithmes tabou sur 10 itérations. Les valeurs affichées sont le nombre de bus totalement congestionés.\\
+	
+	Ce tableau représente le nombre de bus congestionés par méthode. Le degré moyen du graphe est 1 (0.025 probabilité de lien entre deux cours).\\ 
+	\begin{tabular}{|c|c|c|c|c|}
+  		\hline
+  		Tirage numéro & Initiale & Algo glouton & Algo tabou dur & Algo tabou roulette\\
+  		\hline
+  		1 & 9 & 9 & 9 & 9\\
+  		\hline
+  		2 & 10 & 10 & 10 & 10\\
+  		\hline
+  		3 & 11 & 8 & 8 & 8\\
+  		\hline
+  		4 & 10 & 10 & 10 & 10\\
+  		\hline
+  		5 & 10 & 10 & 10 & 10\\
+  		\hline
+  		6 & 10 & 8 & 9 & 8\\
+  		\hline
+  		7 & X & X & X & X\\
+  		\hline
+  		8 & X & X & X & X\\
+  		\hline
+  		9 & X & X & X & X\\
+  		\hline
+  		10 & X & X & X & X\\
+  		\hline
+  		11 & X & X & X & X\\
+  		\hline
+  		12 & X & X & X & X\\
+  		\hline
+  		13 & X & X & X & X\\
+  		\hline
+  		14 & X & X & X & X\\
+  		\hline
+  		15 & X & X & X & X\\
+  		\hline
+  		Moyenne & X & X & X & X\\
+  		\hline
+	\end{tabular}
+
+	Ce tableau représente le nombre de bus congestionés par méthode. Le degré moyen du graphe est 5 (0.125 probabilité de lien entre deux cours).\\ 
+	\begin{tabular}{|c|c|c|c|c|}
+  		\hline
+  		Tirage numéro & Initiale & Algo glouton & Algo tabou dur & Algo tabou roulette\\
+  		\hline
+  		1 & 13 & 6 & 11 & 7\\
+  		\hline
+  		2 & 11 & 9 & 7 & 8\\
+  		\hline
+  		3 & 12 & 7 & 7 & 7\\
+  		\hline
+  		4 & 10 & 9 & 8 & 8\\
+  		\hline
+  		5 & 14 & 9 & 10 & 8\\
+  		\hline
+  		6 & 12 & 7 & 7 & 8\\
+  		\hline
+  		7 & 13 & 8 & 9 & 6\\
+  		\hline
+  		8 & 12 & 10 & 12 & 10\\
+  		\hline
+  		9 & 11 & 8 & 9 & 8\\
+  		\hline
+  		10 & X & X & X & X\\
+  		\hline
+  		11 & X & X & X & X\\
+  		\hline
+  		12 & X & X & X & X\\
+  		\hline
+  		13 & X & X & X & X\\
+  		\hline
+  		14 & X & X & X & X\\
+  		\hline
+  		15 & X & X & X & X\\
+  		\hline
+  		Moyenne & X & X & X & X\\
+  		\hline
+	\end{tabular}
+
+	Ce tableau représente le nombre de bus congestionés par méthode. Le degré moyen du graphe est 7 (0.175 probabilité de lien entre deux cours).\\ 
+	\begin{tabular}{|c|c|c|c|c|}
+  		\hline
+  		Tirage numéro & Initiale & Algo glouton & Algo tabou dur & Algo tabou roulette\\
+  		\hline
+  		1 & 8 & 6 & 6 & 5\\
+  		\hline
+  		2 & 10 & 9 & 9 & 9\\
+  		\hline
+  		3 & 11 & 7 & 8 & 9\\
+  		\hline
+  		4 & 10 & 10 & 7 & 9\\
+  		\hline
+  		5 & 13 & 8 & 8 & 11\\
+  		\hline
+  		6 & X & X & X & X\\
+  		\hline
+  		7 & X & X & X & X\\
+  		\hline
+  		8 & X & X & X & X\\
+  		\hline
+  		9 & X & X & X & X\\
+  		\hline
+  		10 & X & X & X & X\\
+  		\hline
+  		11 & X & X & X & X\\
+  		\hline
+  		12 & X & X & X & X\\
+  		\hline
+  		13 & X & X & X & X\\
+  		\hline
+  		14 & X & X & X & X\\
+  		\hline
+  		15 & X & X & X & X\\
+  		\hline
+  		Moyenne & X & X & X & X\\
+  		\hline
+	\end{tabular}
+
+	Ce tableau représente le nombre de bus congestionés par méthode. Le degré moyen du graphe est 10 (0.25 probabilité de lien entre deux cours).\\ 
+	\begin{tabular}{|c|c|c|c|c|}
+  		\hline
+  		Tirage numéro & Initiale & Algo glouton & Algo tabou dur & Algo tabou roulette\\
+  		\hline
+  		1 & 12 & 8 & 7 & 7\\
+  		\hline
+  		2 & 13& 8& 8&8\\
+  		\hline
+  		3 & 11 & 7 & 6 & 8\\
+  		\hline
+  		4 & 13 & 8 & 10 & 9\\
+  		\hline
+  		5 & 12 & 8 & 9 & 7\\
+  		\hline
+  		6 & 10 & 8 & 6 & 6\\
+  		\hline
+  		7 & X & X & X & X\\
+  		\hline
+  		8 & X & X & X & X\\
+  		\hline
+  		9 & X & X & X & X\\
+  		\hline
+  		10 & X & X & X & X\\
+  		\hline
+  		11 & X & X & X & X\\
+  		\hline
+  		12 & X & X & X & X\\
+  		\hline
+  		13 & X & X & X & X\\
+  		\hline
+  		14 & X & X & X & X\\
+  		\hline
+  		15 & X & X & X & X\\
+  		\hline
+  		Moyenne & X & X & X & X\\
+  		\hline
+	\end{tabular}
+
 	Comparer les algos, comparer en fct des données en entrées
 	Moyenne de l'algo tabou roulette sur la meme horaire.
 	
