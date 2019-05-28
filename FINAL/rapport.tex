@@ -390,8 +390,8 @@ Pour chaque sommet :
 
 	\subsection{Ouverture}
 		Nous avons quelques pistes de réflexions qui pourraient améliorer l'efficacité de notre application.\\
-		Il serait possible par exemple de donner aux algorithmes la possibilité d'inverser les arcs de la matrice d'adjacence des cours. Ainsi on ne serait pas limité à l'ordre établi lors de la planification initiale (a ré-expliquer mieux).\\
-		Il serait également possible d'essayer d'utiliser d'autres heuristiques que celles que nous avons choisi. comme un recuit simulé par exemple (à expliquer), ou alors changer la variable de décision (à expliquer) de l'algorithme glouton.
+		Il serait possible par exemple de donner aux algorithmes la possibilité d'inverser les arcs de la matrice d'adjacence des cours. Ainsi on ne serait pas limité à l'ordre établi lors de la planification initiale. En effet inverser les arcs pourrait permettre d'inverser les dépendances entre les cours. Par exemple un cours ayant des liens avec 5 autres cours qui eux n'on pas de contraintes entre eux oblige a modifier ce cours pour pouvoir modifier les suivants. En inversant les arcs on pourrais d'abord modifier les 5 autres cours. \\
+		Il serait également possible d'essayer d'utiliser d'autres heuristiques que celles que nous avons choisi. comme un recuit simulé par exemple, on pourrait alors en s'autorisant a prendre des solutions ou la congestion est mauvaise sortir d'un optimum local pour essayer de trouver l'optimum global avec une bonne probabilité.On pourrait aussi changer la variable de décision de l'algorithme glouton et choisir d'organiser la planification de façon à ce que les cours finissent le plus tôt possible par exemple.
 
 
 \newpage
