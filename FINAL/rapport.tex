@@ -26,20 +26,18 @@
 \newpage
 \section{Introduction}
 	Le projet décrit dans ce rapport est la réalisation d'Algorithmes d'optimisation pour un bureau des temps.\\
-	La mission d'un tel bureau est de permettre une décongestion des moyens et infrastructure de mobilité afin d'améliorer la qualité de vie des utilisateurs et de diminuer l'impact environnemental de ces structures. Il s'agira donc d'influer sur les causes de la congestion de mobilités en repensant les horaires d'activitées.\\
-	Dans notre projet, les horaires d'activitées sont celles de l'Université Versailles-Saint-Quentin, et plus précisément de l'UFR des Sciences, basé à Versailles. L'objectif sera ici de minimiser le nombre d'étudiants par bus pour ainsi éviter de fortes congestion. Pour cela, on influera sur les horaires de début de cours pour un emploi du temps journalier. Ainsi en repensant ces horaires, on pourra minimiser la congestion sur la ligne de bus R, allant de la gare transilien Versailles-Chantier à l'UFR.\\
+	La mission d'un tel bureau est de permettre une décongestion des moyens et infrastructure de mobilité afin d'améliorer la qualité de vie des utilisateurs et de diminuer l'impact environnemental de ces structures. Il s'agira donc d'influer sur les causes de la congestion de mobilités en repensant les horaires d'activités.\\
+	Dans notre projet, les horaires d'activités sont celles de l'Université Versailles-Saint-Quentin, et plus précisément de l'UFR des Sciences, basé à Versailles. L'objectif sera ici de minimiser le nombre d'étudiants par bus pour ainsi éviter de fortes congestion. Pour cela, on influera sur les horaires de début de cours pour un emploi du temps journalier. Ainsi en repensant ces horaires, on pourra minimiser la congestion sur la ligne de bus R, allant de la gare transilien Versailles-Chantier à l'UFR.\\
 	\\
 	Ce rapport a pour objectif de décrire dans un premier temps les données que nous allons utiliser dans notre projet. Ensuite, nous définirons les objectifs à atteindre et les stratégies de résolutions envisagées afin d'atteindre ces objectifs. Nous comparerons ensuite pour ces différentes stratégies les résultats obtenus afin d'identifier la meilleure stratégie.\\
 	Afin de faciliter la compréhension de ce rapport, nous allons expliciter chaque étape de notre algorithme sous la forme d'un exemple simple situé en annexes.
-	
 	
 \section{Les données initiales}
 	Cette section fait l'état des données utilisées pour le bon fonctionnement de l'application.\\
 	Nous avons pour but de créer une planification pour un emploi du temps, c'est-à-dire un déroulement sur une journée des cours dans une université, ici l'UFR de Versailles.\\
 	\\
-	L'idée étant de modifier un emploi du temps afin de minimiser la congestion dans les bus dûe aux arrivées d'étudiants au début de leurs cours. Il nous faut donc un emploi du temps de base sur lequel travailler.\\
+	L'idée étant de modifier un emploi du temps afin de minimiser la congestion dans les bus dûe aux arrivées d'étudiants au début de leurs cours. Il nous faut donc un emploi du temps de base sur lequel travailler. Pour créer cet emploi du temps nous aurons besoins de ces données : \\
 
-	Nos données initiales sont :
 	\begin{itemize}
 		\item Probabilité de lien entre deux cours (un lien est au moins un étudiant en commun entre deux cours)
 		\item Le nombre cours
@@ -50,7 +48,6 @@
 	\end{itemize}
 
 	La probabilité de lien entre deux cours est définis entre 0 et 1. Les cours sont considérés comme les sommets d'un graphe. Si nous voulons un degré moyen K dans notre graphe, alors on doit mettre une probabilité de lien de K/N avec N le nombre cours.
-
 	Une fois les liens générés, on représente le graphe sous la forme d'une matrice d'adjacence. \\
 	Cette représentation nous permet de facilement identifier quels cours ont des étudiants en communs.\\
 	\\
@@ -69,11 +66,11 @@
 	Chaque cours est également défini par son type :
 	\begin{itemize}
 		\item un CM
-		\item  un TD
+		\item un TD
 	\end{itemize}
 	Ces informations seront utilisées pour connaitre le nombre d'élèves arrivés à chaque cours. En effet, chaque type de cours a un nombre différent d'élèves.\\
-	L'heure de début de journée corespond à l'horaire minimale de début d'un cours.
-	Le lapse de temps entre deux cours correspond au temps laissé entre deux cours, dans notre cas on fixe cette valeur à 15 minutes.
+	L'heure de début de journée corespond à l'horaire minimale de début d'un cours.\\
+	Le lapse de temps entre deux cours correspond au temps laissé entre deux cours, dans notre cas on fixe cette valeur à 15 minutes.\\
 	Avec les données initiales décrite ci dessus nous pourrons créer un emploi du temps initial.
 	
 \section{Objectif}
@@ -81,8 +78,8 @@
 	\subsection{Contraintes}
 		\subsubsection{Entre deux cours}
 			\begin{enumerate}
-				\item Deux cours utilisent la même salle ne doivent pas avoir des horaires qui se chevauchent.
-				\item Deux cours qui ont des horaires qui se chevauchent ne doivent pas avoir d'élèves en commun.
+				\item Deux cours qui utilisent la même salle ne doivent pas avoir des horaires qui se chevauchent.
+				\item Deux cours qui ont des élèves en communs ne doivent pas avoir des horaires qui se chevauchent.
 				\item Le temps laissé entre deux cours doit être de 15 minutes minimum.
 			\end{enumerate}
 	
@@ -91,8 +88,9 @@
 		Le nombre d'étudiants dans un bus ne doit pas dépasser la capacité $capacité_{max}$ du bus. Cette capacité maximale est fixée à 60 dans notre cas d'étude. Ainsi s'il y a plus de 60 élèves pour un bus, le surplus d'élèves empruntera le bus précédent l'horaire du bus surchargé.\\
 		Pour calculer le nombre d'élèves par bus, on utilise l'emploi du temps des données initiales. Nous pouvons ainsi récupérer pour chaque tranche horaire le nombre d'étudiants censé arriver pour suivre leur cours.\\
 		Nous posons l'hypothèse que les élèves arrivent dans le bus précédant leur cours, de ce fait on peut savoir précisément le nombre d'élèves qu'il y aura dans un bus avant un cours.\\
+		Pour calculer le nombre d'élèves par bus, nous prenons aussi en compte la situation où un élève à plusieurs cours dans la même journée. Ainsi il a emprunté uniquement le bus l'ammenant à  son cours le plus tôt.\\
 		On prend également en compte le fait que chaque bus comporte une part de non-étudiants, qui ne sera donc pas variable dans notre application. En effet, une modification de la planification ne changera pas leur nombre.\\
-		A partir de ces informations, nous pouvons savoir si un bus atteint son seuil de congestion.
+		A partir de ces informations, nous pouvons savoir si un bus atteint son seuil de confort. Si oui nous comptabilisons ce bus dans notre calcul de congestion totale. La métrique c'est la congestion totale, c'est à dire le nombre de bus dont le seuil de confort à été dépassé au moins une fois sur le trajet.
 		
 	\subsection{Objectif à atteindre}
 		La métrique décrite dans le point précédent va nous permettre de donner un score a chaque planification que nous allons réaliser.\\
@@ -130,9 +128,10 @@ Pour chaque sommet :
 
 		\subsubsection{L'algorithme tabou dur}
 			Cet algorithme est basé sur le même principe que pour l'algorithme glouton mais d'une façon différente.\\
-			Pour chaque cours, l'heure de début varie tout en respectant les contraintes et une nouvelle valeur pour la congestion est calculée. La meilleure modification pour chaque sommet est gardée en mémoire.\\
-			Après avoir effectué cette recherche sur tout les cours de la planification, le sommet ayant la meilleure amélioration de congestion est modifié.\\
+			Pour chaque cours, l'heure de début varie tout en respectant les contraintes et une nouvelle valeur pour la congestion est calculée. La meilleure modification, c'est à dire l'horaire qui baisse le plus la congestion, pour chaque sommet est gardée en mémoire.\\
+			Après avoir effectué cette recherche sur tous les cours de la planification, le sommet ayant la meilleure amélioration de congestion est modifié.\\
 			Ce procédé est ensuite répété mais en interdisant l'optimisation d'un cours dont l'horaire a déjà été modifiée.\\
+			Ainsi on explore un voisinage restraint de la solution initiale. Restraint car on ne prend pas en compte les solutions non valides. Le voisinage est exploré en choisissant toujours la meilleure solution.\\
 			En pseudo code on a :\\
 \begin{lstlisting}
 Pour chaque sommet :
@@ -151,6 +150,7 @@ Pour chaque sommet :
 			En effet, cet algorithme traite toutes les horaires respectants les contraintes pour tous les cours. La congestion est ensuite calculée pour chaque horaire.\\
 			Ensuite, parmi toute les solutions de tous les sommets, une seule est choisie aléatoirement. Cependant, plus une solution améliore la congestion, plus elle aura de chance d'être sélectionnée. C'est le même fonctionemment qu'une roulette dont les sous parties ne sont pas de tailles égales.\\
 			L'opération est ensuite réitérée tout en interdisant l'optimisation d'un cours déjà modifié, comme pour l'algorithme précédent.\\
+			Ici on explore le voisinage d'une manière un peu différente que l'algorihtme tabou dur, ce qui peut permettre de tomber sur de meilleures solutions si on a un peu de chance.\\
 			En pseudocode on a :\\
 \begin{lstlisting}
 Pour chaque sommet :
@@ -200,9 +200,9 @@ Pour chaque sommet :
 		Les noms des variables sont simplifiés par rapport à leur nom réel dans l'application afin de les rendre plus explicite pour le lecteur.
 		\begin{itemize}
 			\item \textit{probabilité de lien} : la probabilité qu'il y ai un lien entre 2 cours. Un lien entre 2 cours signifie qu'ils ont au moins un étudiant en commun, ils ne peuvent donc pas avoir lieu en même temps.
-			\item \textit{nombre de cours} : le nombre de cours que nous allons représenter lors du déroulement de l'application. C'est le nombre de cours que nous allons devoir modifier pour la planification.
+			\item \textit{nombre de cours} : le nombre de cours que nous allons représenter lors du déroulement de l'application. 
 			\item  \textit{le nombre de salles} : le nombre de salles disponibles pour les cours.
-			\item \textit{heure maximum} : l'heure limite à laquelle on peut placer un cours. Dans notre cas d'étude, nous représentons le temps par tranche de 15 minutes. Il va de 7h30 à 18h, on à donc 42 quart d'heure.
+			\item \textit{heure maximum} : l'heure limite à laquelle on peut placer un cours. Dans notre cas d'étude, nous représentons le temps par tranche de 15 minutes. Il va de 8h à 18h, on a donc 42 quart d'heure.
 		\end{itemize}
 
 \section{Présentation et analyse des résultats}
@@ -249,8 +249,7 @@ Pour chaque sommet :
   		Amélioration & X & 7.6\% & 5.7\% & 5.7\%\\
   		\hline
 	\end{tabular}
-	VALEUR PAREIL PAR ITERATION\\
-	Avec un degré moyen de 1 on observe que tous les résultats sont très similaires. On a 10.5 bus congestionné pour la solution initiale contre 9.9 et 9.7 pour les autres solutions. Cela améliore tres peu le nombre de bus congestionné, a peine 7\% au mieux. Ainsi on peut en conclure que pour un graphe dont le degré moyen est 1, il y a trop peu de liens entre les cours pour laisser la place à une amélioration. On remarque qu'avec un degré de 1 les horaires de la planification sont tous très tôt. Avec cette planification tous les bus du matin sont congestionnés. Ainsi quand les autres algorithmes partent de cette solution, ils ne trouvent pas forcément beaucoup d'améliorations à faire pour améliorer la congestion puisqu'ils prennent les sommets 1 à 1. Cela se remarque d'autant plus si on regarde les résultats ligne par ligne. En effet souvent les 3 algorithmes prennent la même valeur de congestion que les celle de la planification initiale. Ainsi on observe que notre méthode est limité si le degré est très faible. En effet puisque l'on améliore les sommets 1 à 1, on ne pourra pas beaucoup s'éloigner de la planification initiale dans ce cas.
+	Avec un degré moyen de 1 on observe que tous les résultats sont très similaires. On a 10.5 bus congestionné pour la solution initiale contre 9.9 et 9.7 pour les autres solutions. Cela améliore tres peu le nombre de bus congestionné, a peine 7\% au mieux. Ainsi on peut en conclure que pour un graphe dont le degré moyen est 1, il y a trop peu de liens entre les cours pour laisser la place à une amélioration. On remarque qu'avec un degré de 1 les horaires de la planification sont tous très tôt. Avec cette planification tous les bus du matin sont congestionnés. Ainsi quand les autres algorithmes partent de cette solution, ils ne trouvent pas forcément beaucoup d'améliorations à faire pour améliorer la congestion puisqu'ils prennent les sommets 1 à 1. La cause est que en modifiant un cours à une autre horaire, la congestion reste la même car il y a enormément de bus le matin. Cela se remarque d'autant plus si on regarde les résultats ligne par ligne. En effet souvent les 3 algorithmes prennent la même valeur de congestion que les celle de la planification initiale. Ainsi on observe que notre méthode est limité si le degré est très faible. En effet puisque l'on améliore les sommets 1 à 1, on ne pourra pas beaucoup s'éloigner de la planification initiale dans ce cas. Dans ce cas il faudrait un algorithme qui etudie les sommets 3 par 3 ou 4 par 4. Cela nous permettrais de nous éloigner de la solution initiale plus facilement.
 	\newpage
 	Ce tableau représente le nombre de bus congestionnés par méthode. Le degré moyen du graphe est 5 (0.125 probabilité de lien entre deux cours).\\ 
 	\begin{tabular}{|c|c|c|c|c|}
@@ -376,23 +375,26 @@ Pour chaque sommet :
   		Amélioration & X & 31.9\% & 31.0\% & 34.5\%\\
   		\hline
 	\end{tabular}
-	Pour un degré moyen de 10, on constate que les différents algorithmes utilisés on pu améliorer la congestion d'au moins 30\% chacun. On constate également que l'algorithme le plus efficace est l'algorithme roulette. Comme c'est également l'algorithme le plus rapide on aura tendance a le préférer aux autres dans ce cas.
-	
+	Pour un degré moyen de 10, on constate que les différents algorithmes utilisés on pu améliorer la congestion d'au moins 30\% chacun. On constate également que 
+	l'algorithme le plus efficace est l'algorithme roulette. Comme c'est également l'algorithme le plus rapide on aura tendance a le préférer aux autres dans ce cas.
+	\subsection{Modifier le nombre d'itérations des algorithmes tabou}
+	\subsection{Conclusion sur les résultats}
 \section{Conclusion}
 	\subsection{Pistes de réflexion abandonnées}
 		Lors de nos recherches préliminaires, nous avions pensé représenter chaque éléments (cours, étudiants, professeurs, salles) par des classes. Ainsi, un langage de programmation orienté objet nous semblait tout indiqué. Mais nous savions également que nous allions avoir besoin de fonctions procédurales (les algorithmes par exemple). Donc, nous avons opté pour l'utilisation du langage C++ qui est un langage hybride\\
 		Au cours de nos recherches, nous nous sommes rendu compte que nous pouvions modéliser notre problème en utilisant simplement des matrices, nous avons donc abandonnée l'idée de représenter les éléments du projets par des objets.\\
-		Cependant, comme nous avions déjà commencé à programmer une partie du projet, nous avons décidé de garder le C++ comme langage de programmation, sont aspect hybride entre le procédural et l'orienté objet nous permettant de continuer a l'utiliser.
-	
+		Cependant, comme nous avions déjà commencé à programmer une partie du projet, nous avons décidé de garder le C++ comme langage de programmation, sont aspect hybride entre le procédural et l'orienté objet nous permettant de continuer a l'utiliser.\\
+		De plus nous souhaitions au début du projet donner à chaque professeur une plage horaire sur laquelle il serait disponible pour donner des cours. Cela aurait apporté plus de réalisme à notre projet. Cependant cela était difficile à implémenter n'apportait au final pas grand chose de plus quand à l'étude de la meilleure méthode possible pour améliorer la congestion.\\
+
 	\subsection{Conclusion sur les objectifs initiaux}
 		Le problème d'optimisation pour un bureau des temps n'a pas de solution simple. Nous avons eu recourt à différentes heuristique afin de pouvoir fournir des planifications viables.\\
-		Ce problème est donc assez coûteux en temps en fonction de l'heuristique choisie. De plus, nous ne pouvons pas affirmer à 100\% que les planifications fournies soient les meilleures. Cependant, nous pouvons essayer de s'en approcher.
+		Ce problème est donc assez coûteux en temps en fonction de l'heuristique choisie. De plus, nous ne pouvons pas affirmer à 100\% que les planifications fournies soient les meilleures. Cependant, nous pouvons essayer de s'en approcher.\\
+		Nous pouvons cependant conclure dans notre cas que l'algorithme tabou roulette est le plus efficace globalement, c'est à dire quel que soit le degré moyen du graphe.\\
 
 	\subsection{Ouverture}
 		Nous avons quelques pistes de réflexions qui pourraient améliorer l'efficacité de notre application.\\
 		Il serait possible par exemple de donner aux algorithmes la possibilité d'inverser les arcs de la matrice d'adjacence des cours. Ainsi on ne serait pas limité à l'ordre établi lors de la planification initiale. En effet inverser les arcs pourrait permettre d'inverser les dépendances entre les cours. Par exemple un cours ayant des liens avec 5 autres cours qui eux n'on pas de contraintes entre eux oblige a modifier ce cours pour pouvoir modifier les suivants. En inversant les arcs on pourrais d'abord modifier les 5 autres cours. \\
-		Il serait également possible d'essayer d'utiliser d'autres heuristiques que celles que nous avons choisi. comme un recuit simulé par exemple, on pourrait alors en s'autorisant a prendre des solutions ou la congestion est mauvaise sortir d'un optimum local pour essayer de trouver l'optimum global avec une bonne probabilité.On pourrait aussi changer la variable de décision de l'algorithme glouton et choisir d'organiser la planification de façon à ce que les cours finissent le plus tôt possible par exemple.
-
+		Il serait également possible d'essayer d'utiliser d'autres heuristiques que celles que nous avons choisi, comme un recuit simulé par exemple, on pourrait alors en s'autorisant a prendre des solutions ou la congestion est mauvaise sortir d'un optimum local pour essayer de trouver l'optimum global avec une bonne probabilité. On pourrait aussi changer la variable de décision de l'algorithme glouton et choisir d'organiser la planification de façon à ce que les cours avec le plus d'étudiants soit les plus éloignés les uns des autres. On trie les cours par nombre d'élèves décroissant, puis on place le premier à l'horaire le plus tôt, le deuxième cours à l'horaire le plus tard et ainsi de suite afin de les repartir sur la journée.
 
 \newpage
 \section{Annexes}
@@ -455,6 +457,13 @@ Pour chaque sommet :
  			Ce tableau sera générés pour chaque bus. On mesurera dans chaque cas le dépassement à chaque arrêt en mettant un 1 si il y a dépassements, un 0 sinon.
  			Sachant que la limite de confort est de 50 dans le bus que nous étudions, ce bus nous donne une valeur de congestion de 5.\\
  			A partir de la on applique l'algorithme glouton et les deux algorithmes tabou pour essayer d'améliorer notre fonction objectif.
+ 			Quand on execute le code sur un terminal on obtient cela : \\
+ 			\centerline{\includegraphics[scale=0.8]{Captures/terminal1.png}}\\
+ 			Chaque nombre correspond à l'horaire d'un cours, on marque "Jour suivant" pour les cours que l'algorithme n'a pas pu mettre sur la journée.
+ 			En dessous on calcule le nombre de bus congestioné. 
+ 			\centerline{\includegraphics[scale=0.8]{Captures/terminal2.png}}\\
+ 			Les résultats sont égalements dans les fichiers .
+
  			Décrivons ces algos.
 
 	\subsection{Explication de la programmation}
