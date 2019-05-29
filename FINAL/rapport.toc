@@ -3,7 +3,6 @@
 \contentsline {section}{\numberline {2}Les donn\IeC {\'e}es initiales}{}
 \contentsline {section}{\numberline {3}Objectif}{}
 \contentsline {subsection}{\numberline {3.1}Contraintes}{}
-\contentsline {subsubsection}{\numberline {3.1.1}Entre deux cours}{}
 \contentsline {subsection}{\numberline {3.2}M\IeC {\'e}triques sur les contraintes}{}
 \contentsline {subsection}{\numberline {3.3}Objectif \IeC {\`a} atteindre}{}
 \contentsline {section}{\numberline {4}Strat\IeC {\'e}gies de r\IeC {\'e}solution}{}
@@ -20,9 +19,10 @@
 \contentsline {subsection}{\numberline {5.1}Modifier le nombre d'it\IeC {\'e}rations des algorithmes tabou}{}
 \contentsline {subsection}{\numberline {5.2}Conclusion sur les r\IeC {\'e}sultats}{}
 \contentsline {section}{\numberline {6}Conclusion}{}
-\contentsline {subsection}{\numberline {6.1}Pistes de r\IeC {\'e}flexion abandonn\IeC {\'e}es}{}
-\contentsline {subsection}{\numberline {6.2}Conclusion sur les objectifs initiaux}{}
-\contentsline {subsection}{\numberline {6.3}Ouverture}{}
+\contentsline {subsection}{\numberline {6.1}Ce que nous avons obtenu}{}
+\contentsline {subsection}{\numberline {6.2}Pistes de r\IeC {\'e}flexion abandonn\IeC {\'e}es}{}
+\contentsline {subsection}{\numberline {6.3}Conclusion sur les objectifs initiaux}{}
+\contentsline {subsection}{\numberline {6.4}Ouverture}{}
 \contentsline {section}{\numberline {7}Annexes}{}
 \contentsline {subsection}{\numberline {7.1}Exemple d'utilisation}{}
 \contentsline {subsubsection}{\numberline {7.1.1}Repr\IeC {\'e}sentation des mont\IeC {\'e}es et descentes du bus}{}
