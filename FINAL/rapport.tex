@@ -105,7 +105,7 @@
 		Dans un premier temps, nous allons créer une planification initiale qui sera utilisée comme point de départ par chaque algorithme. Cette solution va simplement mettre le sommet initial à la première horaire de la journée puis placer les autres sommets en respectant les contraintes et en les mettant le plus tôt possible. Le sommet initial est le sommet de degré entrant nul d'indice le plus faible. Ces sommets sont les cours, représenté dans la matrice d'adjacence vu dans le premier point de ce rapport.\\
 		En pseudocode on a :\\
 		\begin{lstlisting}
-Mettre le sommet de degre entrant nul d indice minimale a l horaire minimale
+Sommet de degre entrant nul d indice minimale a l horaire minimale
 Pour chaque sommet sauf le premier sommet :
   Mettre l horaire le plus tot respectant les contraintes.
 		\end{lstlisting}
@@ -133,7 +133,7 @@ Pour chaque sommet :
 			Pour chaque cours, l'heure de début varie tout en respectant les contraintes et une nouvelle valeur pour la congestion est calculée. La meilleure modification pour chaque sommet est gardée en mémoire.\\
 			Après avoir effectué cette recherche sur tout les cours de la planification, le sommet ayant la meilleure amélioration de congestion est modifié.\\
 			Ce procédé est ensuite répété mais en interdisant l'optimisation d'un cours dont l'horaire a déjà été modifiée.\\
-			En pseudocode on a :\\
+			En pseudo code on a :\\
 \begin{lstlisting}
 Pour chaque sommet :
   Pour chaque horaire :
@@ -142,7 +142,8 @@ Pour chaque sommet :
     	Si la congestion est meilleur qu'avant le changement,
       	on la conserve.
   On selectionne la meilleure congestion. 
-  On modifie l'horaire du sommet associe a cette congestion a l'horaire donnant cette congestion
+  On modifie l'horaire du sommet associe a cette congestion 
+  					   pour l'ameliorer
 		\end{lstlisting}
 
 		\subsubsection{L'algorithme tabou roulette}
@@ -158,8 +159,10 @@ Pour chaque sommet :
     	Calculer la nouvelle congestion.
     	Si la congestion est meilleur qu'avant le changement,
       	on la conserve.
-  Chaque valeur de congestion est associe a une valeur proportionelle au taux de modification par rapport a la planification initiale
-  On choisit un nombre au hasard. Le sommet associe a la congestion choisis change son horaire a l horaire donnant cette congestion.
+  Chaque valeur de congestion est associe a une valeur proportionelle 
+  	au taux de modification par rapport a la planification initiale
+  On choisit un nombre au hasard. Le sommet associe a la congestion 
+  	choisis change son horaire a l horaire donnant cette congestion.
   \end{lstlisting}
 	
 	\subsection{Données utilisées}
@@ -199,13 +202,13 @@ Pour chaque sommet :
 			\item \textit{probabilité de lien} : la probabilité qu'il y ai un lien entre 2 cours. Un lien entre 2 cours signifie qu'ils ont au moins un étudiant en commun, ils ne peuvent donc pas avoir lieu en même temps.
 			\item \textit{nombre de cours} : le nombre de cours que nous allons représenter lors du déroulement de l'application. C'est le nombre de cours que nous allons devoir modifier pour la planification.
 			\item  \textit{le nombre de salles} : le nombre de salles disponibles pour les cours.
-			\item \textit{heure maximum} : l'heure limite à laquelle on peut placer un cours. Dans notre cas d'étude, nous représentons le temps par tranche de 15 minutes. Il va de 7h30 à 16h, on à donc 34 quart d'heure.
+			\item \textit{heure maximum} : l'heure limite à laquelle on peut placer un cours. Dans notre cas d'étude, nous représentons le temps par tranche de 15 minutes. Il va de 7h30 à 18h, on à donc 42 quart d'heure.
 		\end{itemize}
 
 \section{Présentation et analyse des résultats}
 	Nous allons tester nos algorithmes en choisissant différentes valeurs de degré moyen. Nous fixons le nombre de cours à 40. Par exemple pour un degré moyen de 3 on calcule la probabilité de lien entre deux cours à utiliser : 40/3 = 0.075. Le nombre de salles est fixé à 30. On itère les algorithmes tabou sur 10 itérations. Les valeurs affichées sont le nombre de bus congestionés, c'est à dire dont le seuil de confort est dépassé à un moment du trajet.\\
 	Nous testerons chaque degré 15 fois ainsi nous pourrons calculer la moyenne de congestion totale de chaque méthode. On effectue un grand nombre de test car les liens entre cours sont différents à chaque itération du programme car ils sont générés aléatoirement.
-
+	\newpage
 	Ce tableau représente le nombre de bus congestionés par méthode. Le degré moyen du graphe est 1 (0.025 probabilité de lien entre deux cours).\\ 
 	\begin{tabular}{|c|c|c|c|c|}
   		\hline
@@ -246,10 +249,10 @@ Pour chaque sommet :
   		Amélioration & X & 7.6\% & 5.7\% & 5.7\%\\
   		\hline
 	\end{tabular}
-	VALEUR PAREIL PAR ITERATION
-	Avec un degré moyen de 1 on observe que tous les résultats sont tres similaires. On a 10.5 bus congestioné pour la solution initale contre 9.9 et 9.7 pour les autres solutions. Cela améliore tres peu le nombre de bus congestioné, a peine 7\% au mieux. Ainsi on peut en conclure que pour un graphe dont le degré moyen est 1, il y a trop peu de liens entre les cours pour laisser la place à une amélioration. On remarque qu'avec un degré de 1 les horaires de la planification sont tous très tôt. Avec cette planification tous les bus du matin sont congestionés. Ainsi quand les autres algorithmes partent de cette solution, ils ne trouvent pas forcément beaucoup d'améliorations à faire pour améliorer la congestion puisqu'ils prennent les sommets 1 à 1. Cela se remarque d'autant plus si on regarde les résultats ligne par ligne. En effet souvent les 3 algorithmes prennent la même valeur de congestion que les celle de la planification initiale. Ainsi on observe que notre méthode est limité si le degré est tres faible. En effet puisque l'on améliore les sommets 1 à 1, on ne pourra pas beaucoup s'éloigner de la planification initiale dans ce cas.
-
-	Ce tableau représente le nombre de bus congestionés par méthode. Le degré moyen du graphe est 5 (0.125 probabilité de lien entre deux cours).\\ 
+	VALEUR PAREIL PAR ITERATION\\
+	Avec un degré moyen de 1 on observe que tous les résultats sont très similaires. On a 10.5 bus congestionné pour la solution initiale contre 9.9 et 9.7 pour les autres solutions. Cela améliore tres peu le nombre de bus congestionné, a peine 7\% au mieux. Ainsi on peut en conclure que pour un graphe dont le degré moyen est 1, il y a trop peu de liens entre les cours pour laisser la place à une amélioration. On remarque qu'avec un degré de 1 les horaires de la planification sont tous très tôt. Avec cette planification tous les bus du matin sont congestionnés. Ainsi quand les autres algorithmes partent de cette solution, ils ne trouvent pas forcément beaucoup d'améliorations à faire pour améliorer la congestion puisqu'ils prennent les sommets 1 à 1. Cela se remarque d'autant plus si on regarde les résultats ligne par ligne. En effet souvent les 3 algorithmes prennent la même valeur de congestion que les celle de la planification initiale. Ainsi on observe que notre méthode est limité si le degré est très faible. En effet puisque l'on améliore les sommets 1 à 1, on ne pourra pas beaucoup s'éloigner de la planification initiale dans ce cas.
+	\newpage
+	Ce tableau représente le nombre de bus congestionnés par méthode. Le degré moyen du graphe est 5 (0.125 probabilité de lien entre deux cours).\\ 
 	\begin{tabular}{|c|c|c|c|c|}
   		\hline
   		Tirage numéro & Initiale & Algo glouton & Algo tabou dur & Algo tabou roulette\\
@@ -289,10 +292,9 @@ Pour chaque sommet :
   		Amélioration & X & 32.2\% & 28.0\% & 33.1\%\\
   		\hline
 	\end{tabular}
-	On observe que c'est l'algorithme glouton et l'algorithme tabou roulette qui améliore le plus la congestion avec environ 32\% d'amélioration. Dans ce cas on choisira donc d'utiliser l'algorithme tabou roulette. Il fait 10 itération, c'est à dire qu'il parcours l'ensemble des sommets 10 fois. Alors que l'algo glouton fais 40 itérations, il parcours l'ensemble des sommet autant de fois qu'il y a de sommets dans le graphe. L'algorithme roulette etant 4 fois moins couteux, il sera priviligié dans ce cas. fulgurance de rulette
-
-
-	Ce tableau représente le nombre de bus congestionés par méthode. Le degré moyen du graphe est 7 (0.175 probabilité de lien entre deux cours).\\ 
+	On observe que c'est l'algorithme glouton et l'algorithme tabou roulette qui améliore le plus la congestion avec environ 32\% d'amélioration. Dans ce cas on choisira donc d'utiliser l'algorithme tabou roulette. Il fait 10 itération, c'est à dire qu'il parcours l'ensemble des sommets 10 fois. Alors que l'algorithme glouton fais 40 itérations, il parcours l'ensemble des sommet autant de fois qu'il y a de sommets dans le graphe. L'algorithme roulette étant 4 fois moins coûteux, il sera privilégié dans ce cas.
+	\newpage
+	Ce tableau représente le nombre de bus congestionnés par méthode. Le degré moyen du graphe est 7 (0.175 probabilité de lien entre deux cours).\\ 
 	\begin{tabular}{|c|c|c|c|c|}
   		\hline
   		Tirage numéro & Initiale & Algo glouton & Algo tabou dur & Algo tabou roulette\\
@@ -333,8 +335,8 @@ Pour chaque sommet :
   		\hline
 	\end{tabular}
 	Avec un degré moyen de 7, on observe que l'on modifie moins la congestion que pour un degré de 5. On passe par exemple de 32\% à 28\% pour l'algorithme glouton.
-
-	Ce tableau représente le nombre de bus congestionés par méthode. Le degré moyen du graphe est 10 (0.25 probabilité de lien entre deux cours).\\ 
+	\newpage
+	Ce tableau représente le nombre de bus congestionnés par méthode. Le degré moyen du graphe est 10 (0.25 probabilité de lien entre deux cours).\\ 
 	\begin{tabular}{|c|c|c|c|c|}
   		\hline
   		Tirage numéro & Initiale & Algo glouton & Algo tabou dur & Algo tabou roulette\\
@@ -369,17 +371,15 @@ Pour chaque sommet :
   		\hline
   		15 & 9 & 8 & 9 & 7\\
   		\hline
-  		Moyenne 11.3 & 7.7 & 7.8 & 7.4\\
+  		Moyenne  &11.3  &7.7  &7.8 &  7.4\\
   		\hline
   		Amélioration & X & 31.9\% & 31.0\% & 34.5\%\\
   		\hline
 	\end{tabular}
-
-	Comparer les algos, comparer en fct des données en entrées
-	Moyenne de l'algo tabou roulette sur la meme horaire.
+	Pour un degré moyen de 10, on constate que les différents algorithmes utilisés on pu améliorer la congestion d'au moins 30\% chacun. On constate également que l'algorithme le plus efficace est l'algorithme roulette. Comme c'est également l'algorithme le plus rapide on aura tendance a le préférer aux autres dans ce cas.
 	
 \section{Conclusion}
-	\subsection{Pistes de reflexion abandonnées}
+	\subsection{Pistes de réflexion abandonnées}
 		Lors de nos recherches préliminaires, nous avions pensé représenter chaque éléments (cours, étudiants, professeurs, salles) par des classes. Ainsi, un langage de programmation orienté objet nous semblait tout indiqué. Mais nous savions également que nous allions avoir besoin de fonctions procédurales (les algorithmes par exemple). Donc, nous avons opté pour l'utilisation du langage C++ qui est un langage hybride\\
 		Au cours de nos recherches, nous nous sommes rendu compte que nous pouvions modéliser notre problème en utilisant simplement des matrices, nous avons donc abandonnée l'idée de représenter les éléments du projets par des objets.\\
 		Cependant, comme nous avions déjà commencé à programmer une partie du projet, nous avons décidé de garder le C++ comme langage de programmation, sont aspect hybride entre le procédural et l'orienté objet nous permettant de continuer a l'utiliser.
@@ -454,7 +454,7 @@ Pour chaque sommet :
  			\end{tabular}\\
  			Ce tableau sera générés pour chaque bus. On mesurera dans chaque cas le dépassement à chaque arrêt en mettant un 1 si il y a dépassements, un 0 sinon.
  			Sachant que la limite de confort est de 50 dans le bus que nous étudions, ce bus nous donne une valeur de congestion de 5.\\
- 			A partir de la on applique l'algorithme glouton et les deux algorithmes génétiques pour essayer d'améliorer notre fonction objectif.
+ 			A partir de la on applique l'algorithme glouton et les deux algorithmes tabou pour essayer d'améliorer notre fonction objectif.
  			Décrivons ces algos.
 
 	\subsection{Explication de la programmation}
@@ -504,7 +504,7 @@ for (int i = 0; i < N; i++)
 	Horaires_glouton[sommet_modifie] = meilleure_solution;
 }
 \end{lstlisting}
-		\subsection{Algorithme tabou roulette}
+		\subsection{Algorithme tabou dur et roulette}
 			Nous ne décrivons pas l'algorithme tabou dur car il est quasiment identique. La différence est explicité ci dessous.
 \begin{lstlisting}
 //Horaires_tabou_roulette est un tableau contenant la planification 
@@ -540,7 +540,8 @@ for(int k = 0; k < Nb_iterations; k++){
 		//Initialisation des meilleures solution pour le sommet i
 		Meilleure_solution[i] = Horaires_tabou_roulette[i];
 		Meilleure_congestion[i] = calcul_congestion_totale
-			(Horaires_tabou_roulette,Nb_eleves,heure_max,N,TO);
+			(Horaires_tabou_roulette,
+			Nb_eleves,heure_max,N,TO);
 		horaire_initiale = Horaires_tabou_roulette[i];
 
 		//La boucle j parcours l'ensemble des horaires possibles
@@ -549,11 +550,13 @@ for(int k = 0; k < Nb_iterations; k++){
 			//On verifie que l'horaire est bien valide
 			if (test_solution_valide(Horaires_tabou_roulette, 
 				N, couleur, Type, TO) == true){
-				temp = calcul_congestion_totale(Horaires_tabou_roulette,
+				temp = calcul_congestion_totale
+					(Horaires_tabou_roulette,
 					Nb_eleves,heure_max,N,TO);
-				//Si la congestion de cette horaire est meilleure, 
-				//on met a jour le meilleur horaire et la meilleur 
-				//congestion du sommet i
+				//Si la congestion de cette horaire est 
+				//meilleure, on met a jour le meilleur
+				//horaire et la meilleur congestion
+				// du sommet i
 				if(temp < Meilleure_congestion[i]){
 					Meilleure_congestion[i] = temp;
 					Meilleure_solution[i] = j;
@@ -571,13 +574,13 @@ for(int k = 0; k < Nb_iterations; k++){
 		//On marque la valeurs de modification par rapport a 
 		//la congestion initiale. Ainsi si on a 10 de congestion 
 		//initiale et 8 en congestion pour le sommet i,
-		//Alors on marque 2 dans le tableau. Pour le sommet suivant si 
-		//il modifie de 3 on marque 5. 
+		//Alors on marque 2 dans le tableau. Pour le sommet
+		// suivant si il modifie de 3 on marque 5. 
 		//Ainsi ca donne un tableau comme cela : 
 		//2 4 8 15 16 17 17.
 		if(Meilleure_congestion[i] < congestion_initiale){ 
 			Valeurs_roulette[i] = 
-				congestion_initiale - Meilleure_congestion[i]; }
+			 congestion_initiale - Meilleure_congestion[i]; }
 		else { Valeurs_roulette[i] = 0; }
 	}
 	for (int p = 1; p < N; p++) { 
@@ -594,21 +597,22 @@ for(int k = 0; k < Nb_iterations; k++){
 	//On prend au hasard une valeur et on regarde ou elle tombe 
 	//dans le tableau, ainsi plus on modifie la congestion, 
 	//plus on a de chance d'etre choisi.
-	if ((choix_roulette > 0) && (choix_roulette <= Valeurs_roulette[0]))
+	if ((choix_roulette > 0) &&
+		 (choix_roulette <= Valeurs_roulette[0]))
 	{
 		Horaires_tabou_roulette[0] = Meilleure_solution[0];
 		Sommets_interdits[k] = 0;
 	}
 	else{
 		for (int m = 1; m < N; m++){
-			if ((choix_roulette >= Valeurs_roulette[m-1]) 
-				&& (choix_roulette <= Valeurs_roulette[m])){
-				//Mise a jour de la planification 
-				//et des sommets interdits
-				Horaires_tabou_roulette[m] = Meilleure_solution[m];
-				Sommets_interdits[k] = m;
-				m = N;
-			}
+		  if ((choix_roulette >= Valeurs_roulette[m-1]) 
+		     && (choix_roulette <= Valeurs_roulette[m])){
+			//Mise a jour de la planification 
+			//et des sommets interdits
+			Horaires_tabou_roulette[m]=Meilleure_solution[m];
+			Sommets_interdits[k] = m;
+			m = N;
+		  }
 		}
 	}
 }
@@ -616,6 +620,7 @@ for(int k = 0; k < Nb_iterations; k++){
 		\subsubsection{Planification initiale}
 \begin{lstlisting}
 //N le nombre de cours.
+//HEUREMAX le nombre de quart d'heure dans une planification
 for(int i = 1; i < N; i++){
 	//On va regarder tous les liens de i vers k pour tout i et tout k. 
 	//Si il y a un lien, le cours i est place avant le cours k. 
@@ -624,7 +629,7 @@ for(int i = 1; i < N; i++){
  //Si il y a un lien entre le cours i et le cours k
   if(T[i][k] == 1){
    if(TYPE[i] == 0){//si le cours est un td
-    for(int j = 0; j <= 36; j++){
+    for(int j = 0; j <= HEUREMAX; j++){
 	//Si la solution est valide a l'horaire k + 
 	//la duree du cours + une constante j incremente
 	//pour tester toutes les possibilites d'horaire.
@@ -641,7 +646,7 @@ for(int i = 1; i < N; i++){
     }
 	else //si le cours est un cm, le code est le meme.
 	{
-		for(int j = 0; j <= 36; j++)
+		for(int j = 0; j <= HEUREMAX; j++)
 		{
 			if(test_coloration(Horaires, couleur, N, TYPE, 
 				Horaires[k] + 7 + j,i) == true)
@@ -661,7 +666,7 @@ else {
  if(testConnnexe(T, N, i) == true){
   if(TYPE[k] == 0)//si le cours est un td
   {
-	for(int j = 0; j <= 36; j++)
+	for(int j = 0; j <= HEUREMAX; j++)
 	{
 	  if(test_coloration(Horaires, couleur, N, TYPE, 
 		Horaires[k] + 13  + j, i) == true)
@@ -677,7 +682,7 @@ else {
   }
   else //si le cours est un cm.
   {
-	for(int j = 0; j <= 36; j++)
+	for(int j = 0; j <= HEUREMAX; j++)
     {
 		if(test_coloration(Horaires, couleur, N, TYPE, 
 			Horaires[k] + 7 + j,i) == true)
