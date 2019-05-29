@@ -376,10 +376,9 @@ Pour chaque sommet :
   		Amélioration & X & 31.9\% & 31.0\% & 34.5\%\\
   		\hline
 	\end{tabular}
-	Pour un degré moyen de 10, on constate que les différents algorithmes utilisés on pu améliorer la congestion d'au moins 30\% chacun. Si on fais la moyenne des trois algorithmes ce sont les meilleurs taux de modificationq que l'ont a obtenu. On peut donc emmettre l'hypothèse que sur un degré moyen fort, sois 1) La planification initiale est tres mauvaise et donc les algorithme améliorent facilement la solution sois 2) les algorithmes sont tres efficace pour trouver des solutions quand il y a un grand nombre de leins. On constate également que 
-	l'algorithme le plus efficace est l'algorithme roulette. Comme c'est également l'algorithme le plus rapide on aura tendance a le préférer aux autres dans ce cas.
+	Pour un degré moyen de 10, on constate que les différents algorithmes utilisés on pu améliorer la congestion d'au moins 30\% chacun. Si on fais la moyenne des trois algorithmes ce sont les meilleurs taux de modifications que l'on a obtenu. On peut donc emmettre l'hypothèse que sur un degré moyen fort, sois 1) La planification initiale est tres mauvaise et donc les algorithme améliorent facilement la solution sois 2) les algorithmes sont tres efficace pour trouver des solutions quand il y a un grand nombre de liens. On constate également que l'algorithme le plus efficace est l'algorithme roulette. Comme c'est également l'algorithme le plus rapide on aura tendance a le préférer aux autres dans ce cas.
 	\subsection{Modifier le nombre d'itérations des algorithmes tabou}
-		Dans le cas précedent on itérait les algorithmes tabou sur 10 itérations pour 40 sommets. Puisque l'algo glouton parcours l'ensemble des sommets autant de fois qu'il y a de sommets, alors les algorithmes tabou était 4 fois moins coûteux. Ici nous allons tester nos résultats en faisant varier le nombre d'itérations de l'algo tabou.
+		Dans le cas précedent on itérait les algorithmes tabou sur 10 itérations pour 40 sommets. Puisque l'algorithme glouton parcours l'ensemble des sommets autant de fois qu'il y a de sommets, alors les algorithmes tabou était 4 fois moins coûteux. Ici nous allons tester nos résultats en faisant varier le nombre d'itérations de l'algo tabou.
 		Le degré moyen est fixé à 5.
 		\begin{tabular}{|c|c|c|c|c|}
   		\hline
@@ -426,6 +425,27 @@ Pour chaque sommet :
 	On remarque ici que augmenter la nombre d'itérations des tabou n'augmente pas significativement leurs efficacité. On constate qu'ils deviennent aussi bon ou meilleur que l'algorithme glouton à partir de 10 itérations, mais au dela on observe pas de différences importantes. On peut donc en conclure que pour 40 sommets, itérer sur un quart des sommets est largement suffisant pour l'algorithme tabou.
 
 	\subsection{Conclusion sur les résultats}
+	Tableau récapitulatif des améliorations de la congestion :
+	\begin{tabular}{|c|c|c|c|c|}
+  		\hline
+  		Degré moyen & Initiale & Algo glouton & Algo tabou dur & Algo tabou roulette\\
+  		\hline
+  		1 & X & 7.6\% & 5.7\% & 5.7\%\\
+  		\hline 
+  		5 & X & 32.2\% & 28.0\% & 33.1\%\\
+  		\hline 
+  		7 & X & 28.0\% & 27.1\% & 24.3\%\\
+  		\hline 
+  		10 & X & 31.9\% & 31.0\% & 34.5\%\\
+  		\hline 
+  		Moyenne totale & X & 24.9\% & 23.0\% & 24.4\%\\
+  	\end{tabular}
+	\\
+	On observe que globalement ce sont l'algorithme glouton et l'algorithme tabou roulette qui améliore le plus la congestion. On choisira donc l'algorithme tabou roulette pour résoudre notre problème car il est moins coûteux.\\
+	On a également remarqué que pour un degré moyen tres faible, les algorithmes présenté ici sont inefficaces. La raison etant que la planification initiale place tout les cours tres tôt, ainsi quand les algorithmes utilisent cette planification comme point de départ, ils ne peuvent pas améliorer la congestion car ils considèrent les sommets 1 par 1. En effet modifier un seul sommet n'améliore pas la congestion quand tous les cours sont aux mêmes horaire, donc l'algorithme remet le cours à son horaire initial.\\
+	On peut aussi conclure que la méthode tabou roulette est plus avantageuse que la méthode tabou dur, inclure une part d'aléatoire est benefique dans notre problème. 
+	Donc s'éloigner de la meilleure solution possible à chaque itération peut permettre d'arriver sur un meilleur résultat. On peut même faire l'hypothèse que passer par des solutions non valides nous permettrait de trouver de meilleures solutions.\\
+
 \section{Conclusion}
 	\subsection{Pistes de réflexion abandonnées}
 		Lors de nos recherches préliminaires, nous avions pensé représenter chaque éléments (cours, étudiants, professeurs, salles) par des classes. Ainsi, un langage de programmation orienté objet nous semblait tout indiqué. Mais nous savions également que nous allions avoir besoin de fonctions procédurales (les algorithmes par exemple). Donc, nous avons opté pour l'utilisation du langage C++ qui est un langage hybride\\
