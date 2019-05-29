@@ -292,12 +292,8 @@ Pour chaque sommet :
   		Amélioration & X & 32.2\% & 28.0\% & 33.1\%\\
   		\hline
 	\end{tabular}
-<<<<<<< HEAD
-	On observe que c'est l'algorithme glouton et l'algorithme tabou roulette qui améliore le plus la congestion avec environ 32\% d'amélioration. Dans ce cas on choisira donc d'utiliser l'algorithme tabou roulette. Il fait 10 itérations, c'est à dire qu'il parcourt l'ensemble des sommets 10 fois. Alors que l'algorithme glouton fais 40 itérations, il parcourt l'ensemble des sommet autant de fois qu'il y a de sommets dans le graphe. L'algorithme roulette étant 4 fois moins coûteux, il sera privilégié dans ce cas.
-=======
 	On observe que ce sont les algorithme glouton et tabou roulette qui améliorent le plus la congestion avec environ 32\% d'amélioration par rapport à la planification initiale. Dans ce cas, on choisira donc d'utiliser l'algorithme tabou roulette. Il fait 10 itération, c'est-à-dire qu'il parcours l'ensemble des sommets 10 fois. Alors que l'algorithme glouton fais 40 itérations, il parcours l'ensemble des sommets autant de fois qu'il y a de sommets dans le graphe. L'algorithme roulette étant 4 fois moins coûteux, il sera privilégié dans ce cas.
 
->>>>>>> Lau
 	\newpage
 	Ce tableau représente le nombre de bus congestionnés par méthode. Le degré moyen du graphe est 7 (0.175 probabilité de lien entre deux cours).\\ 
 	\begin{tabular}{|c|c|c|c|c|}
@@ -383,12 +379,6 @@ Pour chaque sommet :
   		Amélioration & X & 31.9\% & 31.0\% & 34.5\%\\
   		\hline
 	\end{tabular}
-<<<<<<< HEAD
-	Pour un degré moyen de 10, on constate que les différents algorithmes utilisés on amélioré la congestion d'au moins 30\% chacun. Si on fais la moyenne des trois algorithmes ce sont les meilleurs taux de modifications que l'on a obtenu. On peut donc emmettre l'hypothèse que sur un degré moyen fort, sois 1) La planification initiale est très mauvaise et donc les algorithmes améliorent facilement la solution sois 2) les algorithmes sont très efficace pour trouver des solutions quand il y a un grand nombre de liens. On constate également que l'algorithme le plus efficace est l'algorithme roulette. On aura tendance a le préférer aux autres dans ce cas.
-
-	\subsection{Modifier le nombre d'itérations des algorithmes tabou}
-		Dans le cas précedent on itérait les algorithmes tabou sur 10 itérations pour 40 sommets. Puisque l'algorithme glouton parcourt l'ensemble des sommets autant de fois qu'il y a de sommets, alors les algorithmes tabou était 4 fois moins coûteux. Ici nous allons tester nos résultats en faisant varier le nombre d'itérations ded algorithmes tabou.
-=======
 	Pour un degré moyen de 10, on constate que les différents algorithmes utilisés on pu améliorer la congestion d'au moins 30\% chacun. Si on fait la moyenne des trois algorithmes ce sont les meilleurs taux de modifications que l'on a obtenu. On peut donc emettre l'hypothèse que sur un degré moyen fort,
 	\begin{enumerate}
 		\item Soit la planification initiale est très mauvaise et donc les algorithme améliorent facilement la solution 
@@ -398,7 +388,6 @@ Pour chaque sommet :
 	
 	\subsection{Modifier le nombre d'itérations des algorithmes tabou}
 		Dans le cas précedent, on itérait les algorithmes tabou sur 10 itérations pour 40 sommets. Puisque l'algorithme glouton parcours l'ensemble des sommets autant de fois qu'il y a de sommets, alors les algorithmes tabou était 4 fois moins coûteux. Ici, nous avons testé nos résultats en faisant varier le nombre d'itérations des algorithmes tabou.\\
->>>>>>> Lau
 		Le degré moyen est fixé à 5.
 		\begin{tabular}{|c|c|c|c|c|}
   		\hline
@@ -468,25 +457,26 @@ Pour chaque sommet :
 
 \section{Conclusion}
 	\subsection{Ce que nous avons obtenu}
-		Notre application permet de créer une planification valide à partir des données initiales entrées par l'utilisateur (Probabilité de lien entre deux cours, nombre cours, nombre de salles, type de chaque cours, heure de début et de fin de journée, lapse de temps entre la fin d'un cours et le début du suivant).
+		Notre application permet de créer une planification valide par rapport aux contraintes que nous avons défini et des données initiales entrées par l'utilisateur (Probabilité de lien entre deux cours, nombre cours, nombre de salles, type de chaque cours, heure de début et de fin de journée, lapse de temps entre la fin d'un cours et le début du suivant).\\
 		Nous créons une planification initiale, une planification suivant un algorithme glouton et deux planifications suivant des algorithmes tabou. Tous ces résultats sont consignés dans des fichiers (resultats.txt et congestion\_bus.txt) facilement compréhensibles pour un utilisateur.
 		Nous avons également conclu que l'algorithme le plus efficace est l'algorithme tabou roulette.
+
 	\subsection{Pistes de réflexion abandonnées}
-		Lors de nos recherches préliminaires, nous avions pensé représenter chaque éléments (cours, étudiants, professeurs, salles) par des classes. Ainsi, un langage de programmation orienté objet nous semblait tout indiqué. Mais nous savions également que nous allions avoir besoin de fonctions procédurales (les algorithmes par exemple). Donc, nous avons opté pour l'utilisation du langage C++ qui est un langage hybride\\
+		Lors de nos recherches préliminaires, nous avions pensé représenter chaque élément (cours, étudiants, professeurs, salles) par des classes. Ainsi, un langage de programmation orienté objet nous semblait tout indiqué. Mais nous savions également que nous allions avoir besoin de fonctions procédurales (les algorithmes par exemple). Donc, nous avons opté pour l'utilisation du langage C++ qui est un langage hybride\\
 		Au cours de nos recherches, nous nous sommes rendu compte que nous pouvions modéliser notre problème en utilisant simplement des matrices, nous avons donc abandonnée l'idée de représenter les éléments du projets par des objets.\\
-		Cependant, comme nous avions déjà commencé à programmer une partie du projet, nous avons décidé de garder le C++ comme langage de programmation, sont aspect hybride entre le procédural et l'orienté objet nous permettant de continuer a l'utiliser.\\
-		De plus nous souhaitions au début du projet donner à chaque professeur une plage horaire sur laquelle il serait disponible pour donner des cours. Cela aurait apporté plus de réalisme à notre projet. Cependant cela était difficile à implémenter n'apportait au final pas grand chose de plus quand à l'étude de la meilleure méthode possible pour améliorer la congestion.\\
+		Cependant, comme nous avions déjà commencé à programmer une partie du projet, nous avons décidé de garder le C++ comme langage de programmation, son aspect hybride entre le procédural et l'orienté objet nous permettant de continuer à l'utiliser.\\
+		De plus, nous souhaitions au début du projet donner à chaque professeur une plage horaire sur laquelle il serait disponible pour donner des cours. Cela aurait apporté plus de réalisme à notre projet. Cependant, cela était difficile à implémenter et n'apportait, au final, pas grand chose de plus quand à l'étude de la meilleure méthode possible pour améliorer la congestion.\\
 
 	\subsection{Conclusion sur les objectifs initiaux}
 		Le problème d'optimisation pour un bureau des temps n'a pas de solution simple. Nous avons eu recourt à différentes heuristique afin de pouvoir fournir des planifications viables.\\
-		Ce problème est donc assez coûteux en temps en fonction de l'heuristique choisie. De plus, nous ne pouvons pas affirmer à 100\% que les planifications fournies soient les meilleures. Cependant, nous pouvons essayer de s'en approcher.\\
-		Nous pouvons cependant conclure dans notre cas que l'algorithme tabou roulette est le plus efficace globalement, c'est à dire quel que soit le degré moyen du graphe.\\
+		Ce problème est donc assez coûteux en temps en fonction de l'heuristique choisie. De plus, nous ne pouvons pas affirmer à 100\% que les planifications fournies soient les meilleures. Néanmoins, nous pouvons essayer de s'en approcher.\\
+		Nous pouvons tout de même conclure dans notre cas que l'algorithme tabou roulette est le plus efficace globalement, autrement dit, quel que soit le degré moyen du graphe.\\
 
 	\subsection{Ouverture}
 		Nous avons quelques pistes de réflexions qui pourraient améliorer l'efficacité de notre application.\\
-		Il serait possible par exemple de donner aux algorithmes la possibilité d'inverser les arcs de la matrice d'adjacence des cours. Ainsi on ne serait pas limité à l'ordre établi lors de la planification initiale. En effet inverser les arcs pourrait permettre d'inverser les dépendances entre les cours. Par exemple un cours ayant des liens avec 5 autres cours qui eux n'on pas de contraintes entre eux oblige a modifier ce cours pour pouvoir modifier les suivants. En inversant les arcs on pourrais d'abord modifier les 5 autres cours. \\
-		De plus nous avons observé que pour un degré faible, nos algorithmes sont très peu efficaces, pour résoudre ce problème il faudrait des algorithmes qui modifient plusieurs sommets à la fois. \\
-		Il serait également possible d'essayer d'utiliser d'autres heuristiques que celles que nous avons choisi, comme un recuit simulé par exemple, on pourrait alors en s'autorisant a prendre des solutions ou la congestion est mauvaise sortir d'un optimum local pour essayer de trouver l'optimum global avec une bonne probabilité. On pourrait aussi changer la variable de décision de l'algorithme glouton et choisir d'organiser la planification de façon à ce que les cours avec le plus d'étudiants soit les plus éloignés les uns des autres. On trie les cours par nombre d'élèves décroissant, puis on place le premier à l'horaire le plus tôt, le deuxième cours à l'horaire le plus tard et ainsi de suite afin de les repartir sur la journée.
+		Il serait possible, par exemple, de donner aux algorithmes la possibilité d'inverser les arcs de la matrice d'adjacence des cours. Ainsi, on ne serait pas limité à l'ordre établi lors de la planification initiale. En effet, inverser les arcs pourrait permettre d'inverser les dépendances entre les cours. Par exemple un cours ayant des liens avec 5 autres cours qui eux n'on pas de contraintes entre eux oblige à modifier ce cours pour pouvoir modifier les suivants. En inversant les arcs, il serait possible modifier en premier les 5 autres cours. \\
+		De plus, nous avons observé que pour un degré faible, nos algorithmes sont très peu efficaces, pour résoudre ce problème il faudrait des algorithmes qui modifient plusieurs sommets à la fois. \\
+		Il serait également possible d'essayer d'utiliser d'autres heuristiques que celles que nous avons choisi, comme un recuit simulé par exemple, on pourrait alors, en s'autorisant à prendre des solutions où la congestion est mauvaise, sortir d'un optimum local pour essayer de trouver l'optimum global avec une bonne probabilité. On pourrait aussi changer la variable de décision de l'algorithme glouton et choisir d'organiser la planification de façon à ce que les cours avec le plus d'étudiants soient les plus éloignés les uns des autres. On trie les cours par nombre d'élèves décroissant, puis on place le premier à l'horaire le plus tôt, le deuxième cours à l'horaire le plus tard et ainsi de suite afin de les répartir sur la journée.
 
 \newpage
 \section{Annexes}
