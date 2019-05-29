@@ -26,20 +26,20 @@
 \newpage
 \section{Introduction}
 	Le projet décrit dans ce rapport est la réalisation d'Algorithmes d'optimisation pour un bureau des temps.\\
-	La mission d'un tel bureau est de permettre une décongestion des moyens et infrastructure de mobilité afin d'améliorer la qualité de vie des utilisateurs et de diminuer l'impact environnemental de ces structures. Il s'agira donc d'influer sur les causes de la congestion de mobilités en repensant les horaires d'activités.\\
-	Dans notre projet, les horaires d'activités sont celles de l'Université Versailles-Saint-Quentin, et plus précisément de l'UFR des Sciences, basé à Versailles. L'objectif sera ici de minimiser le nombre d'étudiants par bus pour ainsi éviter de fortes congestion. Pour cela, on influera sur les horaires de début de cours pour un emploi du temps journalier. Ainsi en repensant ces horaires, on pourra minimiser la congestion sur la ligne de bus R, allant de la gare transilien Versailles-Chantier à l'UFR.\\
+	La mission d'un tel bureau est de permettre une décongestion des moyens et infrastructures de mobilité afin d'améliorer la qualité de vie des utilisateurs et de diminuer l'impact environnemental de ces structures. Il s'agira donc d'influer sur les causes de la congestion des moyens de mobilité en repensant les horaires d'activités.\\
+	Dans notre projet, les horaires d'activités sont celles de l'Université Versailles-Saint-Quentin, et plus précisément de l'UFR des Sciences, basé à Versailles. L'objectif sera ici de minimiser le nombre d'étudiants par bus pour ainsi éviter de fortes congestions. Pour cela, nous influerons sur les horaires de début de chaque cours pour un emploi du temps journalier. Ainsi, en repensant ces horaires, on pourra minimiser la congestion sur la ligne de bus R, allant de la gare transilien Versailles-Chantier à l'UFR.\\
 	\\
-	Ce rapport a pour objectif de décrire dans un premier temps les données que nous allons utiliser dans notre projet. Ensuite, nous définirons les objectifs à atteindre et les stratégies de résolutions envisagées afin d'atteindre ces objectifs. Nous comparerons ensuite pour ces différentes stratégies les résultats obtenus afin d'identifier la meilleure stratégie.\\
+	Ce rapport a pour objectif de décrire dans un premier temps les données que nous avous utilisé dans notre projet. Puis, nous définirons les objectifs à atteindre et les stratégies de résolutions envisagées afin d'atteindre ces objectifs. Nous comparerons ensuite pour ces différentes stratégies les résultats obtenus afin d'identifier la meilleure stratégie.\\
 	Afin de faciliter la compréhension de ce rapport, nous allons expliciter chaque étape de notre algorithme sous la forme d'un exemple simple situé en annexes.
 	
 \section{Les données initiales}
 	Cette section fait l'état des données utilisées pour le bon fonctionnement de l'application.\\
 	Nous avons pour but de créer une planification pour un emploi du temps, c'est-à-dire un déroulement sur une journée des cours dans une université, ici l'UFR de Versailles.\\
 	\\
-	L'idée étant de modifier un emploi du temps afin de minimiser la congestion dans les bus dûe aux arrivées d'étudiants au début de leurs cours. Il nous faut donc un emploi du temps de base sur lequel travailler. Pour créer cet emploi du temps nous aurons besoins de ces données : \\
+	L'idée étant de modifier un emploi du temps afin de minimiser la congestion dans les bus dûe aux arrivées d'étudiants au début de leurs cours. Il nous faut donc un emploi du temps de base sur lequel travailler. Pour créer cet emploi du temps, nous aurons besoins des données suivantes : \\
 
 	\begin{itemize}
-		\item Probabilité de lien entre deux cours (un lien est au moins un étudiant en commun entre deux cours)
+		\item Probabilité de liens entre deux cours (un lien représente au moins un étudiant en commun entre deux cours)
 		\item Le nombre cours
 		\item Le nombre de salles 
 		\item Le type de chaque cours 
@@ -47,8 +47,8 @@
 		\item Le lapse de temps entre la fin d'un cours et le début du suivant
 	\end{itemize}
 
-	La probabilité de lien entre deux cours est définis entre 0 et 1. Les cours sont considérés comme les sommets d'un graphe. Si nous voulons un degré moyen K dans notre graphe, alors on doit mettre une probabilité de lien de K/N avec N le nombre cours.
-	Une fois les liens générés, on représente le graphe sous la forme d'une matrice d'adjacence. \\
+	La probabilité de liens entre deux cours est défini entre 0 et 1. Les cours sont considérés comme les sommets d'un graphe. Si nous voulons un degré moyen $K$ dans notre graphe, alors on doit mettre une probabilité de lien de $K/N$ avec $N$ le nombre cours.\\
+	Une fois les liens générés, le graphe est représenté sous la forme d'une matrice d'adjacence. 
 	Cette représentation nous permet de facilement identifier quels cours ont des étudiants en communs.\\
 	\\
 	\begin{tabular}{ | c | c | c | c |}
@@ -61,42 +61,41 @@
 	\end{tabular}\\
 	Dans cette exemple, nous pouvons voir que le cours 1 et le cours 2 ont au moins un étudiant en commun.\\
 	Nous avons besoin de cette information afin de pouvoir fournir une planification réaliste.\\
-	\\
-	Le nombre de salle sera dans notre graphe le nombre couleur utilisé au maximum pour colorier les sommets.
+	Le nombre de salles sera dans notre graphe le nombre couleurs utilisées au maximum pour colorier les sommets.
 	Chaque cours est également défini par son type :
 	\begin{itemize}
 		\item un CM
 		\item un TD
 	\end{itemize}
 	Ces informations seront utilisées pour connaitre le nombre d'élèves arrivés à chaque cours. En effet, chaque type de cours a un nombre différent d'élèves.\\
-	L'heure de début de journée corespond à l'horaire minimale de début d'un cours.\\
-	Le lapse de temps entre deux cours correspond au temps laissé entre deux cours, dans notre cas on fixe cette valeur à 15 minutes.\\
-	Avec les données initiales décrite ci dessus nous pourrons créer un emploi du temps initial.
+	L'heure de début de journée correspond à l'horaire minimale de début d'un cours.\\
+	Le lapse de temps entre deux cours correspond au temps laissé entre deux cours, dans notre cas d'étude, cette valeur est fixée à 15 minutes.\\
+	\\
+	Avec les données initiales décrites ci-dessus nous pouvons créer un emploi du temps initial.
 	
 \section{Objectif}
 	L'objectif de notre projet est de générer un emploi du temps, c'est-à-dire une planification qui respecte toutes les contraintes et dont la métrique est minimale.
 	\subsection{Contraintes}
-		\subsubsection{Entre deux cours}
-			\begin{enumerate}
-				\item Deux cours qui utilisent la même salle ne doivent pas avoir des horaires qui se chevauchent.
-				\item Deux cours qui ont des élèves en communs ne doivent pas avoir des horaires qui se chevauchent.
-				\item Le temps laissé entre deux cours doit être de 15 minutes minimum.
-			\end{enumerate}
+		\begin{enumerate}
+			\item Deux cours qui utilisent la même salle ne doivent pas avoir des horaires qui se chevauchent.
+			\item Deux cours qui ont des élèves en communs ne doivent pas avoir des horaires qui se chevauchent.
+			\item Le temps laissé entre deux cours doit respecter un lapse de temps minimum donné dans les données initales.
+		\end{enumerate}
 	
 	\subsection{Métriques sur les contraintes}
-		Nous évaluons le dépassements du seuil de confort du bus. Dans notre cas d'étude, le seuil de confort est fixé à 50 personnes. Au delà de ce seuil, le score de congestion est incrémenté à chaque arrêt de bus.
-		Le nombre d'étudiants dans un bus ne doit pas dépasser la capacité $capacité_{max}$ du bus. Cette capacité maximale est fixée à 60 dans notre cas d'étude. Ainsi s'il y a plus de 60 élèves pour un bus, le surplus d'élèves empruntera le bus précédent l'horaire du bus surchargé.\\
-		Pour calculer le nombre d'élèves par bus, on utilise l'emploi du temps des données initiales. Nous pouvons ainsi récupérer pour chaque tranche horaire le nombre d'étudiants censé arriver pour suivre leur cours.\\
+		Nous évaluons le dépassement du seuil de confort du bus. Dans notre cas d'étude, le seuil de confort est fixé à 50 personnes. Au delà de ce seuil, le score de congestion est incrémenté à chaque arrêt de bus.
+		Le nombre d'étudiants dans un bus ne doit pas dépasser la capacité $capacité_{max}$ du bus. Cette capacité maximale est fixée à 60 dans notre cas d'étude. Ainsi, s'il y a plus de 60 élèves pour un bus, le surplus d'élèves empruntera le bus précédent l'horaire du bus surchargé.\\
+		Pour calculer le nombre d'élèves par bus, on utilise l'emploi du temps initial (voir section "Les données initales"). Nous pouvons ainsi récupérer pour chaque tranche horaire le nombre d'étudiants censé arriver pour suivre leur cours.\\
 		Nous posons l'hypothèse que les élèves arrivent dans le bus précédant leur cours, de ce fait on peut savoir précisément le nombre d'élèves qu'il y aura dans un bus avant un cours.\\
-		Pour calculer le nombre d'élèves par bus, nous prenons aussi en compte la situation où un élève à plusieurs cours dans la même journée. Ainsi il a emprunté uniquement le bus l'ammenant à  son cours le plus tôt.\\
+		Pour calculer le nombre d'élèves par bus, nous prenons aussi en compte la situation où un élève à plusieurs cours dans la même journée. Ainsi, il a emprunté uniquement le bus l'ammenant à son cours le plus tôt.\\
 		On prend également en compte le fait que chaque bus comporte une part de non-étudiants, qui ne sera donc pas variable dans notre application. En effet, une modification de la planification ne changera pas leur nombre.\\
-		A partir de ces informations, nous pouvons savoir si un bus atteint son seuil de confort. Si oui nous comptabilisons ce bus dans notre calcul de congestion totale. La métrique c'est la congestion totale, c'est à dire le nombre de bus dont le seuil de confort à été dépassé au moins une fois sur le trajet.
+		A partir de ces informations, nous pouvons savoir si un bus atteint son seuil de confort. Si c'est le cas, nous avons comptabilisé ce bus dans notre calcul de congestion totale. La métrique est la congestion totale, c'est-à-dire le nombre de bus pour lesquels le seuil de confort a été dépassé pour au moins un arrêt sur le trajet.
 		
 	\subsection{Objectif à atteindre}
-		La métrique décrite dans le point précédent va nous permettre de donner un score a chaque planification que nous allons réaliser.\\
+		La métrique décrite dans le point précédent va nous permettre de donner un score à chaque planification que nous allons réaliser.\\
 		En effet, l'objectif étant de réduire la congestion des bus, nous aurons tendance à préférer une planification pour laquelle le score de congestion est faible.\\
 		C'est donc dans la modification de la planification que les contraintes vu plus haut interviennent.\\
-		Nous allons donc devoir trouver une planification qui minimise la congestion des bus tout en respectant les trois contraintes vu précédemment.
+		L'objectif final est de trouver une planification qui minimise la congestion des bus tout en respectant les trois contraintes vu précédemment.
 	
 \section{Stratégies de résolution}
 	\subsection{Planification initiale}
