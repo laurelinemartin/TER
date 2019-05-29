@@ -205,10 +205,10 @@ Pour chaque sommet :
 		\end{itemize}
 
 \section{Présentation et analyse des résultats}
-	Nous allons tester nos algorithmes en choisissant différentes valeurs de degré moyen. Nous fixons le nombre de cours à 40. Par exemple pour un degré moyen de 3 on calcule la probabilité de lien entre deux cours à utiliser : 40/3 = 0.075. Le nombre de salles est fixé à 30. On itère les algorithmes tabou sur 10 itérations. Les valeurs affichées sont le nombre de bus congestionés, c'est à dire dont le seuil de confort est dépassé à un moment du trajet.\\
-	Nous testerons chaque degré 15 fois ainsi nous pourrons calculer la moyenne de congestion totale de chaque méthode. On effectue un grand nombre de test car les liens entre cours sont différents à chaque itération du programme car ils sont générés aléatoirement.
+	Nous avons testé nos algorithmes en choisissant différentes valeurs de degré moyen. Nous avons fixé le nombre de cours à 40. Par exemple, pour un degré moyen de 3 on calcule la probabilité de liens entre deux cours à utiliser : 40/3 = 0.075. Le nombre de salles est fixé à 30. On itère les algorithmes tabou sur 10 itérations. Les valeurs affichées sont le nombre de bus congestionés, c'est-à-dire dont le seuil de confort est dépassé à un moment du trajet.\\
+	Nous avons testé chaque degré 15 fois. Ainsi nous avons pu calculer la moyenne de congestion totale de chaque méthode. On effectue un grand nombre de tests car les liens entre les cours sont différents à chaque itération du programme car ils sont générés aléatoirement.
 	\newpage
-	Ce tableau représente le nombre de bus congestionés par méthode. Le degré moyen du graphe est 1 (0.025 probabilité de lien entre deux cours).\\ 
+	Ce tableau représente le nombre de bus congestionés par méthode. Le degré moyen du graphe est 1 (0.025 probabilité de liens entre deux cours).\\ 
 	\begin{tabular}{|c|c|c|c|c|}
   		\hline
   		Tirage numéro & Initiale & Algo glouton & Algo tabou dur & Algo tabou roulette\\
@@ -248,7 +248,8 @@ Pour chaque sommet :
   		Amélioration & X & 7.6\% & 5.7\% & 5.7\%\\
   		\hline
 	\end{tabular}
-	Avec un degré moyen de 1 on observe que tous les résultats sont très similaires. On a 10.5 bus congestionné pour la solution initiale contre 9.9 et 9.7 pour les autres solutions. Cela améliore tres peu le nombre de bus congestionné, a peine 7\% au mieux. Ainsi on peut en conclure que pour un graphe dont le degré moyen est 1, il y a trop peu de liens entre les cours pour laisser la place à une amélioration. On remarque qu'avec un degré de 1 les horaires de la planification sont tous très tôt. Avec cette planification tous les bus du matin sont congestionnés. Ainsi quand les autres algorithmes partent de cette solution, ils ne trouvent pas forcément beaucoup d'améliorations à faire pour améliorer la congestion puisqu'ils prennent les sommets 1 à 1. La cause est que en modifiant un cours à une autre horaire, la congestion reste la même car il y a enormément de bus le matin. Cela se remarque d'autant plus si on regarde les résultats ligne par ligne. En effet souvent les 3 algorithmes prennent la même valeur de congestion que les celle de la planification initiale. Ainsi on observe que notre méthode est limité si le degré est très faible. En effet puisque l'on améliore les sommets 1 à 1, on ne pourra pas beaucoup s'éloigner de la planification initiale dans ce cas. Dans ce cas il faudrait un algorithme qui etudie les sommets 3 par 3 ou 4 par 4. Cela nous permettrais de nous éloigner de la solution initiale plus facilement.
+	Avec un degré moyen de 1 on observe que tous les résultats sont très similaires. On a 10.5 bus congestionnés pour la solution initiale contre 9.9 et 9.7 pour les autres solutions. Cela améliore que très peu le nombre de bus congestionnés, à peine 7\% au mieux. Ainsi on peut en conclure que pour un graphe dont le degré moyen est 1, il y a trop peu de liens entre les cours pour laisser la place à une amélioration. On remarque qu'avec un degré de 1 les horaires de la planification sont tous très tôt. Avec cette planification tous les bus du matin sont congestionnés. Ainsi, quand les autres algorithmes partent de cette solution, ils ne trouvent pas forcément beaucoup d'améliorations à faire pour améliorer la congestion puisqu'ils prennent les sommets 1 à 1. La cause est que en modifiant un cours à un autre horaire, la congestion reste la même car il y a énormément de bus le matin. Cela se remarque d'autant plus si on regarde les résultats ligne par ligne. En effet, souvent les 3 algorithmes prennent la même valeur de congestion que celles de la planification initiale. On observe alors que notre méthode est limité si le degré est très faible. Effectivement, puisque l'on améliore les sommets 1 à 1, on ne pourra pas beaucoup s'éloigner de la planification initiale dans ce cas. Pour ce cas précis, il faudrait un algorithme qui étudie les sommets 3 par 3 ou 4 par 4. Cela nous permettrait de nous éloigner de la solution initiale plus facilement.
+
 	\newpage
 	Ce tableau représente le nombre de bus congestionnés par méthode. Le degré moyen du graphe est 5 (0.125 probabilité de lien entre deux cours).\\ 
 	\begin{tabular}{|c|c|c|c|c|}
@@ -290,7 +291,8 @@ Pour chaque sommet :
   		Amélioration & X & 32.2\% & 28.0\% & 33.1\%\\
   		\hline
 	\end{tabular}
-	On observe que c'est l'algorithme glouton et l'algorithme tabou roulette qui améliore le plus la congestion avec environ 32\% d'amélioration. Dans ce cas on choisira donc d'utiliser l'algorithme tabou roulette. Il fait 10 itération, c'est à dire qu'il parcours l'ensemble des sommets 10 fois. Alors que l'algorithme glouton fais 40 itérations, il parcours l'ensemble des sommet autant de fois qu'il y a de sommets dans le graphe. L'algorithme roulette étant 4 fois moins coûteux, il sera privilégié dans ce cas.
+	On observe que ce sont les algorithme glouton et tabou roulette qui améliorent le plus la congestion avec environ 32\% d'amélioration par rapport à la planification initiale. Dans ce cas, on choisira donc d'utiliser l'algorithme tabou roulette. Il fait 10 itération, c'est-à-dire qu'il parcours l'ensemble des sommets 10 fois. Alors que l'algorithme glouton fais 40 itérations, il parcours l'ensemble des sommets autant de fois qu'il y a de sommets dans le graphe. L'algorithme roulette étant 4 fois moins coûteux, il sera privilégié dans ce cas.
+
 	\newpage
 	Ce tableau représente le nombre de bus congestionnés par méthode. Le degré moyen du graphe est 7 (0.175 probabilité de lien entre deux cours).\\ 
 	\begin{tabular}{|c|c|c|c|c|}
@@ -332,8 +334,9 @@ Pour chaque sommet :
   		Amélioration & X & 28.0\% & 27.1\% & 24.3\%\\
   		\hline
 	\end{tabular}
-	Avec un degré moyen de 7, on observe que l'on modifie moins la congestion que pour un degré de 5. On passe par exemple de 32\% à 28\% pour l'algorithme glouton.
-	Ici l'algorithme glouton et l'algorithme tabou dur sont aussi efficace. On choisira donc l'algorithme tabou dur car il est moins coûteux. 
+	Avec un degré moyen de 7, on observe que l'on modifie moins la congestion que pour un degré de 5. On passe par exemple de 32\% à 28\% d'amélioration par rapport à la planification initiale, pour l'algorithme glouton.\\
+	Ici, l'algorithme glouton et l'algorithme tabou dur sont aussi efficace. On choisira donc l'algorithme tabou dur car il est moins coûteux. 
+
 	\newpage
 	Ce tableau représente le nombre de bus congestionnés par méthode. Le degré moyen du graphe est 10 (0.25 probabilité de lien entre deux cours).\\ 
 	\begin{tabular}{|c|c|c|c|c|}
@@ -375,9 +378,15 @@ Pour chaque sommet :
   		Amélioration & X & 31.9\% & 31.0\% & 34.5\%\\
   		\hline
 	\end{tabular}
-	Pour un degré moyen de 10, on constate que les différents algorithmes utilisés on pu améliorer la congestion d'au moins 30\% chacun. Si on fais la moyenne des trois algorithmes ce sont les meilleurs taux de modifications que l'on a obtenu. On peut donc emmettre l'hypothèse que sur un degré moyen fort, sois 1) La planification initiale est tres mauvaise et donc les algorithme améliorent facilement la solution sois 2) les algorithmes sont tres efficace pour trouver des solutions quand il y a un grand nombre de liens. On constate également que l'algorithme le plus efficace est l'algorithme roulette. Comme c'est également l'algorithme le plus rapide on aura tendance a le préférer aux autres dans ce cas.
+	Pour un degré moyen de 10, on constate que les différents algorithmes utilisés on pu améliorer la congestion d'au moins 30\% chacun. Si on fait la moyenne des trois algorithmes ce sont les meilleurs taux de modifications que l'on a obtenu. On peut donc emettre l'hypothèse que sur un degré moyen fort,
+	\begin{enumerate}
+		\item Soit la planification initiale est très mauvaise et donc les algorithme améliorent facilement la solution 
+		\item Soit les algorithmes sont très efficace pour trouver des solutions quand il y a un grand nombre de liens. 
+	\end{enumerate}
+	On constate également que l'algorithme le plus efficace est l'algorithme roulette. Comme c'est également l'algorithme le plus rapide on aura tendance à le préférer aux autres dans ce cas.
+	
 	\subsection{Modifier le nombre d'itérations des algorithmes tabou}
-		Dans le cas précedent on itérait les algorithmes tabou sur 10 itérations pour 40 sommets. Puisque l'algorithme glouton parcours l'ensemble des sommets autant de fois qu'il y a de sommets, alors les algorithmes tabou était 4 fois moins coûteux. Ici nous allons tester nos résultats en faisant varier le nombre d'itérations de l'algo tabou.
+		Dans le cas précedent, on itérait les algorithmes tabou sur 10 itérations pour 40 sommets. Puisque l'algorithme glouton parcours l'ensemble des sommets autant de fois qu'il y a de sommets, alors les algorithmes tabou était 4 fois moins coûteux. Ici, nous avons testé nos résultats en faisant varier le nombre d'itérations des algorithmes tabou.\\
 		Le degré moyen est fixé à 5.
 		\begin{tabular}{|c|c|c|c|c|}
   		\hline
@@ -420,8 +429,7 @@ Pour chaque sommet :
   		Amélioration & X & 26.7\% & 24.1\% & 25.0\%\\
   		\hline
 	\end{tabular}
-	\\
-	On remarque ici que augmenter la nombre d'itérations des tabou n'augmente pas significativement leurs efficacité. On constate qu'ils deviennent aussi bon ou meilleur que l'algorithme glouton à partir de 10 itérations, mais au dela on observe pas de différences importantes. On peut donc en conclure que pour 40 sommets, itérer sur un quart des sommets est largement suffisant pour l'algorithme tabou.
+	On remarque ici que augmenter la nombre d'itérations des algorithmes tabou n'augmente pas significativement leurs efficacité. On constate qu'ils deviennent aussi bon ou meilleur que l'algorithme glouton à partir de 10 itérations, mais au delà, on observe pas de différences importantes. On peut donc en conclure que pour 40 sommets, itérer sur un quart des sommets est largement suffisant pour l'algorithme tabou.
 
 	\subsection{Conclusion sur les résultats}
 	Tableau récapitulatif des améliorations de la congestion :\\
@@ -439,12 +447,12 @@ Pour chaque sommet :
   		\hline 
   		Moyenne totale & X & 24.9\% & 23.0\% & 24.4\%\\
   	\end{tabular}
+	.\\
 	\\
-	\\
-	On observe que globalement ce sont l'algorithme glouton et l'algorithme tabou roulette qui améliore le plus la congestion. On choisira donc l'algorithme tabou roulette pour résoudre notre problème car il est moins coûteux.\\
-	On a également remarqué que pour un degré moyen tres faible, les algorithmes présenté ici sont inefficaces. La raison etant que la planification initiale place tout les cours tres tôt, ainsi quand les algorithmes utilisent cette planification comme point de départ, ils ne peuvent pas améliorer la congestion car ils considèrent les sommets 1 par 1. En effet modifier un seul sommet n'améliore pas la congestion quand tous les cours sont aux mêmes horaire, donc l'algorithme remet le cours à son horaire initial.\\
-	On peut aussi conclure que la méthode tabou roulette est plus avantageuse que la méthode tabou dur, inclure une part d'aléatoire est benefique dans notre problème. 
-	Donc s'éloigner de la meilleure solution possible à chaque itération peut permettre d'arriver sur un meilleur résultat. On peut même faire l'hypothèse que passer par des solutions non valides nous permettrait de trouver de meilleures solutions.\\
+	On observe que globalement ce sont l'algorithme glouton et l'algorithme tabou roulette qui améliorent le plus la congestion. On choisira donc l'algorithme tabou roulette pour résoudre notre problème car il est moins coûteux.\\
+	On a également remarqué que pour un degré moyen très faible, les algorithmes présentés ici sont inefficaces. La raison étant que la planification initiale place tout les cours très tôt. Quand les algorithmes utilisent cette planification comme point de départ, ils ne peuvent pas améliorer la congestion car ils considèrent les sommets 1 par 1. En effet, modifier un seul sommet n'améliore pas la congestion quand tous les cours sont aux mêmes horaire, donc l'algorithme remet le cours à son horaire initial.\\
+	On peut aussi conclure que la méthode tabou roulette est plus avantageuse que la méthode tabou dur, inclure une part d'aléatoire est bénéfique dans notre problème. 
+	Donc, s'éloigner de la meilleure solution possible à chaque itération peut permettre d'arriver sur un meilleur résultat. On peut faire l'hypothèse que passer par des solutions non-valides nous permettraient de trouver de meilleures solutions.\\
 
 \section{Conclusion}
 	\subsection{Pistes de réflexion abandonnées}
