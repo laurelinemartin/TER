@@ -36,10 +36,10 @@
 	Cette section fait l'état des données utilisées pour le bon fonctionnement de l'application.\\
 	Nous avons pour but de créer une planification pour un emploi du temps, c'est-à-dire un déroulement sur une journée des cours dans une université, ici l'UFR de Versailles.\\
 	\\
-	L'idée étant de modifier un emploi du temps afin de minimiser la congestion dans les bus dûe aux arrivées d'étudiants au début de leurs cours. Il nous faut donc un emploi du temps de base sur lequel travailler. Pour créer cet emploi du temps nous aurons besoins de ces données : \\
+	L'idée étant de modifier un emploi du temps afin de minimiser la congestion dans les bus dûe aux arrivées d'étudiants au début de leurs cours. Il nous faut donc un emploi du temps de base sur lequel travailler. Pour créer cet emploi du temps, nous aurons besoins des données suivantes : \\
 
 	\begin{itemize}
-		\item Probabilité de lien entre deux cours (un lien est au moins un étudiant en commun entre deux cours)
+		\item Probabilité de liens entre deux cours (un lien représente au moins un étudiant en commun entre deux cours)
 		\item Le nombre cours
 		\item Le nombre de salles 
 		\item Le type de chaque cours 
@@ -47,8 +47,8 @@
 		\item Le lapse de temps entre la fin d'un cours et le début du suivant
 	\end{itemize}
 
-	La probabilité de lien entre deux cours est définis entre 0 et 1. Les cours sont considérés comme les sommets d'un graphe. Si nous voulons un degré moyen K dans notre graphe, alors on doit mettre une probabilité de lien de K/N avec N le nombre cours.
-	Une fois les liens générés, on représente le graphe sous la forme d'une matrice d'adjacence. \\
+	La probabilité de liens entre deux cours est défini entre 0 et 1. Les cours sont considérés comme les sommets d'un graphe. Si nous voulons un degré moyen $K$ dans notre graphe, alors on doit mettre une probabilité de lien de $K/N$ avec $N$ le nombre cours.\\
+	Une fois les liens générés, le graphe est représenté sous la forme d'une matrice d'adjacence. 
 	Cette représentation nous permet de facilement identifier quels cours ont des étudiants en communs.\\
 	\\
 	\begin{tabular}{ | c | c | c | c |}
@@ -61,17 +61,17 @@
 	\end{tabular}\\
 	Dans cette exemple, nous pouvons voir que le cours 1 et le cours 2 ont au moins un étudiant en commun.\\
 	Nous avons besoin de cette information afin de pouvoir fournir une planification réaliste.\\
-	\\
-	Le nombre de salle sera dans notre graphe le nombre couleur utilisé au maximum pour colorier les sommets.
+	Le nombre de salles sera dans notre graphe le nombre couleurs utilisées au maximum pour colorier les sommets.
 	Chaque cours est également défini par son type :
 	\begin{itemize}
 		\item un CM
 		\item un TD
 	\end{itemize}
 	Ces informations seront utilisées pour connaitre le nombre d'élèves arrivés à chaque cours. En effet, chaque type de cours a un nombre différent d'élèves.\\
-	L'heure de début de journée corespond à l'horaire minimale de début d'un cours.\\
-	Le lapse de temps entre deux cours correspond au temps laissé entre deux cours, dans notre cas on fixe cette valeur à 15 minutes.\\
-	Avec les données initiales décrite ci dessus nous pourrons créer un emploi du temps initial.
+	L'heure de début de journée correspond à l'horaire minimale de début d'un cours.\\
+	Le lapse de temps entre deux cours correspond au temps laissé entre deux cours, dans notre cas d'étude, cette valeur est fixée à 15 minutes.\\
+	\\
+	Avec les données initiales décrites ci-dessus nous pouvons créer un emploi du temps initial.
 	
 \section{Objectif}
 	L'objectif de notre projet est de générer un emploi du temps, c'est-à-dire une planification qui respecte toutes les contraintes et dont la métrique est minimale.
