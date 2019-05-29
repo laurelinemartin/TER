@@ -425,7 +425,7 @@ Pour chaque sommet :
 	On remarque ici que augmenter la nombre d'itérations des tabou n'augmente pas significativement leurs efficacité. On constate qu'ils deviennent aussi bon ou meilleur que l'algorithme glouton à partir de 10 itérations, mais au dela on observe pas de différences importantes. On peut donc en conclure que pour 40 sommets, itérer sur un quart des sommets est largement suffisant pour l'algorithme tabou.
 
 	\subsection{Conclusion sur les résultats}
-	Tableau récapitulatif des améliorations de la congestion :
+	Tableau récapitulatif des améliorations de la congestion :\\
 	\begin{tabular}{|c|c|c|c|c|}
   		\hline
   		Degré moyen & Initiale & Algo glouton & Algo tabou dur & Algo tabou roulette\\
@@ -440,6 +440,7 @@ Pour chaque sommet :
   		\hline 
   		Moyenne totale & X & 24.9\% & 23.0\% & 24.4\%\\
   	\end{tabular}
+	\\
 	\\
 	On observe que globalement ce sont l'algorithme glouton et l'algorithme tabou roulette qui améliore le plus la congestion. On choisira donc l'algorithme tabou roulette pour résoudre notre problème car il est moins coûteux.\\
 	On a également remarqué que pour un degré moyen tres faible, les algorithmes présenté ici sont inefficaces. La raison etant que la planification initiale place tout les cours tres tôt, ainsi quand les algorithmes utilisent cette planification comme point de départ, ils ne peuvent pas améliorer la congestion car ils considèrent les sommets 1 par 1. En effet modifier un seul sommet n'améliore pas la congestion quand tous les cours sont aux mêmes horaire, donc l'algorithme remet le cours à son horaire initial.\\
@@ -525,10 +526,10 @@ Pour chaque sommet :
  			Sachant que la limite de confort est de 50 dans le bus que nous étudions, ce bus nous donne une valeur de congestion de 5.\\
  			A partir de la on applique l'algorithme glouton et les deux algorithmes tabou pour essayer d'améliorer notre fonction objectif.
  			Quand on execute le code sur un terminal on obtient cela : \\
- 			\centerline{\includegraphics[scale=0.8]{Captures/terminal1.png}}\\
+ 			\centerline{\includegraphics[scale=0.5]{Captures/terminal1.png}}\\
  			Chaque nombre correspond à l'horaire d'un cours, on marque "Jour suivant" pour les cours que l'algorithme n'a pas pu mettre sur la journée.
  			En dessous on calcule le nombre de bus congestioné. 
- 			\centerline{\includegraphics[scale=0.8]{Captures/terminal2.png}}\\
+ 			\centerline{\includegraphics[scale=0.5]{Captures/terminal2.png}}\\
  			Les résultats sont égalements dans les fichiers resultats.txt et congestionbus.txt.
 
 	\subsection{Explication de la programmation}

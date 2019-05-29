@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.9.4)  28 MAY 2019 17:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.9.4)  29 MAY 2019 13:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -994,748 +994,825 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--34
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--41
+Underfull \hbox (badness 10000) in paragraph at lines 36--40
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--41
+Underfull \hbox (badness 10000) in paragraph at lines 36--40
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 54--70
+Underfull \hbox (badness 10000) in paragraph at lines 50--67
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--70
+Underfull \hbox (badness 10000) in paragraph at lines 50--67
 
  []
 
 [4]
 
-LaTeX Warning: Command \' invalid in math mode on input line 91.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 105--107
-
- []
+LaTeX Warning: Command \' invalid in math mode on input line 88.
 
 [5]
-Overfull \hbox (139.32404pt too wide) in paragraph at lines 108--109
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (21.06308pt too wide) in paragraph at lines 110--111
-[][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 115--120
+Underfull \hbox (badness 10000) in paragraph at lines 103--105
 
  []
 
 
-Overfull \hbox (99.90372pt too wide) in paragraph at lines 123--124
-[][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (40.77324pt too wide) in paragraph at lines 125--126
-[][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (34.20319pt too wide) in paragraph at lines 126--127
+Overfull \hbox (73.6235pt too wide) in paragraph at lines 106--107
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--137
+Overfull \hbox (21.06308pt too wide) in paragraph at lines 108--109
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 113--118
+
+ []
+
+
+Overfull \hbox (99.90372pt too wide) in paragraph at lines 121--122
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (40.77324pt too wide) in paragraph at lines 123--124
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (34.20319pt too wide) in paragraph at lines 124--125
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 [6]
-Overfull \hbox (99.90372pt too wide) in paragraph at lines 140--141
+Underfull \hbox (badness 10000) in paragraph at lines 130--136
+
+ []
+
+
+Overfull \hbox (99.90372pt too wide) in paragraph at lines 139--140
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (40.77324pt too wide) in paragraph at lines 142--143
+Overfull \hbox (40.77324pt too wide) in paragraph at lines 141--142
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (270.7251pt too wide) in paragraph at lines 145--146
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 149--154
-
- []
-
-
-Overfull \hbox (99.90372pt too wide) in paragraph at lines 157--158
+Overfull \hbox (27.63313pt too wide) in paragraph at lines 144--145
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (40.77324pt too wide) in paragraph at lines 159--160
-[][][][][][][][][][][][][][][][][][][][][] 
+Overfull \hbox (27.63313pt too wide) in paragraph at lines 145--146
+[][][][][][][][] 
  []
 
 
-Overfull \hbox (513.81706pt too wide) in paragraph at lines 161--162
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][] 
- []
-
-
-Overfull \hbox (507.24701pt too wide) in paragraph at lines 162--163
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][] 
- []
-
-
-Overfull \hbox (88.30643pt too wide) in paragraph at lines 169--179
-[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 169--179
+Underfull \hbox (badness 10000) in paragraph at lines 149--155
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 192--195
+Overfull \hbox (99.90372pt too wide) in paragraph at lines 158--159
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (40.77324pt too wide) in paragraph at lines 160--161
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (93.33366pt too wide) in paragraph at lines 162--163
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (106.47377pt too wide) in paragraph at lines 163--164
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (80.19356pt too wide) in paragraph at lines 164--165
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (113.04382pt too wide) in paragraph at lines 165--166
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (88.30643pt too wide) in paragraph at lines 172--182
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--182
 
  []
 
 [8]
-Overfull \hbox (36.19125pt too wide) in paragraph at lines 209--249
+Underfull \hbox (badness 10000) in paragraph at lines 195--198
+
+ []
+
+[9] [10]
+Overfull \hbox (36.19125pt too wide) in paragraph at lines 212--253
 []
  []
 
-[9]
-Overfull \hbox (36.19125pt too wide) in paragraph at lines 250--288
+[11]
+Overfull \hbox (36.19125pt too wide) in paragraph at lines 254--295
+[]
+ []
+
+[12]
+Overfull \hbox (36.19125pt too wide) in paragraph at lines 296--338
+[]
+ []
+
+[13]
+Overfull \hbox (36.19125pt too wide) in paragraph at lines 339--380
+[]
+ []
+
+
+Overfull \hbox (66.33488pt too wide) in paragraph at lines 381--426
+[] 
+ []
+
+[14]
+Overfull \hbox (39.47778pt too wide) in paragraph at lines 428--449
 [] 
  []
 
 
-Overfull \hbox (36.19125pt too wide) in paragraph at lines 289--327
-[] 
- []
+Underfull \hbox (badness 10000) in paragraph at lines 428--449
 
-[10]
-Overfull \hbox (36.19125pt too wide) in paragraph at lines 328--366
-[] 
  []
 
 
-Overfull \hbox (4.02498pt too wide) in paragraph at lines 372--375
+Underfull \hbox (badness 10000) in paragraph at lines 428--449
+
+ []
+
+[15]
+Overfull \hbox (4.02498pt too wide) in paragraph at lines 452--456
 []\T1/lmr/m/n/10.95 Lors de nos re-cherches pré-li-mi-naires, nous avions pensé
  re-pré-sen-ter chaque
  []
 
-[11] [12]
-Underfull \hbox (badness 10000) in paragraph at lines 390--407
+
+Underfull \hbox (badness 10000) in paragraph at lines 452--456
 
  []
 
 
-Overfull \hbox (88.30643pt too wide) in paragraph at lines 390--407
+Underfull \hbox (badness 10000) in paragraph at lines 458--461
+
+ []
+
+[16] [17]
+Underfull \hbox (badness 10000) in paragraph at lines 471--488
+
+ []
+
+
+Overfull \hbox (88.30643pt too wide) in paragraph at lines 471--488
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 390--407
+Underfull \hbox (badness 10000) in paragraph at lines 471--488
 
  []
 
-<Captures/exemple1.png, id=49, 289.08pt x 289.08pt>
+<Captures/exemple1.png, id=65, 289.08pt x 289.08pt>
 File: Captures/exemple1.png Graphic file (type png)
 <use Captures/exemple1.png>
-Package pdftex.def Info: Captures/exemple1.png  used on input line 412. on inpu
-t line 412.
+Package pdftex.def Info: Captures/exemple1.png  used on input line 493. on inpu
+t line 493.
 Package pdftex.def Info: Requested size: 231.2643pt x 231.2643pt on input line 
-412.
+493.
 
-Overfull \hbox (33.425pt too wide) in paragraph at lines 411--413
+Overfull \hbox (33.425pt too wide) in paragraph at lines 492--494
 [] 
  []
 
-[13 <./Captures/exemple1.png>]
-<Captures/exemple2.png, id=54, 289.08pt x 289.08pt>
+[18 <./Captures/exemple1.png>]
+<Captures/exemple2.png, id=69, 289.08pt x 289.08pt>
 File: Captures/exemple2.png Graphic file (type png)
 <use Captures/exemple2.png>
-Package pdftex.def Info: Captures/exemple2.png  used on input line 415. on inpu
-t line 415.
+Package pdftex.def Info: Captures/exemple2.png  used on input line 496. on inpu
+t line 496.
 Package pdftex.def Info: Requested size: 231.2643pt x 231.2643pt on input line 
-415.
+496.
 
-Overfull \hbox (33.425pt too wide) in paragraph at lines 414--416
+Overfull \hbox (33.425pt too wide) in paragraph at lines 495--497
 [] 
  []
 
-<Captures/exemple3.png, id=55, 289.08pt x 289.08pt>
+<Captures/exemple3.png, id=70, 289.08pt x 289.08pt>
 File: Captures/exemple3.png Graphic file (type png)
 <use Captures/exemple3.png>
-Package pdftex.def Info: Captures/exemple3.png  used on input line 418. on inpu
-t line 418.
+Package pdftex.def Info: Captures/exemple3.png  used on input line 499. on inpu
+t line 499.
 Package pdftex.def Info: Requested size: 231.2643pt x 231.2643pt on input line 
-418.
+499.
 
-Overfull \hbox (33.425pt too wide) in paragraph at lines 417--419
+Overfull \hbox (33.425pt too wide) in paragraph at lines 498--500
 [] 
  []
 
-<Captures/exemple4.png, id=56, 578.16pt x 201.90431pt>
+<Captures/exemple4.png, id=71, 578.16pt x 201.90431pt>
 File: Captures/exemple4.png Graphic file (type png)
 <use Captures/exemple4.png>
-Package pdftex.def Info: Captures/exemple4.png  used on input line 421. on inpu
-t line 421.
+Package pdftex.def Info: Captures/exemple4.png  used on input line 502. on inpu
+t line 502.
 Package pdftex.def Info: Requested size: 462.52863pt x 161.52365pt on input lin
-e 421.
+e 502.
 
-Overfull \hbox (33.425pt too wide) in paragraph at lines 419--422
+Overfull \hbox (33.425pt too wide) in paragraph at lines 500--503
 [] 
  []
 
-[14 <./Captures/exemple2.png> <./Captures/exemple3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 423--432
+[19 <./Captures/exemple2.png> <./Captures/exemple3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 504--513
 
  []
 
 
-Overfull \hbox (39.23315pt too wide) in paragraph at lines 423--432
+Overfull \hbox (39.23315pt too wide) in paragraph at lines 504--513
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 423--432
+Underfull \hbox (badness 10000) in paragraph at lines 504--513
 
  []
 
-[15 <./Captures/exemple4.png>]
-Overfull \hbox (86.76361pt too wide) in paragraph at lines 455--456
+<Captures/terminal1.png, id=77, 1909.1325pt x 832.10875pt>
+File: Captures/terminal1.png Graphic file (type png)
+<use Captures/terminal1.png>
+Package pdftex.def Info: Captures/terminal1.png  used on input line 529. on inp
+ut line 529.
+Package pdftex.def Info: Requested size: 954.56393pt x 416.05336pt on input lin
+e 529.
+<Captures/terminal2.png, id=79, 1904.11375pt x 484.81125pt>
+File: Captures/terminal2.png Graphic file (type png)
+<use Captures/terminal2.png>
+Package pdftex.def Info: Captures/terminal2.png  used on input line 532. on inp
+ut line 532.
+Package pdftex.def Info: Requested size: 952.05457pt x 242.40503pt on input lin
+e 532.
+
+Overfull \hbox (189.65465pt too wide) in paragraph at lines 515--534
+\T1/lmr/m/n/10.95 on cal-cule le nombre de bus conges-tioné. [] 
+ []
+
+[20 <./Captures/exemple4.png>] [21 <./Captures/terminal1.png>]
+Overfull \hbox (86.76361pt too wide) in paragraph at lines 541--542
 [][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (80.19356pt too wide) in paragraph at lines 456--457
+Overfull \hbox (80.19356pt too wide) in paragraph at lines 542--543
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (67.05345pt too wide) in paragraph at lines 457--458
+Overfull \hbox (67.05345pt too wide) in paragraph at lines 543--544
 [][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (67.05345pt too wide) in paragraph at lines 458--459
+Overfull \hbox (67.05345pt too wide) in paragraph at lines 544--545
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (86.76361pt too wide) in paragraph at lines 460--461
+Overfull \hbox (86.76361pt too wide) in paragraph at lines 546--547
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (73.6235pt too wide) in paragraph at lines 461--462
+Overfull \hbox (73.6235pt too wide) in paragraph at lines 547--548
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (47.34329pt too wide) in paragraph at lines 464--465
+Overfull \hbox (47.34329pt too wide) in paragraph at lines 550--551
 [][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (7.92297pt too wide) in paragraph at lines 465--466
+Overfull \hbox (7.92297pt too wide) in paragraph at lines 551--552
 [][][][][][][][][] 
  []
 
 
-Overfull \hbox (93.33366pt too wide) in paragraph at lines 468--469
+Overfull \hbox (93.33366pt too wide) in paragraph at lines 554--555
 [][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-
-Overfull \hbox (99.90372pt too wide) in paragraph at lines 473--474
+[22 <./Captures/terminal2.png>]
+Overfull \hbox (99.90372pt too wide) in paragraph at lines 559--560
 [][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (119.61388pt too wide) in paragraph at lines 476--477
+Overfull \hbox (119.61388pt too wide) in paragraph at lines 562--563
 [][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (21.06308pt too wide) in paragraph at lines 477--478
+Overfull \hbox (21.06308pt too wide) in paragraph at lines 563--564
 [][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (99.90372pt too wide) in paragraph at lines 478--479
+Overfull \hbox (99.90372pt too wide) in paragraph at lines 564--565
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (73.6235pt too wide) in paragraph at lines 479--480
+Overfull \hbox (73.6235pt too wide) in paragraph at lines 565--566
 [][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (99.90372pt too wide) in paragraph at lines 480--481
+Overfull \hbox (99.90372pt too wide) in paragraph at lines 566--567
 [][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (1.35292pt too wide) in paragraph at lines 482--483
+Overfull \hbox (1.35292pt too wide) in paragraph at lines 568--569
 [][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (119.61388pt too wide) in paragraph at lines 485--486
+Overfull \hbox (119.61388pt too wide) in paragraph at lines 571--572
 [][][][][][][] 
  []
 
 
-Overfull \hbox (34.20319pt too wide) in paragraph at lines 486--487
+Overfull \hbox (34.20319pt too wide) in paragraph at lines 572--573
 [][][][][][][][][] 
  []
 
 
-Overfull \hbox (7.92297pt too wide) in paragraph at lines 491--492
+Overfull \hbox (7.92297pt too wide) in paragraph at lines 577--578
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[16]
-Overfull \hbox (47.34329pt too wide) in paragraph at lines 493--494
-[][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (80.19356pt too wide) in paragraph at lines 499--500
-[][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (27.63313pt too wide) in paragraph at lines 500--501
-[][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 501.
-
-(/usr/share/texmf/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Overfull \hbox (34.20319pt too wide) in paragraph at lines 501--503
-[][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (60.4834pt too wide) in paragraph at lines 503--504
-[][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (73.6235pt too wide) in paragraph at lines 505--507
-[][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (40.77324pt too wide) in paragraph at lines 507--508
-[][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (1.35292pt too wide) in paragraph at lines 508--510
-[][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (47.34329pt too wide) in paragraph at lines 510--511
-[][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (67.05345pt too wide) in paragraph at lines 511--513
-[][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (40.77324pt too wide) in paragraph at lines 513--514
-[][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (80.19356pt too wide) in paragraph at lines 521--522
-[][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (113.04382pt too wide) in paragraph at lines 524--525
-[][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (27.63313pt too wide) in paragraph at lines 525--526
-[][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (80.19356pt too wide) in paragraph at lines 527--528
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (119.61388pt too wide) in paragraph at lines 529--530
-[][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (80.19356pt too wide) in paragraph at lines 530--531
-[][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (73.6235pt too wide) in paragraph at lines 531--532
-[][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (132.75398pt too wide) in paragraph at lines 532--533
-[][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (47.34329pt too wide) in paragraph at lines 533--535
-[][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (113.04382pt too wide) in paragraph at lines 535--536
-[][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[17]
-Overfull \hbox (1.35292pt too wide) in paragraph at lines 537--538
-[][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (73.6235pt too wide) in paragraph at lines 538--539
-[][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (119.61388pt too wide) in paragraph at lines 539--540
-[][][][][][][][][][] 
- []
-
-
-Overfull \hbox (53.91335pt too wide) in paragraph at lines 540--541
-[][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (218.16467pt too wide) in paragraph at lines 541--542
-[][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (73.6235pt too wide) in paragraph at lines 542--543
-[][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (178.74435pt too wide) in paragraph at lines 543--544
-[][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (178.74435pt too wide) in paragraph at lines 544--545
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (7.92297pt too wide) in paragraph at lines 545--546
-[][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (80.19356pt too wide) in paragraph at lines 546--547
-[][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (106.47377pt too wide) in paragraph at lines 547--548
-[][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (73.6235pt too wide) in paragraph at lines 548--549
-[][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (53.91335pt too wide) in paragraph at lines 553--554
-[][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (99.90372pt too wide) in paragraph at lines 555--556
-[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (80.19356pt too wide) in paragraph at lines 556--557
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (47.34329pt too wide) in paragraph at lines 558--559
-[][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (86.76361pt too wide) in paragraph at lines 559--560
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (86.76361pt too wide) in paragraph at lines 560--561
-[][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (113.04382pt too wide) in paragraph at lines 561--562
-[][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (53.91335pt too wide) in paragraph at lines 562--563
-[][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (152.46414pt too wide) in paragraph at lines 563--564
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (7.92297pt too wide) in paragraph at lines 565--566
-[][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (73.6235pt too wide) in paragraph at lines 567--568
-[][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (165.60425pt too wide) in paragraph at lines 569--570
-[][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (93.33366pt too wide) in paragraph at lines 574--575
-[][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (99.90372pt too wide) in paragraph at lines 575--576
-[][][][][][][][][][][][][][][][][][][][] 
  []
 
 
 Overfull \hbox (47.34329pt too wide) in paragraph at lines 579--580
-[][][][][][][][][][][][][] 
- []
-
-[18]
-Overfull \hbox (80.19356pt too wide) in paragraph at lines 583--584
-[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (53.91335pt too wide) in paragraph at lines 584--585
-[][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (139.32404pt too wide) in paragraph at lines 586--587
-[][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (80.19356pt too wide) in paragraph at lines 588--589
-[][][][][][][][][][] 
- []
-
-
-Overfull \hbox (93.33366pt too wide) in paragraph at lines 593--594
-[][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (139.32404pt too wide) in paragraph at lines 594--595
-[][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (67.05345pt too wide) in paragraph at lines 595--596
-[][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (21.06308pt too wide) in paragraph at lines 596--597
-[][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (185.3144pt too wide) in paragraph at lines 597--598
-[][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (14.49303pt too wide) in paragraph at lines 598--599
 [][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (126.18393pt too wide) in paragraph at lines 609--610
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+Overfull \hbox (80.19356pt too wide) in paragraph at lines 585--586
+[][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (80.19356pt too wide) in paragraph at lines 610--611
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+Overfull \hbox (27.63313pt too wide) in paragraph at lines 586--587
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 587.
+
+(/usr/share/texmf/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Overfull \hbox (34.20319pt too wide) in paragraph at lines 587--589
+[][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (7.92297pt too wide) in paragraph at lines 618--619
+Overfull \hbox (60.4834pt too wide) in paragraph at lines 589--590
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (73.6235pt too wide) in paragraph at lines 591--593
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (40.77324pt too wide) in paragraph at lines 593--594
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (1.35292pt too wide) in paragraph at lines 594--596
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (47.34329pt too wide) in paragraph at lines 596--597
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (67.05345pt too wide) in paragraph at lines 597--599
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (7.92297pt too wide) in paragraph at lines 619--620
-[][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (1.35292pt too wide) in paragraph at lines 620--621
-[][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (14.49303pt too wide) in paragraph at lines 622--623
+Overfull \hbox (40.77324pt too wide) in paragraph at lines 599--600
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
-[19]
-Overfull \hbox (14.49303pt too wide) in paragraph at lines 624--625
-[][][][][][][][][][][][][][][][][][][][][][][][] 
+[23]
+Overfull \hbox (80.19356pt too wide) in paragraph at lines 607--608
+[][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (27.63313pt too wide) in paragraph at lines 625--626
+Overfull \hbox (113.04382pt too wide) in paragraph at lines 610--611
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (27.63313pt too wide) in paragraph at lines 611--612
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (80.19356pt too wide) in paragraph at lines 613--614
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (21.06308pt too wide) in paragraph at lines 631--632
+Overfull \hbox (119.61388pt too wide) in paragraph at lines 615--616
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (80.19356pt too wide) in paragraph at lines 616--617
+[][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (73.6235pt too wide) in paragraph at lines 617--618
+[][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (47.34329pt too wide) in paragraph at lines 620--622
+[][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (113.04382pt too wide) in paragraph at lines 622--623
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (1.35292pt too wide) in paragraph at lines 624--625
+[][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (73.6235pt too wide) in paragraph at lines 625--626
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (119.61388pt too wide) in paragraph at lines 626--627
+[][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (53.91335pt too wide) in paragraph at lines 627--628
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (53.91335pt too wide) in paragraph at lines 628--629
+[][][][][][][][] 
+ []
+
+
+Overfull \hbox (67.05345pt too wide) in paragraph at lines 629--630
+[][][][][][] 
+ []
+
+
+Overfull \hbox (73.6235pt too wide) in paragraph at lines 630--631
+[][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (106.47377pt too wide) in paragraph at lines 631--632
+[][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (99.90372pt too wide) in paragraph at lines 632--633
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (80.19356pt too wide) in paragraph at lines 633--634
+[][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (80.19356pt too wide) in paragraph at lines 635--636
+[][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (106.47377pt too wide) in paragraph at lines 636--637
+[][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (73.6235pt too wide) in paragraph at lines 637--638
+[][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (53.91335pt too wide) in paragraph at lines 642--643
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (99.90372pt too wide) in paragraph at lines 644--645
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[24]
+Overfull \hbox (99.90372pt too wide) in paragraph at lines 645--646
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (47.34329pt too wide) in paragraph at lines 647--648
+[][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (86.76361pt too wide) in paragraph at lines 648--649
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (86.76361pt too wide) in paragraph at lines 649--650
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (113.04382pt too wide) in paragraph at lines 650--651
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (53.91335pt too wide) in paragraph at lines 651--652
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (80.19356pt too wide) in paragraph at lines 652--653
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (21.06308pt too wide) in paragraph at lines 653--654
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (7.92297pt too wide) in paragraph at lines 654--655
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (73.6235pt too wide) in paragraph at lines 656--657
+[][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (119.61388pt too wide) in paragraph at lines 658--659
+[][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (93.33366pt too wide) in paragraph at lines 663--664
+[][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (99.90372pt too wide) in paragraph at lines 664--665
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (47.34329pt too wide) in paragraph at lines 668--669
+[][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (80.19356pt too wide) in paragraph at lines 672--673
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (53.91335pt too wide) in paragraph at lines 673--674
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (14.49303pt too wide) in paragraph at lines 675--676
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (14.49303pt too wide) in paragraph at lines 677--678
+[][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (40.77324pt too wide) in paragraph at lines 678--679
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (14.49303pt too wide) in paragraph at lines 680--681
+[][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (80.19356pt too wide) in paragraph at lines 682--683
+[][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (53.91335pt too wide) in paragraph at lines 687--688
+[][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (67.05345pt too wide) in paragraph at lines 688--689
+[][][][][][][][][][][][][][] 
+ []
+
+[25]
+Overfull \hbox (14.49303pt too wide) in paragraph at lines 689--690
+[][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (119.61388pt too wide) in paragraph at lines 691--692
+[][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (34.20319pt too wide) in paragraph at lines 702--703
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (126.18393pt too wide) in paragraph at lines 704--705
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (80.19356pt too wide) in paragraph at lines 705--706
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (7.92297pt too wide) in paragraph at lines 713--714
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (7.92297pt too wide) in paragraph at lines 714--715
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (1.35292pt too wide) in paragraph at lines 715--716
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (14.49303pt too wide) in paragraph at lines 717--718
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (14.49303pt too wide) in paragraph at lines 719--720
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (27.63313pt too wide) in paragraph at lines 720--721
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (21.06308pt too wide) in paragraph at lines 726--727
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (99.90372pt too wide) in paragraph at lines 635--636
+Overfull \hbox (99.90372pt too wide) in paragraph at lines 730--731
 [][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (53.91335pt too wide) in paragraph at lines 636--637
+Overfull \hbox (53.91335pt too wide) in paragraph at lines 731--732
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-
-Overfull \hbox (99.90372pt too wide) in paragraph at lines 638--639
+[26]
+Overfull \hbox (99.90372pt too wide) in paragraph at lines 733--734
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (73.6235pt too wide) in paragraph at lines 641--642
+Overfull \hbox (73.6235pt too wide) in paragraph at lines 736--737
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (7.92297pt too wide) in paragraph at lines 655--656
+Overfull \hbox (7.92297pt too wide) in paragraph at lines 750--751
 [][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (21.06308pt too wide) in paragraph at lines 658--659
+Overfull \hbox (21.06308pt too wide) in paragraph at lines 753--754
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (27.63313pt too wide) in paragraph at lines 661--662
+Overfull \hbox (27.63313pt too wide) in paragraph at lines 756--757
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[20]
-Overfull \hbox (47.34329pt too wide) in paragraph at lines 671--672
+
+Overfull \hbox (47.34329pt too wide) in paragraph at lines 766--767
 [][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (1.35292pt too wide) in paragraph at lines 672--673
+Overfull \hbox (1.35292pt too wide) in paragraph at lines 767--768
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (73.6235pt too wide) in paragraph at lines 674--675
+Overfull \hbox (73.6235pt too wide) in paragraph at lines 769--770
 [][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (7.92297pt too wide) in paragraph at lines 675--676
+Overfull \hbox (7.92297pt too wide) in paragraph at lines 770--771
 [][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (73.6235pt too wide) in paragraph at lines 677--678
+Overfull \hbox (73.6235pt too wide) in paragraph at lines 772--773
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[21] (./rapport.aux) ) 
+[27] [28] (./rapport.aux) ) 
 Here is how much of TeX's memory you used:
- 8328 strings out of 494829
- 114545 string characters out of 6178001
- 209359 words of memory out of 5000000
- 11461 multiletter control sequences out of 15000+600000
+ 8338 strings out of 494829
+ 114785 string characters out of 6178001
+ 210359 words of memory out of 5000000
+ 11469 multiletter control sequences out of 15000+600000
  46604 words of font info for 46 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 41i,7n,39p,542b,1544s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/sha
-re/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/
-lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/
-fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb
-></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/typ
-e1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr
-/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/publ
-ic/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/t
-exmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/l
-msy10.pfb>
-Output written on rapport.pdf (21 pages, 242813 bytes).
+ 41i,7n,39p,1495b,1544s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/us
+r/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvip
+s/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/t
+exmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx1
+0.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/font
+s/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb>
+</usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1
+/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/sh
+are/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public
+/lm/lmsy10.pfb>
+Output written on rapport.pdf (28 pages, 404092 bytes).
 PDF statistics:
- 123 PDF objects out of 1000 (max. 8388607)
- 84 compressed objects within 1 object stream
+ 150 PDF objects out of 1000 (max. 8388607)
+ 100 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
