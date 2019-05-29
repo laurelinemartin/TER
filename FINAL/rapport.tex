@@ -99,10 +99,10 @@
 	
 \section{Stratégies de résolution}
 	\subsection{Planification initiale}
-		Dans un premier temps, nous allons créer une planification initiale qui sera utilisée comme point de départ par chaque algorithme. Cette solution va simplement mettre le sommet initial à la première horaire de la journée puis placer les autres sommets en respectant les contraintes et en les mettant le plus tôt possible. Le sommet initial est le sommet de degré entrant nul d'indice le plus faible. Ces sommets sont les cours, représenté dans la matrice d'adjacence vu dans le premier point de ce rapport.\\
+		Dans un premier temps, nous allons créer une planification initiale qui sera utilisée comme point de départ par chaque algorithme. Cette solution va simplement mettre le sommet initial à la première horaire de la journée puis placer les autres sommets en respectant les contraintes et en les mettant le plus tôt possible. Le sommet initial est le sommet de degré entrant nul d'indice le plus faible. Ces sommets sont les cours, représentés dans la matrice d'adjacence vu dans le premier point de ce rapport.\\
 		En pseudocode on a :\\
 		\begin{lstlisting}
-Sommet de degre entrant nul d indice minimale a l horaire minimale
+Sommet de degre entrant nul d indice minimal a l horaire minimale
 Pour chaque sommet sauf le premier sommet :
   Mettre l horaire le plus tot respectant les contraintes.
 		\end{lstlisting}
@@ -110,14 +110,14 @@ Pour chaque sommet sauf le premier sommet :
 	\subsection{Les algorithmes}
 		\subsubsection{L'algorithme glouton}
 			Cet algorithme est basé sur une heuristique simple : à partir d'une planification initiale, on fait varier les cours un par un sur toutes les horaires possibles respectant les contraintes.\\
-			Pour chaque modification on recalcule la congestion des bus. Si la congestion est améliorée, alors on défini cet horaire comme étant le nouvel horaire du cours.\\
-			On parcours cependant toutes les horaires possibles afin de choisir celui qui améliore le plus la congestion. Si aucun n'améliore la congestion, le cours est placé à son horaire initial.\\
+			Pour chaque modification, la congestion des bus est recalculée. Si la congestion est améliorée, alors,  cet horaire est défini comme étant le nouvel horaire du cours.\\
+			L'algorithme parcours cependant, tous les horaires possibles afin de choisir celui qui améliore le plus la congestion. Si aucun n'améliore la congestion, le cours est placé à son horaire initial.\\
 			Une fois le premier sommet fixé, le sommet suivant est traité et ainsi de suite.\\
 			En pseudocode on a :\\
 \begin{lstlisting}
 Pour chaque sommet :
   Pour chaque horaire :
-  	Si la planification a cette horaire respecte les contraintes :
+  	Si la planification a cet horaire respecte les contraintes :
     	Calculer la nouvelle congestion.
     	Si la congestion est meilleur qu'avant le changement,
       	on fixe ce sommet a ce nouvel horaire et on reitere. 
@@ -127,17 +127,17 @@ Pour chaque sommet :
 
 		\subsubsection{L'algorithme tabou dur}
 			Cet algorithme est basé sur le même principe que pour l'algorithme glouton mais d'une façon différente.\\
-			Pour chaque cours, l'heure de début varie tout en respectant les contraintes et une nouvelle valeur pour la congestion est calculée. La meilleure modification, c'est à dire l'horaire qui baisse le plus la congestion, pour chaque sommet est gardée en mémoire.\\
+			Pour chaque cours, l'heure de début varie tout en respectant les contraintes et une nouvelle valeur pour la congestion est calculée. La meilleure modification, c'est-à-dire l'horaire qui baisse le plus la congestion, pour chaque sommet est gardée en mémoire.\\
 			Après avoir effectué cette recherche sur tous les cours de la planification, le sommet ayant la meilleure amélioration de congestion est modifié.\\
-			Ce procédé est ensuite répété mais en interdisant l'optimisation d'un cours dont l'horaire a déjà été modifiée.\\
-			Ainsi on explore un voisinage restraint de la solution initiale. Restraint car on ne prend pas en compte les solutions non valides. Le voisinage est exploré en choisissant toujours la meilleure solution.\\
+			Ce procédé est ensuite répété mais en interdisant l'optimisation d'un cours dont l'horaire a déjà été modifié.\\
+			L'algorithme explore un voisinage restreint de la solution initiale. Restreint car on ne prend pas en compte les solutions non valides. Le voisinage est exploré en choisissant toujours la meilleure solution.\\
 			En pseudo code on a :\\
 \begin{lstlisting}
 Pour chaque sommet :
   Pour chaque horaire :
-  	Si la planification a cette horaire respecte les contraintes :
+  	Si la planification a cet horaire respecte les contraintes :
     	Calculer la nouvelle congestion.
-    	Si la congestion est meilleur qu'avant le changement,
+    	Si la congestion est meilleure qu'avant le changement,
       	on la conserve.
   On selectionne la meilleure congestion. 
   On modifie l'horaire du sommet associe a cette congestion 
@@ -146,17 +146,17 @@ Pour chaque sommet :
 
 		\subsubsection{L'algorithme tabou roulette}
 			Cet algorithme ressemble à l'algorithme tabou dur, à ceci près qu'il laisse une part de hasard dans le choix de la modification à apporter dans la planification.\\
-			En effet, cet algorithme traite toutes les horaires respectants les contraintes pour tous les cours. La congestion est ensuite calculée pour chaque horaire.\\
-			Ensuite, parmi toute les solutions de tous les sommets, une seule est choisie aléatoirement. Cependant, plus une solution améliore la congestion, plus elle aura de chance d'être sélectionnée. C'est le même fonctionemment qu'une roulette dont les sous parties ne sont pas de tailles égales.\\
+			En effet, cet algorithme traite tous les horaires respectant les contraintes pour tous les cours. La congestion est ensuite calculée pour chaque horaire.\\
+			Parmi toutes les solutions de tous les sommets, une seule est choisie aléatoirement. Cependant, plus une solution améliore la congestion, plus elle aura de chance d'être sélectionnée. C'est le même fonctionemment qu'une roulette dont les sous-parties ne seraient pas de tailles égales.\\
 			L'opération est ensuite réitérée tout en interdisant l'optimisation d'un cours déjà modifié, comme pour l'algorithme précédent.\\
-			Ici on explore le voisinage d'une manière un peu différente que l'algorihtme tabou dur, ce qui peut permettre de tomber sur de meilleures solutions si on a un peu de chance.\\
+			Ici, l'algorithme explore le voisinage d'une manière un peu différente que l'algorihtme tabou dur, ce qui peut permettre de tomber sur de meilleures solutions si on a un peu de chance.\\
 			En pseudocode on a :\\
 \begin{lstlisting}
 Pour chaque sommet :
   Pour chaque horaire :
-  	Si la planification a cette horaire respecte les contraintes :
+  	Si la planification a cet horaire respecte les contraintes :
     	Calculer la nouvelle congestion.
-    	Si la congestion est meilleur qu'avant le changement,
+    	Si la congestion est meilleure qu'avant le changement,
       	on la conserve.
   Chaque valeur de congestion est associe a une valeur proportionelle 
   	au taux de modification par rapport a la planification initiale
@@ -173,35 +173,35 @@ Pour chaque sommet :
  			Pour obtenir les données des arrêts intermédiaires nous choisirons une valeur aléatoire, choisie dans un intervalle différent en fonction de l'heure. L'objectif est de représenter la congestion forte des heures de pointes de manière un peu plus précise : \\
  			\begin{tabular}{ | c | c | c | c | c | c | c | c | c | c |}
  				\hline			
-   				Horaire & 7-8h & 8-9h & 9-10h & 10-11h & 11-12h & 12-13h & 13-14h & 14-15h & 15-16h\\
-   				Montées & [5:15] & [5:15] & [3:10] & [2:8] & [1:5] & [1:5] & [1:5] & [2:8] & [3:10]\\
-   				Descentes & [0:5] & [0:5] & [1:6] & [1:6] & [1:5] & [1:5] & [0:5] & [0:5] & [1:5]\\
+   				Horaire 	& 7-8h & 8-9h & 9-10h & 10-11h & 11-12h & 12-13h & 13-14h & 14-15h & 15-16h\\
+   				Montées 	& [5:15] & [5:15] & [3:10] & [2:8] & [1:5] & [1:5] & [1:5] & [2:8] & [3:10]\\
+   				Descentes 	& [0:5] & [0:5] & [1:6] & [1:6] & [1:5] & [1:5] & [0:5] & [0:5] & [1:5]\\
  				\hline  
  			\end{tabular}\\
 
 	\subsection{L'emploi du temps}
 		L'emploi du temps est un graphe dont les sommets sont des cours et les liens des étudiants en communs.
-		Pour plus de clarté nous considérons ici que chaque professeur est disponible sur toute la durée de la journée.\\
-		Les sommets du graphe sont également coloriés, chaque couleur représentant une salle.
+		Pour plus de clarté, nous considérons ici que chaque professeur est disponible sur toute la durée de la journée.\\
+		Les sommets du graphe sont également colorés, chaque couleur représentant une salle.
 		\begin{enumerate}
 			\item On crée un graphe non orienté en numérotant les sommets de 1 jusqu'au nombre de cours.
-			\item On relie les sommets entre eux lorsque qu'il y a une contrainte (étudiants en commun). Pour cela on crée une matrice d'adjacence avec un degré moyen choisit arbitrairement. Pour $N$ sommets et $K$ le degré moyen, la probabilité qu'il y ai une arête à insérer dans chaque case est $K/N$.
-			\item Les arêtes s'oriente, désormais des arcs, du sommet d'indice le plus faible au plus fort
+			\item On relie les sommets entre eux lorsque qu'il y a une contrainte (étudiants en commun). Pour cela on crée une matrice d'adjacence avec un degré moyen choisi arbitrairement. Pour $N$ sommets et $K$ le degré moyen, la probabilité qu'il y ai une arête à insérer dans chaque case est $K/N$.
+			\item Les arêtes s'orientent, désormais des arcs, du sommet d'indice le plus faible au plus fort
 			\item Il y a obligatoirement un ou plusieurs sommets de degré entrant nul, ces sommets de notre DAG seront des points de départs possible pour notre planification.
-			\item Le graphe est colorié, chaque couleur représente une salle.		
-			\item L'emploi du temps est agencé en respectant le fait que deux couleurs et deux sommets reliés par un arc ne peuvent pas être sur la même plage horaire. Par défaut le sommet duquel nous partirons est le sommet de degré entrant nul d'indice le plus faible.
+			\item Le graphe est coloré, chaque couleur représente une salle.		
+			\item L'emploi du temps est agencé en respectant le fait que deux couleurs et deux sommets reliés par un arc ne peuvent pas être sur la même plage horaire. Par défaut, le sommet duquel nous partirons est le sommet de degré entrant nul d'indice le plus faible.
 		\end{enumerate}
-		Chaque cours possède un nombre d'étudiants choisit aléatoirement entre 16 et 32 pour un TD et entre 16 et 100 pour un cours magistral. les TDs représentent trois quart des cours.\\
+		Chaque cours possède un nombre d'étudiants choisi aléatoirement entre 16 et 32 pour un TD et entre 16 et 100 pour un cours magistral. les TDs représentent trois quart des cours.\\
 		\\	
-		Cependant comme nous avons dû les générer faute de données concrètes, nous inclurons également dans cette section l'ensemble des variables utilisées pour les générer.
+		Cependant, comme nous avons dû les générer faute de données concrètes, nous inclurons également dans cette section l'ensemble des variables utilisées pour les générer.
 
 	\subsection{Les variables}
-		Les noms des variables sont simplifiés par rapport à leur nom réel dans l'application afin de les rendre plus explicite pour le lecteur.
+		Les noms des variables sont simplifiés par rapport à leur nom réel dans l'application afin de les rendre plus explicite.
 		\begin{itemize}
-			\item \textit{probabilité de lien} : la probabilité qu'il y ai un lien entre 2 cours. Un lien entre 2 cours signifie qu'ils ont au moins un étudiant en commun, ils ne peuvent donc pas avoir lieu en même temps.
+			\item \textit{probabilité de lien} : la probabilité qu'il y est un lien entre 2 cours. Un lien entre 2 cours signifie qu'ils ont au moins un étudiant en commun, ils ne peuvent donc pas avoir lieu en même temps.
 			\item \textit{nombre de cours} : le nombre de cours que nous allons représenter lors du déroulement de l'application. 
 			\item  \textit{le nombre de salles} : le nombre de salles disponibles pour les cours.
-			\item \textit{heure maximum} : l'heure limite à laquelle on peut placer un cours. Dans notre cas d'étude, nous représentons le temps par tranche de 15 minutes. Il va de 8h à 18h, on a donc 42 quart d'heure.
+			\item \textit{heure maximum} : l'heure limite à laquelle on peut placer un cours. Dans notre cas d'étude, nous représentons le temps par tranche de 15 minutes. Les horaires s'étendent de 8h à 18h, on a donc 42 quart d'heure.
 		\end{itemize}
 
 \section{Présentation et analyse des résultats}
