@@ -1,6 +1,9 @@
 #include "../include/IO.h"
 using namespace std;
 
+//IO.cpp permet d'ecrire les fichiers de sortie congestion.txt et résultat.txt.
+//Les fonctions ci dessous lisent les resultats et les paramètres d'entrées et les rrecopie dans des fichiers.
+
 void initFichier(){
 	ofstream fichier("resultats.txt", ios::out); 
 	if(fichier){
@@ -43,7 +46,6 @@ void ecrireInformationCongestion(string s){
 void ecrireSolution(int* horaires, int* salles, int horaireMax, int nbBus, int congestionTotale){
 	ecrirePlanification(horaires, salles, horaireMax);
 	ecrireCongestionTotale(congestionTotale, nbBus);
-	// ecrireCongestionBus(bus);
 }
 
 void ecrirePlanification(int* horaires, int* salles, int horaireMax){

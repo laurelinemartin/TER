@@ -1,5 +1,6 @@
 #include "../include/Planification.h"
 
+//Créer la matrice d'adjacence symétrique
 int **matrice_adjacence_GNO (int N, float K)
 {
 	int **T = (int**)malloc(N*sizeof(int*));
@@ -14,7 +15,7 @@ int **matrice_adjacence_GNO (int N, float K)
 		}
 	}
 
-	int x = 0;
+	float x = 0.0;
 	srand(time(NULL));
 	for (int j = 0; j < N; j++){
 		for(int i = j; i < N; i++){
@@ -32,9 +33,7 @@ int **matrice_adjacence_GNO (int N, float K)
 	return T;
 }
 
-//pas besoin de fonction pour orienter le graphe suffis de lire la matrice d'adjacence en escalier c'est facile
-//je fais ca dans matrice_graphe_oriente
-
+//Attribue les salles aux cours en donnant une couleur à chaque cours
 int *coloration (int N, int Nb)
 {
 	int *T = (int*)malloc(N*sizeof(int*));
@@ -52,26 +51,8 @@ int *coloration (int N, int Nb)
 	return T;
 }
 
-/* int trouver_degre_entrant_nul (int **T, int N)
-{
-	for (int i = 0; i < N; i++)
-	{
-		for(int j = 0; j < N; j++)
-		{
-			if(T[i][j] != 0)
-			{
-				j = 1000;
-			}
-			else if(j == N-1)
-			{
-				return i;
-			}
-		}
-	}
-	perror("Erreur ce n'est pas un DAG" ); 
- 	exit(0);
-}*/
-
+//Oriente la matrice du graphe non orienté en mettant les liens du sommet d'indice
+//le plus faible vers le sommet d'indice le plus fort
 int **matrice_graphe_oriente (int **T, int N){
 	int **TO = (int**)malloc(N*sizeof(int*));
 	for (int i = 0; i < N; i++){
@@ -98,6 +79,7 @@ int **matrice_graphe_oriente (int **T, int N){
 }
 
 //0 un TD, 1 un CM
+//attribu un type a chaque cours
 int *type_cours (int N)
 {
 	int type = 0;
@@ -122,6 +104,7 @@ int *type_cours (int N)
 	return T;
 }
 
+//attribu un nombre d'élèves a chaque cours
 int *nb_eleves (int *TYPE, int N)
 {
 	int nb = 0;
@@ -176,6 +159,7 @@ int* tabCours(int* nbEleves, int N){
 	return tabNbEleveDesc;
 }
 
+//Test s une planification est valide en terme de coloration uniquement
 bool test_coloration(int *Horaires, int *couleur, int N, int *TYPE, int heure_a_teste, int sommet_a_teste)
 {
 	int duree1 = 0;
@@ -193,7 +177,7 @@ bool test_coloration(int *Horaires, int *couleur, int N, int *TYPE, int heure_a_
 	return true;
 }
 
-
+//Test si le graphe est bien connexe
 bool testConnnexe(int **T, int N, int sommet){
 	int degre = 0;
 	for(int i = 0; i < N; i ++){
@@ -208,6 +192,7 @@ bool testConnnexe(int **T, int N, int sommet){
 	return false;
 }
 
+//Test si une planification est valide vis a vis des liens entre les sommets
 bool test_lien(int *Horaires, int N, int **T, int heure_a_teste, int sommet_a_teste, int *TYPE)
 {
 	int duree = 0;
@@ -229,6 +214,7 @@ bool test_lien(int *Horaires, int N, int **T, int heure_a_teste, int sommet_a_te
 //Pour représenter les heures par créneau de 15 min :
 //0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34: indices
 //    8       9       10          11          12          13          14          15          16: heure
+//C'est la planification initiale
 int *planification(int **T, int sommet_depart, int *couleur, int N, int *TYPE){
 	int *Horaires = (int*)malloc(N*sizeof(int*));
 	for (int i = 0; i < N; i++){
@@ -239,7 +225,7 @@ int *planification(int **T, int sommet_depart, int *couleur, int N, int *TYPE){
 		for(int k = 0; k < N; k++){
 			if(T[i][k] == 1){
 				if(TYPE[i] == 0){//si le cours est un td
-					for(int j = 0; j <= 44; j++){
+					for(int j = 0; j <= 36; j++){
 						if(test_coloration(Horaires, couleur, N, TYPE, Horaires[k] + 13 + j, i) == true){
 							if(test_lien(Horaires, N, T, Horaires[k] + 13 + j, i, TYPE) == true){
 								Horaires[i] = Horaires[k] + 13 + j;
@@ -251,7 +237,7 @@ int *planification(int **T, int sommet_depart, int *couleur, int N, int *TYPE){
 				}
 				else //si le cours est un cm
 				{
-					for(int j = 0; j <= 44; j++)
+					for(int j = 0; j <= 36; j++)
 					{
 						if(test_coloration(Horaires, couleur, N, TYPE, Horaires[k] + 7 + j,i) == true)
 						{
@@ -269,7 +255,7 @@ int *planification(int **T, int sommet_depart, int *couleur, int N, int *TYPE){
 				if(testConnnexe(T, N, i) == true){
 					if(TYPE[k] == 0)//si le cours est un td
 					{
-						for(int j = 0; j <= 44; j++)
+						for(int j = 0; j <= 36; j++)
 						{
 							if(test_coloration(Horaires, couleur, N, TYPE, Horaires[k] + 13  + j, i) == true)
 							{
@@ -284,7 +270,7 @@ int *planification(int **T, int sommet_depart, int *couleur, int N, int *TYPE){
 					}
 					else //si le cours est un cm
 					{
-						for(int j = 0; j <= 44; j++)
+						for(int j = 0; j <= 36; j++)
 						{
 							if(test_coloration(Horaires, couleur, N, TYPE, Horaires[k] + 7 + j,i) == true)
 							{
@@ -308,6 +294,7 @@ int *planification(int **T, int sommet_depart, int *couleur, int N, int *TYPE){
 	return Horaires;
 }
 
+//Test si une planification est valide, si elle respecte toutes les contraintes
 bool test_solution_valide(int *Horaires, int N, int *couleur, int *TYPE, int **TO){	
 	//TEST COLORATION
 	int dureei, dureej;
@@ -321,7 +308,6 @@ bool test_solution_valide(int *Horaires, int N, int *couleur, int *TYPE, int **T
 				
 					if(Horaires[j] +dureej > Horaires[i])
 					{
-						//printf("Erreur couleur : %d et %d\n",i,j);
 						return false;	
 					}		
 				}
@@ -329,14 +315,12 @@ bool test_solution_valide(int *Horaires, int N, int *couleur, int *TYPE, int **T
 					
 					if(Horaires[i] + dureei > Horaires[j])
 					{
-						//printf("Erreur couleur : %d et %d\n",i,j);
 						return false;
 					}
 				}
 			}
 		}
 	}
-	//printf("return true color\n");
 
 	//TEST LIEN
 	int duree = 0;
@@ -353,7 +337,6 @@ bool test_solution_valide(int *Horaires, int N, int *couleur, int *TYPE, int **T
 		}
 		}
 	}
-	//printf("return true lien\n");
 	return true;
 }
 
