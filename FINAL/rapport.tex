@@ -334,6 +334,7 @@ Pour chaque sommet :
   		\hline
 	\end{tabular}
 	Avec un degré moyen de 7, on observe que l'on modifie moins la congestion que pour un degré de 5. On passe par exemple de 32\% à 28\% pour l'algorithme glouton.
+	Ici l'algorithme glouton et l'algorithme tabou dur sont aussi efficace. On choisira donc l'algorithme tabou dur car il est moins coûteux. 
 	\newpage
 	Ce tableau représente le nombre de bus congestionnés par méthode. Le degré moyen du graphe est 10 (0.25 probabilité de lien entre deux cours).\\ 
 	\begin{tabular}{|c|c|c|c|c|}
@@ -375,9 +376,55 @@ Pour chaque sommet :
   		Amélioration & X & 31.9\% & 31.0\% & 34.5\%\\
   		\hline
 	\end{tabular}
-	Pour un degré moyen de 10, on constate que les différents algorithmes utilisés on pu améliorer la congestion d'au moins 30\% chacun. On constate également que 
+	Pour un degré moyen de 10, on constate que les différents algorithmes utilisés on pu améliorer la congestion d'au moins 30\% chacun. Si on fais la moyenne des trois algorithmes ce sont les meilleurs taux de modificationq que l'ont a obtenu. On peut donc emmettre l'hypothèse que sur un degré moyen fort, sois 1) La planification initiale est tres mauvaise et donc les algorithme améliorent facilement la solution sois 2) les algorithmes sont tres efficace pour trouver des solutions quand il y a un grand nombre de leins. On constate également que 
 	l'algorithme le plus efficace est l'algorithme roulette. Comme c'est également l'algorithme le plus rapide on aura tendance a le préférer aux autres dans ce cas.
 	\subsection{Modifier le nombre d'itérations des algorithmes tabou}
+		Dans le cas précedent on itérait les algorithmes tabou sur 10 itérations pour 40 sommets. Puisque l'algo glouton parcours l'ensemble des sommets autant de fois qu'il y a de sommets, alors les algorithmes tabou était 4 fois moins coûteux. Ici nous allons tester nos résultats en faisant varier le nombre d'itérations de l'algo tabou.
+		Le degré moyen est fixé à 5.
+		\begin{tabular}{|c|c|c|c|c|}
+  		\hline
+  		Itérations algo tabou & Initiale & Algo glouton & Algo tabou dur & Algo tabou roulette\\
+  		\hline
+  		1 & 11 & 9 & 10 & 10\\
+  		\hline
+  		2 & 11 & 9 & 10 & 11\\
+  		\hline
+  		4 & 10 & 9 & 10 & 10\\
+  		\hline
+  		6 & 11 & 8 & 9 & 9\\
+  		\hline
+  		8 & 14 & 7 & 8 & 9\\
+  		\hline
+  		10 & 11 & 8 & 9 & 8\\
+  		\hline
+  		12 & 10 & 10 & 9 & 9\\
+  		\hline
+  		14 & 11 & 8 & 8 & 8\\
+  		\hline
+  		16 & 11 & 8 & 8 & 9\\
+  		\hline
+  		18 & 12 & 8 & 8 & 9\\
+  		\hline
+  		20 & 11 & 9 & 10 & 8\\
+  		\hline
+  		22 & 9 & 9 & 9 & 9\\
+  		\hline
+  		24 & 16 & 8 & 11 & 8\\
+  		\hline
+  		26 & 13 & 8 & 9 & 9\\
+  		\hline
+  		28 & 11 & 7 & 7 & 7\\
+  		\hline
+  		30 & 14 & 8 & 9 & 7\\
+  		\hline
+  		Moyenne & 11.6 & 8.5 & 8.8 & 8.7\\
+  		\hline
+  		Amélioration & X & 26.7\% & 24.1\% & 25.0\%\\
+  		\hline
+	\end{tabular}
+	\\
+	On remarque ici que augmenter la nombre d'itérations des tabou n'augmente pas significativement leurs efficacité. On constate qu'ils deviennent aussi bon ou meilleur que l'algorithme glouton à partir de 10 itérations, mais au dela on observe pas de différences importantes. On peut donc en conclure que pour 40 sommets, itérer sur un quart des sommets est largement suffisant pour l'algorithme tabou.
+
 	\subsection{Conclusion sur les résultats}
 \section{Conclusion}
 	\subsection{Pistes de réflexion abandonnées}
@@ -463,8 +510,6 @@ Pour chaque sommet :
  			En dessous on calcule le nombre de bus congestioné. 
  			\centerline{\includegraphics[scale=0.8]{Captures/terminal2.png}}\\
  			Les résultats sont égalements dans les fichiers resultats.txt et congestionbus.txt.
-
- 			Décrivons ces algos.
 
 	\subsection{Explication de la programmation}
 		\subsubsection{Algorithme glouton}
@@ -576,7 +621,7 @@ for(int k = 0; k < Nb_iterations; k++){
 		//j commence a 2 car 2 correspond a 8h du matin 
 		j = 2;
 		//On remet l'horaire du sommet i a son horaire de base 
-		//car on sait pas encore quel sommet sera modifie a 
+		//car on ne sait pas encore quel sommet sera modifie a 
 		//cette iteration de l'algo tabou
 		Horaires_tabou_roulette[i] = horaire_initiale;
 		//On remplit le tableau des proba de cette maniere :
@@ -606,6 +651,10 @@ for(int k = 0; k < Nb_iterations; k++){
 	//On prend au hasard une valeur et on regarde ou elle tombe 
 	//dans le tableau, ainsi plus on modifie la congestion, 
 	//plus on a de chance d'etre choisi.
+	//La difference avec l algo tabou dur ce fait ici
+	//L algo tabou dur va a la place de faire ca
+	//fixer horaires_tabou_dur a la meilleure horaire
+	//possible, celle qui ameliore le plus la congestion.
 	if ((choix_roulette > 0) &&
 		 (choix_roulette <= Valeurs_roulette[0]))
 	{
