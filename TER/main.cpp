@@ -155,7 +155,7 @@ int main(int argc, char** argv)
     ecrireSolution(Horaires, couleur, TAILLE, HEUREMAX, congestion_totale);
    // int* Bus = congestionBus(HEUREMAX, TAILLE, Horaires,NBELEVES);
     ecrireInformationCongestion("* Nombre d'élèves par bus pour la planification initiale");
-    ecrireCongestionBus(nbElevesBus(Horaires, couleur, HEUREMAX, TAILLE), HEUREMAX);
+    ecrireCongestionBus(nbElevesBus(Horaires, NBELEVES, HEUREMAX, TAILLE), HEUREMAX);
     // ecrireCongestionBus(Bus, HEUREMAX);
 
     //// Ecriture terminal
